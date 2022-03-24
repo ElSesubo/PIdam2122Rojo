@@ -1,0 +1,167 @@
+
+body{
+    background-image: url(columns-5135499_1920.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;     
+    size: 100% 100%;
+}
+.circulo {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: url(educational-project-girl-customer-software-engineer-usability-senior-user-profile-user-interface-design-java-application-avatar.png);
+    background-size: 100% 100%;
+    margin-left: 39.5%;
+    margin-top: 120px;
+    box-shadow: 0 0 30px 5px black;
+    position: relative;
+}
+
+.txtbox {
+    width: 600px; 
+    height: 20px; 
+    border: 2px solid black;
+    background: white;
+    margin-left:34%;
+    display: inline-block;
+    position: relative;
+    border-radius: 1%;
+    margin-top: 19px;
+}
+
+.boton {
+    width: 150px;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    margin-left: 46%;
+    font-weight: 700;
+    background-color: grey;
+    padding: 0px 10px;
+    border-radius: 4px;
+    color: black;
+    overflow: hidden;
+    transition: all 400ms ease;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: CamptonBold;
+}
+
+.boton:hover {
+    background-color: #CA2400;
+    color: white;
+}
+
+.boton1 {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    margin-left: 92%;
+    font-weight: 700;
+    background-color: grey;
+    padding: 0px 10px;
+    border-radius: 4px;
+    color: black;
+    overflow: hidden;
+    transition: all 400ms ease;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: CamptonBold;
+}
+
+.boton1:hover {
+  background-color: #CA2400;
+  color: white;
+}
+
+.entrarprofe {
+    text-align: center;
+    width: 150px; 
+    height: 30px; 
+    border: 2px solid black;
+    background: gray;
+    margin-left: 92%;
+    position : relative;
+    margin-top: 20px;
+    font-family: CamptonBold;
+}
+
+.title{
+    position: absolute;
+    margin-left: 31%;
+    font-size: 95px;
+    width: 700px;
+    color: #f5f3e9;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: CamptonBold;
+    background-color: #CA2400;
+    border-radius: 10px;
+}
+
+.texto{
+    position: absolute;
+    display: inline-block;
+    margin-left: 24%;
+    font-size: 20px;
+    font-family: CamptonThin;
+    color: white;
+}
+
+.texto1{
+    position: absolute;
+    display: inline-block;
+    margin-left: 27%;
+    font-size: 20px;
+    font-family: CamptonThin;
+    color: white;
+}
+
+.registro{
+    font-size: 17px;    
+}
+
+a{
+    color: white;
+  }
+  
+  a:hover{
+    color: red;
+  }
+  
+  a:used {
+      color: white;
+  }
+
+.menu{
+    position: fixed;
+	width: 400px;
+	height: 100%;
+    left: 0px;
+    top: 0px;
+	background: black;
+	padding: 40px 0;
+	z-index: 1;
+}
+
+@font-face {
+    font-family:CamptonBold;
+    src: url(CamptonSemiBold.otf);
+    }
+
+@font-face {
+    font-family: Blanka;
+    src: url(Blanka-Regular.otf);
+}
+
+@font-face {
+    font-family: CamptonThin;
+    src: url(CamptonLight.otf);
+}
+
+@font-face {
+    font-family: ADAM;
+    src: url(ADAM.CGPRO.otf);
+}
