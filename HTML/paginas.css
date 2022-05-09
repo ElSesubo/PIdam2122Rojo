@@ -1,0 +1,468 @@
+body{ 	
+	background-image: url(columns-5135499_1920.jpg) ;
+	background-size: 100% 100% ;
+	background-attachment: fixed ;
+}
+
+.menu{
+    position: fixed;
+	width: 19.7%;
+	height: 100%;
+	background: #211F1F;
+	padding: 40px 0;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+
+.logo{
+	margin-top: 30px;
+	width: 150px;
+	padding: 0 27%; 
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.logo:hover{
+	width: 160px;
+	padding: 0 26%;
+}
+
+.titulo{
+	margin-top: -5px;
+	padding: 0 24.3%;
+	color: white;
+	font-size: 30px;
+	font-family: CamptonBold;
+}
+
+.menu li{
+	padding: 45px 70px;
+	border-bottom: 2px solid rgba(0,0,0,0.50);
+	border-top: 1px solid rgba(225,225,225,0.05);
+	font-family: CamptonBold;
+	color: #EBE4E4;
+	font-size: 21px;
+	list-style-type: none;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.menu li:hover{
+	background-color: #E51616;
+  	color: white	;
+}
+
+.inicio{
+    position: absolute;
+    display: inline;
+	margin-left: 18%;
+	height: 100%;
+	width: 81%;
+	right: 0;
+	top: 0;
+	background-image: url(fondos.png);
+	z-index: 1;
+}
+
+.inicio h1{
+	font-family: CamptonBold;
+	font-size: 80px;
+	text-align: center;
+	margin-top: 50px;
+	color: white;
+}
+
+.inicio p{
+	font-family: CamptonThin;
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 200px 10px 200px;
+	color: white;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.icono{
+	width: 18px;
+	margin-top: 105px;
+	margin-left: 20px;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.icono:hover{
+	width: 20px;
+}
+
+.diapositiva{
+	width: 70%;
+	height: 280%;
+	background-color: #EDE8EC;
+	margin:0px auto;
+	border: 1px solid;
+	border-radius: 2%;
+}
+
+.diapositiva h2{
+	font-family: CamptonBold;
+	font-size: 45px;
+	text-align: center;
+	margin-top: 50px;
+	color: #E51616;
+}
+
+.diapositiva p{
+	font-family: CamptonThin;
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	padding: 50px 100px 10px 100px;
+}
+
+
+.boton {
+	font-size: 40pt;
+	color: black;
+	position: absolute;
+	top: 45%;
+	font-weight: 700;
+	background-color: rgba(0,0,0,0.8);
+	padding: 0px 10px;
+	border-radius: 4px;
+	background-color: grey;
+	overflow: hidden;
+	transition: all 400ms ease;
+	cursor: pointer;
+	font-family: Broadway;
+}
+.boton:hover {
+  background-color: red;
+  color: white	;
+}
+.derecho {
+	right: 100px;
+}
+.izquierdo {
+	left: 100px;
+}	
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+.menusC{
+	width: 30%;
+	height: 60%;
+	background-color: #EDE8EC;
+	margin-left: 13%;
+	display: inline-block;
+	border: 1px solid;
+	border-color: white;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.menusCO{
+	width: 30%;
+	height: 60%;
+	background-color: #211F1F;
+	margin-left: 13%;
+	display: inline-block;
+	border: 1px solid;
+	border-color: black;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.menusCO:hover{
+	box-shadow: 0 0 5px black, 0 0 10px black, 0 0 10px black;
+}
+
+.menusCO h2{
+	font-family: CamptonBold;
+	font-size: 45px;
+	text-align: center;
+	margin-top: 50px;
+	color: #E51616;
+	padding: 0px 50px 0px 50px;
+}
+
+.menusC:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+.menusC h2{
+	font-family: CamptonBold;
+	font-size: 45px;
+	text-align: center;
+	margin-top: 50px;
+	color: #E51616;
+	padding: 0px 50px 0px 50px;
+}
+
+.comida1{
+	width: 30%;
+	height: 20%;
+	background-image: url(2019-08-29-Cómo-preparar-la-hamburguesa-perfecta-1.jpg);
+	background-size: cover;
+	margin-left: 13%;
+	display: inline-block;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.comida1:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+.comida2{
+	width: 30%;
+	height: 20%;
+	background-image: url(3.jpg);
+	background-size: cover;
+	margin-left: 13%;
+	display: inline-block;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.comida2:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+.comida3{
+	width: 30%;
+	height: 20%;
+	background-image: url(menu-paella-barcelona-scaled-1.jpg);
+	background-size: cover;
+	margin-left: 13%;
+	display: inline-block;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.comida3:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+.comida4{
+	width: 30%;
+	height: 20%;
+	background-image: url(fideua-con-gambas-y-chipirones-595x335.jpg);
+	background-size: cover;
+	margin-left: 13%;
+	display: inline-block;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.comida4:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+.comida5{
+	width: 30%;
+	height: 20%;
+	background-image: url(bolleria-agrupada-700x466.jpg);
+	background-size: cover;
+	margin-left: 13%;
+	display: inline-block;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.comida5:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+.comida6{
+	width: 30%;
+	height: 20%;
+	background-image: url(img_Full_Refrescos.jpg);
+	background-size: cover;
+	margin-left: 13%;
+	display: inline-block;
+	border-radius: 2%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+
+.comida6:hover{
+	box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white;
+}
+
+
+h2{
+	font-family: CamptonBold;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 75px;
+	color: #E51616;
+	text-shadow: 1px  0px 0px white,
+	0px  1px 0px white,
+   -1px  0px 0px white,
+	0px -1px 0px white;
+}
+
+.foto{
+	width: 300px;
+	border-radius: 5px;
+	margin-left: 18%;
+	position: relative;
+	height: 310px;
+}
+
+.foto1{
+	width: 400px;
+	border-radius: 60px;
+	margin-left: 8%;
+	position: relative;
+	height: 310px;
+}
+
+.volver:hover{
+	text-shadow: 1px  0px 0px white,
+	0px  1px 0px white,
+   -1px  0px 0px white,
+	0px -1px 0px white;
+}
+
+.modulo{
+	width: 20%;
+	height: 10%;
+	margin-left: 9.5%;
+	display: inline-block;
+	border-radius: 5%;
+	transition: all 400ms ease;
+	cursor: pointer;
+	color: white;
+	background-color: red;
+	margin-top: 30px;
+	text-align: center;
+	transition: all 400ms ease;
+	cursor: pointer;
+	font-size: 30px;
+	font-family: CamptonBold;
+}
+
+.modulo h4{
+	margin-top: 5%;
+}
+
+.modulo:hover{
+	color: black;
+}
+
+.lista li{
+	padding: 10px 0px;
+	border-bottom: 2px solid rgba(0,0,0,0.50);
+	border-top: 2px solid rgba(0,0,0,0.50);
+	font-family: CamptonBold;
+	margin-right: 4%;
+	color: #EBE4E4;
+	font-size: 21px;
+	color: black;
+	list-style-type: none;
+	transition: all 400ms ease;
+	cursor: pointer;
+	text-align: center;
+}
+
+.formulario{
+	padding: 10px 0px;
+	font-family: CamptonBold;
+	margin-left: 15%;
+	color: #EBE4E4;
+	font-size: 25px;
+	color: black;
+	list-style-type: none;
+	transition: all 400ms ease;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.imagen-port{
+	margin-left: 15%;
+	margin-bottom: 20px;
+}
+
+.texto{
+	font-size: 25px;
+	text-align: center;
+	font-family: CamptonThin;
+	padding: 20px;
+}
+
+.textoO{
+	font-size: 25px;
+	text-align: center;
+	font-family: CamptonThin;
+	padding: 20px;
+	color: #EDE8EC;
+}
+
+.english{
+	color: black;
+}
+
+.logout{
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	margin-top: -22px;
+	margin-left: 5%;
+}
+
+@font-face {
+    font-family:CamptonBold;
+    src: url(CamptonSemiBold.otf);
+    }
+
+@font-face {
+    font-family: Blanka;
+    src: url(Blanka-Regular.otf);
+}
+
+@font-face {
+    font-family: CamptonThin;
+    src: url(CamptonLight.otf);
+}
+
+@font-face {
+    font-family: ADAM;
+    src: url(ADAM.CGPRO.otf);
+}
