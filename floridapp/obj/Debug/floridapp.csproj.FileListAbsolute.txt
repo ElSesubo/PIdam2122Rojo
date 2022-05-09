@@ -1,0 +1,10 @@
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\gaarag\Desktop\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\gaarag\Desktop\floridapp\bin\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\floridapp\bin\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.pdb
