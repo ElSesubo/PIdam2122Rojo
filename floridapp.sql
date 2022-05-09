@@ -13,6 +13,7 @@ profesor BOOL NOT NULL,
 administrador BOOL NOT NULL,
 cocina BOOL NOT NULL,
 biblioteca BOOL NOT NULL,
+alumno BOOL NOT NULL,
 PRIMARY KEY(nif));
 
 CREATE TABLE portatil(
