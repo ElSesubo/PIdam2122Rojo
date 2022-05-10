@@ -49,10 +49,10 @@ C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoI
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.csproj.SuggestedBindingRedirects.cache
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.exe.config
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.Properties.Resources.resources
-C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.prueba.resources
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.csproj.GenerateResource.cache
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.csproj.CoreCompileInputs.cache
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.csproj.CopyComplete
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.exe
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.pdb
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.Form1.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.Form2.resources

@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net.Mail;
 namespace ProyectoIntegrado
+
 
 {
     public partial class Form1 : Form
     {
+        const string mailAddress = "haitianji123@gmail.com";
+        const string password = "Haitian1234567890";
         public Form1()
         {
             InitializeComponent();
@@ -37,6 +41,45 @@ namespace ProyectoIntegrado
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public static void EnviarMensaje(StringBuilder Mensaje,DateTime fec, string para, string asunto, out string Error)
+        {
+            Error = "";
+            try
+            {
+                Mensaje.Append(Environment.NewLine);
+                Mensaje.Append(String.Format("Este correo ha sido enviado el dia {0:yyyy/MM/dd} a las {0:HH:mm:ss} h \n\n",fec));
+                Mensaje.Append(Environment.NewLine);
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(mailAddress);
+                mail.To.Add(para);
+                mail.Subject = asunto;
+                mail.Body = Mensaje.ToString();
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                smtp.Port = 587;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new System.Net.NetworkCredential(mailAddress, password);
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
+                Error = "Exito";
+                MessageBox.Show(Error);
+
+            }
+            catch (Exception ex)
+            {
+                Error="Error: "+ex.Message;
+                MessageBox.Show(Error);
+                return;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string error = "";
+            StringBuilder sb=new StringBuilder();
+            sb.Append(txtMensaje.Text.Trim());
+            Form1.EnviarMensaje(sb, DateTime.Now, txtPara.Text.Trim(), txtAsunto.Text.Trim(),out error);
         }
     }
 }
