@@ -10,6 +10,7 @@ namespace ProyectoIntegrado
     {
         private int numero_mesa;
         private bool reservado;
+        private usuario user;
 
         public cafeteria(int numero_mesa, bool reservado)
         {
@@ -17,7 +18,14 @@ namespace ProyectoIntegrado
             this.reservado = reservado;
         }
 
+        public cafeteria()
+        {
+
+        }
+
         public int Numero_mesa { get => numero_mesa; set => numero_mesa = value; }
         public bool Reservado { get => reservado; set => reservado = value; }
+
+
     }
 }
