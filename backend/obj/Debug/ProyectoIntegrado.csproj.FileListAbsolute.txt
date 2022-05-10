@@ -56,3 +56,29 @@ C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoI
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.exe
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.pdb
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\backend\obj\Debug\ProyectoIntegrado.Form1.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\ProyectoIntegrado.exe.config
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\ProyectoIntegrado.exe
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\ProyectoIntegrado.pdb
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\Google.Protobuf.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\ZstdNet.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\System.Memory.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\System.Buffers.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\MySql.Data.xml
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\bin\Debug\MySql.Web.xml
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.csproj.AssemblyReference.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.exe.config
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.Form1.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.Properties.Resources.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.prueba.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.csproj.GenerateResource.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.csproj.CoreCompileInputs.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.csproj.CopyComplete
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.exe
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\backend\obj\Debug\ProyectoIntegrado.pdb
