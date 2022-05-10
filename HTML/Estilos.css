@@ -1,0 +1,113 @@
+*{
+    font-family: PoiretOne;
+    font-weight: bold;
+    
+}
+
+body
+{
+    background-color: grey;
+}
+
+.diapositiva{
+	width: 70%;
+	height: 280%;
+	background-color: #EDE8EC;
+	margin:0px auto;
+	border: 1px solid;
+	border-radius: 2%;
+}
+.inicio{
+
+    display: inline;
+	margin-left: 18%;
+	height: 100%;
+	width: 81%;
+	right: 0;
+	top: 0;
+	background-image: url(fondos.png);
+	z-index: 1;
+}
+
+.inicio h1{
+
+	font-size: 80px;
+	text-align: center;
+	margin-top: 50px;
+	color: red;
+
+}
+.inicio h2{
+
+	font-size: 80px;
+	text-align: center;
+	margin-top: 50px;
+	color: black;
+    -webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+.inicio p{
+	
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 200px 10px 200px;
+	color: black;
+	transition: all 400ms ease;
+	cursor: pointer;
+}
+header {
+    border: 1px solid;
+	border-radius: 0.5%;
+    margin: 0 auto;
+	width: 70%; 
+	overflow:hidden; 
+	background:#252932;
+	margin-bottom:20px;
+}
+
+.wrapper {
+	width:90%; 
+	max-width:1000px; 
+	margin: 10px auto;
+	overflow: hidden; 
+    position: relative;
+}
+
+header .logo {
+	color:#f2f2f2;
+	font-size:50px;
+	line-height:200px;
+	float:left;
+}
+
+header nav {
+	float:right;
+	line-height:200px;
+}
+
+header nav a {
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+header nav a:hover {
+	background:#f53a3a;
+	border: radius 30px;
+}
+
+
+
+@font-face {
+    font-family: PoiretOne;
+    src: url(PoiretOne-Regular.ttf);
+}
