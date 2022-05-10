@@ -15,8 +15,8 @@ namespace ProyectoIntegrado
 {
     public partial class Form1 : Form
     {
-        const string mailAddress = "haitianji123@gmail.com";
-        const string password = "Haitian1234567890";
+        const string mailAddress = "floridapprojo@gmail.com";
+        const string password = "ghidm6rojo";
         public Form1()
         {
             InitializeComponent();
