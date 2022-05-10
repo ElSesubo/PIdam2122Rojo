@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace AEV7
+namespace ProyectoIntegrado
 {
     internal class conexion
     {
@@ -28,12 +28,13 @@ namespace AEV7
                     if (instancia == null)
                     {
                         instancia = new MySqlConnection();
-                        string server = "server=127.0.0.1;";
+                        string server = "server=database-florida.cgnqmiidkquu.us-east-1.rds.amazonaws.com;";
+                        string oldguids = "oldguids=true;";
                         string port = "port=3306;";
-                        string database = "database=bd_gestion_empleados;";
-                        string usuario = "uid=root;";
-                        string password = "pwd=;";
-                        instancia.ConnectionString = server + port + database + usuario + password;
+                        string database = "database=floridapp;";
+                        string usuario = "uid=admin;";
+                        string password = "pwd=12345678;";
+                        instancia.ConnectionString = server + oldguids + port + database + usuario + password;
                     }
                     return instancia;
                 }
