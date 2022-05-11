@@ -20,3 +20,6 @@ C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
