@@ -52,6 +52,24 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Biblio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Biblio.Designer.cs">
+      <DependentUpon>Biblio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\News.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\News.Designer.cs">
+      <DependentUpon>News.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reunion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reunion.Designer.cs">
+      <DependentUpon>Reunion.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Cafeteria.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -70,6 +88,15 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Biblio.resx">
+      <DependentUpon>Biblio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\News.resx">
+      <DependentUpon>News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reunion.resx">
+      <DependentUpon>Reunion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Cafeteria.resx">
       <DependentUpon>Cafeteria.cs</DependentUpon>
@@ -123,6 +150,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\283-personalizar-imagen-wp-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

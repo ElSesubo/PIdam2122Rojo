@@ -203,6 +203,7 @@ namespace floridapp
             this.panelVista.Name = "panelVista";
             this.panelVista.Size = new System.Drawing.Size(1108, 804);
             this.panelVista.TabIndex = 5;
+            this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
             // 
             // Form1
             // 

@@ -20,3 +20,22 @@ C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+<<<<<<< HEAD
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\floridapp.exe
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\floridapp.pdb
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.exe
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.pdb
+=======
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+>>>>>>> a774bfd66bfaf43dfe4aa643f59ef315d137759f

@@ -93,6 +93,16 @@ namespace floridapp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a {
+            get {
+                object obj = ResourceManager.GetObject("a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cafeteria {
             get {
                 object obj = ResourceManager.GetObject("cafeteria", resourceCulture);
@@ -106,6 +116,16 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap floridapng {
             get {
                 object obj = ResourceManager.GetObject("floridapng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_1 {
+            get {
+                object obj = ResourceManager.GetObject("foto-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,16 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap reunion {
             get {
                 object obj = ResourceManager.GetObject("reunion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xd {
+            get {
+                object obj = ResourceManager.GetObject("xd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

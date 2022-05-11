@@ -8,7 +8,14 @@ body
 {
     background-color: grey;
 }
-
+.Integrantes{
+	width: 70%;
+	height: 4400px;
+	background-color: #EDE8EC;
+	margin:0px auto;
+	border: 1px solid;
+	border-radius: 2%;
+}
 .diapositiva{
 	width: 70%;
 	height: 280%;
@@ -16,8 +23,7 @@ body
 	margin:0px auto;
 	border: 1px solid;
 	border-radius: 2%;
-}
-.inicio{
+}.inicio{
 
     display: inline;
 	margin-left: 18%;
