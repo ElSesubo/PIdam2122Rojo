@@ -42,9 +42,10 @@ namespace floridapp.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(116, 269);
+            this.label2.Location = new System.Drawing.Point(155, 331);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(313, 19);
+            this.label2.Size = new System.Drawing.Size(396, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Servicio de reserva de salas y portatiles";
             // 
@@ -53,19 +54,21 @@ namespace floridapp.UserControls
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(122, 495);
+            this.button1.Location = new System.Drawing.Point(163, 609);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(369, 41);
+            this.button1.Size = new System.Drawing.Size(492, 50);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Realiza la tuya propia";
+            this.button1.Text = "Realiza tu reserva";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::floridapp.Properties.Resources.a;
-            this.pictureBox1.Location = new System.Drawing.Point(466, 233);
+            this.pictureBox1.Location = new System.Drawing.Point(621, 287);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(601, 487);
+            this.pictureBox1.Size = new System.Drawing.Size(801, 599);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -74,9 +77,10 @@ namespace floridapp.UserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(118, 300);
+            this.label3.Location = new System.Drawing.Point(157, 369);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(538, 192);
+            this.label3.Size = new System.Drawing.Size(692, 264);
             this.label3.TabIndex = 7;
             this.label3.Text = resources.GetString("label3.Text");
             // 
@@ -85,23 +89,25 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(110, 197);
+            this.label1.Location = new System.Drawing.Point(147, 242);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(697, 72);
+            this.label1.Size = new System.Drawing.Size(869, 91);
             this.label1.TabIndex = 8;
             this.label1.Text = "Buscas un portatil?";
             // 
             // Biblio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Biblio";
-            this.Size = new System.Drawing.Size(1108, 804);
+            this.Size = new System.Drawing.Size(1477, 990);
             this.Load += new System.EventHandler(this.Biblioteca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
