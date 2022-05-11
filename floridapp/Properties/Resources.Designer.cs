@@ -83,6 +83,16 @@ namespace floridapp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _283_personalizar_imagen_wp_login {
+            get {
+                object obj = ResourceManager.GetObject("283-personalizar-imagen-wp-login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cafeteria {
             get {
                 object obj = ResourceManager.GetObject("cafeteria", resourceCulture);
@@ -96,6 +106,26 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap floridapng {
             get {
                 object obj = ResourceManager.GetObject("floridapng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paella_valenciana_VP {
+            get {
+                object obj = ResourceManager.GetObject("paella-valenciana-VP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Receta_paella_Valenciana {
+            get {
+                object obj = ResourceManager.GetObject("Receta-paella-Valenciana", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
