@@ -1,4 +1,5 @@
-﻿using System;
+﻿using floridapp.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,8 @@ namespace floridapp
 
         private void btnReunion_Click(object sender, EventArgs e)
         {
-
+            Reunion reu = new Reunion();
+            addUserControl(reu);
         }
 
         private void btnCafeteria_Click(object sender, EventArgs e)
@@ -38,12 +40,14 @@ namespace floridapp
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
         {
-
+            Biblio bib = new Biblio();
+            addUserControl(bib);
         }
 
         private void btnNews_Click(object sender, EventArgs e)
         {
-
+            News nw = new News();
+            addUserControl(nw);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,6 +58,11 @@ namespace floridapp
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panelVista_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
