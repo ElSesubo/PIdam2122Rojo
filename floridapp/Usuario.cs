@@ -89,16 +89,21 @@ namespace floridapp
             }else if (user.Alumno)
             {
                 tipo = 2;
-            }else if (user.Cocina)
+            }
+            else if (user.Admi)
             {
                 tipo = 3;
+            }
+            else if (user.Cocina)
+            {
+                tipo = 4;
             }else if (user.Biblioteca)
             {
-                tipo=4;
+                tipo=5;
             }
             else
             {
-                tipo=0;
+                MessageBox.Show("Error al asignar un tipo de usuario.");
             }
             switch (tipo)
             {
@@ -131,9 +136,8 @@ namespace floridapp
                     reader1.Close();
                     comando1.ExecuteNonQuery();
                     break;
-                    
                 case 3:
-                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and cocina=true", mail);
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and admistrador=true", mail);
                     MySqlCommand comando2 = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader2 = comando2.ExecuteReader();
                     while (reader2.Read())
@@ -146,8 +150,22 @@ namespace floridapp
                     reader2.Close();
                     comando2.ExecuteNonQuery();
                     break;
-                    
                 case 4:
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and cocina=true", mail);
+                    MySqlCommand comando4 = new MySqlCommand(consulta, conexion.Conexion);
+                    MySqlDataReader reader4 = comando4.ExecuteReader();
+                    while (reader4.Read())
+                    {
+                        if ((reader4.GetString(0) == mail && reader4.GetString(1) == password))
+                        {
+                            return 4;
+                        }
+                    }
+                    reader4.Close();
+                    comando4.ExecuteNonQuery();
+                    break;
+                    
+                case 5:
                     consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and biblioteca=true", mail);
                     MySqlCommand comando3 = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader3 = comando3.ExecuteReader();
@@ -155,19 +173,22 @@ namespace floridapp
                     {
                         if ((reader3.GetString(0) == mail && reader3.GetString(1) == password))
                         {
-                            return 4;
+                            return 5;
                         }
                     }
                     reader3.Close();
                     comando3.ExecuteNonQuery();
                     break;
+                default:
+                    MessageBox.Show("Error al conectarse.");
+                    break;
             }
             return 0;
         }
 
-        static public bool UserExiste()
-        {
+        //static public bool UserExiste()
+        //{
 
-        }
+        //}
     }
 }

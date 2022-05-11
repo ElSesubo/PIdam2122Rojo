@@ -24,12 +24,43 @@ namespace floridapp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            inicio.ShowDialog();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                int tipologin = usuario.VerifyUser(txtCorreo.Text, txtContraseña.Text);
+                switch (tipologin)
+                {
+                    case 1:
+                        MessageBox.Show("Login profesor.");
+                        break;
+                    case 2:
+                        inicio.Show();
+                        break;
+                    case 3:
+                        MessageBox.Show("Login del administrador");
+                        break;
+                    case 4:
+                        MessageBox.Show("Login cafeteria,");
+                        break;
+                    case 5:
+                        MessageBox.Show("Login biblioteca,");
+                        break;
+                    default:
+                        MessageBox.Show("Error al iniciar sesion");
+                        break;
+                }
+                conexion.CerrarConexion();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
