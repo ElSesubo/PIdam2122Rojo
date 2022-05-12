@@ -186,9 +186,22 @@ namespace floridapp
             return 0;
         }
 
-        //static public bool UserExiste()
-        //{
+        static public bool UserExiste(string mail)
+        {
+            string consulta = "";
+            consulta = string.Format("SELECT correo FROM usuario WHERE correo = '{0}'", mail);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.GetString(0) == mail)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-        //}
+
     }
 }
