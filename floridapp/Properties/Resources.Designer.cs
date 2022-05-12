@@ -103,9 +103,29 @@ namespace floridapp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Biblioteca__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Biblioteca (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cafeteria {
             get {
                 object obj = ResourceManager.GetObject("cafeteria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cafeteria__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Cafeteria (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,26 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap foto_1 {
             get {
                 object obj = ResourceManager.GetObject("foto-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap News__1_ {
+            get {
+                object obj = ResourceManager.GetObject("News (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap News__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("News (1) (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +196,26 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap reunion {
             get {
                 object obj = ResourceManager.GetObject("reunion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reunion__1_ {
+            get {
+                object obj = ResourceManager.GetObject("reunion (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teacher_PNG24 {
+            get {
+                object obj = ResourceManager.GetObject("teacher_PNG24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

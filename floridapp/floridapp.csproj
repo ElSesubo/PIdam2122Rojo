@@ -71,6 +71,24 @@
     <Compile Include="UserControls\News.Designer.cs">
       <DependentUpon>News.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\RealizarPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RealizarPedido.Designer.cs">
+      <DependentUpon>RealizarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RealizarReunion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RealizarReunion.Designer.cs">
+      <DependentUpon>RealizarReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RealizarReunionFormulario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RealizarReunionFormulario.Designer.cs">
+      <DependentUpon>RealizarReunionFormulario.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Reunion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +119,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\News.resx">
       <DependentUpon>News.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RealizarPedido.resx">
+      <DependentUpon>RealizarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RealizarReunion.resx">
+      <DependentUpon>RealizarReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RealizarReunionFormulario.resx">
+      <DependentUpon>RealizarReunionFormulario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Reunion.resx">
       <DependentUpon>Reunion.cs</DependentUpon>
@@ -166,6 +193,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cafeteria %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biblioteca %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reunion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_PNG24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
