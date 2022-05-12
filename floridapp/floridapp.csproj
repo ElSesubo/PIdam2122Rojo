@@ -71,18 +71,6 @@
     <Compile Include="UserControls\News.Designer.cs">
       <DependentUpon>News.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\RealizarFacturaCafeteria.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\RealizarFacturaCafeteria.Designer.cs">
-      <DependentUpon>RealizarFacturaCafeteria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\RealizarPedido.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\RealizarPedido.Designer.cs">
-      <DependentUpon>RealizarPedido.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\RealizarPedidoCafeteria.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,9 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\News.resx">
       <DependentUpon>News.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\RealizarPedido.resx">
-      <DependentUpon>RealizarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RealizarPedidoCafeteria.resx">
       <DependentUpon>RealizarPedidoCafeteria.cs</DependentUpon>
