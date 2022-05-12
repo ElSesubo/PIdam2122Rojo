@@ -75,7 +75,7 @@ CREATE TABLE reservar_profesor(
 id INT NOT NULL AUTO_INCREMENT,
 hora_reserva TIME NOT NULL,
 ocupado BOOL NOT NULL,
-id_user VARCHAR(9) NOT NULL,playlist
+id_user VARCHAR(9) NOT NULL,
 nif_profesor VARCHAR(9) NOT NULL,
 PRIMARY KEY(id),
 FOREIGN KEY(id_user) REFERENCES usuario(nif),
