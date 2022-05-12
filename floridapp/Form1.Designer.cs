@@ -88,11 +88,11 @@ namespace floridapp
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(319, 30);
+            this.label1.Location = new System.Drawing.Point(469, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(507, 56);
+            this.label1.Size = new System.Drawing.Size(176, 56);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NUESTROS SERVICIOS";
+            this.label1.Text = "INICIO";
             // 
             // panelVista
             // 
@@ -110,12 +110,12 @@ namespace floridapp
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::floridapp.Properties.Resources._2799204_management_business_office_setting_success_icon;
+            this.button5.Image = global::floridapp.Properties.Resources.SALIDA;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 722);
+            this.button5.Location = new System.Drawing.Point(31, 722);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(278, 79);
+            this.button5.Size = new System.Drawing.Size(247, 79);
             this.button5.TabIndex = 5;
             this.button5.Text = "   Salida";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,7 +193,7 @@ namespace floridapp
             this.btnReunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReunion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReunion.ForeColor = System.Drawing.Color.White;
-            this.btnReunion.Image = global::floridapp.Properties.Resources.reunion__1_;
+            this.btnReunion.Image = global::floridapp.Properties.Resources.CALENDIARUI;
             this.btnReunion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReunion.Location = new System.Drawing.Point(31, 263);
             this.btnReunion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

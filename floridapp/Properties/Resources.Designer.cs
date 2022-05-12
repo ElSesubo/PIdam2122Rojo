@@ -133,6 +133,26 @@ namespace floridapp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CALENDIARUI {
+            get {
+                object obj = ResourceManager.GetObject("CALENDIARUI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estudiantes_214533102 {
+            get {
+                object obj = ResourceManager.GetObject("estudiantes_214533102", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap floridapng {
             get {
                 object obj = ResourceManager.GetObject("floridapng", resourceCulture);
@@ -183,6 +203,16 @@ namespace floridapp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pizzeria_14 {
+            get {
+                object obj = ResourceManager.GetObject("pizzeria_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Receta_paella_Valenciana {
             get {
                 object obj = ResourceManager.GetObject("Receta-paella-Valenciana", resourceCulture);
@@ -206,6 +236,16 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap reunion__1_ {
             get {
                 object obj = ResourceManager.GetObject("reunion (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SALIDA {
+            get {
+                object obj = ResourceManager.GetObject("SALIDA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
