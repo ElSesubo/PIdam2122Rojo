@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace floridapp
 {
-    public partial class accesoAdministrador : Form
+    public partial class accesoBiblioteca : Form
     {
-        public accesoAdministrador()
+        public accesoBiblioteca()
         {
             InitializeComponent();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
