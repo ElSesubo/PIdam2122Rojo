@@ -77,3 +77,5 @@ C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFrame
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources

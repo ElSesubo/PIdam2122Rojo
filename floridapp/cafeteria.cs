@@ -13,6 +13,7 @@ namespace floridapp
         private int id;
         private int numero_mesa;
         private DateTime hora;
+        private bool ocupado;
         private usuario user;
 
         public cafeteria(int id ,int numero_mesa, DateTime hora)
@@ -22,6 +23,11 @@ namespace floridapp
             this.hora = hora;
         }
 
+        public cafeteria(int id, bool ocupado)
+        {
+            this.id = id;
+            this.ocupado = ocupado;
+        }
         public cafeteria()
         {
 
@@ -30,45 +36,67 @@ namespace floridapp
         public int Numero_mesa { get => numero_mesa; set => numero_mesa = value; }
         public DateTime Hora { get => hora; set => hora = value; }
         public int Id { get => id; set=>id=value; }
+        public bool Ocupado { get=> ocupado; set=>ocupado=value; }
 
         public static void InsertarReserva(DateTime reserva, int mesa, usuario use)
         {
             string consulta = "";
             consulta = String.Format("INSERT INTO reservar_mesa_cafeteria (hora_reserva, num_mesa, id_user) VALUES " +
-                    "('{0}','{1}','{2}')", reserva, mesa, use.Correo);
-            string consulta2 = "";
-            consulta2 = String.Format("UPDATE mesa_cafeteria set num='{0}', reservado=1;", mesa);
-            if (ComprobarReserva(reserva, mesa))
+                    "('{0}','{1}','{2}')", reserva, mesa, use.Nif);
+            if (ComprobarReserva(mesa))
             {
                 MessageBox.Show("Ya esta reservada");
             }
             else
             {
+                ActualizarMesaR(mesa);
                 MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
                 comando.ExecuteReader();
+
             }
         }
 
-        public static void EliminarReserva(cafeteria cafe)
+        public static void EliminarReserva(cafeteria cafe,int mesa)
         {
             string consulta = "";
             consulta = String.Format("DELETE FROM reserva_mesa_cafeteria WHERE id = '{0}'", cafe.Id);
+            ActualizarMesaV(mesa);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.ExecuteReader();
         }
-        public static bool ComprobarReserva(DateTime reservaa, int mesa)
+
+        public static List<cafeteria> ListaMesaCocina()
+        {
+            List<cafeteria> lista = new List<cafeteria>();
+            string consulta = "";
+            consulta = String.Format("SELECT num, reservado FROM mesa_cafeteria where reservado=1;");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    cafeteria cafe = new cafeteria(reader.GetInt16(0), reader.GetBoolean(1));
+                    lista.Add(cafe);
+                }
+            }
+            reader.Close();
+            return lista;
+        }
+        public static bool ComprobarReserva(int mesa)
         {
             string consulta = "";
-            consulta = String.Format("SELECT hora_reserva, num_mesa FROM reservar_mesa_cafeteria;");
+            consulta = String.Format("SELECT num, reservado FROM mesa_cafeteria;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                if (reader.GetDateTime(0) == reservaa && reader.GetInt16(1)==mesa)
+                if (reader.GetInt16(0) == mesa && reader.GetBoolean(1)==true)
                 {
                     return true;
                 }
             }
+            reader.Close();
             return false;
         }
 
@@ -76,7 +104,7 @@ namespace floridapp
         {
             List<cafeteria> lista = new List<cafeteria>();
             string consulta = "";
-             consulta = String.Format("SELECT id, num_mesa, hora_reserva FROM reservar_mesa_cafeteria WHERE id_user = '{0}'",use.Correo);
+             consulta = String.Format("SELECT id, num_mesa, hora_reserva FROM reservar_mesa_cafeteria WHERE id_user = '{0}'",use.Nif);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
@@ -89,6 +117,22 @@ namespace floridapp
                 }
             }
             return lista;
+        }
+
+        public static void ActualizarMesaR(int mesa)
+        {
+            string consulta2 = "";
+            consulta2 = String.Format("UPDATE mesa_cafeteria set num='{0}', reservado=1;", mesa);
+            MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
+            comando2.ExecuteReader();
+        }
+
+        public static void ActualizarMesaV(int mesa)
+        {
+            string consulta2 = "";
+            consulta2 = String.Format("UPDATE mesa_cafeteria set num='{0}', reservado=0;", mesa);
+            MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
+            comando2.ExecuteReader();
         }
     }
 }

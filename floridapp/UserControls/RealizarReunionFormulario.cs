@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace floridapp
+namespace floridapp.UserControls
 {
-    public partial class Reunion : UserControl
+    public partial class RealizarReunionFormulario : UserControl
     {
-        public Reunion()
+        public RealizarReunionFormulario()
         {
             InitializeComponent();
         }
 
-        private void Reunion_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RealizarReunionFormulario_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
