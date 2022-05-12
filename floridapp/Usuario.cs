@@ -64,40 +64,40 @@ namespace floridapp
         public bool Cocina { get => cocina; set => cocina = value; }
         public bool Biblioteca { get => biblioteca; set => biblioteca = value; }
 
-        static private usuario tipoUsuario(string mail)
+        static private List<usuario> tipoUsuario(string mail)
         {
-            usuario user=new usuario();
-            string search = string.Format("SELECT profesor,alumno,admi,cocina,biblioteca FROM usuario where correo='{0}';",mail);
+            List<usuario> us=new List<usuario>();
+            string search = string.Format("SELECT profesor,alumno,administrador,cocina,biblioteca FROM usuario where correo='{0}';",mail);
             MySqlCommand comando = new MySqlCommand(search, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                user = new usuario(reader.GetBoolean(0), reader.GetBoolean(1), reader.GetBoolean(2), reader.GetBoolean(3), reader.GetBoolean(4));
+                 us.Add(new usuario(reader.GetBoolean(0), reader.GetBoolean(1), reader.GetBoolean(2), reader.GetBoolean(3), reader.GetBoolean(4)));
             }
             reader.Close();
-            return user;
+            return us;
         }
 
         static public int VerifyUser(string mail, string password)
         {
-            usuario user = tipoUsuario(mail);
+            List<usuario> user = tipoUsuario(mail);
             int tipo=0;
             string consulta="";
-            if (user.Profesor)
+            if (user[0].Profesor)
             {
                 tipo = 1;
-            }else if (user.Alumno)
+            }else if (user[0].Alumno)
             {
                 tipo = 2;
             }
-            else if (user.Admi)
+            else if (user[0].Admi)
             {
                 tipo = 3;
             }
-            else if (user.Cocina)
+            else if (user[0].Cocina)
             {
                 tipo = 4;
-            }else if (user.Biblioteca)
+            }else if (user[0].Biblioteca)
             {
                 tipo=5;
             }
@@ -108,7 +108,7 @@ namespace floridapp
             switch (tipo)
             {
                 case 1:
-                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and profesor=true", mail);
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correo='{0}' and profesor=true", mail);
                     MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())
@@ -123,7 +123,7 @@ namespace floridapp
                     break;
                     
                 case 2:
-                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and alumno=true", mail);
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correo='{0}' and alumno=true", mail);
                     MySqlCommand comando1 = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader1 = comando1.ExecuteReader();
                     while (reader1.Read())
@@ -137,7 +137,7 @@ namespace floridapp
                     comando1.ExecuteNonQuery();
                     break;
                 case 3:
-                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and admistrador=true", mail);
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correo='{0}' and administrador=true", mail);
                     MySqlCommand comando2 = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader2 = comando2.ExecuteReader();
                     while (reader2.Read())
@@ -151,7 +151,7 @@ namespace floridapp
                     comando2.ExecuteNonQuery();
                     break;
                 case 4:
-                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and cocina=true", mail);
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correo='{0}' and cocina=true", mail);
                     MySqlCommand comando4 = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader4 = comando4.ExecuteReader();
                     while (reader4.Read())
@@ -166,7 +166,7 @@ namespace floridapp
                     break;
                     
                 case 5:
-                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correro='{0}' and biblioteca=true", mail);
+                    consulta = string.Format("SELECT correo,contraseña FROM usuario WHERE correo='{0}' and biblioteca=true", mail);
                     MySqlCommand comando3 = new MySqlCommand(consulta, conexion.Conexion);
                     MySqlDataReader reader3 = comando3.ExecuteReader();
                     while (reader3.Read())
@@ -186,22 +186,37 @@ namespace floridapp
             return 0;
         }
 
-        static public bool UserExiste(string mail)
+        static public bool MailExiste(string mail)
         {
             string consulta = "";
             consulta = string.Format("SELECT correo FROM usuario WHERE correo = '{0}'", mail);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.GetString(0) == mail)
+            if (reader.HasRows)
             {
+                reader.Close();
                 return true;
             }
             else
             {
+                reader.Close();
                 return false;
             }
         }
 
+        public static string BuscarNIF(string mail)
+        {
+            string nif = "";
+            string consulta=string.Format("Select nif from usuario where correo='{0}';",mail);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                nif= reader.GetString(0);
+            }
+            reader.Close();
+            return nif;
+        }
 
     }
 }

@@ -27,30 +27,45 @@ namespace floridapp
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                int tipologin = usuario.VerifyUser(txtCorreo.Text, txtContraseña.Text);
-                switch (tipologin)
+                if (usuario.MailExiste(txtCorreo.Text))
                 {
-                    case 1:
-                        MessageBox.Show("Login profesor.");
-                        break;
-                    case 2:
-                        inicio.Show();
-                        break;
-                    case 3:
-                        MessageBox.Show("Login del administrador");
-                        break;
-                    case 4:
-                        MessageBox.Show("Login cafeteria,");
-                        break;
-                    case 5:
-                        MessageBox.Show("Login biblioteca,");
-                        break;
-                    default:
-                        MessageBox.Show("Error al iniciar sesion");
-                        break;
+                    int tipologin = usuario.VerifyUser(txtCorreo.Text, txtContraseña.Text);
+                    switch (tipologin)
+                    {
+                        case 1:
+                            MessageBox.Show("Login profesor.");
+                            break;
+                        case 2:
+                            inicio.Show();
+                            break;
+                        case 3:
+                            MessageBox.Show("Login del administrador");
+                            break;
+                        case 4:
+                            MessageBox.Show("Login cafeteria,");
+                            break;
+                        case 5:
+                            MessageBox.Show("Login biblioteca,");
+                            break;
+                        default:
+                            MessageBox.Show("Error al iniciar sesion");
+                            break;
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("No existe");
+                }
+
                 conexion.CerrarConexion();
-            }
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    string nif = usuario.BuscarNIF(txtCorreo.Text);
+                    MessageBox.Show(nif);
+                    conexion.CerrarConexion();
+                }
+                }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
