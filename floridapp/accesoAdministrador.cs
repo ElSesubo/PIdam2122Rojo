@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace floridapp.UserControls
+namespace floridapp
 {
-    public partial class RealizarFacturaCafeteria : UserControl
+    public partial class accesoAdministrador : Form
     {
-        public RealizarFacturaCafeteria()
+        public accesoAdministrador()
         {
             InitializeComponent();
         }
