@@ -35,6 +35,7 @@ namespace floridapp
                 if (usuario.MailExiste(txtCorreo.Text))
                 {
                     int tipologin = usuario.VerifyUser(txtCorreo.Text, txtContraseña.Text);
+                    conexion.CerrarConexion();
                     switch (tipologin)
                     {
                         case 1:
@@ -65,15 +66,7 @@ namespace floridapp
                     MessageBox.Show("No existe");
                 }
 
-                conexion.CerrarConexion();
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    string nif = usuario.BuscarNIF(txtCorreo.Text);
-                    MessageBox.Show(nif);
-                    conexion.CerrarConexion();
-                }
-                }
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

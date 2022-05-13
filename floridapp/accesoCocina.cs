@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace floridapp
 {
@@ -24,12 +25,23 @@ namespace floridapp
 
         private void accesoCocina_Load(object sender, EventArgs e)
         {
+
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
                 dtgvUsuarios.DataSource = cafeteria.ListaMesaCocina();
                 conexion.CerrarConexion();
             }
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
