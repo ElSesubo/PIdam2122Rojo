@@ -21,5 +21,15 @@ namespace floridapp
         {
 
         }
+
+        private void accesoCocina_Load(object sender, EventArgs e)
+        {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                dtgvUsuarios.DataSource = cafeteria.ListaMesaCocina();
+                conexion.CerrarConexion();
+            }
+        }
     }
 }

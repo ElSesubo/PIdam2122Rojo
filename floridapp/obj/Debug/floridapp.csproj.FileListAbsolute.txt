@@ -82,3 +82,43 @@ C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedido.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Memory.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
