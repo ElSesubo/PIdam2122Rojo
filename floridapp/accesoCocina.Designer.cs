@@ -53,10 +53,6 @@ namespace floridapp
 
             this.Numero_de_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ocupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-<<<<<<< HEAD
-=======
-            
->>>>>>> ab17f358d89890e4553bbbc770d93a436a19ecb6
 
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();

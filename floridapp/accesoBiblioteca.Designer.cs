@@ -33,7 +33,6 @@ namespace floridapp
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -62,6 +61,7 @@ namespace floridapp
             this.btnMostrar.TabIndex = 32;
             this.btnMostrar.Text = "Mostrar";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnEliminar
             // 
@@ -72,6 +72,7 @@ namespace floridapp
             this.btnEliminar.TabIndex = 31;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -82,6 +83,7 @@ namespace floridapp
             this.btnEditar.TabIndex = 30;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBuscar
             // 
@@ -92,16 +94,7 @@ namespace floridapp
             this.btnBuscar.TabIndex = 29;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnInsertar
-            // 
-            this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(851, 326);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(81, 36);
-            this.btnInsertar.TabIndex = 28;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pnlUsuario
             // 
@@ -235,16 +228,16 @@ namespace floridapp
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(73, 39);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(75, 19);
+            this.lblEmail.Size = new System.Drawing.Size(140, 19);
             this.lblEmail.TabIndex = 26;
-            this.lblEmail.Text = "Reservas";
+            this.lblEmail.Text = "Reservas Peceras";
             // 
             // dtgvReservas
             // 
             this.dtgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvReservas.Location = new System.Drawing.Point(77, 63);
             this.dtgvReservas.Name = "dtgvReservas";
-            this.dtgvReservas.Size = new System.Drawing.Size(678, 362);
+            this.dtgvReservas.Size = new System.Drawing.Size(674, 361);
             this.dtgvReservas.TabIndex = 24;
             // 
             // button5
@@ -255,7 +248,7 @@ namespace floridapp
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::floridapp.Properties.Resources.SALIDA;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 440);
+            this.button5.Location = new System.Drawing.Point(12, 446);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(247, 79);
@@ -274,7 +267,6 @@ namespace floridapp
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.pnlUsuario);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.button5);
@@ -298,7 +290,6 @@ namespace floridapp
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Panel pnlUsuario;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
