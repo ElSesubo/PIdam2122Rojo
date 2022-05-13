@@ -19,7 +19,7 @@ namespace floridapp
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (conexion.Conexion != null)
+           /* if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
                 dtgvReservas.DataSource = usuario.BuscarUsuario(txtNif.Text);
@@ -28,7 +28,7 @@ namespace floridapp
             else
             {
                 MessageBox.Show("No existe conexión a la Base de Datos");
-            }
+            }*/
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

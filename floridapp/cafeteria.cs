@@ -154,7 +154,7 @@ namespace floridapp
         public static void ActualizarMesaV(int mesa)
         {
             string consulta2 = "";
-            consulta2 = String.Format("UPDATE mesa_cafeteria set num='{0}', reservado=0;", mesa);
+            consulta2 = String.Format("UPDATE mesa_cafeteria set reservado=0 where num='{0}';", mesa);
             MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
             comando2.ExecuteReader();
         }
