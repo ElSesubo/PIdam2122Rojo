@@ -52,7 +52,14 @@ namespace floridapp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (usuario.Tipo == 2)
+            {
+                btnListaMod.Hide();
+            }
+            else
+            {
+                btnListaMod.Show();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -61,6 +68,11 @@ namespace floridapp
         }
 
         private void panelVista_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

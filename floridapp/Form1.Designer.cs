@@ -30,24 +30,28 @@ namespace floridapp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelVista = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnNews = new System.Windows.Forms.Button();
             this.btnBiblioteca = new System.Windows.Forms.Button();
             this.btnCafeteria = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReunion = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelVista = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnListaMod = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel1.Controls.Add(this.btnListaMod);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnNews);
@@ -61,48 +65,6 @@ namespace floridapp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 804);
             this.panel1.TabIndex = 0;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(84, 201);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(108, 23);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "FLORIDAPP";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(278, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1108, 123);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(469, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "INICIO";
-            // 
-            // panelVista
-            // 
-            this.panelVista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelVista.ForeColor = System.Drawing.Color.Black;
-            this.panelVista.Location = new System.Drawing.Point(278, 0);
-            this.panelVista.Name = "panelVista";
-            this.panelVista.Size = new System.Drawing.Size(1108, 804);
-            this.panelVista.TabIndex = 5;
-            this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
             // 
             // button5
             // 
@@ -121,6 +83,17 @@ namespace floridapp
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoEllipsis = true;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(68, 201);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(93, 28);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "FLORID";
             // 
             // btnNews
             // 
@@ -205,9 +178,71 @@ namespace floridapp
             this.btnReunion.UseVisualStyleBackColor = true;
             this.btnReunion.Click += new System.EventHandler(this.btnReunion_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(278, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1108, 123);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(469, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 70);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "INICIO";
+            // 
+            // panelVista
+            // 
+            this.panelVista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVista.ForeColor = System.Drawing.Color.Black;
+            this.panelVista.Location = new System.Drawing.Point(278, 0);
+            this.panelVista.Name = "panelVista";
+            this.panelVista.Size = new System.Drawing.Size(1108, 804);
+            this.panelVista.TabIndex = 5;
+            this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoEllipsis = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(155, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "APP";
+            // 
+            // btnListaMod
+            // 
+            this.btnListaMod.FlatAppearance.BorderSize = 0;
+            this.btnListaMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaMod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaMod.ForeColor = System.Drawing.Color.White;
+            this.btnListaMod.Image = global::floridapp.Properties.Resources.News__1___1_;
+            this.btnListaMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaMod.Location = new System.Drawing.Point(31, 582);
+            this.btnListaMod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnListaMod.Name = "btnListaMod";
+            this.btnListaMod.Size = new System.Drawing.Size(247, 79);
+            this.btnListaMod.TabIndex = 7;
+            this.btnListaMod.Text = "   Lista grados";
+            this.btnListaMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListaMod.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 804);
             this.ControlBox = false;
@@ -224,9 +259,9 @@ namespace floridapp
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,6 +279,8 @@ namespace floridapp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelVista;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnListaMod;
     }
 }
 

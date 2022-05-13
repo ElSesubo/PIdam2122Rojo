@@ -82,3 +82,10 @@ C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedido.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources

@@ -22,6 +22,8 @@ namespace floridapp
         private bool admi;
         private bool cocina;
         private bool biblioteca;
+        private static string email;
+        private static int tipo;
 
         public usuario(string nif, string correo, string contraseña, string nombre, string apellido, int tel, bool profesor, bool alumno, bool admi, bool cocina, bool biblioteca)
         {
@@ -63,6 +65,8 @@ namespace floridapp
         public bool Admi { get => admi; set => admi = value; }
         public bool Cocina { get => cocina; set => cocina = value; }
         public bool Biblioteca { get => biblioteca; set => biblioteca = value; }
+        public static string Email { get => email; set => email = value; }
+        public static int Tipo { get => tipo; set => tipo = value; }
 
         static private List<usuario> tipoUsuario(string mail)
         {
