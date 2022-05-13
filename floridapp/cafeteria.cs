@@ -12,20 +12,20 @@ namespace floridapp
     {
         private int id;
         private int numero_mesa;
-        private DateTime hora;
+        private TimeSpan hora;
         private bool ocupado;
         private usuario user;
 
-        public cafeteria(int id ,int numero_mesa, DateTime hora)
+        public cafeteria(int id ,int numero_mesa, TimeSpan hora)
         {
             this.id = id;
             this.numero_mesa = numero_mesa;
             this.hora = hora;
         }
 
-        public cafeteria(int id, bool ocupado)
+        public cafeteria(int numero_mesa, bool ocupado)
         {
-            this.id = id;
+            this.numero_mesa = numero_mesa;
             this.ocupado = ocupado;
         }
         public cafeteria()
@@ -34,11 +34,11 @@ namespace floridapp
         }
 
         public int Numero_mesa { get => numero_mesa; set => numero_mesa = value; }
-        public DateTime Hora { get => hora; set => hora = value; }
+        public TimeSpan Hora { get => hora; set => hora = value; }
         public int Id { get => id; set=>id=value; }
         public bool Ocupado { get=> ocupado; set=>ocupado=value; }
 
-        public static void InsertarReserva(DateTime reserva, int mesa, usuario use)
+        public static void InsertarReserva(TimeSpan reserva, int mesa, usuario use)
         {
             string consulta = "";
             consulta = String.Format("INSERT INTO reservar_mesa_cafeteria (hora_reserva, num_mesa, id_user) VALUES " +
@@ -112,7 +112,7 @@ namespace floridapp
                 while (reader.Read())
                 {
                     cafeteria cafe = new cafeteria(reader.GetInt16(0), reader.GetInt16(1),
-                        reader.GetDateTime(2));
+                        reader.GetTimeSpan(2));
                     lista.Add(cafe);
                 }
             }
