@@ -218,5 +218,83 @@ namespace floridapp
             return nif;
         }
 
+        public int AgregarUsuario(usuario usu)
+        {
+            int retorno;
+            string consulta = String.Format("INSERT INTO usuario (nif,correo,contraseña,nombre,apellido,tel,profesor,administrador,cocina,biblioteca,alumno) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", usu.nif, usu.correo, usu.contraseña, usu.nombre, 
+                usu.apellido, usu.tel, usu.profesor, usu.admi, usu.cocina, usu.biblioteca, usu.alumno);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
+
+        public int ActualizaUsuario(usuario usu)
+        {
+            int retorno;
+            string consulta = string.Format("UPDATE usuarios SET correo='{0}',contraseña='{1}',nombre='{2}',apellido='{3}',tel='{4}',profesor={5}," +
+                "administrador='{6}',cocina='{7}',biblioteca='{8}',alumno='{9}'  WHERE nif={10}", usu.correo, usu.contraseña, usu.nombre, usu.apellido, usu.tel,
+                usu.profesor, usu.admi, usu.cocina, usu.biblioteca, usu.alumno, usu.nif);
+
+            MessageBox.Show(consulta);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+        public static List<usuario> BuscarUsuario(string consulta)
+        {
+            List<usuario> lista = new List<usuario>();
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows) 
+            {
+                while (reader.Read())
+                {
+                    usuario user = new usuario(reader.GetString(0), reader.GetString(1), reader.GetString(2),
+                        reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetBoolean(6),
+                        reader.GetBoolean(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetBoolean(10));
+                    lista.Add(user);
+                }
+            }
+            return lista;
+        }
+
+        public static usuario ObtenerUsuario(string nif)
+        {
+            usuario usu = new usuario();
+            string consulta = string.Format("SELECT * FROM usuario WHERE nif={0}", nif);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                usu.nif = reader.GetString(0);
+                usu.correo = reader.GetString(1);
+                usu.contraseña = reader.GetString(2);
+                usu.nombre = reader.GetString(3);
+                usu.apellido = reader.GetString(4);
+                usu.tel = reader.GetInt32(5);
+                usu.profesor = reader.GetBoolean(6);
+                usu.admi = reader.GetBoolean(7);
+                usu.cocina = reader.GetBoolean(8);
+                usu.biblioteca = reader.GetBoolean(9);
+                usu.alumno = reader.GetBoolean(10);
+            }
+            return usu;
+        }
+
+        public static int EliminaUsuario(string nif)
+        {
+            int retorno;
+            string consulta = string.Format("DELETE FROM usuario WHERE nif={0}", nif);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace floridapp
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dtgvPedidos = new System.Windows.Forms.DataGridView();
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -37,28 +37,28 @@ namespace floridapp
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtgvUsuarios
+            // dtgvPedidos
             // 
-            this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvUsuarios.Location = new System.Drawing.Point(83, 63);
-            this.dtgvUsuarios.Name = "dtgvUsuarios";
-            this.dtgvUsuarios.Size = new System.Drawing.Size(678, 362);
-            this.dtgvUsuarios.TabIndex = 15;
+            this.dtgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPedidos.Location = new System.Drawing.Point(83, 63);
+            this.dtgvPedidos.Name = "dtgvPedidos";
+            this.dtgvPedidos.Size = new System.Drawing.Size(678, 362);
+            this.dtgvPedidos.TabIndex = 15;
             // 
             // lblEmail
             // 
@@ -138,6 +138,74 @@ namespace floridapp
             this.pnlUsuario.Size = new System.Drawing.Size(490, 224);
             this.pnlUsuario.TabIndex = 18;
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(144, 189);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(104, 25);
+            this.checkBox3.TabIndex = 31;
+            this.checkBox3.Text = "Recogido";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(144, 156);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 21);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Hora Reserva:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(144, 123);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(180, 27);
+            this.textBox2.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(81, 125);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 21);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Mesa:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(144, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(111, 27);
+            this.textBox1.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 21);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Id:";
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -167,63 +235,6 @@ namespace floridapp
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "NIF:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(111, 27);
-            this.textBox1.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 21);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Id:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(144, 123);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 27);
-            this.textBox2.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 21);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Mesa:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(144, 156);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker1.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 21);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Hora Reserva:";
-            // 
             // button5
             // 
             this.button5.FlatAppearance.BorderSize = 0;
@@ -241,17 +252,6 @@ namespace floridapp
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(144, 189);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(104, 25);
-            this.checkBox3.TabIndex = 31;
-            this.checkBox3.Text = "Recogido";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // accesoCocina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,12 +267,12 @@ namespace floridapp
             this.Controls.Add(this.pnlUsuario);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.dtgvUsuarios);
+            this.Controls.Add(this.dtgvPedidos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "accesoCocina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "accesoCocina";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).EndInit();
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
             this.ResumeLayout(false);
@@ -283,7 +283,7 @@ namespace floridapp
         #endregion
 
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dtgvUsuarios;
+        private System.Windows.Forms.DataGridView dtgvPedidos;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnEliminar;

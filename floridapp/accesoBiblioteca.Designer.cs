@@ -35,6 +35,8 @@ namespace floridapp
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -45,12 +47,10 @@ namespace floridapp
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.dtgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dtgvReservas = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.pnlUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvReservas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMostrar
@@ -120,6 +120,28 @@ namespace floridapp
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(490, 257);
             this.pnlUsuario.TabIndex = 27;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(144, 220);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(101, 25);
+            this.checkBox3.TabIndex = 30;
+            this.checkBox3.Text = "Devuelto";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(144, 123);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(84, 25);
+            this.checkBox2.TabIndex = 29;
+            this.checkBox2.Text = "Portatil";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -217,13 +239,13 @@ namespace floridapp
             this.lblEmail.TabIndex = 26;
             this.lblEmail.Text = "Reservas";
             // 
-            // dtgvUsuarios
+            // dtgvReservas
             // 
-            this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvUsuarios.Location = new System.Drawing.Point(77, 63);
-            this.dtgvUsuarios.Name = "dtgvUsuarios";
-            this.dtgvUsuarios.Size = new System.Drawing.Size(678, 362);
-            this.dtgvUsuarios.TabIndex = 24;
+            this.dtgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvReservas.Location = new System.Drawing.Point(77, 63);
+            this.dtgvReservas.Name = "dtgvReservas";
+            this.dtgvReservas.Size = new System.Drawing.Size(678, 362);
+            this.dtgvReservas.TabIndex = 24;
             // 
             // button5
             // 
@@ -242,28 +264,6 @@ namespace floridapp
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(144, 123);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(84, 25);
-            this.checkBox2.TabIndex = 29;
-            this.checkBox2.Text = "Portatil";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(144, 220);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(101, 25);
-            this.checkBox3.TabIndex = 30;
-            this.checkBox3.Text = "Devuelto";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // accesoBiblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,7 +278,7 @@ namespace floridapp
             this.Controls.Add(this.pnlUsuario);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.dtgvUsuarios);
+            this.Controls.Add(this.dtgvReservas);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "accesoBiblioteca";
@@ -286,7 +286,7 @@ namespace floridapp
             this.Text = "accesoBiblioteca";
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvReservas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +311,7 @@ namespace floridapp
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dtgvUsuarios;
+        private System.Windows.Forms.DataGridView dtgvReservas;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
     }
