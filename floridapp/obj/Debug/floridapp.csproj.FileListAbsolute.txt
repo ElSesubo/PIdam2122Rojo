@@ -82,11 +82,9 @@ C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedido.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
-<<<<<<< HEAD
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
-=======
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb

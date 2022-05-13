@@ -25,24 +25,24 @@ namespace floridapp
 
         private void accesoCocina_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
 
 
             Thread.Sleep(2000);
 
-=======
+
             List<cafeteria> cafe = new List<cafeteria>();
->>>>>>> 38ade62b618fca83a45d96c155b660967ce86534
+
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
                 cafe = cafeteria.ListaMesaCocina();
                 conexion.CerrarConexion();
             }
-            dtgvUsuarios.Rows.Clear();
+            dtgvPedidos.Rows.Clear();
             for(int i = 0; i < cafe.Count; i++)
             {
-                dtgvUsuarios.Rows.Add(cafe[i].Numero_mesa, cafe[i].Ocupado);
+                dtgvPedidos.Rows.Add(cafe[i].Numero_mesa, cafe[i].Ocupado);
             }
         }
 

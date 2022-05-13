@@ -176,7 +176,7 @@ namespace floridapp
                         if (conexion.Conexion != null)
                         {
                             conexion.AbrirConexion();
-                            resultado = usuario.EliminaUsuario(idUsuario);
+                            resultado = usuario.EliminaUsuario(nif);
                         }
                         else
                         {
