@@ -25,7 +25,11 @@ namespace floridapp
 
         private void accesoCocina_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            Thread.Sleep(2000);
+>>>>>>> 37ce448a8ea3ff3bee1f8dce08dfac0519bcbe29
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
