@@ -48,6 +48,8 @@ namespace floridapp
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.Numero_de_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ocupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +57,9 @@ namespace floridapp
             // dtgvUsuarios
             // 
             this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Numero_de_mesa,
+            this.Ocupado});
             this.dtgvUsuarios.Location = new System.Drawing.Point(111, 78);
             this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvUsuarios.Name = "dtgvUsuarios";
@@ -272,6 +277,20 @@ namespace floridapp
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // Numero_de_mesa
+            // 
+            this.Numero_de_mesa.HeaderText = "Numero de mesa";
+            this.Numero_de_mesa.MinimumWidth = 6;
+            this.Numero_de_mesa.Name = "Numero_de_mesa";
+            this.Numero_de_mesa.Width = 125;
+            // 
+            // Ocupado
+            // 
+            this.Ocupado.HeaderText = "Ocupado";
+            this.Ocupado.MinimumWidth = 6;
+            this.Ocupado.Name = "Ocupado";
+            this.Ocupado.Width = 125;
+            // 
             // accesoCocina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,5 +342,7 @@ namespace floridapp
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_mesa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ocupado;
     }
 }

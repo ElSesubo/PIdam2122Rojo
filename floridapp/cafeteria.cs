@@ -23,9 +23,9 @@ namespace floridapp
             this.hora = hora;
         }
 
-        public cafeteria(int id, bool ocupado)
+        public cafeteria(int numero_mesa, bool ocupado)
         {
-            this.id = id;
+            this.numero_mesa = numero_mesa;
             this.ocupado = ocupado;
         }
         public cafeteria()

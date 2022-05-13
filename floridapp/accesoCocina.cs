@@ -25,16 +25,17 @@ namespace floridapp
 
         private void accesoCocina_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
-=======
-            Thread.Sleep(2000);
->>>>>>> 37ce448a8ea3ff3bee1f8dce08dfac0519bcbe29
+            List<cafeteria> cafe = new List<cafeteria>();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                dtgvUsuarios.DataSource = cafeteria.ListaMesaCocina();
+                cafe = cafeteria.ListaMesaCocina();
                 conexion.CerrarConexion();
+            }
+            dtgvUsuarios.Rows.Clear();
+            for(int i = 0; i < cafe.Count; i++)
+            {
+                dtgvUsuarios.Rows.Add(cafe[i].Numero_mesa, cafe[i].Ocupado);
             }
         }
 
