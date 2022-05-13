@@ -28,7 +28,7 @@ namespace floridapp
 
 
 
-            Thread.Sleep(2000);
+            
 
 
             List<cafeteria> cafe = new List<cafeteria>();

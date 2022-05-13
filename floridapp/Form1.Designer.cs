@@ -30,6 +30,8 @@ namespace floridapp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnListaMod = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnNews = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@ namespace floridapp
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelVista = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnListaMod = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,6 +65,35 @@ namespace floridapp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 804);
             this.panel1.TabIndex = 0;
+            // 
+            // btnListaMod
+            // 
+            this.btnListaMod.FlatAppearance.BorderSize = 0;
+            this.btnListaMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaMod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaMod.ForeColor = System.Drawing.Color.White;
+            this.btnListaMod.Image = global::floridapp.Properties.Resources.News__1___1_;
+            this.btnListaMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaMod.Location = new System.Drawing.Point(31, 582);
+            this.btnListaMod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnListaMod.Name = "btnListaMod";
+            this.btnListaMod.Size = new System.Drawing.Size(247, 79);
+            this.btnListaMod.TabIndex = 7;
+            this.btnListaMod.Text = "   Lista grados";
+            this.btnListaMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListaMod.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoEllipsis = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(155, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "APP";
             // 
             // button5
             // 
@@ -203,6 +232,7 @@ namespace floridapp
             // 
             // panelVista
             // 
+            this.panelVista.BackColor = System.Drawing.SystemColors.Control;
             this.panelVista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelVista.ForeColor = System.Drawing.Color.Black;
             this.panelVista.Location = new System.Drawing.Point(278, 0);
@@ -210,35 +240,6 @@ namespace floridapp
             this.panelVista.Size = new System.Drawing.Size(1108, 804);
             this.panelVista.TabIndex = 5;
             this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
-            // 
-            // label2
-            // 
-            this.label2.AutoEllipsis = true;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(155, 201);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "APP";
-            // 
-            // btnListaMod
-            // 
-            this.btnListaMod.FlatAppearance.BorderSize = 0;
-            this.btnListaMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaMod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaMod.ForeColor = System.Drawing.Color.White;
-            this.btnListaMod.Image = global::floridapp.Properties.Resources.News__1___1_;
-            this.btnListaMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListaMod.Location = new System.Drawing.Point(31, 582);
-            this.btnListaMod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnListaMod.Name = "btnListaMod";
-            this.btnListaMod.Size = new System.Drawing.Size(247, 79);
-            this.btnListaMod.TabIndex = 7;
-            this.btnListaMod.Text = "   Lista grados";
-            this.btnListaMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnListaMod.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

@@ -29,13 +29,13 @@ namespace floridapp
         private void btnReunion_Click(object sender, EventArgs e)
         {
             Reunion reu = new Reunion();
-            addUserControl(reu);
+            MainControl.showControl(reu, panelVista);
         }
 
         private void btnCafeteria_Click(object sender, EventArgs e)
         {
             Cafeteria caf = new Cafeteria();
-            addUserControl(caf);
+            MainControl.showControl(caf, panelVista);
         }
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
