@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace floridapp
 {
@@ -24,6 +25,7 @@ namespace floridapp
 
         private void accesoCocina_Load(object sender, EventArgs e)
         {
+            Thread.Sleep(2000);
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
