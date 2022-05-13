@@ -38,13 +38,13 @@ namespace floridapp
                     switch (tipologin)
                     {
                         case 1:
-                            MessageBox.Show("Login como profesor.");
                             usuario.Tipo = 1;
+                            MessageBox.Show("Login como profesor.");
                             inicio.Show();
                             break;
                         case 2:
-                            inicio.Show();
                             usuario.Tipo = 2;
+                            inicio.Show();
                             break;
                         case 3:
                             admi.Show();
