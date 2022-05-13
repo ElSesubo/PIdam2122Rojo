@@ -9,7 +9,7 @@ body
 }
 .Integrantes{
 	width: 70%;
-	height: 4400px;
+	height: 4150px;
 	background-color: #EDE8EC;
 	margin:0px auto;
 
@@ -198,11 +198,20 @@ span{
 
 
 h1{
+	font-size: 80px;
+	text-align: center;
+	padding: 50px 50px 50px 50px;
+	color: white;
+	font-weight: bold;
+	font-family: CenturyGothic;
+}
+h2{
   font-size: 39px;  
   text-align: letf; 
   padding-bottom: 20px; 
   color: red;
 }
+
 
 
 h3{
@@ -257,4 +266,7 @@ p{
 @font-face {
   font-family: CenturyGothicN;
   src: url(GOTHIC.TTF);
+}
+.Abajo{
+margin-bottom: 30px;
 }
