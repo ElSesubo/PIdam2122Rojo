@@ -16,5 +16,34 @@ namespace floridapp
         {
             InitializeComponent();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           /* if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                dtgvReservas.DataSource = usuario.BuscarUsuario(txtNif.Text);
+                conexion.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de Datos");
+            }*/
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

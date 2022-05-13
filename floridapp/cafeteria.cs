@@ -28,6 +28,11 @@ namespace floridapp
             this.numero_mesa = numero_mesa;
             this.ocupado = ocupado;
         }
+
+        public cafeteria (int numero_mesa)
+        {
+            this.numero_mesa = numero_mesa;
+        }
         public cafeteria()
         {
 
@@ -119,6 +124,25 @@ namespace floridapp
             return lista;
         }
 
+        public static List<cafeteria> ListaMesa()
+        {
+            List<cafeteria> lista = new List<cafeteria>();
+            string consulta = "";
+            consulta = String.Format("SELECT num FROM mesa_cafeteria;");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    cafeteria cafe = new cafeteria(reader.GetInt16(0));
+                    lista.Add(cafe);
+                }
+            }
+            return lista;
+        }
+
+
         public static void ActualizarMesaR(int mesa)
         {
             string consulta2 = "";
@@ -130,7 +154,7 @@ namespace floridapp
         public static void ActualizarMesaV(int mesa)
         {
             string consulta2 = "";
-            consulta2 = String.Format("UPDATE mesa_cafeteria set num='{0}', reservado=0;", mesa);
+            consulta2 = String.Format("UPDATE mesa_cafeteria set reservado=0 where num='{0}';", mesa);
             MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
             comando2.ExecuteReader();
         }

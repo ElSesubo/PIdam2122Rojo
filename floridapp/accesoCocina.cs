@@ -26,24 +26,8 @@ namespace floridapp
         private void accesoCocina_Load(object sender, EventArgs e)
         {
 
+            Cargar();
 
-
-            Thread.Sleep(2000);
-
-
-            List<cafeteria> cafe = new List<cafeteria>();
-
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                cafe = cafeteria.ListaMesaCocina();
-                conexion.CerrarConexion();
-            }
-            dtgvPedidos.Rows.Clear();
-            for(int i = 0; i < cafe.Count; i++)
-            {
-                dtgvPedidos.Rows.Add(cafe[i].Numero_mesa, cafe[i].Ocupado);
-            }
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -54,6 +38,46 @@ namespace floridapp
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dtgvPedidos.SelectedRows.Count == 1)
+            {
+                int cafe = (Convert.ToInt32(dtgvPedidos.CurrentRow.Cells[0].Value));
+                                        
+                
+
+                DialogResult confirmacion = MessageBox.Show("Vaciar la mesa el registro seleccionado. ¿Continuar?",
+                                                    "Eliminación", MessageBoxButtons.YesNo);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        cafeteria.ActualizarMesaV(cafe);
+                        conexion.CerrarConexion();
+                    }
+                    Cargar();
+                }
+            }
+        }
+        private void Cargar()
+        {
+            List<cafeteria> cafe = new List<cafeteria>();
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                cafe = cafeteria.ListaMesaCocina();
+                conexion.CerrarConexion();
+            }
+            dtgvPedidos.Rows.Clear();
+            for (int i = 0; i < cafe.Count; i++)
+            {
+                dtgvPedidos.Rows.Add(cafe[i].Numero_mesa, cafe[i].Ocupado);
+            }
         }
     }
 }
