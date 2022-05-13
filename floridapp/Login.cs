@@ -13,6 +13,9 @@ namespace floridapp
     public partial class Login : Form
     {
         Form1 inicio = new Form1();
+        accesoAdministrador admi= new accesoAdministrador();
+        accesoBiblioteca biblio= new accesoBiblioteca();
+        accesoCocina cocina= new accesoCocina();
         public Login()
         {
             InitializeComponent();
@@ -24,6 +27,8 @@ namespace floridapp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            usuario.Email = txtCorreo.Text;
+            usuario.Tipo = 0;
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
@@ -33,19 +38,22 @@ namespace floridapp
                     switch (tipologin)
                     {
                         case 1:
-                            MessageBox.Show("Login profesor.");
+                            MessageBox.Show("Login como profesor.");
+                            usuario.Tipo = 1;
+                            inicio.Show();
                             break;
                         case 2:
                             inicio.Show();
+                            usuario.Tipo = 2;
                             break;
                         case 3:
-                            MessageBox.Show("Login del administrador");
+                            admi.Show();
                             break;
                         case 4:
-                            MessageBox.Show("Login cafeteria,");
+                            cocina.Show();
                             break;
                         case 5:
-                            MessageBox.Show("Login biblioteca,");
+                            biblio.Show();
                             break;
                         default:
                             MessageBox.Show("Error al iniciar sesion");
