@@ -12,6 +12,7 @@ namespace floridapp.UserControls
 {
     public partial class Biblio : UserControl
     {
+
         public Biblio()
         {
             InitializeComponent();
@@ -21,5 +22,19 @@ namespace floridapp.UserControls
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (!Form1.Instance.panelV.Controls.ContainsKey("RealizarReservaBiblioteca"))
+            {
+                RealizarReservaBiblioteca rb = new RealizarReservaBiblioteca();
+                rb.Dock = DockStyle.Fill;
+                Form1.Instance.panelV.Controls.Add(rb);
+            }
+            Form1.Instance.panelV.Controls["RealizarReservaBiblioteca"].BringToFront();
+
+        }
+
     }
 }

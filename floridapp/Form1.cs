@@ -13,6 +13,21 @@ namespace floridapp
 {
     public partial class Form1 : Form
     {
+        public static Form1 _instance;
+        public static Form1 Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form1();
+                return _instance;
+            }
+        }
+        public Panel panelV
+        {
+            get { return panelVista; }
+            set { panelVista = value; }
+        }
         public Form1()
         {
             InitializeComponent();
