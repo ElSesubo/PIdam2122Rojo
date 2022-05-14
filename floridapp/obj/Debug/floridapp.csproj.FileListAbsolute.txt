@@ -134,3 +134,4 @@ C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\florida
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
 >>>>>>> fdb72d1cddf0ca5599742bedb0680d2041abedac
 >>>>>>> d8a82ef2114545a185b248037aa8f1e8c77d8550
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources

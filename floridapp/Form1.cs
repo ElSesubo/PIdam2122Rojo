@@ -33,18 +33,22 @@ namespace floridapp
             InitializeComponent();
         }
 
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            panelVista.Controls.Clear();
-            panelVista.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
+        //private void addUserControl(UserControl userControl)
+        //{
+        //    userControl.Dock = DockStyle.Fill;
+        //    panelVista.Controls.Clear();
+        //    panelVista.Controls.Add(userControl);
+        //    userControl.BringToFront();
+        //}
 
         private void btnReunion_Click(object sender, EventArgs e)
         {
             Reunion reu = new Reunion();
-            MainControl.showControl(reu, panelVista);
+            //MainControl.showControl(reu, panelVista);
+            _instance = this;
+            reu.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(reu);
+            reu.BringToFront();
         }
 
         private void btnCafeteria_Click(object sender, EventArgs e)
@@ -71,7 +75,11 @@ namespace floridapp
         private void btnNews_Click(object sender, EventArgs e)
         {
             News nw = new News();
-            addUserControl(nw);
+            //addUserControl(nw);
+            _instance = this;
+            nw.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(nw);
+            nw.BringToFront();
         }
 
         private void Form1_Load(object sender, EventArgs e)

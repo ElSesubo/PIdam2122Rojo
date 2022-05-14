@@ -19,8 +19,15 @@ namespace floridapp.UserControls
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            RealizarReunionFormulario reu = new RealizarReunionFormulario();
-            addUserControl(reu);
+            //RealizarReunionFormulario reu = new RealizarReunionFormulario();
+            //addUserControl(reu);
+            if (!Form1.Instance.panelV.Controls.ContainsKey("RealizarReunionFormulario"))
+            {
+                RealizarReunionFormulario ruf = new RealizarReunionFormulario();
+                ruf.Dock = DockStyle.Fill;
+                Form1.Instance.panelV.Controls.Add(ruf);
+            }
+            Form1.Instance.panelV.Controls["RealizarReunionFormulario"].BringToFront();
         }
 
         private void RealizarReunion_Load(object sender, EventArgs e)
@@ -28,10 +35,10 @@ namespace floridapp.UserControls
 
         }
 
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            userControl.BringToFront();
-        }
+        //private void addUserControl(UserControl userControl)
+        //{
+        //    userControl.Dock = DockStyle.Fill;
+        //    userControl.BringToFront();
+        //}
     }
 }
