@@ -49,14 +49,23 @@ namespace floridapp
 
         private void btnCafeteria_Click(object sender, EventArgs e)
         {
+
             Cafeteria caf = new Cafeteria();
-            MainControl.showControl(caf, panelVista);
+            //MainControl.showControl(caf, panelVista);
+            _instance = this;
+            caf.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(caf);
+            caf.BringToFront();
         }
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
         {
+            _instance = this;
             Biblio bib = new Biblio();
-            addUserControl(bib);
+            //addUserControl(bib);
+            bib.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(bib);
+            bib.BringToFront();
         }
 
         private void btnNews_Click(object sender, EventArgs e)
