@@ -89,7 +89,7 @@ namespace floridapp.UserControls
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(166, 477);
+            this.checkBox1.Location = new System.Drawing.Point(161, 408);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(130, 28);
             this.checkBox1.TabIndex = 9;
@@ -100,7 +100,7 @@ namespace floridapp.UserControls
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(160, 426);
+            this.label4.Location = new System.Drawing.Point(158, 381);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 24);
             this.label4.TabIndex = 10;
@@ -110,7 +110,7 @@ namespace floridapp.UserControls
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(319, 423);
+            this.dateTimePicker1.Location = new System.Drawing.Point(317, 378);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
@@ -120,7 +120,7 @@ namespace floridapp.UserControls
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(319, 368);
+            this.dateTimePicker2.Location = new System.Drawing.Point(318, 344);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
@@ -130,7 +130,7 @@ namespace floridapp.UserControls
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(159, 371);
+            this.label5.Location = new System.Drawing.Point(158, 347);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 24);
             this.label5.TabIndex = 12;
@@ -141,7 +141,7 @@ namespace floridapp.UserControls
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(167, 535);
+            this.button1.Location = new System.Drawing.Point(161, 463);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 41);
             this.button1.TabIndex = 14;
