@@ -171,3 +171,4 @@ C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.Core
 C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
 C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources

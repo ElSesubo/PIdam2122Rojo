@@ -51,12 +51,6 @@ namespace floridapp
             this.lblNombre = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
-
-            this.Numero_de_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ocupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
-
-
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +66,7 @@ namespace floridapp
             this.dtgvPedidos.RowHeadersWidth = 51;
             this.dtgvPedidos.Size = new System.Drawing.Size(904, 446);
             this.dtgvPedidos.TabIndex = 15;
+            this.dtgvPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPedidos_CellContentClick);
             // 
             // Numero_de_mesa
             // 

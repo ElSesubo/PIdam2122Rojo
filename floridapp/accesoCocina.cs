@@ -79,5 +79,10 @@ namespace floridapp
                 dtgvPedidos.Rows.Add(cafe[i].Numero_mesa, cafe[i].Ocupado);
             }
         }
+
+        private void dtgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
