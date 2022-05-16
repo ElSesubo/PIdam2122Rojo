@@ -96,7 +96,6 @@ namespace floridapp
             return lista;
         }
 
-<<<<<<< HEAD
         public static biblioteca ObtenerUsuario(int identificacion)
         {
             biblioteca reg = new biblioteca();
@@ -122,11 +121,12 @@ namespace floridapp
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
-=======
+        }
+
         public static void reservar_portatil()
         {
             string consulta = "INSERT INTO biblioteca";
->>>>>>> 8c34a77afcc7330d70a3ed783fa4afcce60802aa
+
         }
     }
 }
