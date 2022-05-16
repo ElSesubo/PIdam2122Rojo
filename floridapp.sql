@@ -22,6 +22,12 @@ reservado BOOL NOT NULL,
 devuelto BOOL NOT NULL,
 PRIMARY KEY (id));
 
+CREATE TABLE pecera(
+id INT NOT NULL AUTO_INCREMENT,
+reservado BOOL NOT NULL,
+libre BOOL NOT NULL,
+PRIMARY KEY(id));
+
 CREATE TABLE pedido(
 id INT NOT NULL AUTO_INCREMENT,
 llevar BOOL NOT NULL,
@@ -31,11 +37,6 @@ recogido BOOL NOT NULL,
 preparado BOOL NOT NULL,
 PRIMARY KEY(id),
 FOREIGN KEY (nifusu) REFERENCES usuario(nif) ON DELETE CASCADE ON UPDATE CASCADE);
-
-CREATE TABLE pecera(
-id INT NOT NULL AUTO_INCREMENT,
-reservado BOOL NOT NULL,
-PRIMARY KEY(id));
 
 CREATE TABLE ciclo(
 id INT NOT NULL AUTO_INCREMENT,
@@ -53,21 +54,15 @@ num INT NOT NULL AUTO_INCREMENT,
 reservado BOOL NOT NULL,
 PRIMARY KEY (num));
 
-CREATE TABLE reserva_portatil(
+CREATE TABLE reserva_biblioteca(
 id INT NOT NULL AUTO_INCREMENT,
-hora_reserva TIME NOT NULL,
-id_portatil INT NOT NULL,
+dia_hora_reserva DATETIME NOT NULL,
+id_portatil INT,
+id_pecera INT,
 id_user VARCHAR(9) NOT NULL,
+dia_hora_devolucion DATETIME,
 PRIMARY KEY(id),
 FOREIGN KEY (id_portatil) REFERENCES portatil(id),
-FOREIGN KEY (id_user) REFERENCES usuario(nif));
-
-CREATE TABLE reserva_pecera(
-id INT NOT NULL AUTO_INCREMENT,
-hora_reserva TIME NOT NULL,
-id_pecera INT NOT NULL,
-id_user VARCHAR(9) NOT NULL,
-PRIMARY KEY (id),
 FOREIGN KEY (id_pecera) REFERENCES pecera(id),
 FOREIGN KEY (id_user) REFERENCES usuario(nif));
 
