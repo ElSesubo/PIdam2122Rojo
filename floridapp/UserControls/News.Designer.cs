@@ -46,7 +46,7 @@ namespace floridapp.UserControls
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 41);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Realiza la tuya propia";
+            this.button1.Text = "Más noticias";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -106,6 +106,7 @@ namespace floridapp.UserControls
             this.Controls.Add(this.label1);
             this.Name = "News";
             this.Size = new System.Drawing.Size(1108, 804);
+            this.Load += new System.EventHandler(this.News_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

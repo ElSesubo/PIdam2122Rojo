@@ -15,6 +15,7 @@ namespace floridapp
         public accesoAdministrador()
         {
             InitializeComponent();
+            dtgvUsuarios.ReadOnly = true;
         }
 
         private void accesoAdministrador_Load(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace floridapp
                     usu.Cocina = cbCocina.Checked;
                     usu.Biblioteca = cbBiblioteca.Checked;
 
-                    if (String.IsNullOrEmpty(txtNif.Text)) 
+                    if (!usuario.MailExiste(txtCorreo.Text)) 
                     {
                         resultado = usu.AgregarUsuario(usu);
                     }

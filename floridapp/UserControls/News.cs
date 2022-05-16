@@ -16,5 +16,10 @@ namespace floridapp.UserControls
         {
             InitializeComponent();
         }
+
+        private void News_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,6 +51,12 @@ namespace floridapp
             this.lblNombre = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
+
+            this.Numero_de_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ocupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
+
+
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();
             // 

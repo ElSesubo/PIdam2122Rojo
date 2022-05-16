@@ -49,7 +49,7 @@ namespace floridapp.UserControls
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(161, 462);
+            this.label5.Location = new System.Drawing.Point(163, 392);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 24);
             this.label5.TabIndex = 37;
@@ -59,7 +59,7 @@ namespace floridapp.UserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(161, 358);
+            this.label3.Location = new System.Drawing.Point(161, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 24);
             this.label3.TabIndex = 34;
@@ -70,7 +70,7 @@ namespace floridapp.UserControls
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(165, 537);
+            this.button1.Location = new System.Drawing.Point(167, 450);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 41);
             this.button1.TabIndex = 33;
@@ -103,7 +103,7 @@ namespace floridapp.UserControls
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(165, 311);
+            this.checkBox2.Location = new System.Drawing.Point(165, 297);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(109, 28);
             this.checkBox2.TabIndex = 40;
@@ -114,7 +114,7 @@ namespace floridapp.UserControls
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(323, 459);
+            this.dateTimePicker1.Location = new System.Drawing.Point(320, 392);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
@@ -123,7 +123,7 @@ namespace floridapp.UserControls
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(397, 409);
+            this.numericUpDown1.Location = new System.Drawing.Point(397, 359);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             7,
             0,
@@ -137,7 +137,7 @@ namespace floridapp.UserControls
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(161, 410);
+            this.label4.Location = new System.Drawing.Point(161, 360);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(230, 24);
             this.label4.TabIndex = 43;
@@ -146,7 +146,7 @@ namespace floridapp.UserControls
             // pictureBox1
             // 
             this.pictureBox1.Image = global::floridapp.Properties.Resources.estudiantes_214533102;
-            this.pictureBox1.Location = new System.Drawing.Point(560, 220);
+            this.pictureBox1.Location = new System.Drawing.Point(539, 216);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(531, 658);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +158,7 @@ namespace floridapp.UserControls
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(349, 358);
+            this.comboBox1.Location = new System.Drawing.Point(349, 328);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(282, 29);
             this.comboBox1.TabIndex = 45;
