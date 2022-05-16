@@ -134,6 +134,7 @@ C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\florida
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
 >>>>>>> fdb72d1cddf0ca5599742bedb0680d2041abedac
 >>>>>>> d8a82ef2114545a185b248037aa8f1e8c77d8550
+<<<<<<< HEAD
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
@@ -154,3 +155,42 @@ C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.c
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+=======
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\System.Memory.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+>>>>>>> 79b30e124e3be9aeb6b0bfe165c872221efbc923

@@ -13,41 +13,73 @@ namespace floridapp
 {
     public partial class Form1 : Form
     {
+        public static Form1 _instance;
+        public static Form1 Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form1();
+                return _instance;
+            }
+        }
+        public Panel panelV
+        {
+            get { return panelVista; }
+            set { panelVista = value; }
+        }
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            panelVista.Controls.Clear();
-            panelVista.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
+        //private void addUserControl(UserControl userControl)
+        //{
+        //    userControl.Dock = DockStyle.Fill;
+        //    panelVista.Controls.Clear();
+        //    panelVista.Controls.Add(userControl);
+        //    userControl.BringToFront();
+        //}
 
         private void btnReunion_Click(object sender, EventArgs e)
         {
             Reunion reu = new Reunion();
-            addUserControl(reu);
+            //MainControl.showControl(reu, panelVista);
+            _instance = this;
+            reu.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(reu);
+            reu.BringToFront();
         }
 
         private void btnCafeteria_Click(object sender, EventArgs e)
         {
+
             Cafeteria caf = new Cafeteria();
-            addUserControl(caf);
+            //MainControl.showControl(caf, panelVista);
+            _instance = this;
+            caf.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(caf);
+            caf.BringToFront();
         }
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
         {
+            _instance = this;
             Biblio bib = new Biblio();
-            addUserControl(bib);
+            //addUserControl(bib);
+            bib.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(bib);
+            bib.BringToFront();
         }
 
         private void btnNews_Click(object sender, EventArgs e)
         {
             News nw = new News();
-            addUserControl(nw);
+            //addUserControl(nw);
+            _instance = this;
+            nw.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(nw);
+            nw.BringToFront();
         }
 
         private void Form1_Load(object sender, EventArgs e)

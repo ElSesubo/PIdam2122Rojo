@@ -21,5 +21,23 @@ namespace floridapp.UserControls
         {
 
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<cafeteria> cafe = new List<cafeteria>();
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                cafe = cafeteria.ListaMesa();
+                conexion.CerrarConexion();
+            }
+            
+            for (int i = 0; i < cafe.Count; i++)
+            {
+                comboBox2.Items.Add(cafe[i].Numero_mesa);
+            }
+
+        }
     }
 }
