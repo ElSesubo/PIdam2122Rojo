@@ -134,3 +134,23 @@ C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\florida
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
 >>>>>>> fdb72d1cddf0ca5599742bedb0680d2041abedac
 >>>>>>> d8a82ef2114545a185b248037aa8f1e8c77d8550
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
