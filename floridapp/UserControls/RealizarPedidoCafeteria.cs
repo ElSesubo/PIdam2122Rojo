@@ -19,10 +19,15 @@ namespace floridapp.UserControls
 
         private void RealizarPedidoCafeteria_Load(object sender, EventArgs e)
         {
-
+            Cargar();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cargar()
         {
             List<cafeteria> cafe = new List<cafeteria>();
 
@@ -32,11 +37,45 @@ namespace floridapp.UserControls
                 cafe = cafeteria.ListaMesa();
                 conexion.CerrarConexion();
             }
-            
+            comboBox2.Items.Clear();
             for (int i = 0; i < cafe.Count; i++)
             {
                 comboBox2.Items.Add(cafe[i].Numero_mesa);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(comboBox2.Text);
+            TimeSpan hora =TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
+            usuario user = new usuario();
+            string nif="";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                 nif = usuario.BuscarNIF(usuario.Email);
+                conexion.CerrarConexion();
+            }
+           
+            cafeteria cafes = new cafeteria();
+            
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                cafeteria.InsertarReserva(hora, id, nif);
+                conexion.CerrarConexion();
+            }
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                cafeteria.ActualizarMesaR(int.Parse(comboBox2.SelectedItem.ToString()));
+                conexion.CerrarConexion();
+            }
+            Cargar();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }
