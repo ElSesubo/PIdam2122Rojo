@@ -46,5 +46,10 @@ namespace floridapp
             }
             return lista;
         }
+
+        public static void reservar_portatil()
+        {
+            string consulta = "INSERT INTO biblioteca";
+        }
     }
 }
