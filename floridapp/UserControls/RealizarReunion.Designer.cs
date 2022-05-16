@@ -40,7 +40,7 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(153, 184);
+            this.label1.Location = new System.Drawing.Point(125, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(791, 72);
             this.label1.TabIndex = 1;
@@ -51,7 +51,7 @@ namespace floridapp.UserControls
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(343, 342);
+            this.comboBox1.Location = new System.Drawing.Point(298, 343);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(384, 29);
             this.comboBox1.TabIndex = 2;
@@ -60,7 +60,7 @@ namespace floridapp.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(336, 249);
+            this.label2.Location = new System.Drawing.Point(308, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(394, 19);
             this.label2.TabIndex = 3;
@@ -71,7 +71,7 @@ namespace floridapp.UserControls
             this.btnContinuar.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuar.Location = new System.Drawing.Point(340, 455);
+            this.btnContinuar.Location = new System.Drawing.Point(295, 456);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(390, 41);
             this.btnContinuar.TabIndex = 5;

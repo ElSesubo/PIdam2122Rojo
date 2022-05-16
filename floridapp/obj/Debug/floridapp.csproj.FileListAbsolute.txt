@@ -191,6 +191,14 @@ C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.Core
 C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
 C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+=======
+<<<<<<< HEAD
+>>>>>>> 075ffaa25fde2204823b2d84e69eca2b52e9e3cf
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
 >>>>>>> 79b30e124e3be9aeb6b0bfe165c872221efbc923
 >>>>>>> a6cce9f77a87e9ebe6d0de69dd4d361199c7abc3
+>>>>>>> 8c34a77afcc7330d70a3ed783fa4afcce60802aa
