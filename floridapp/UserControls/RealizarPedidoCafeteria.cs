@@ -20,6 +20,7 @@ namespace floridapp.UserControls
         private void RealizarPedidoCafeteria_Load(object sender, EventArgs e)
         {
             Cargar();
+            
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -27,20 +28,27 @@ namespace floridapp.UserControls
 
         }
 
+
         private void Cargar()
         {
             List<cafeteria> cafe = new List<cafeteria>();
-
+            List<Pedido> pedi = new List<Pedido>();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                cafe = cafeteria.ListaMesa();
+                cafe = cafeteria.ListaMesasDisponibles();
+                pedi = Pedido.ListaMenus();
                 conexion.CerrarConexion();
             }
             comboBox2.Items.Clear();
             for (int i = 0; i < cafe.Count; i++)
             {
                 comboBox2.Items.Add(cafe[i].Numero_mesa);
+            }
+            
+            for (int j = 0; j < pedi.Count; j++)
+            {
+                comboBox1.Items.Add(pedi[j].Nombre_menu);
             }
         }
 
@@ -71,12 +79,54 @@ namespace floridapp.UserControls
                 cafeteria.ActualizarMesaR(int.Parse(comboBox2.SelectedItem.ToString()));
                 conexion.CerrarConexion();
             }
+
+            int id2 = 0;
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                id2 = Pedido.ListarMenus(comboBox1.Text);
+                conexion.CerrarConexion();
+            }
+            
+            bool llevar = checkBox1.Checked;
+            int llevar2= 0;
+            if (llevar)
+            {
+                llevar2 = 1;
+            }
+            else
+            {
+                llevar2 = 0;
+            }
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                Pedido.InsertarReserva(hora, id2, nif, llevar2);
+                conexion.CerrarConexion();
+            }
             Cargar();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            Pedido.BuscarPrecio(comboBox1.Text);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                textBox1.Text = Pedido.BuscarPrecio(comboBox1.Text).ToString();
+                conexion.CerrarConexion();
+            }
+            
         }
     }
 }
