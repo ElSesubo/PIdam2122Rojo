@@ -40,8 +40,12 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(204, 226);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.label1.Location = new System.Drawing.Point(125, 185);
+>>>>>>> d3515cd7bcab80d2b039d23ecca03e0e111a6ee6
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(987, 91);
             this.label1.TabIndex = 1;
@@ -49,6 +53,7 @@ namespace floridapp.UserControls
             // 
             // cmbCiclo
             // 
+<<<<<<< HEAD
             this.cmbCiclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCiclo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCiclo.FormattingEnabled = true;
@@ -59,13 +64,26 @@ namespace floridapp.UserControls
             this.cmbCiclo.TabIndex = 2;
             this.cmbCiclo.Text = "SELECIONE UNA OPCIÓN";
             this.cmbCiclo.SelectedIndexChanged += new System.EventHandler(this.cmbCiclo_SelectedIndexChanged);
+=======
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(298, 343);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(384, 29);
+            this.comboBox1.TabIndex = 2;
+>>>>>>> d3515cd7bcab80d2b039d23ecca03e0e111a6ee6
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(448, 306);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.label2.Location = new System.Drawing.Point(308, 250);
+>>>>>>> d3515cd7bcab80d2b039d23ecca03e0e111a6ee6
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(499, 23);
             this.label2.TabIndex = 3;
@@ -76,8 +94,12 @@ namespace floridapp.UserControls
             this.btnContinuar.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnContinuar.Location = new System.Drawing.Point(453, 560);
             this.btnContinuar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.btnContinuar.Location = new System.Drawing.Point(295, 456);
+>>>>>>> d3515cd7bcab80d2b039d23ecca03e0e111a6ee6
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(520, 50);
             this.btnContinuar.TabIndex = 5;

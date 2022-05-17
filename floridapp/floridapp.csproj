@@ -77,12 +77,25 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainControl.cs" />
+    <Compile Include="Pedido.cs" />
     <Compile Include="profesor.cs" />
     <Compile Include="UserControls\Biblio.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Biblio.Designer.cs">
       <DependentUpon>Biblio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\listaAlumnos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\listaAlumnos.Designer.cs">
+      <DependentUpon>listaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\listaModulos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\listaModulos.Designer.cs">
+      <DependentUpon>listaModulos.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\News.cs">
       <SubType>UserControl</SubType>
@@ -150,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Biblio.resx">
       <DependentUpon>Biblio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\listaAlumnos.resx">
+      <DependentUpon>listaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\listaModulos.resx">
+      <DependentUpon>listaModulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\News.resx">
       <DependentUpon>News.cs</DependentUpon>

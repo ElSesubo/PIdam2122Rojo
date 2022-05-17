@@ -50,8 +50,24 @@ namespace floridapp
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.dgvPedidoMenu = new System.Windows.Forms.DataGridView();
+            this.lblPedidoMenu = new System.Windows.Forms.Label();
+            this.id_menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.llevar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nif = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recogido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preparado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPreparado = new System.Windows.Forms.Button();
+            this.btnEliminarMenu = new System.Windows.Forms.Button();
+            this.btnBuscarMenu = new System.Windows.Forms.Button();
+            this.lblNifMenu = new System.Windows.Forms.Label();
+            this.txtBuscarMenu = new System.Windows.Forms.TextBox();
+            this.btnRestaurar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
             this.pnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvPedidos
@@ -64,7 +80,7 @@ namespace floridapp
             this.dtgvPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvPedidos.Name = "dtgvPedidos";
             this.dtgvPedidos.RowHeadersWidth = 51;
-            this.dtgvPedidos.Size = new System.Drawing.Size(904, 446);
+            this.dtgvPedidos.Size = new System.Drawing.Size(930, 183);
             this.dtgvPedidos.TabIndex = 15;
             this.dtgvPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPedidos_CellContentClick);
             // 
@@ -89,9 +105,9 @@ namespace floridapp
             this.lblEmail.Location = new System.Drawing.Point(105, 48);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(87, 23);
+            this.lblEmail.Size = new System.Drawing.Size(146, 23);
             this.lblEmail.TabIndex = 17;
-            this.lblEmail.Text = "Pedidos";
+            this.lblEmail.Text = "Pedidos Mesa";
             // 
             // btnMostrar
             // 
@@ -293,6 +309,153 @@ namespace floridapp
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // dgvPedidoMenu
+            // 
+            this.dgvPedidoMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidoMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_menu,
+            this.llevar,
+            this.nif,
+            this.hora,
+            this.recogido,
+            this.preparado,
+            this.menu});
+            this.dgvPedidoMenu.Location = new System.Drawing.Point(111, 320);
+            this.dgvPedidoMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPedidoMenu.Name = "dgvPedidoMenu";
+            this.dgvPedidoMenu.RowHeadersWidth = 51;
+            this.dgvPedidoMenu.Size = new System.Drawing.Size(930, 183);
+            this.dgvPedidoMenu.TabIndex = 24;
+            this.dgvPedidoMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidoMenu_CellContentClick);
+            // 
+            // lblPedidoMenu
+            // 
+            this.lblPedidoMenu.AutoSize = true;
+            this.lblPedidoMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPedidoMenu.Location = new System.Drawing.Point(107, 293);
+            this.lblPedidoMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPedidoMenu.Name = "lblPedidoMenu";
+            this.lblPedidoMenu.Size = new System.Drawing.Size(148, 23);
+            this.lblPedidoMenu.TabIndex = 25;
+            this.lblPedidoMenu.Text = "Pedidos Menu";
+            // 
+            // id_menu
+            // 
+            this.id_menu.HeaderText = "ID menu";
+            this.id_menu.MinimumWidth = 6;
+            this.id_menu.Name = "id_menu";
+            this.id_menu.Width = 125;
+            // 
+            // llevar
+            // 
+            this.llevar.HeaderText = "Llevar";
+            this.llevar.MinimumWidth = 6;
+            this.llevar.Name = "llevar";
+            this.llevar.Width = 125;
+            // 
+            // nif
+            // 
+            this.nif.HeaderText = "Nif";
+            this.nif.MinimumWidth = 6;
+            this.nif.Name = "nif";
+            this.nif.Width = 125;
+            // 
+            // hora
+            // 
+            this.hora.HeaderText = "Hora";
+            this.hora.MinimumWidth = 6;
+            this.hora.Name = "hora";
+            this.hora.Width = 125;
+            // 
+            // recogido
+            // 
+            this.recogido.HeaderText = "Recogido";
+            this.recogido.MinimumWidth = 6;
+            this.recogido.Name = "recogido";
+            this.recogido.Width = 125;
+            // 
+            // preparado
+            // 
+            this.preparado.HeaderText = "Preparado";
+            this.preparado.MinimumWidth = 6;
+            this.preparado.Name = "preparado";
+            this.preparado.Width = 125;
+            // 
+            // menu
+            // 
+            this.menu.HeaderText = "Menu";
+            this.menu.MinimumWidth = 6;
+            this.menu.Name = "menu";
+            this.menu.Width = 125;
+            // 
+            // btnPreparado
+            // 
+            this.btnPreparado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreparado.Location = new System.Drawing.Point(1132, 425);
+            this.btnPreparado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPreparado.Name = "btnPreparado";
+            this.btnPreparado.Size = new System.Drawing.Size(142, 44);
+            this.btnPreparado.TabIndex = 26;
+            this.btnPreparado.Text = "Preparado";
+            this.btnPreparado.UseVisualStyleBackColor = true;
+            this.btnPreparado.Click += new System.EventHandler(this.btnPreparado_Click);
+            // 
+            // btnEliminarMenu
+            // 
+            this.btnEliminarMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMenu.Location = new System.Drawing.Point(1286, 425);
+            this.btnEliminarMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarMenu.Name = "btnEliminarMenu";
+            this.btnEliminarMenu.Size = new System.Drawing.Size(144, 44);
+            this.btnEliminarMenu.TabIndex = 27;
+            this.btnEliminarMenu.Text = "Recogido";
+            this.btnEliminarMenu.UseVisualStyleBackColor = true;
+            this.btnEliminarMenu.Click += new System.EventHandler(this.btnEliminarMenu_Click);
+            // 
+            // btnBuscarMenu
+            // 
+            this.btnBuscarMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarMenu.Location = new System.Drawing.Point(1299, 485);
+            this.btnBuscarMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarMenu.Name = "btnBuscarMenu";
+            this.btnBuscarMenu.Size = new System.Drawing.Size(100, 44);
+            this.btnBuscarMenu.TabIndex = 29;
+            this.btnBuscarMenu.Text = "Buscar";
+            this.btnBuscarMenu.UseVisualStyleBackColor = true;
+            this.btnBuscarMenu.Click += new System.EventHandler(this.btnBuscarMenu_Click);
+            // 
+            // lblNifMenu
+            // 
+            this.lblNifMenu.AutoSize = true;
+            this.lblNifMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNifMenu.Location = new System.Drawing.Point(1079, 496);
+            this.lblNifMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNifMenu.Name = "lblNifMenu";
+            this.lblNifMenu.Size = new System.Drawing.Size(45, 23);
+            this.lblNifMenu.TabIndex = 30;
+            this.lblNifMenu.Text = "NIF:";
+            // 
+            // txtBuscarMenu
+            // 
+            this.txtBuscarMenu.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarMenu.Location = new System.Drawing.Point(1132, 493);
+            this.txtBuscarMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarMenu.Name = "txtBuscarMenu";
+            this.txtBuscarMenu.Size = new System.Drawing.Size(159, 32);
+            this.txtBuscarMenu.TabIndex = 31;
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestaurar.Location = new System.Drawing.Point(1417, 485);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(116, 44);
+            this.btnRestaurar.TabIndex = 32;
+            this.btnRestaurar.Text = "Restaurar";
+            this.btnRestaurar.UseVisualStyleBackColor = true;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            // 
             // accesoCocina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,6 +463,14 @@ namespace floridapp
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1827, 650);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRestaurar);
+            this.Controls.Add(this.txtBuscarMenu);
+            this.Controls.Add(this.lblNifMenu);
+            this.Controls.Add(this.btnBuscarMenu);
+            this.Controls.Add(this.btnEliminarMenu);
+            this.Controls.Add(this.btnPreparado);
+            this.Controls.Add(this.lblPedidoMenu);
+            this.Controls.Add(this.dgvPedidoMenu);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -318,6 +489,7 @@ namespace floridapp
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).EndInit();
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +518,20 @@ namespace floridapp
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_mesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ocupado;
+        private System.Windows.Forms.DataGridView dgvPedidoMenu;
+        private System.Windows.Forms.Label lblPedidoMenu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_menu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn llevar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nif;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn recogido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preparado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn menu;
+        private System.Windows.Forms.Button btnPreparado;
+        private System.Windows.Forms.Button btnEliminarMenu;
+        private System.Windows.Forms.Button btnBuscarMenu;
+        private System.Windows.Forms.Label lblNifMenu;
+        private System.Windows.Forms.TextBox txtBuscarMenu;
+        private System.Windows.Forms.Button btnRestaurar;
     }
 }
