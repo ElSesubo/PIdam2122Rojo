@@ -33,12 +33,13 @@ namespace floridapp.UserControls
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDia = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbprofesor = new System.Windows.Forms.ComboBox();
             this.cmbHoras = new System.Windows.Forms.ComboBox();
+            this.lblprofesor = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,16 +89,17 @@ namespace floridapp.UserControls
             this.label4.TabIndex = 10;
             this.label4.Text = "Hora Reserva:";
             // 
-            // dateTimePicker2
+            // dtpDia
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(421, 449);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.Size = new System.Drawing.Size(265, 32);
-            this.dateTimePicker2.TabIndex = 13;
+            this.dtpDia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDia.Location = new System.Drawing.Point(421, 449);
+            this.dtpDia.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDia.Name = "dtpDia";
+            this.dtpDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpDia.Size = new System.Drawing.Size(265, 32);
+            this.dtpDia.TabIndex = 13;
+            this.dtpDia.ValueChanged += new System.EventHandler(this.dtpDia_ValueChanged);
             // 
             // label5
             // 
@@ -122,6 +124,7 @@ namespace floridapp.UserControls
             this.button1.TabIndex = 14;
             this.button1.Text = "Enviar solicitud";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -134,33 +137,45 @@ namespace floridapp.UserControls
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // cmbprofesor
-            // 
-            this.cmbprofesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbprofesor.FormattingEnabled = true;
-            this.cmbprofesor.Location = new System.Drawing.Point(421, 401);
-            this.cmbprofesor.Name = "cmbprofesor";
-            this.cmbprofesor.Size = new System.Drawing.Size(265, 31);
-            this.cmbprofesor.TabIndex = 17;
-            // 
             // cmbHoras
             // 
+            this.cmbHoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHoras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHoras.FormattingEnabled = true;
             this.cmbHoras.Location = new System.Drawing.Point(421, 493);
             this.cmbHoras.Name = "cmbHoras";
             this.cmbHoras.Size = new System.Drawing.Size(265, 31);
             this.cmbHoras.TabIndex = 18;
+            this.cmbHoras.SelectedIndexChanged += new System.EventHandler(this.cmbHoras_SelectedIndexChanged);
+            // 
+            // lblprofesor
+            // 
+            this.lblprofesor.AutoSize = true;
+            this.lblprofesor.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprofesor.Location = new System.Drawing.Point(425, 407);
+            this.lblprofesor.Name = "lblprofesor";
+            this.lblprofesor.Size = new System.Drawing.Size(103, 27);
+            this.lblprofesor.TabIndex = 19;
+            this.lblprofesor.Text = "profesor";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(376, 206);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(189, 24);
+            this.comboBox1.TabIndex = 20;
             // 
             // RealizarReunionFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblprofesor);
             this.Controls.Add(this.cmbHoras);
-            this.Controls.Add(this.cmbprofesor);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtpDia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -182,11 +197,12 @@ namespace floridapp.UserControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpDia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cmbprofesor;
         private System.Windows.Forms.ComboBox cmbHoras;
+        private System.Windows.Forms.Label lblprofesor;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
