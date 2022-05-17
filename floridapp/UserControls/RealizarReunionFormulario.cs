@@ -37,11 +37,11 @@ namespace floridapp.UserControls
 
         private void refresh()
         {
-
+            List<int> l = obtenerindice();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                cmbHoras.DataSource = /*profesor.Lista_horas_filtro(dtpDia.Value);*/profesor.Lista_horas;
+                cmbHoras.DataSource = profesor.horas_filtradas(l);
                 conexion.CerrarConexion();
             }
 
@@ -51,6 +51,7 @@ namespace floridapp.UserControls
                 comboBox1.DataSource = profesor.filtrar_horas_por_dias(dtpDia.Value);
                 conexion.CerrarConexion();
             }
+
             comboBox2.DataSource = obtenerindice();
 
         }

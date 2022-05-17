@@ -116,6 +116,18 @@ namespace floridapp
         //    return lista;
         //}
 
+        public List<string> horas_filtradas(List<int> ind)
+        {
+            List<string> ho=new List<string>();
+            profesor p=new profesor();
+            ho = p.Lista_horas;
+            for(int i=0;i< ind.Count; i++)
+            {
+                ho.RemoveAt(ind[i]);
+            }
+            return ho;
+        }
+
     }
 
 
