@@ -26,23 +26,34 @@ namespace floridapp.UserControls
         private void RealizarReunionFormulario_Load(object sender, EventArgs e)
         {
             refresh();
-
-
-        }
-
-        private void refresh()
-        {
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
                 lblprofesor.Text = profesor.cargar_profesor_modulos();
                 conexion.CerrarConexion();
             }
-            cmbHoras.DataSource = profesor.Lista_horas;
-            for(int i = 0; i < obtenerindice().Count; i++)
+
+        }
+
+        private void refresh()
+        {
+            List<int> l = obtenerindice();
+            if (conexion.Conexion != null)
             {
-                cmbHoras.Items.Remove(obtenerindice()[i]);
+                conexion.AbrirConexion();
+                cmbHoras.DataSource = profesor.horas_filtradas(l);
+                conexion.CerrarConexion();
             }
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                comboBox1.DataSource = profesor.filtrar_horas_por_dias(dtpDia.Value);
+                conexion.CerrarConexion();
+            }
+
+            comboBox2.DataSource = obtenerindice();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -69,7 +80,7 @@ namespace floridapp.UserControls
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                horas = profesor.indices(dtpDia.Value);
+                horas = profesor.buscar_indice(dtpDia.Value);
                 conexion.CerrarConexion();
             }
             return horas;
@@ -99,6 +110,11 @@ namespace floridapp.UserControls
         }
 
         private void dtpDia_ValueChanged(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             refresh();
         }
