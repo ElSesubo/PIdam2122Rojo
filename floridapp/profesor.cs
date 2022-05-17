@@ -18,7 +18,7 @@ namespace floridapp
            "14:00:00","14:30:00",   "15:00:00","15:30:00",   "16:00:00","16:30:00",   "17:00:00","17:30:00",   "18:00:00","18:30:00",   "19:00:00","19:30:00",   "20:00:00","20:30:00",   "21:00:00","21:30:00",
            "22:00:00","22:30:00",   "23:00:00","23:30:00",   "00:00:00"};
         public string Nif { get => nif; }
-        public List<string> Lista_horas { get => lista_horas; set => lista_horas = value; }
+        public List<string> Lista_horas { get => lista_horas; }
 
         private int buscar_ciclo()
         {
@@ -70,40 +70,51 @@ namespace floridapp
 
         }
 
-        private List<string> filtrar_horas_por_dias(DateTime dia)
+        public List<string> filtrar_horas_por_dias(DateTime dia)
         {
-            TimeSpan a;
+            TimeSpan a = new TimeSpan(0, 0, 0);
             List<string> hora_dia=new List<string>();
-            string consulta = "SELECT * FROM reservar_profesor WHERE dia_reserva=@dia and nif_profesor=@nif_pro;";
+            string consulta = "SELECT hora_reserva FROM reservar_profesor WHERE dia_reserva=@dia and nif_profesor=@nif_pro;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("dia", dia.ToString("yyyy-MM-dd"));
             comando.Parameters.AddWithValue("nif_pro", this.nif);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                a = reader.GetTimeSpan(1);
+                a=reader.GetTimeSpan(0);
                 hora_dia.Add(a.ToString());
             }
             reader.Close();
             return hora_dia;
         }
 
-        public List<int> indices(DateTime dia)
+        public List<int> buscar_indice(DateTime dias)
         {
-            List<int> indices = new List<int>();
-            List<string> hora = filtrar_horas_por_dias(dia);
-            for(int i = 0; i < hora.Count; i++)
+            List<int> num=new List<int>();
+            List<string> fecha = filtrar_horas_por_dias(dias);
+            for(int i = 0; i < fecha.Count; i++)
             {
                 for(int j = 0; j < lista_horas.Count; j++)
                 {
-                    if (hora[i] == this.lista_horas[j])
+                    if (lista_horas[j] == fecha[i])
                     {
-                        indices.Add(j);
+                        num.Add(j);
                     }
                 }
             }
-            return indices;
+            return num;
         }
+
+        //public List<string> Lista_horas_filtro(DateTime dia)
+        //{
+        //    List<int> indice = buscar_indice(dia);
+        //    List<string> lista = Lista_horas;
+        //    for (int x = 0; x < indice.Count; x++)
+        //    {
+        //        lista.RemoveAt(indice[x]);
+        //    }
+        //    return lista;
+        //}
 
     }
 
