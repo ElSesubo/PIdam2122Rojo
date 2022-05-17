@@ -40,12 +40,8 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-
-            this.label1.Location = new System.Drawing.Point(204, 226);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label1.Location = new System.Drawing.Point(125, 185);
-
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(987, 91);
             this.label1.TabIndex = 1;
@@ -53,30 +49,23 @@ namespace floridapp.UserControls
             // 
             // cmbCiclo
             // 
-
+            this.cmbCiclo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCiclo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCiclo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCiclo.FormattingEnabled = true;
-            this.cmbCiclo.Location = new System.Drawing.Point(457, 421);
-            this.cmbCiclo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCiclo.Location = new System.Drawing.Point(296, 400);
+            this.cmbCiclo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCiclo.Name = "cmbCiclo";
             this.cmbCiclo.Size = new System.Drawing.Size(511, 31);
             this.cmbCiclo.TabIndex = 2;
-            this.cmbCiclo.Text = "SELECIONE UNA OPCIÓN";
             this.cmbCiclo.SelectedIndexChanged += new System.EventHandler(this.cmbCiclo_SelectedIndexChanged);
-
-
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.label2.Location = new System.Drawing.Point(448, 306);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-
             this.label2.Location = new System.Drawing.Point(308, 250);
-
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(499, 23);
             this.label2.TabIndex = 3;
@@ -87,12 +76,8 @@ namespace floridapp.UserControls
             this.btnContinuar.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-            this.btnContinuar.Location = new System.Drawing.Point(453, 560);
-            this.btnContinuar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-
             this.btnContinuar.Location = new System.Drawing.Point(295, 456);
-
+            this.btnContinuar.Margin = new System.Windows.Forms.Padding(4);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(520, 50);
             this.btnContinuar.TabIndex = 5;
@@ -108,7 +93,7 @@ namespace floridapp.UserControls
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbCiclo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RealizarReunion";
             this.Size = new System.Drawing.Size(1477, 990);
             this.Load += new System.EventHandler(this.RealizarReunion_Load);

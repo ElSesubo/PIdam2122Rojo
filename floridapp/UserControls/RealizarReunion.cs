@@ -47,7 +47,7 @@ namespace floridapp.UserControls
                 }
                 conexion.CerrarConexion();
             }
-
+            cmbCiclo.SelectedIndex = 0;
 
             
         }

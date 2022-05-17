@@ -76,7 +76,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainControl.cs" />
     <Compile Include="Pedido.cs" />
     <Compile Include="profesor.cs" />
     <Compile Include="UserControls\Biblio.cs">
