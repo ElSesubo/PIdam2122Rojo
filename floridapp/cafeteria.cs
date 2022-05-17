@@ -125,7 +125,7 @@ namespace floridapp
             return lista;
         }
 
-        public static List<cafeteria> ListaMesa()
+        public static List<cafeteria> ListaMesasDisponibles()
         {
             List<cafeteria> lista = new List<cafeteria>();
             string consulta = "";

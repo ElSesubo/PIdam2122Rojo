@@ -51,7 +51,6 @@ namespace floridapp
             this.lblNombre = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.dgvPedidoMenu = new System.Windows.Forms.DataGridView();
-            this.lblPedidoMenu = new System.Windows.Forms.Label();
             this.id_menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.llevar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nif = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +58,7 @@ namespace floridapp
             this.recogido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preparado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblPedidoMenu = new System.Windows.Forms.Label();
             this.btnPreparado = new System.Windows.Forms.Button();
             this.btnEliminarMenu = new System.Windows.Forms.Button();
             this.btnBuscarMenu = new System.Windows.Forms.Button();
@@ -328,17 +328,6 @@ namespace floridapp
             this.dgvPedidoMenu.TabIndex = 24;
             this.dgvPedidoMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidoMenu_CellContentClick);
             // 
-            // lblPedidoMenu
-            // 
-            this.lblPedidoMenu.AutoSize = true;
-            this.lblPedidoMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPedidoMenu.Location = new System.Drawing.Point(107, 293);
-            this.lblPedidoMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPedidoMenu.Name = "lblPedidoMenu";
-            this.lblPedidoMenu.Size = new System.Drawing.Size(148, 23);
-            this.lblPedidoMenu.TabIndex = 25;
-            this.lblPedidoMenu.Text = "Pedidos Menu";
-            // 
             // id_menu
             // 
             this.id_menu.HeaderText = "ID menu";
@@ -387,6 +376,17 @@ namespace floridapp
             this.menu.MinimumWidth = 6;
             this.menu.Name = "menu";
             this.menu.Width = 125;
+            // 
+            // lblPedidoMenu
+            // 
+            this.lblPedidoMenu.AutoSize = true;
+            this.lblPedidoMenu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPedidoMenu.Location = new System.Drawing.Point(107, 293);
+            this.lblPedidoMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPedidoMenu.Name = "lblPedidoMenu";
+            this.lblPedidoMenu.Size = new System.Drawing.Size(148, 23);
+            this.lblPedidoMenu.TabIndex = 25;
+            this.lblPedidoMenu.Text = "Pedidos Menu";
             // 
             // btnPreparado
             // 
@@ -450,7 +450,7 @@ namespace floridapp
             this.btnRestaurar.Location = new System.Drawing.Point(1417, 485);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(116, 44);
+            this.btnRestaurar.Size = new System.Drawing.Size(179, 44);
             this.btnRestaurar.TabIndex = 32;
             this.btnRestaurar.Text = "Restaurar";
             this.btnRestaurar.UseVisualStyleBackColor = true;
