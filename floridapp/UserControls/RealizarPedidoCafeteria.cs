@@ -48,47 +48,43 @@ namespace floridapp.UserControls
             
             for (int j = 0; j < pedi.Count; j++)
             {
-                comboBox1.Items.Add(pedi[j].Nombre_menu);
+                cbMenu.Items.Add(pedi[j].Nombre_menu);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(cbMesa.Text);
-            TimeSpan hora =TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
-            usuario user = new usuario();
-            string nif="";
+            int id = 0;
+            TimeSpan hora = TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
+            string nif = "";
+            id = int.Parse(cbMesa.Text);
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                 nif = usuario.BuscarNIF(usuario.Email);
+                nif = usuario.BuscarNIF(usuario.Email);
                 conexion.CerrarConexion();
             }
-           
-            cafeteria cafes = new cafeteria();
-            
-            if (conexion.Conexion != null)
+            if (cbMesa.SelectedItem != null)
             {
-                conexion.AbrirConexion();
-                cafeteria.InsertarReserva(hora, id, nif);
-                conexion.CerrarConexion();
-            }
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
-                conexion.CerrarConexion();
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    cafeteria.InsertarReserva(hora, id, nif);
+                    conexion.CerrarConexion();
+                }
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
+                    conexion.CerrarConexion();
+                }
             }
 
-            int id2 = 0;
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                id2 = Pedido.ListarMenus(comboBox1.Text);
-                conexion.CerrarConexion();
-            }
             
-            bool llevar = checkBox1.Checked;
+            int id2 = 0;
+
+            
+            bool llevar = cbLlevar.Checked;
             int llevar2= 0;
             if (llevar)
             {
@@ -98,13 +94,23 @@ namespace floridapp.UserControls
             {
                 llevar2 = 0;
             }
-
-            if (conexion.Conexion != null)
+            if (cbMenu.SelectedItem!=null)
             {
-                conexion.AbrirConexion();
-                Pedido.InsertarReserva(hora, id2, nif, llevar2);
-                conexion.CerrarConexion();
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    id2 = Pedido.ListarMenus(cbMenu.Text);
+                    conexion.CerrarConexion();
+                }
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    Pedido.InsertarReserva(hora, id2, nif, llevar2);
+                    conexion.CerrarConexion();
+                }
             }
+
+
             Cargar();
         }
 
@@ -113,10 +119,10 @@ namespace floridapp.UserControls
 
         }
 
-<<<<<<< HEAD
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+
+        private void cbLlevar_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbLlevar.Checked == true)
+            if (cbLlevar.Checked == true)
             {
                 cbMesa.Enabled = false;
             }
@@ -124,22 +130,24 @@ namespace floridapp.UserControls
             {
                 cbMesa.Enabled = true;
             }
-=======
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            Pedido.BuscarPrecio(comboBox1.Text);
+
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            Pedido.BuscarPrecio(cbMenu.Text);
+        }
+
+        private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                textBox1.Text = Pedido.BuscarPrecio(comboBox1.Text).ToString();
+                txtPrecio.Text = Pedido.BuscarPrecio(cbMenu.Text).ToString();
                 conexion.CerrarConexion();
             }
-            
->>>>>>> 9fb43a8f91770989f370329e310afbf57c43f78d
         }
     }
-}
+
+
+    }
