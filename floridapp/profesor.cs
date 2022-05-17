@@ -121,9 +121,11 @@ namespace floridapp
             List<string> ho=new List<string>();
             profesor p=new profesor();
             ho = p.Lista_horas;
+            int o = 0;
             for(int i=0;i< ind.Count; i++)
             {
-                ho.RemoveAt(ind[i]);
+                ho.RemoveAt(ind[i]-o);
+                o++;
             }
             return ho;
         }
