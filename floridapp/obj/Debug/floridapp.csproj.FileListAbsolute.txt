@@ -223,5 +223,24 @@ C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.pdb
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
 >>>>>>> 217387429c9fe8b0460051d523c71e84bde1e5c8
+<<<<<<< HEAD
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+=======
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\floridapp.exe
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\floridapp.pdb
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\System.Memory.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+>>>>>>> c19299561cd49341193f5090bd39522440178c83
