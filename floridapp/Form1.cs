@@ -74,7 +74,7 @@ namespace floridapp
             bib.BringToFront();
         }
 
-        private void btnNews_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             panelVista.Controls.Clear();
             News nw = new News();
@@ -83,16 +83,16 @@ namespace floridapp
             nw.Dock = DockStyle.Fill;
             panelVista.Controls.Add(nw);
             nw.BringToFront();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
             if (usuario.Tipo == 2)
             {
+                pbUsuario.Hide();
                 btnListaMod.Hide();
             }
             else
             {
+                pbUsuario.Show();
+                pbAlumno.Hide();
                 btnListaMod.Show();
             }
         }
@@ -108,6 +108,33 @@ namespace floridapp
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnListaMod_Click(object sender, EventArgs e)
+        {
+            panelVista.Controls.Clear();
+            _instance = this;
+            listaModulos lmod = new listaModulos();
+            //addUserControl(bib);
+            lmod.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(lmod);
+            lmod.BringToFront();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panelVista.Controls.Clear();
+            News nw = new News();
+            //addUserControl(nw);
+            _instance = this;
+            nw.Dock = DockStyle.Fill;
+            panelVista.Controls.Add(nw);
+            nw.BringToFront();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

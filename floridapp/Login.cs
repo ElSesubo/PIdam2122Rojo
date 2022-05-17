@@ -12,10 +12,6 @@ namespace floridapp
 {
     public partial class Login : Form
     {
-        Form1 inicio = new Form1();
-        accesoAdministrador admi= new accesoAdministrador();
-        accesoBiblioteca biblio= new accesoBiblioteca();
-        accesoCocina cocina= new accesoCocina();
         public Login()
         {
             InitializeComponent();
@@ -27,6 +23,11 @@ namespace floridapp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form1 inicio = new Form1();
+            accesoAdministrador admi = new accesoAdministrador();
+            accesoBiblioteca biblio = new accesoBiblioteca();
+            accesoCocina cocina = new accesoCocina();
+
             usuario.Email = txtCorreo.Text;
             usuario.Tipo = 0;
             if (conexion.Conexion != null)
@@ -40,7 +41,6 @@ namespace floridapp
                     {
                         case 1:
                             usuario.Tipo = 1;
-                            MessageBox.Show("Login como profesor.");
                             inicio.Show();
                             break;
                         case 2:

@@ -42,7 +42,7 @@ namespace floridapp.UserControls
             // 
             this.dtgvProfesores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvProfesores.Location = new System.Drawing.Point(88, 173);
+            this.dtgvProfesores.Location = new System.Drawing.Point(46, 250);
             this.dtgvProfesores.Name = "dtgvProfesores";
             this.dtgvProfesores.Size = new System.Drawing.Size(531, 324);
             this.dtgvProfesores.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace floridapp.UserControls
             // 
             this.cbCiclos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCiclos.FormattingEnabled = true;
-            this.cbCiclos.Location = new System.Drawing.Point(678, 218);
+            this.cbCiclos.Location = new System.Drawing.Point(636, 295);
             this.cbCiclos.Name = "cbCiclos";
             this.cbCiclos.Size = new System.Drawing.Size(229, 28);
             this.cbCiclos.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace floridapp.UserControls
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(678, 467);
+            this.btnBuscar.Location = new System.Drawing.Point(636, 544);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(229, 30);
             this.btnBuscar.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(266, 59);
+            this.label1.Location = new System.Drawing.Point(287, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(455, 72);
             this.label1.TabIndex = 30;
@@ -82,7 +82,7 @@ namespace floridapp.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(321, 127);
+            this.label2.Location = new System.Drawing.Point(342, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(334, 19);
             this.label2.TabIndex = 47;
@@ -92,7 +92,7 @@ namespace floridapp.UserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(717, 194);
+            this.label3.Location = new System.Drawing.Point(675, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 21);
             this.label3.TabIndex = 48;
@@ -110,6 +110,7 @@ namespace floridapp.UserControls
             this.Controls.Add(this.dtgvProfesores);
             this.Name = "listaModulos";
             this.Size = new System.Drawing.Size(1108, 581);
+            this.Load += new System.EventHandler(this.listaModulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProfesores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

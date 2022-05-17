@@ -37,16 +37,16 @@ namespace floridapp.UserControls
                 cafe = cafeteria.ListaMesa();
                 conexion.CerrarConexion();
             }
-            comboBox2.Items.Clear();
+            cbMesa.Items.Clear();
             for (int i = 0; i < cafe.Count; i++)
             {
-                comboBox2.Items.Add(cafe[i].Numero_mesa);
+                cbMesa.Items.Add(cafe[i].Numero_mesa);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(comboBox2.Text);
+            int id = int.Parse(cbMesa.Text);
             TimeSpan hora =TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
             usuario user = new usuario();
             string nif="";
@@ -68,7 +68,7 @@ namespace floridapp.UserControls
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                cafeteria.ActualizarMesaR(int.Parse(comboBox2.SelectedItem.ToString()));
+                cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
                 conexion.CerrarConexion();
             }
             Cargar();
@@ -77,6 +77,18 @@ namespace floridapp.UserControls
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbLlevar.Checked == true)
+            {
+                cbMesa.Enabled = false;
+            }
+            else
+            {
+                cbMesa.Enabled = true;
+            }
         }
     }
 }

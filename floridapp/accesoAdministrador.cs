@@ -199,5 +199,10 @@ namespace floridapp
         {
             CargaListaUsuarios();
         }
+
+        private void cbProfesor_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

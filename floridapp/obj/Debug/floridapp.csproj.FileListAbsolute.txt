@@ -198,7 +198,6 @@ C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam21
 >>>>>>> 79b30e124e3be9aeb6b0bfe165c872221efbc923
 >>>>>>> a6cce9f77a87e9ebe6d0de69dd4d361199c7abc3
 >>>>>>> 8c34a77afcc7330d70a3ed783fa4afcce60802aa
-<<<<<<< HEAD
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.exe.config
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
@@ -221,7 +220,8 @@ C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.GenerateReso
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.exe
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.pdb
-=======
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
 >>>>>>> 217387429c9fe8b0460051d523c71e84bde1e5c8
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources

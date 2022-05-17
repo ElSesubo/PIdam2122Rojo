@@ -16,5 +16,10 @@ namespace floridapp.UserControls
         {
             InitializeComponent();
         }
+
+        private void listaModulos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,31 +30,37 @@ namespace floridapp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnListaMod = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnNews = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelVista = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
+            this.btnListaMod = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.btnBiblioteca = new System.Windows.Forms.Button();
             this.btnCafeteria = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReunion = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelVista = new System.Windows.Forms.Panel();
+            this.pbAlumno = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel1.Controls.Add(this.pbAlumno);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.pbUsuario);
             this.panel1.Controls.Add(this.btnListaMod);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.lblTitulo);
-            this.panel1.Controls.Add(this.btnNews);
             this.panel1.Controls.Add(this.btnBiblioteca);
             this.panel1.Controls.Add(this.btnCafeteria);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -65,147 +71,17 @@ namespace floridapp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 804);
             this.panel1.TabIndex = 0;
-            // 
-            // btnListaMod
-            // 
-            this.btnListaMod.FlatAppearance.BorderSize = 0;
-            this.btnListaMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaMod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaMod.ForeColor = System.Drawing.Color.White;
-            this.btnListaMod.Image = global::floridapp.Properties.Resources.News__1___1_;
-            this.btnListaMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListaMod.Location = new System.Drawing.Point(31, 582);
-            this.btnListaMod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnListaMod.Name = "btnListaMod";
-            this.btnListaMod.Size = new System.Drawing.Size(247, 79);
-            this.btnListaMod.TabIndex = 7;
-            this.btnListaMod.Text = "   Lista grados";
-            this.btnListaMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnListaMod.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoEllipsis = true;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(155, 201);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "APP";
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::floridapp.Properties.Resources.SALIDA;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(31, 722);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(247, 79);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "   Salida";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoEllipsis = true;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(68, 201);
+            this.lblTitulo.Location = new System.Drawing.Point(71, 263);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(93, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(0, 23);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "FLORID";
-            // 
-            // btnNews
-            // 
-            this.btnNews.FlatAppearance.BorderSize = 0;
-            this.btnNews.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNews.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNews.ForeColor = System.Drawing.Color.White;
-            this.btnNews.Image = global::floridapp.Properties.Resources.News__1___1_;
-            this.btnNews.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNews.Location = new System.Drawing.Point(31, 507);
-            this.btnNews.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnNews.Name = "btnNews";
-            this.btnNews.Size = new System.Drawing.Size(247, 79);
-            this.btnNews.TabIndex = 4;
-            this.btnNews.Text = "   Florida News";
-            this.btnNews.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNews.UseVisualStyleBackColor = true;
-            this.btnNews.Click += new System.EventHandler(this.btnNews_Click);
-            // 
-            // btnBiblioteca
-            // 
-            this.btnBiblioteca.FlatAppearance.BorderSize = 0;
-            this.btnBiblioteca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBiblioteca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBiblioteca.ForeColor = System.Drawing.Color.White;
-            this.btnBiblioteca.Image = global::floridapp.Properties.Resources.Biblioteca__1_;
-            this.btnBiblioteca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBiblioteca.Location = new System.Drawing.Point(31, 426);
-            this.btnBiblioteca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBiblioteca.Name = "btnBiblioteca";
-            this.btnBiblioteca.Size = new System.Drawing.Size(247, 79);
-            this.btnBiblioteca.TabIndex = 3;
-            this.btnBiblioteca.Text = "   Biblioteca";
-            this.btnBiblioteca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBiblioteca.UseVisualStyleBackColor = true;
-            this.btnBiblioteca.Click += new System.EventHandler(this.btnBiblioteca_Click);
-            // 
-            // btnCafeteria
-            // 
-            this.btnCafeteria.FlatAppearance.BorderSize = 0;
-            this.btnCafeteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCafeteria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCafeteria.ForeColor = System.Drawing.Color.White;
-            this.btnCafeteria.Image = global::floridapp.Properties.Resources.Cafeteria__1_;
-            this.btnCafeteria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCafeteria.Location = new System.Drawing.Point(31, 345);
-            this.btnCafeteria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCafeteria.Name = "btnCafeteria";
-            this.btnCafeteria.Size = new System.Drawing.Size(247, 79);
-            this.btnCafeteria.TabIndex = 2;
-            this.btnCafeteria.Text = "   Cafetería";
-            this.btnCafeteria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCafeteria.UseVisualStyleBackColor = true;
-            this.btnCafeteria.Click += new System.EventHandler(this.btnCafeteria_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::floridapp.Properties.Resources.floridapng;
-            this.pictureBox1.Location = new System.Drawing.Point(63, 46);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnReunion
-            // 
-            this.btnReunion.FlatAppearance.BorderSize = 0;
-            this.btnReunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReunion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReunion.ForeColor = System.Drawing.Color.White;
-            this.btnReunion.Image = global::floridapp.Properties.Resources.CALENDIARUI;
-            this.btnReunion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReunion.Location = new System.Drawing.Point(31, 263);
-            this.btnReunion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReunion.Name = "btnReunion";
-            this.btnReunion.Size = new System.Drawing.Size(247, 79);
-            this.btnReunion.TabIndex = 1;
-            this.btnReunion.Text = "   Reunion";
-            this.btnReunion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReunion.UseVisualStyleBackColor = true;
-            this.btnReunion.Click += new System.EventHandler(this.btnReunion_Click);
             // 
             // panel2
             // 
@@ -226,7 +102,7 @@ namespace floridapp
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(469, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 70);
+            this.label1.Size = new System.Drawing.Size(176, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "INICIO";
             // 
@@ -241,9 +117,153 @@ namespace floridapp
             this.panelVista.TabIndex = 5;
             this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
             // 
+            // label3
+            // 
+            this.label3.AutoEllipsis = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(84, 262);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 23);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "FLORIDAPP";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(71, 33);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(65, 22);
+            this.lblNombre.TabIndex = 10;
+            this.lblNombre.Text = "label2";
+            // 
+            // pbUsuario
+            // 
+            this.pbUsuario.Image = global::floridapp.Properties.Resources.ProfesorUser;
+            this.pbUsuario.Location = new System.Drawing.Point(31, 28);
+            this.pbUsuario.Name = "pbUsuario";
+            this.pbUsuario.Size = new System.Drawing.Size(28, 40);
+            this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuario.TabIndex = 9;
+            this.pbUsuario.TabStop = false;
+            // 
+            // btnListaMod
+            // 
+            this.btnListaMod.FlatAppearance.BorderSize = 0;
+            this.btnListaMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaMod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaMod.ForeColor = System.Drawing.Color.White;
+            this.btnListaMod.Image = global::floridapp.Properties.Resources.News__1___1_;
+            this.btnListaMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaMod.Location = new System.Drawing.Point(34, 561);
+            this.btnListaMod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnListaMod.Name = "btnListaMod";
+            this.btnListaMod.Size = new System.Drawing.Size(247, 79);
+            this.btnListaMod.TabIndex = 7;
+            this.btnListaMod.Text = "   Lista grados";
+            this.btnListaMod.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListaMod.UseVisualStyleBackColor = true;
+            this.btnListaMod.Click += new System.EventHandler(this.btnListaMod_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = global::floridapp.Properties.Resources.SALIDA;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(31, 722);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(247, 79);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "   Salida";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btnBiblioteca
+            // 
+            this.btnBiblioteca.FlatAppearance.BorderSize = 0;
+            this.btnBiblioteca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBiblioteca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiblioteca.ForeColor = System.Drawing.Color.White;
+            this.btnBiblioteca.Image = global::floridapp.Properties.Resources.Biblioteca__1_;
+            this.btnBiblioteca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBiblioteca.Location = new System.Drawing.Point(34, 488);
+            this.btnBiblioteca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBiblioteca.Name = "btnBiblioteca";
+            this.btnBiblioteca.Size = new System.Drawing.Size(247, 79);
+            this.btnBiblioteca.TabIndex = 3;
+            this.btnBiblioteca.Text = "   Biblioteca";
+            this.btnBiblioteca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBiblioteca.UseVisualStyleBackColor = true;
+            this.btnBiblioteca.Click += new System.EventHandler(this.btnBiblioteca_Click);
+            // 
+            // btnCafeteria
+            // 
+            this.btnCafeteria.FlatAppearance.BorderSize = 0;
+            this.btnCafeteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCafeteria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCafeteria.ForeColor = System.Drawing.Color.White;
+            this.btnCafeteria.Image = global::floridapp.Properties.Resources.Cafeteria__1_;
+            this.btnCafeteria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCafeteria.Location = new System.Drawing.Point(34, 407);
+            this.btnCafeteria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCafeteria.Name = "btnCafeteria";
+            this.btnCafeteria.Size = new System.Drawing.Size(247, 79);
+            this.btnCafeteria.TabIndex = 2;
+            this.btnCafeteria.Text = "   Cafetería";
+            this.btnCafeteria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCafeteria.UseVisualStyleBackColor = true;
+            this.btnCafeteria.Click += new System.EventHandler(this.btnCafeteria_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::floridapp.Properties.Resources.floridapng;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 108);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnReunion
+            // 
+            this.btnReunion.FlatAppearance.BorderSize = 0;
+            this.btnReunion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReunion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReunion.ForeColor = System.Drawing.Color.White;
+            this.btnReunion.Image = global::floridapp.Properties.Resources.CALENDIARUI;
+            this.btnReunion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReunion.Location = new System.Drawing.Point(34, 325);
+            this.btnReunion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReunion.Name = "btnReunion";
+            this.btnReunion.Size = new System.Drawing.Size(247, 79);
+            this.btnReunion.TabIndex = 1;
+            this.btnReunion.Text = "   Reunion";
+            this.btnReunion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReunion.UseVisualStyleBackColor = true;
+            this.btnReunion.Click += new System.EventHandler(this.btnReunion_Click);
+            // 
+            // pbAlumno
+            // 
+            this.pbAlumno.Image = global::floridapp.Properties.Resources.AlumnoUser;
+            this.pbAlumno.Location = new System.Drawing.Point(31, 27);
+            this.pbAlumno.Name = "pbAlumno";
+            this.pbAlumno.Size = new System.Drawing.Size(28, 28);
+            this.pbAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAlumno.TabIndex = 11;
+            this.pbAlumno.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 804);
             this.ControlBox = false;
@@ -260,9 +280,11 @@ namespace floridapp
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,14 +296,16 @@ namespace floridapp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBiblioteca;
         private System.Windows.Forms.Button btnCafeteria;
-        private System.Windows.Forms.Button btnNews;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelVista;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnListaMod;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.PictureBox pbUsuario;
+        private System.Windows.Forms.PictureBox pbAlumno;
     }
 }
 
