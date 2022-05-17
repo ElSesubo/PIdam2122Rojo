@@ -103,6 +103,16 @@ namespace floridapp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AlumnoUser {
+            get {
+                object obj = ResourceManager.GetObject("AlumnoUser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Biblioteca__1_ {
             get {
                 object obj = ResourceManager.GetObject("Biblioteca (1)", resourceCulture);
@@ -206,6 +216,16 @@ namespace floridapp.Properties {
         internal static System.Drawing.Bitmap pizzeria_14 {
             get {
                 object obj = ResourceManager.GetObject("pizzeria_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProfesorUser {
+            get {
+                object obj = ResourceManager.GetObject("ProfesorUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

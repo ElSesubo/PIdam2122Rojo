@@ -53,12 +53,13 @@ namespace floridapp
         public static void InsertarReserva(TimeSpan reserva, int mesa, string nif)
         {
             string consulta = "";
-            consulta = String.Format("INSERT INTO reserva_mesa_cafeteria (hora_reserva, num_mesa, id_user) VALUES " +
-                    "('{0}','{1}','{2}')", reserva, mesa, nif);
 
-           MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-           comando.ExecuteReader();
-         
+            consulta = String.Format("INSERT INTO reserva_mesa_cafeteria (hora_reserva, num_mesa, id_user) VALUES " +
+                        "('{0}','{1}','{2}')", reserva, mesa, nif);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteReader();
+
         }
 
         public static void EliminarReserva(cafeteria cafe,int mesa)
@@ -125,7 +126,7 @@ namespace floridapp
             return lista;
         }
 
-        public static List<cafeteria> ListaMesa()
+        public static List<cafeteria> ListaMesasDisponibles()
         {
             List<cafeteria> lista = new List<cafeteria>();
             string consulta = "";

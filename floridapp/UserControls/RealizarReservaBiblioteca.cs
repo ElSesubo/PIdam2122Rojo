@@ -26,5 +26,17 @@ namespace floridapp.UserControls
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbSala.Checked == false)
+            {
+                cbSalas.Enabled = false;
+            }
+            else
+            {
+                cbSalas.Enabled = true;
+            }
+        }
     }
 }

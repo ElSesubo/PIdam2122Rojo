@@ -121,6 +121,12 @@
   <data name="paella-valenciana-VP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paella-valenciana-VP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SALIDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SALIDA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlumnoUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AlumnoUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="News (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\News (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,14 +136,11 @@
   <data name="cafeteria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cafeteria.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pizzeria_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pizzeria_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="floridapng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floridapng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cafeteria (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cafeteria (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pizzeria_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pizzeria_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Biblioteca (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Biblioteca (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,16 +172,19 @@
   <data name="reunion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reunion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SALIDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SALIDA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cafeteria (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cafeteria (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="283-personalizar-imagen-wp-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\283-personalizar-imagen-wp-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="estudiantes_214533102" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estudiantes_214533102.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="estudiantes_214533102" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estudiantes_214533102.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ProfesorUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProfesorUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
