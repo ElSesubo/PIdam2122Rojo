@@ -300,5 +300,21 @@ namespace floridapp
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
+
+
+        public static List<string> cargar_modulos()
+        {
+            string nif = usuario.BuscarNIF(usuario.Email);
+            List<string> ciclos = new List<string>();
+            string consulta =  string.Format("SELECT modulo FROM pertenencia_modulos m INNER JOIN ciclo c INNER JOIN ciclo_pertenece p ON m.cicl=c.id AND c.id=p.cicl WHERE p.user_nif='{0}';",nif);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                 ciclos.Add(reader.GetString(0));
+            }
+            reader.Close();
+            return ciclos;
+        }
     }
 }
