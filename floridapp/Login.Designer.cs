@@ -43,9 +43,10 @@ namespace floridapp
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(142, 404);
+            this.button1.Location = new System.Drawing.Point(189, 497);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 33);
+            this.button1.Size = new System.Drawing.Size(276, 41);
             this.button1.TabIndex = 0;
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,26 +55,30 @@ namespace floridapp
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(129, 340);
+            this.txtContraseña.Location = new System.Drawing.Point(172, 418);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(267, 27);
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(355, 32);
             this.txtContraseña.TabIndex = 2;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(129, 295);
+            this.txtCorreo.Location = new System.Drawing.Point(172, 363);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(267, 27);
+            this.txtCorreo.Size = new System.Drawing.Size(355, 32);
             this.txtCorreo.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 295);
+            this.label1.Location = new System.Drawing.Point(75, 363);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 21);
+            this.label1.Size = new System.Drawing.Size(82, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Correo:";
             // 
@@ -81,18 +86,20 @@ namespace floridapp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 340);
+            this.label2.Location = new System.Drawing.Point(21, 418);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 21);
+            this.label2.Size = new System.Drawing.Size(130, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Contraseña:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::floridapp.Properties.Resources.floridapng;
-            this.pictureBox1.Location = new System.Drawing.Point(143, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(191, 55);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 208);
+            this.pictureBox1.Size = new System.Drawing.Size(275, 256);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -100,9 +107,10 @@ namespace floridapp
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(377, 447);
+            this.btnSalir.Location = new System.Drawing.Point(503, 550);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -110,10 +118,10 @@ namespace floridapp
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(477, 491);
+            this.ClientSize = new System.Drawing.Size(636, 604);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
@@ -123,6 +131,7 @@ namespace floridapp
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

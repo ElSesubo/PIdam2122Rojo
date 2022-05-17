@@ -43,6 +43,7 @@ namespace floridapp
 
         private void btnReunion_Click(object sender, EventArgs e)
         {
+            panelVista.Controls.Clear();
             Reunion reu = new Reunion();
             //MainControl.showControl(reu, panelVista);
             _instance = this;
@@ -53,7 +54,7 @@ namespace floridapp
 
         private void btnCafeteria_Click(object sender, EventArgs e)
         {
-
+            panelVista.Controls.Clear();
             Cafeteria caf = new Cafeteria();
             //MainControl.showControl(caf, panelVista);
             _instance = this;
@@ -64,6 +65,7 @@ namespace floridapp
 
         private void btnBiblioteca_Click(object sender, EventArgs e)
         {
+            panelVista.Controls.Clear();
             _instance = this;
             Biblio bib = new Biblio();
             //addUserControl(bib);
@@ -74,6 +76,7 @@ namespace floridapp
 
         private void btnNews_Click(object sender, EventArgs e)
         {
+            panelVista.Controls.Clear();
             News nw = new News();
             //addUserControl(nw);
             _instance = this;

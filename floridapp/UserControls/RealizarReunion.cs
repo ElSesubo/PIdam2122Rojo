@@ -20,6 +20,7 @@ namespace floridapp.UserControls
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
+            profesor.modulo = cmbCiclo.SelectedItem.ToString();
             //RealizarReunionFormulario reu = new RealizarReunionFormulario();
             //addUserControl(reu);
             if (!Form1.Instance.panelV.Controls.ContainsKey("RealizarReunionFormulario"))
@@ -29,7 +30,7 @@ namespace floridapp.UserControls
                 Form1.Instance.panelV.Controls.Add(ruf);
             }
             Form1.Instance.panelV.Controls["RealizarReunionFormulario"].BringToFront();
-            profesor.Modulo=cmbCiclo.SelectedItem.ToString();
+
         }
 
 
