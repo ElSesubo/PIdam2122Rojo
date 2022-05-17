@@ -12,6 +12,7 @@ namespace floridapp.UserControls
 {
     public partial class RealizarReunionFormulario : UserControl
     {
+        private profesor profesor=new profesor();
         public RealizarReunionFormulario()
         {
             InitializeComponent();
@@ -28,12 +29,14 @@ namespace floridapp.UserControls
             {
                 conexion.AbrirConexion();
                 List<string> ciclos = profesor.cargar_profesor_modulos();
-                for (int i = 0; i < ciclos.Count; i++)
+                for(int i = 0; i < ciclos.Count; i++)
                 {
-                    cmbProfesor.Items.Add(ciclos[i]);
+                    cmbprofesor.Items.Add(ciclos[i]);
                 }
                 conexion.CerrarConexion();
             }
+            cmbHoras.DataSource = profesor.Lista_horas;
+            
         }
     }
 }

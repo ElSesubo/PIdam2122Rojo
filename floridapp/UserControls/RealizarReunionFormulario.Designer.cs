@@ -31,14 +31,14 @@ namespace floridapp.UserControls
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbProfesor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbprofesor = new System.Windows.Forms.ComboBox();
+            this.cmbHoras = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,17 +65,6 @@ namespace floridapp.UserControls
             this.label1.TabIndex = 4;
             this.label1.Text = "Realiza el formulario";
             // 
-            // cmbProfesor
-            // 
-            this.cmbProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbProfesor.FormattingEnabled = true;
-            this.cmbProfesor.Location = new System.Drawing.Point(347, 388);
-            this.cmbProfesor.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbProfesor.Name = "cmbProfesor";
-            this.cmbProfesor.Size = new System.Drawing.Size(375, 31);
-            this.cmbProfesor.TabIndex = 6;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -99,22 +88,11 @@ namespace floridapp.UserControls
             this.label4.TabIndex = 10;
             this.label4.Text = "Hora Reserva:";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(421, 484);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 32);
-            this.dateTimePicker1.TabIndex = 11;
-            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(421, 444);
+            this.dateTimePicker2.Location = new System.Drawing.Point(421, 449);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -156,18 +134,36 @@ namespace floridapp.UserControls
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbprofesor
+            // 
+            this.cmbprofesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbprofesor.FormattingEnabled = true;
+            this.cmbprofesor.Location = new System.Drawing.Point(421, 401);
+            this.cmbprofesor.Name = "cmbprofesor";
+            this.cmbprofesor.Size = new System.Drawing.Size(265, 31);
+            this.cmbprofesor.TabIndex = 17;
+            // 
+            // cmbHoras
+            // 
+            this.cmbHoras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHoras.FormattingEnabled = true;
+            this.cmbHoras.Location = new System.Drawing.Point(421, 493);
+            this.cmbHoras.Name = "cmbHoras";
+            this.cmbHoras.Size = new System.Drawing.Size(265, 31);
+            this.cmbHoras.TabIndex = 18;
+            // 
             // RealizarReunionFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbHoras);
+            this.Controls.Add(this.cmbprofesor);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbProfesor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -184,13 +180,13 @@ namespace floridapp.UserControls
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbProfesor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbprofesor;
+        private System.Windows.Forms.ComboBox cmbHoras;
     }
 }
