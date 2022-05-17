@@ -147,6 +147,14 @@ namespace floridapp.UserControls
                 conexion.CerrarConexion();
             }
         }
+
+        private void btnLimpiarPedido_Click(object sender, EventArgs e)
+        {
+            cbLlevar.Checked = false;
+            cbMenu.SelectedItem = null;
+            cbMesa.SelectedItem = null;
+            
+        }
     }
 
 

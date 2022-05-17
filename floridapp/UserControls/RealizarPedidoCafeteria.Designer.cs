@@ -42,6 +42,7 @@ namespace floridapp.UserControls
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnLimpiarPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,10 +201,25 @@ namespace floridapp.UserControls
             this.dateTimePicker1.TabIndex = 26;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // btnLimpiarPedido
+            // 
+            this.btnLimpiarPedido.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnLimpiarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarPedido.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarPedido.Location = new System.Drawing.Point(151, 673);
+            this.btnLimpiarPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiarPedido.Name = "btnLimpiarPedido";
+            this.btnLimpiarPedido.Size = new System.Drawing.Size(492, 50);
+            this.btnLimpiarPedido.TabIndex = 30;
+            this.btnLimpiarPedido.Text = "Limpiar Pedido";
+            this.btnLimpiarPedido.UseVisualStyleBackColor = false;
+            this.btnLimpiarPedido.Click += new System.EventHandler(this.btnLimpiarPedido_Click);
+            // 
             // RealizarPedidoCafeteria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnLimpiarPedido);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label6);
@@ -242,5 +258,6 @@ namespace floridapp.UserControls
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnLimpiarPedido;
     }
 }
