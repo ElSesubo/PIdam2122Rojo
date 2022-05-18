@@ -43,13 +43,27 @@ namespace floridapp
 
         private void btnReunion_Click(object sender, EventArgs e)
         {
-            panelVista.Controls.Clear();
-            Reunion reu = new Reunion();
-            //MainControl.showControl(reu, panelVista);
-            _instance = this;
-            reu.Dock = DockStyle.Fill;
-            panelVista.Controls.Add(reu);
-            reu.BringToFront();
+            if (usuario.Tipo == 2)
+            {
+                panelVista.Controls.Clear();
+                Reunion reu = new Reunion();
+                //MainControl.showControl(reu, panelVista);
+                _instance = this;
+                reu.Dock = DockStyle.Fill;
+                panelVista.Controls.Add(reu);
+                reu.BringToFront();
+            }
+            else
+            {
+                panelVista.Controls.Clear();
+                VistaProfesor vip = new VistaProfesor();
+                //MainControl.showControl(reu, panelVista);
+                _instance = this;
+                vip.Dock = DockStyle.Fill;
+                panelVista.Controls.Add(vip);
+                vip.BringToFront();
+            }
+            
         }
 
         private void btnCafeteria_Click(object sender, EventArgs e)

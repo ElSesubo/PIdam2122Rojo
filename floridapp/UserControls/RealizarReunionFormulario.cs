@@ -25,6 +25,7 @@ namespace floridapp.UserControls
 
         private void RealizarReunionFormulario_Load(object sender, EventArgs e)
         {
+            dtpDia.Value = DateTime.Now;
             refresh();
             if (conexion.Conexion != null)
             {
@@ -37,22 +38,12 @@ namespace floridapp.UserControls
 
         private void refresh()
         {
-            List<int> l = obtenerindice();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                cmbHoras.DataSource = profesor.horas_filtradas(l);
+                cmbHoras.DataSource = profesor.filtrar_horas_por_dias(dtpDia.Value);
                 conexion.CerrarConexion();
             }
-
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                comboBox1.DataSource = profesor.filtrar_horas_por_dias(dtpDia.Value);
-                conexion.CerrarConexion();
-            }
-
-            comboBox2.DataSource = obtenerindice();
 
         }
 
@@ -74,17 +65,24 @@ namespace floridapp.UserControls
             }
         }
 
-        private List<int> obtenerindice()
-        {
-            List<int> horas = new List<int>();
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                horas = profesor.buscar_indice(dtpDia.Value);
-                conexion.CerrarConexion();
-            }
-            return horas;
-        }
+        //Este metodo servia para obtener el indice de las horas ocupadas para los siguientes metodos.
+
+        //private List<int> obtenerindice()
+        //{
+        //    List<int> horas = new List<int>();
+        //    if (conexion.Conexion != null)
+        //    {
+        //        conexion.AbrirConexion();
+        //        horas = profesor.buscar_indice(dtpDia.Value);
+        //        conexion.CerrarConexion();
+        //    }
+        //    return horas;
+        //}
+
+
+
+        //Este metodo servia para pintar de blanco las horas ocupadas, pero vimos que sobrecargaba al sistema y decidimos buscar otra forma.
+
         //private void cmbHoras_DrawItem(object sender, DrawItemEventArgs e)
         //{
 
@@ -101,12 +99,13 @@ namespace floridapp.UserControls
 
         private void cmbHoras_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Este metodo mo te dejaba seleccionar las casillas pintadas de blanco del metodo anterior.
 
-            
             //if (obtenerindice().Contains(cmbHoras.SelectedIndex))
             //{
             //    cmbHoras.SelectedIndex = -1;
             //}
+            refresh();
         }
 
         private void dtpDia_ValueChanged(object sender, EventArgs e)

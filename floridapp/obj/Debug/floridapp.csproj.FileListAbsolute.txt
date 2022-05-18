@@ -245,3 +245,4 @@ C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Web.xml
 C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 >>>>>>> c19299561cd49341193f5090bd39522440178c83
 >>>>>>> 9fb43a8f91770989f370329e310afbf57c43f78d
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources

@@ -147,6 +147,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\VistaProfesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\VistaProfesor.Designer.cs">
+      <DependentUpon>VistaProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="usuario.cs" />
     <EmbeddedResource Include="accesoAdministrador.resx">
       <DependentUpon>accesoAdministrador.cs</DependentUpon>
@@ -203,6 +209,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\VistaProfesor.resx">
+      <DependentUpon>VistaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
