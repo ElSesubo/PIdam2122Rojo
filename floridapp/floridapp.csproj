@@ -160,6 +160,9 @@
     <EmbeddedResource Include="accesoBiblioteca.resx">
       <DependentUpon>accesoBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="accesoCocina.es.resx">
+      <DependentUpon>accesoCocina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="accesoCocina.resx">
       <DependentUpon>accesoCocina.cs</DependentUpon>
     </EmbeddedResource>
