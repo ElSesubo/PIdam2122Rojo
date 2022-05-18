@@ -244,6 +244,17 @@ namespace floridapp
             return nombre_alumno;
         }
 
+        public static int anular_tutoria(string id,DateTime hora, DateTime dia)
+        {
+            int result = 0;
+            string consulta = "DELETE FROM reservar_profesor WHERE id_user=@id_us and hora_reserva=@hora and dia_reserva=@dia;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("id_us", id);
+            comando.Parameters.AddWithValue("hora", hora.ToString("hh:mm:ss"));
+            comando.Parameters.AddWithValue("dia", dia.ToString("yyyy-MM-dd"));
+            result= comando.ExecuteNonQuery();
+            return result;
+        }
         
     }
 

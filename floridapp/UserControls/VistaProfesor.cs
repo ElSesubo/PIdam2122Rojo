@@ -19,13 +19,18 @@ namespace floridapp.UserControls
 
         private void VistaProfesor_Load(object sender, EventArgs e)
         {
+            refresh();
+        }
+
+        private void refresh()
+        {
             List<profesor> p = profesores();//Devuelve la lista de tutoria profesor.
             List<string> list_alumnos = nombre();//Devuelve la lista de nombres traducidos por nif
             List<string> list_ciclos = nombre_de_ciclos();//Devuelve la lista de los nombres de los ciclos traducido por id
             dgvTutoria.Rows.Clear();
             for (int i = 0; i < list_alumnos.Count; i++)
             {
-                dgvTutoria.Rows.Add(list_alumnos[i], list_ciclos[i], p[i].Dia, p[i].Hora);
+                dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia, p[i].Hora, "Anular");
             }
             for (int i = 0; i < list_alumnos.Count; i++)
             {
@@ -92,6 +97,41 @@ namespace floridapp.UserControls
                 conexion.CerrarConexion();
             }
             return nombres;
+        }
+
+        private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            int fila=e.RowIndex;
+            int exito = 0;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    try
+                    {
+                        exito=profesor.anular_tutoria(dgvTutoria.Rows[fila].Cells[1].Value.ToString(), DateTime.Parse(dgvTutoria.Rows[fila].Cells[4].Value.ToString()),DateTime.Parse(dgvTutoria.Rows[fila].Cells[3].Value.ToString()));
+                        if(exito != 0)
+                        {
+                            MessageBox.Show("Anulado con exito.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Fallo");
+                        }
+
+                    }catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                    conexion.CerrarConexion();
+                }
+            }
+            refresh();
         }
     }
 }
