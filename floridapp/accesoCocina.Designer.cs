@@ -74,6 +74,7 @@ namespace floridapp
             // dtgvPedidos
             // 
             resources.ApplyResources(this.dtgvPedidos, "dtgvPedidos");
+            this.dtgvPedidos.AllowUserToAddRows = false;
             this.dtgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero_de_mesa,
@@ -200,6 +201,7 @@ namespace floridapp
             // dgvPedidoMenu
             // 
             resources.ApplyResources(this.dgvPedidoMenu, "dgvPedidoMenu");
+            this.dgvPedidoMenu.AllowUserToAddRows = false;
             this.dgvPedidoMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedidoMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_menu,

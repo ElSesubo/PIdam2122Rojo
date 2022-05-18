@@ -54,8 +54,8 @@ namespace floridapp
         {
             string consulta = "";
 
-            consulta = String.Format("INSERT INTO reserva_mesa_cafeteria (hora_reserva, num_mesa, id_user) VALUES " +
-                        "('{0}','{1}','{2}')", reserva, mesa, nif);
+            consulta = String.Format("INSERT INTO reserva_mesa_cafeteria (hora_reserva, num_mesa, id_user, dia_reserva) VALUES " +
+                        "('{0}','{1}','{2}','{3}')", reserva, mesa, nif,DateTime.Now.ToString("yyyy-MM-dd"));
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.ExecuteReader();
