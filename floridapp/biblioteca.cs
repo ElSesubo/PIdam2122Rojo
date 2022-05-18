@@ -25,6 +25,15 @@ namespace floridapp
         public string Id_user { get => id_user; set => id_user = value; }
         public DateTime Dia_hora_devolucion { get => dia_hora_devolucion; set => dia_hora_devolucion = value; }
 
+        /// <summary>
+        /// Constructor sobrecargado
+        /// </summary>
+        /// <param name="id">identificador del registro</param>
+        /// <param name="dhr">dia y hora del registro</param>
+        /// <param name="id_portatil">identificador del portatil</param>
+        /// <param name="id_pecera">identificador de la pecera seleccionada</param>
+        /// <param name="id_user">identificador del usuario</param>
+        /// <param name="dhd">dia y hora de la devolucion o terminacion de la reserva</param>
         public biblioteca(int id, DateTime dhr,int id_portatil, int id_pecera, string id_user, DateTime dhd)
         {
             this.id = id;
@@ -35,12 +44,19 @@ namespace floridapp
             this.dia_hora_devolucion = dhd;
         }
 
+        /// <summary>
+        /// Constructor vacio
+        /// </summary>
         public biblioteca()
         {
 
         }
 
-
+        /// <summary>
+        /// Busca un registro por el número de la id 
+        /// </summary>
+        /// <param name="id">identificardor del registro</param>
+        /// <returns>Una lista cargada con los registros que tengan el id correspondiente</returns>
         public static List<biblioteca> BuscarRegistroId(int id)
         {
             List<biblioteca> lista = new List<biblioteca>();
@@ -60,6 +76,11 @@ namespace floridapp
             return lista;
         }
 
+        /// <summary>
+        /// Busca un registro dependiendo de la consulta que le es mandada a la hora de llamar al método
+        /// </summary>
+        /// <param name="consulta">consulta realizada con anterioridad en otro método</param>
+        /// <returns>una lista carga con los registros dependiendo de el contenido de la consulta enviada</returns>
         public static List<biblioteca> BuscarRegistro(string consulta)
         {
             List<biblioteca> lista = new List<biblioteca>();
@@ -78,28 +99,15 @@ namespace floridapp
             return lista;
         }
 
-        public static List<biblioteca> BuscarReserva(string consulta)
-        {
-            List<biblioteca> lista = new List<biblioteca>();
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    biblioteca registro = new biblioteca(reader.GetInt32(0), reader.GetDateTime(1), reader.GetInt32(2),
-                        reader.GetInt32(3), reader.GetString(4), reader.GetDateTime(5));
-                    lista.Add(registro);
-                }
-            }
-            return lista;
-        }
-
+        /// <summary>
+        /// Obtiene toda la información de un registro con una concreta id
+        /// </summary>
+        /// <param name="identificacion">identificador del registro</param>
+        /// <returns></returns>
         public static biblioteca ObtenerUsuario(int identificacion)
         {
             biblioteca reg = new biblioteca();
-            string consulta = string.Format("SELECT * FROM usuarios WHERE id={0}", identificacion);
+            string consulta = string.Format("SELECT * FROM reserva_biblioteca WHERE id={0}", identificacion);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
@@ -114,6 +122,11 @@ namespace floridapp
             return reg;
         }
 
+        /// <summary>
+        /// Elimina un registro de la base de datos con un concreto identificador
+        /// </summary>
+        /// <param name="identidad">identificador del registro</param>
+        /// <returns>1 o 0 para comprobar que la acción se ha realizado</returns>
         public static int EliminaRegistro(int identidad)
         {
             int retorno;
@@ -121,12 +134,6 @@ namespace floridapp
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
-        }
-
-        public static void reservar_portatil()
-        {
-            string consulta = "INSERT INTO biblioteca";
-
         }
     }
 }
