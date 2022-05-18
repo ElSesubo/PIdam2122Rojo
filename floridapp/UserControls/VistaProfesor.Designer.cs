@@ -52,20 +52,22 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvTutoria.Location = new System.Drawing.Point(101, 142);
+            this.dgvTutoria.Location = new System.Drawing.Point(83, 125);
+            this.dgvTutoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvTutoria.Name = "dgvTutoria";
             this.dgvTutoria.RowHeadersWidth = 51;
             this.dgvTutoria.RowTemplate.Height = 24;
-            this.dgvTutoria.Size = new System.Drawing.Size(802, 293);
+            this.dgvTutoria.Size = new System.Drawing.Size(804, 344);
             this.dgvTutoria.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 102);
+            this.label1.Location = new System.Drawing.Point(79, 83);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 27);
+            this.label1.Size = new System.Drawing.Size(256, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Listado de tutoria privadas";
             // 
@@ -123,7 +125,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Aceptar";
+            this.Column5.HeaderText = "Aceptado";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -132,6 +134,7 @@
             // 
             // Column6
             // 
+            this.Column6.FillWeight = 50F;
             this.Column6.HeaderText = "Anular";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -141,16 +144,15 @@
             // 
             // VistaProfesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTutoria);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VistaProfesor";
-            this.Size = new System.Drawing.Size(1262, 683);
+            this.Size = new System.Drawing.Size(967, 555);
             this.Load += new System.EventHandler(this.VistaProfesor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutoria)).EndInit();
             this.ResumeLayout(false);
@@ -162,9 +164,12 @@
 
         private System.Windows.Forms.DataGridView dgvTutoria;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+=======
+>>>>>>> 016c9407d3d0cc4033f4b2695d04e7c32950249e
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
