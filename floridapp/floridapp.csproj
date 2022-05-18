@@ -160,6 +160,9 @@
     <EmbeddedResource Include="accesoBiblioteca.resx">
       <DependentUpon>accesoBiblioteca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="accesoCocina.es.resx">
+      <DependentUpon>accesoCocina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="accesoCocina.resx">
       <DependentUpon>accesoCocina.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +296,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ProfesorUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RecursosLocalizables\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

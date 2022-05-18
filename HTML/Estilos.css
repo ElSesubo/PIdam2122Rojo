@@ -20,6 +20,7 @@ body
 	background-color: #EDE8EC;
 	margin: 0 auto;
 	bottom: 0;
+	
 }
 
 .inicio{
@@ -31,7 +32,7 @@ body
 }
 
 .inicio h1{
-	font-size: 80px;
+	font-size: 100px;
 	text-align: center;
 	padding: 50px 50px 50px 50px;
 	color: white;
@@ -50,11 +51,12 @@ body
 .inicio p{
 	
 	font-size: 20px;
-	text-align: center;
-	padding: 10px 200px 10px 200px;
+	text-align: justify;
+	padding: 10px 300px 10px 300px;
 	color: black;
 	transition: all 400ms ease;
-	cursor: pointer;
+	
+
 }
 
 header {
@@ -67,8 +69,8 @@ header {
 }
 
 .wrapper {
-	width:100%; 
-	max-width:1100px; 
+	width: 100%; 
+	max-width:1300px; 
 	margin: 10px auto;
 	overflow: hidden; 
 	top: 0;
@@ -78,10 +80,12 @@ header .logoimg{
 	float: left;
 	width: 150px;
 	height: 150px;
-	margin-right: 40px;
+	margin-right: 20px;
 	margin-top: 20px;
 }
-
+header .logoimg:hover{
+	transform: scale(1.015);
+}
 header .notranslate {
 	color:#f2f2f2;
 	font-size:50px;
@@ -107,11 +111,14 @@ header nav a {
 	-o-transition:all 500ms ease;
 	transition:all 500ms ease;
 	font-family: CenturyGothic;
+	
 }
 
 header nav a:hover {
-	background:#f53a3a;
-	border: radius 30px;
+	background-color: transparent;
+    border-radius: 15px;
+	color: red;
+    transform: scale(1.015);
 }
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
@@ -251,6 +258,7 @@ p{
 
 .formulario{
   font-family: CenturyGothic;
+  
 }
 
 @font-face {
@@ -269,4 +277,74 @@ p{
 }
 .Abajo{
 margin-bottom: 30px;
+}
+
+.banner{
+	width: 100%;
+	height: 500px;
+	background-image: url(blurFlorida.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+}
+.minidiapositiva h1{
+	font-size: 80px;
+    color: rgb(255, 255, 255);
+}
+
+.minidiapositiva{
+
+	width:60%;
+	margin: 0 auto;
+	background-color: red;
+	opacity: 0.6;
+}
+.Explic{
+	width:100%;
+	height: 612px;
+}
+.cuadrado{
+	margin-left: 100px;
+	height: 500px;
+	width: 600px;
+	margin-right: 1px;
+	background-color: #0e0e0e;
+	display:inline-block;
+	position: absolute;
+}
+.Explic h1{
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	font-family:  CenturyGothicN;
+	letter-spacing: -2px;
+}
+.separacion {
+	margin-top: 1px;
+	float: left;
+	position: absolute;
+	margin-left: 750px;
+	margin-right: 1px;
+	height: 500px;
+	width: 5px;
+	background-color: #0e0e0e;
+}
+.cuadradotexto{
+
+	height: 500px;
+	width: 600px;
+	margin-right: 1px;
+	background-color: transparent;
+	display:inline-block;
+	position: absolute;
+	margin-left: 760px;
+
+	position: absolute;
+}
+.cuadradotexto h1 {
+	font-size: 33px;
+	text-align: left;
+	color: black;
+	font-family:  CenturyGothicN;
+	
 }
