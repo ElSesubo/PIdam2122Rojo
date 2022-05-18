@@ -45,7 +45,7 @@ namespace floridapp.UserControls
             {
                 cbMesa.Items.Add(cafe[i].Numero_mesa);
             }
-            
+            cbMenu.Items.Clear();
             for (int j = 0; j < pedi.Count; j++)
             {
                 cbMenu.Items.Add(pedi[j].Nombre_menu);
@@ -112,6 +112,7 @@ namespace floridapp.UserControls
 
 
             Cargar();
+            MessageBox.Show("Pedido realizado");
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
