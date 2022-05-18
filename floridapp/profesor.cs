@@ -22,11 +22,12 @@ namespace floridapp
 
 
         //Constructor para almacenar la informacion de tutoria privadas y cargarlas en una data grid view
-        public profesor( TimeSpan hora, DateTime dia, string nif_alumno)
+        public profesor( TimeSpan hora, DateTime dia, string nif_alumno,int cicl)
         {
             this.hora = hora;
             this.dia = dia;
             this.nif_alumno = nif_alumno;
+            this.ciclo = cicl;
         }
 
         public profesor()
@@ -46,7 +47,7 @@ namespace floridapp
         /// Metodo que busca el ciclo del alumno
         /// </summary>
         /// <returns>Devuelve el ciclo que esta matriculado el alumno</returns>
-        private int buscar_ciclo()
+        public int buscar_ciclo()
         {
             int ciclo=0;
             string nif = usuario.BuscarNIF(usuario.Email);
@@ -66,7 +67,7 @@ namespace floridapp
         /// </summary>
         /// <param name="nif_a"></param>
         /// <returns></returns>
-        private int buscar_ciclo(string nif_a)
+        public int buscar_ciclo(string nif_a)
         {
             int id_ciclo = 0;
             string consulta = string.Format("SELECT cicl from ciclo_pertenece where user_nif='{0}';", nif_a);
@@ -80,19 +81,6 @@ namespace floridapp
             return id_ciclo;
         }
 
-        private void asignar_nombre_ciclo(string nif)
-        {
-            string nombre_ciclo = "";
-            string consulta2 = "SELECT nombre from ciclo WHERE id=@id;";
-            MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
-            comando2.Parameters.AddWithValue("id", buscar_ciclo(nif));
-            MySqlDataReader reader2 = comando2.ExecuteReader();
-            while (reader2.Read())
-            {
-                nombre_ciclo = reader2.GetString(0);
-            }
-            reader2.Close();
-        }
 
         /// <summary>
         /// Metodo que seleciona el nombre y apellidos del profesor que pertenece al modulo selecionado y al ciclo del alumno.
@@ -122,14 +110,14 @@ namespace floridapp
         /// </summary>
         /// <param name="dia"></param>
         /// <param name="hora"></param>
-        public void realizar_reserva_profesor(DateTime dia,string hora)
+        public void realizar_reserva_profesor(DateTime dia,string hora,int cicl)
         {
             string nif = usuario.BuscarNIF(usuario.Email);//El nif lo buscamos directamente del usuario logueado.
-            string consulta = "INSERT INTO reservar_profesor VALUES(@id,@h_re,@ocu,@id_user,@nif_profe,@dia);";//No hemos puesto ningun condicion para comprobar las horas reservadas, lo haremos mas tarde.
+            string consulta = "INSERT INTO reservar_profesor VALUES(@id,@h_re,@id_user,@cicl,@nif_profe,@dia);";//No hemos puesto ningun condicion para comprobar las horas reservadas, lo haremos mas tarde.
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("id", null);
             comando.Parameters.AddWithValue("h_re", hora);
-            comando.Parameters.AddWithValue("ocu", true);//Este campo sobra.
+            comando.Parameters.AddWithValue("cicl", cicl);
             comando.Parameters.AddWithValue("id_user", nif);
             comando.Parameters.AddWithValue("nif_profe", this.nif);//El nif del profesor lo hemos guardado en el metodo anterior.
             comando.Parameters.AddWithValue("dia", dia.ToString("yyyy/MM/dd"));
@@ -202,21 +190,61 @@ namespace floridapp
         //}
 
         
-        public static List<profesor> tutoriaprivada()
+        public static List<profesor> tutoriaprivada(string nif)
         {
             List<profesor> tutoria=new List<profesor>();
-            string consulta = "SELECT * FROM reservar_profesor WHERE nif_profesor=@nif_pro order by hora_reserva asc, dia_reserva asc;";
+            string consulta = "SELECT hora_reserva,id_user,ciclo,dia_reserva FROM reservar_profesor WHERE nif_profesor=@nif_pro;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            comando.Parameters.AddWithValue("nif_pro", usuario.BuscarNIF(usuario.Email));
+            comando.Parameters.AddWithValue("nif_pro", nif);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-               tutoria.Add(new profesor(reader.GetTimeSpan(1),reader.GetDateTime(5),reader.GetString(3)));
+               tutoria.Add(new profesor(reader.GetTimeSpan(0),reader.GetDateTime(3),reader.GetString(1),reader.GetInt32(2)));
             }
             reader.Close();
             return tutoria;
 
         }
+
+
+
+        public static List<string> traducir_ciclos(List<int> c)
+        {
+            List<string> nombre_ciclo = new List<string>();
+            for(int i = 0; i < c.Count; i++)
+            {
+                string consulta = "SELECT nombre from ciclo WHERE id=@id;";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                comando.Parameters.AddWithValue("id", c[i]);
+                MySqlDataReader reader = comando.ExecuteReader();
+                while(reader.Read())
+                {
+                    nombre_ciclo.Add(reader.GetString(0));
+                }
+                reader.Close();
+            }
+            return nombre_ciclo;
+        }
+
+        public static List<string> traducir_nombre(List<string> us)
+        {
+            List<string> nombre_alumno = new List<string>();
+            for (int i = 0; i < us.Count; i++)
+            {
+                string consulta = "SELECT nombre,apellido from usuario WHERE nif=@nif;";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                comando.Parameters.AddWithValue("nif", us[i]);
+                MySqlDataReader reader = comando.ExecuteReader();
+                while(reader.Read())
+                {
+                    nombre_alumno.Add(reader.GetString(0)+" "+reader.GetString(1));
+                }
+                reader.Close();
+            }
+            return nombre_alumno;
+        }
+
+        
     }
 
 

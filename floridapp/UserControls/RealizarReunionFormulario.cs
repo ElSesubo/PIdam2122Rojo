@@ -49,12 +49,19 @@ namespace floridapp.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int id_ci = 0;
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                id_ci = profesor.buscar_ciclo();
+                conexion.CerrarConexion();
+            }
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
                 try
                 {
-                    profesor.realizar_reserva_profesor(dtpDia.Value, cmbHoras.SelectedItem.ToString());
+                    profesor.realizar_reserva_profesor(dtpDia.Value, cmbHoras.SelectedItem.ToString(), id_ci);
                     MessageBox.Show("Reserva realizado con exito.");
                 }catch (Exception ex)
                 {
@@ -63,6 +70,7 @@ namespace floridapp.UserControls
                 
                 conexion.CerrarConexion();
             }
+            refresh();
         }
 
         //Este metodo servia para obtener el indice de las horas ocupadas para los siguientes metodos.
@@ -105,7 +113,6 @@ namespace floridapp.UserControls
             //{
             //    cmbHoras.SelectedIndex = -1;
             //}
-            refresh();
         }
 
         private void dtpDia_ValueChanged(object sender, EventArgs e)
