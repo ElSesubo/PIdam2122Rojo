@@ -16,9 +16,8 @@ namespace floridapp
     {
         const string mailAddress = "floridapprojo@gmail.com";
         const string password = "ghidm6rojo";
-        public static void EnviarMensaje(StringBuilder Mensaje, string para, string asunto, out string Error)
+        public static void EnviarMensaje(StringBuilder Mensaje, string para, string asunto, string Error)
         {
-            Error = "";
             try
             {
                 Mensaje.Append(Environment.NewLine);

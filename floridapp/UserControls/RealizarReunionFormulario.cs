@@ -91,7 +91,7 @@ namespace floridapp.UserControls
                         string error = "";
                         StringBuilder sb = new StringBuilder();
                         sb.Append(string.Format("{0} del ciclo {1} ha realizado una reserva para una tutoria para la fecha {2} a las {3}",nombre,ciclo,dtpDia.Value.ToString("MM-dd"),cmbHoras.SelectedItem.ToString()));
-                        EnviarGmail.EnviarMensaje(sb,gmail,"NOT-REPLY", out error);
+                        EnviarGmail.EnviarMensaje(sb,gmail,"NOT-REPLY",error);
                     }
                     catch (Exception ex)
                     {

@@ -109,7 +109,7 @@ namespace floridapp.UserControls
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                nombre = usuario.obtener_nombre_ciclo();
+                nombre = usuario.obtener_nombre_usuario();
                 conexion.CerrarConexion();
             }
             string modulo = "";
@@ -123,13 +123,13 @@ namespace floridapp.UserControls
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                gmail = profesor.Email_alumno(dgvTutoria.Rows[fila].Cells[1].ToString());
+                gmail = profesor.Email_alumno(dgvTutoria.Rows[fila].Cells[1].Value.ToString());
                 conexion.CerrarConexion();
             }
             string error = "";
             StringBuilder sb = new StringBuilder();
             sb.Append(string.Format("El profesor {0} del {1} ha anulado tu tutoria.", nombre, modulo));
-            EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY", out error);
+            EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY",error);
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
