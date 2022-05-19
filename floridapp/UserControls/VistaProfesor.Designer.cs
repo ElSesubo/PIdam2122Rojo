@@ -36,10 +36,13 @@
             this.C_hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_anular = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnDiaOcupado = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gbCalendario = new System.Windows.Forms.GroupBox();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutoria)).BeginInit();
+            this.gbCalendario.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvTutoria
@@ -118,40 +121,66 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Listado de tutoria privadas";
             // 
-            // comboBox1
+            // btnDiaOcupado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1413, 288);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 2;
+            this.btnDiaOcupado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiaOcupado.Location = new System.Drawing.Point(110, 605);
+            this.btnDiaOcupado.Name = "btnDiaOcupado";
+            this.btnDiaOcupado.Size = new System.Drawing.Size(206, 60);
+            this.btnDiaOcupado.TabIndex = 5;
+            this.btnDiaOcupado.Text = "Dia ocupado";
+            this.btnDiaOcupado.UseVisualStyleBackColor = true;
+            this.btnDiaOcupado.Click += new System.EventHandler(this.btnDiaOcupado_Click);
             // 
-            // comboBox2
+            // label3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1413, 390);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 24);
-            this.comboBox2.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(350, 54);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Selecione el dia que no vas a \r\ndejar reservar.";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // comboBox3
+            // gbCalendario
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1413, 506);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(160, 24);
-            this.comboBox3.TabIndex = 4;
+            this.gbCalendario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbCalendario.Controls.Add(this.dtpFecha);
+            this.gbCalendario.Controls.Add(this.btnConfirmar);
+            this.gbCalendario.Controls.Add(this.label3);
+            this.gbCalendario.Location = new System.Drawing.Point(395, 147);
+            this.gbCalendario.Name = "gbCalendario";
+            this.gbCalendario.Size = new System.Drawing.Size(461, 423);
+            this.gbCalendario.TabIndex = 7;
+            this.gbCalendario.TabStop = false;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.Location = new System.Drawing.Point(27, 218);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(179, 37);
+            this.btnConfirmar.TabIndex = 8;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CalendarFont = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(27, 136);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(319, 36);
+            this.dtpFecha.TabIndex = 9;
             // 
             // VistaProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.gbCalendario);
+            this.Controls.Add(this.btnDiaOcupado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTutoria);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -159,6 +188,8 @@
             this.Size = new System.Drawing.Size(1289, 683);
             this.Load += new System.EventHandler(this.VistaProfesor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutoria)).EndInit();
+            this.gbCalendario.ResumeLayout(false);
+            this.gbCalendario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,14 +199,16 @@
 
         private System.Windows.Forms.DataGridView dgvTutoria;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_nif;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_ciclo;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_dia;
         private System.Windows.Forms.DataGridViewTextBoxColumn C_hora;
         private System.Windows.Forms.DataGridViewButtonColumn C_anular;
+        private System.Windows.Forms.Button btnDiaOcupado;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbCalendario;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

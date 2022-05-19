@@ -204,5 +204,10 @@ namespace floridapp
         {
 
         }
+
+        private void dtgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -32,18 +32,7 @@ namespace floridapp.UserControls
             {
                 dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia, p[i].Hora, "Anular");
             }
-            for (int i = 0; i < list_alumnos.Count; i++)
-            {
-                comboBox1.Items.Add(list_alumnos[i]);
-            }
-            for (int i = 0; i < list_ciclos.Count; i++)
-            {
-                comboBox2.Items.Add(list_ciclos[i]);
-            }
-            for (int i = 0; i < p.Count; i++)
-            {
-                comboBox3.Items.Add(p[i].Nif_alumno);
-            }
+            gbCalendario.Visible = false;
         }
         private List<profesor> profesores()
         {
@@ -162,6 +151,43 @@ namespace floridapp.UserControls
                     }
                 }
 
+            }
+            refresh();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDiaOcupado_Click(object sender, EventArgs e)
+        {
+            gbCalendario.Visible = true;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            string nif = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                nif = usuario.BuscarNIF(usuario.Email);
+                conexion.CerrarConexion();
+            }
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                try
+                {
+                    profesor.dia_ocupado(profesor.lista_ciclos(nif), dtpFecha.Value);
+                    MessageBox.Show("Dia libre.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al reservar.");
+                }
+
+                conexion.CerrarConexion();
             }
             refresh();
         }
