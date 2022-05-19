@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Castellano.resx</DependentUpon>
     </Compile>
+    <Compile Include="Recurso_lenguaje\Ingles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ingles.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Biblio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +183,10 @@
     <EmbeddedResource Include="Recurso_lenguaje\Castellano.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Castellano.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recurso_lenguaje\Ingles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ingles.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Biblio.resx">
       <DependentUpon>Biblio.cs</DependentUpon>

@@ -61,6 +61,42 @@ namespace floridapp.Recurso_lenguaje {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Buscas un portatil?.
+        /// </summary>
+        internal static string bib_1 {
+            get {
+                return ResourceManager.GetString("bib_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Servicio de reserva de salas y portatiles.
+        /// </summary>
+        internal static string bib_2 {
+            get {
+                return ResourceManager.GetString("bib_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ofrecemos un sofisticado servicio de reserva de equipos informáticos,   .
+        /// </summary>
+        internal static string bib_3 {
+            get {
+                return ResourceManager.GetString("bib_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Realizar Reserva.
+        /// </summary>
+        internal static string bib_4 {
+            get {
+                return ResourceManager.GetString("bib_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Por solamente:.
         /// </summary>
         internal static string caf_1 {
@@ -200,6 +236,69 @@ namespace floridapp.Recurso_lenguaje {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Tablón de noticias.
+        /// </summary>
+        internal static string new_1 {
+            get {
+                return ResourceManager.GetString("new_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nuestras noticias más recientes.
+        /// </summary>
+        internal static string new_2 {
+            get {
+                return ResourceManager.GetString("new_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Máas noticias.
+        /// </summary>
+        internal static string new_3 {
+            get {
+                return ResourceManager.GetString("new_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Organizar una reunión.
+        /// </summary>
+        internal static string reu_1 {
+            get {
+                return ResourceManager.GetString("reu_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Con tus profesores de confianza.
+        /// </summary>
+        internal static string reu_2 {
+            get {
+                return ResourceManager.GetString("reu_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string reu_3 {
+            get {
+                return ResourceManager.GetString("reu_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Realiza la tuya propia.
+        /// </summary>
+        internal static string reu_4 {
+            get {
+                return ResourceManager.GetString("reu_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Realiza tu pedido.
         /// </summary>
         internal static string rpc_1 {
@@ -277,6 +376,141 @@ namespace floridapp.Recurso_lenguaje {
         internal static string rpc_9 {
             get {
                 return ResourceManager.GetString("rpc_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Realizar Reserva.
+        /// </summary>
+        internal static string rrb_1 {
+            get {
+                return ResourceManager.GetString("rrb_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Reserva tanto de portatil como de salas de estudio.
+        /// </summary>
+        internal static string rrb_2 {
+            get {
+                return ResourceManager.GetString("rrb_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Portatil?.
+        /// </summary>
+        internal static string rrb_3 {
+            get {
+                return ResourceManager.GetString("rrb_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hora Reserva:.
+        /// </summary>
+        internal static string rrb_4 {
+            get {
+                return ResourceManager.GetString("rrb_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Realizar Reserva.
+        /// </summary>
+        internal static string rrb_5 {
+            get {
+                return ResourceManager.GetString("rrb_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona tu módulo.
+        /// </summary>
+        internal static string rreu_1 {
+            get {
+                return ResourceManager.GetString("rreu_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Para acceder a la disponibilidad de los docentes.
+        /// </summary>
+        internal static string rreu_2 {
+            get {
+                return ResourceManager.GetString("rreu_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Continuar.
+        /// </summary>
+        internal static string rreu_3 {
+            get {
+                return ResourceManager.GetString("rreu_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Realizar el formulario.
+        /// </summary>
+        internal static string rreuf_1 {
+            get {
+                return ResourceManager.GetString("rreuf_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Para enviar una solicitud para una reunión.
+        /// </summary>
+        internal static string rreuf_2 {
+            get {
+                return ResourceManager.GetString("rreuf_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Profesor: .
+        /// </summary>
+        internal static string rreuf_3 {
+            get {
+                return ResourceManager.GetString("rreuf_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dia Reserva:.
+        /// </summary>
+        internal static string rreuf_4 {
+            get {
+                return ResourceManager.GetString("rreuf_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hora Reserva: .
+        /// </summary>
+        internal static string rreuf_5 {
+            get {
+                return ResourceManager.GetString("rreuf_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar solicitud.
+        /// </summary>
+        internal static string rreuf_6 {
+            get {
+                return ResourceManager.GetString("rreuf_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Listado de tutorias privadas.
+        /// </summary>
+        internal static string vpr_1 {
+            get {
+                return ResourceManager.GetString("vpr_1", resourceCulture);
             }
         }
     }

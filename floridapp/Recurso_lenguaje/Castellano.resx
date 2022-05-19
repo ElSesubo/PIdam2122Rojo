@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="bib_1" xml:space="preserve">
+    <value>Buscas un portatil?</value>
+  </data>
+  <data name="bib_2" xml:space="preserve">
+    <value>Servicio de reserva de salas y portatiles</value>
+  </data>
+  <data name="bib_3" xml:space="preserve">
+    <value>Ofrecemos un sofisticado servicio de reserva de equipos informáticos,   </value>
+  </data>
+  <data name="bib_4" xml:space="preserve">
+    <value>Realizar Reserva</value>
+  </data>
   <data name="caf_1" xml:space="preserve">
     <value>Por solamente:</value>
   </data>
@@ -166,6 +178,27 @@ culinaria española traspase fronteras.</value>
   <data name="lo_sal" xml:space="preserve">
     <value>Salir</value>
   </data>
+  <data name="new_1" xml:space="preserve">
+    <value>Tablón de noticias</value>
+  </data>
+  <data name="new_2" xml:space="preserve">
+    <value>Nuestras noticias más recientes</value>
+  </data>
+  <data name="new_3" xml:space="preserve">
+    <value>Máas noticias</value>
+  </data>
+  <data name="reu_1" xml:space="preserve">
+    <value>Organizar una reunión</value>
+  </data>
+  <data name="reu_2" xml:space="preserve">
+    <value>Con tus profesores de confianza</value>
+  </data>
+  <data name="reu_3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="reu_4" xml:space="preserve">
+    <value>Realiza la tuya propia</value>
+  </data>
   <data name="rpc_1" xml:space="preserve">
     <value>Realiza tu pedido</value>
   </data>
@@ -192,5 +225,50 @@ culinaria española traspase fronteras.</value>
   </data>
   <data name="rpc_9" xml:space="preserve">
     <value>Limpiar Pedido</value>
+  </data>
+  <data name="rrb_1" xml:space="preserve">
+    <value>Realizar Reserva</value>
+  </data>
+  <data name="rrb_2" xml:space="preserve">
+    <value>Reserva tanto de portatil como de salas de estudio</value>
+  </data>
+  <data name="rrb_3" xml:space="preserve">
+    <value>Portatil?</value>
+  </data>
+  <data name="rrb_4" xml:space="preserve">
+    <value>Hora Reserva:</value>
+  </data>
+  <data name="rrb_5" xml:space="preserve">
+    <value>Realizar Reserva</value>
+  </data>
+  <data name="rreuf_1" xml:space="preserve">
+    <value>Realizar el formulario</value>
+  </data>
+  <data name="rreuf_2" xml:space="preserve">
+    <value>Para enviar una solicitud para una reunión</value>
+  </data>
+  <data name="rreuf_3" xml:space="preserve">
+    <value>Profesor: </value>
+  </data>
+  <data name="rreuf_4" xml:space="preserve">
+    <value>Dia Reserva:</value>
+  </data>
+  <data name="rreuf_5" xml:space="preserve">
+    <value>Hora Reserva: </value>
+  </data>
+  <data name="rreuf_6" xml:space="preserve">
+    <value>Enviar solicitud</value>
+  </data>
+  <data name="rreu_1" xml:space="preserve">
+    <value>Selecciona tu módulo</value>
+  </data>
+  <data name="rreu_2" xml:space="preserve">
+    <value>Para acceder a la disponibilidad de los docentes</value>
+  </data>
+  <data name="rreu_3" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="vpr_1" xml:space="preserve">
+    <value>Listado de tutorias privadas</value>
   </data>
 </root>
