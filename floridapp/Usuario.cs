@@ -25,7 +25,7 @@ namespace floridapp
         private static string email;
         private static int tipo;
 
-        public usuario(string nif, string correo, string contraseña, string nombre, string apellido, int tel, bool profesor, bool alumno, bool admi, bool cocina, bool biblioteca)
+        public usuario(string nif, string correo, string contraseña, string nombre, string apellido, int tel, bool profesor, bool admi, bool cocina, bool biblioteca, bool alumno)
         {
             this.nif = nif;
             this.correo = correo;
@@ -34,10 +34,10 @@ namespace floridapp
             this.apellido = apellido;
             this.tel = tel;
             this.profesor = profesor;
-            this.alumno = alumno;
             this.admi = admi;
             this.cocina = cocina;
             this.biblioteca = biblioteca;
+            this.alumno = alumno;
         }
 
         public usuario(bool profesor, bool alumno, bool admi, bool cocina, bool biblioteca)

@@ -34,7 +34,6 @@ namespace floridapp
                 smtp.Credentials = new System.Net.NetworkCredential(mailAddress, password);
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
-                MessageBox.Show(Error);
 
             }
             catch (Exception ex)

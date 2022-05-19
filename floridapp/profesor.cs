@@ -155,6 +155,8 @@ namespace floridapp
         }
 
 
+
+
         //Metodos que se ha optimizado.
         //public List<int> buscar_indice(DateTime dias)
         //{
@@ -323,6 +325,61 @@ namespace floridapp
             reader.Close();
             return modulo;
         }
+
+        public static List<int> lista_ciclos(string nif_a)
+        {
+            List<int> list_ciclo = new List<int>();
+            string consulta = string.Format("SELECT cicl from ciclo_pertenece where user_nif='{0}';", nif_a);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                list_ciclo.Add(reader.GetInt32(0));
+            }
+            reader.Close();
+            return list_ciclo;
+        }
+
+        public static void dia_ocupado(List<int> li,DateTime dia)
+        {
+            string nif = usuario.BuscarNIF(usuario.Email);
+            for(int i = 0; i < li.Count; i++)
+            {
+                string consulta = "INSERT INTO reservar_profesor VALUES(@id,@h_re,@id_user,@cicl,@nif_profe,@dia);";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                comando.Parameters.AddWithValue("id", null);
+                comando.Parameters.AddWithValue("h_re", "04:00:00");
+                comando.Parameters.AddWithValue("cicl", li[i]);
+                comando.Parameters.AddWithValue("id_user", nif);
+                comando.Parameters.AddWithValue("nif_profe", nif);
+                comando.Parameters.AddWithValue("dia", dia.ToString("yyyy/MM/dd"));
+                comando.ExecuteNonQuery();
+            }
+
+        }
+
+        //public bool comprobar_dia(DateTime dia_re)
+        //{
+        //    string consulta = "SELECT id_user,nif_profesor FROM reservar_profesor where dia_reserva=@dia_re and nif_profesor=@nif_pro;";
+        //    MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+        //    comando.Parameters.AddWithValue("dia_re", dia_re.ToString("yyyy-MM-dd"));
+        //    comando.Parameters.AddWithValue("nif_pro", Nif);
+        //    comando.ExecuteNonQuery();
+        //    MySqlDataReader reader = comando.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        if (reader.GetString(1) == reader.GetString(0))
+        //        {
+        //            return false;
+        //        }
+        //        else
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    reader.Close();
+        //    return  true;
+        //}
     }
 
 
