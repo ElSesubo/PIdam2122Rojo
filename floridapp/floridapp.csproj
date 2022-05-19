@@ -298,8 +298,6 @@
   <ItemGroup>
     <None Include="Resources\ProfesorUser.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RecursosLocalizables\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

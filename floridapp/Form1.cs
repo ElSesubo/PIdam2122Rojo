@@ -172,7 +172,7 @@ namespace floridapp
                     }
             }
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
-            AplicarIdioma();
+            
         }
     }
 }

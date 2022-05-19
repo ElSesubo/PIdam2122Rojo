@@ -48,7 +48,6 @@ namespace floridapp
 
         private void accesoBiblioteca_Load(object sender, EventArgs e)
         {
-            //CargaListaReservas();
             Cargar();
         }
 
@@ -85,7 +84,28 @@ namespace floridapp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+
+            if (dtgvReservas.SelectedRows.Count == 1)
+            {
+                int cafe = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[0].Value));
+
+
+
+                DialogResult confirmacion = MessageBox.Show("Vaciar la mesa el registro seleccionado. ¿Continuar?",
+                                                    "Eliminación", MessageBoxButtons.YesNo);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        cafeteria.ActualizarMesaV(cafe);
+                        conexion.CerrarConexion();
+                    }
+                    Cargar();
+                }
+            }
+            /*try
             {
                 int resultado;
 
@@ -116,12 +136,12 @@ namespace floridapp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            //CargaListaReservas();
+            Cargar();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -147,8 +167,13 @@ namespace floridapp
             dtgvReservas.Rows.Clear();
             for (int i = 0; i < portatil.Count; i++)
             {
-                dtgvReservas.Rows.Add(portatil[i].Id_portatil, portatil[i].Reservado);
+                dtgvReservas.Rows.Add(portatil[i].Id, portatil[i].Hora, portatil[i].Id_portatil, portatil[i].Id_user, portatil[i].Dia_hora_reserva);
             }
+        }
+
+        private void accesoBiblioteca_Load_1(object sender, EventArgs e)
+        {
+            Cargar();
         }
     }
 }
