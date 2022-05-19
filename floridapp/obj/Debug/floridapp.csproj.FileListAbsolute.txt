@@ -246,11 +246,7 @@ C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 >>>>>>> c19299561cd49341193f5090bd39522440178c83
 >>>>>>> 9fb43a8f91770989f370329e310afbf57c43f78d
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
-=======
 >>>>>>> fbed7b41071a533379f17c9057b745979cfef6f8
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources

@@ -70,6 +70,7 @@
     <Compile Include="biblioteca.cs" />
     <Compile Include="cafeteria.cs" />
     <Compile Include="conexion.cs" />
+    <Compile Include="EnviarGmail.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

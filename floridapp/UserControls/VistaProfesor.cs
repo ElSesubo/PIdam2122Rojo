@@ -101,35 +101,67 @@ namespace floridapp.UserControls
 
         private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             var senderGrid = (DataGridView)sender;
             int fila=e.RowIndex;
             int exito = 0;
-
+            string nombre = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                nombre = usuario.obtener_nombre_ciclo();
+                conexion.CerrarConexion();
+            }
+            string modulo = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                modulo = profesor.Modulo_profesor();
+                conexion.CerrarConexion();
+            }
+            string gmail = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                gmail = profesor.Email_alumno(dgvTutoria.Rows[fila].Cells[1].ToString());
+                conexion.CerrarConexion();
+            }
+            string error = "";
+            StringBuilder sb = new StringBuilder();
+            sb.Append(string.Format("El profesor {0} del {1} ha anulado tu tutoria.", nombre, modulo));
+            EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY", out error);
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                if (conexion.Conexion != null)
+                DialogResult resultado = MessageBox.Show("¿Deseas anular la tutoria?",
+               "ANULAR!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.Yes)
                 {
-                    conexion.AbrirConexion();
-                    try
+                    if (conexion.Conexion != null)
                     {
-                        exito=profesor.anular_tutoria(dgvTutoria.Rows[fila].Cells[1].Value.ToString(), DateTime.Parse(dgvTutoria.Rows[fila].Cells[4].Value.ToString()),DateTime.Parse(dgvTutoria.Rows[fila].Cells[3].Value.ToString()));
-                        if(exito != 0)
+                        conexion.AbrirConexion();
+                        try
                         {
-                            MessageBox.Show("Anulado con exito.");
+                            exito = profesor.anular_tutoria(dgvTutoria.Rows[fila].Cells[1].Value.ToString(), DateTime.Parse(dgvTutoria.Rows[fila].Cells[4].Value.ToString()), DateTime.Parse(dgvTutoria.Rows[fila].Cells[3].Value.ToString()));
+                            if (exito != 0)
+                            {
+                                MessageBox.Show("Anulado con exito.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fallo");
+                            }
+
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("Fallo");
+                            MessageBox.Show(ex.Message);
                         }
 
-                    }catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
+                        conexion.CerrarConexion();
                     }
-
-                    conexion.CerrarConexion();
                 }
+
             }
             refresh();
         }
