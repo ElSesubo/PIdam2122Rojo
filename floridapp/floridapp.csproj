@@ -79,6 +79,11 @@
     </Compile>
     <Compile Include="Pedido.cs" />
     <Compile Include="profesor.cs" />
+    <Compile Include="Recurso_lenguaje\Castellano.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Castellano.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Biblio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +174,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recurso_lenguaje\Castellano.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Castellano.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Biblio.resx">
       <DependentUpon>Biblio.cs</DependentUpon>
@@ -298,8 +307,6 @@
   <ItemGroup>
     <None Include="Resources\ProfesorUser.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RecursosLocalizables\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
