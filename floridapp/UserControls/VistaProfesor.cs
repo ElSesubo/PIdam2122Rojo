@@ -19,25 +19,26 @@ namespace floridapp.UserControls
 
         private void VistaProfesor_Load(object sender, EventArgs e)
         {
+            refresh();
+        }
+
+        private void refresh()
+        {
             List<profesor> p = profesores();//Devuelve la lista de tutoria profesor.
             List<string> list_alumnos = nombre();//Devuelve la lista de nombres traducidos por nif
             List<string> list_ciclos = nombre_de_ciclos();//Devuelve la lista de los nombres de los ciclos traducido por id
             dgvTutoria.Rows.Clear();
             for (int i = 0; i < list_alumnos.Count; i++)
             {
-                dgvTutoria.Rows.Add(list_alumnos[i], list_ciclos[i], p[i].Dia, p[i].Hora);
+                dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia, p[i].Hora, "Anular");
             }
-            for (int i = 0; i < list_alumnos.Count; i++)
+            for(int j=0; j < list_ciclos.Count; j++)
             {
-                comboBox1.Items.Add(list_alumnos[i]);
-            }
-            for (int i = 0; i < list_ciclos.Count; i++)
-            {
-                comboBox2.Items.Add(list_ciclos[i]);
-            }
-            for (int i = 0; i < p.Count; i++)
-            {
-                comboBox3.Items.Add(p[i].Nif_alumno);
+                if (dgvTutoria.Rows[j].Cells[4].Value.ToString() == "04:00:00")
+                {
+                    dgvTutoria.Rows[j].Visible = false;
+                    
+                }
             }
         }
         private List<profesor> profesores()
@@ -93,5 +94,80 @@ namespace floridapp.UserControls
             }
             return nombres;
         }
+
+        private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            var senderGrid = (DataGridView)sender;
+            int fila=e.RowIndex;
+            int exito = 0;
+            string nombre = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                nombre = usuario.obtener_nombre_usuario();
+                conexion.CerrarConexion();
+            }
+            string modulo = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                modulo = profesor.Modulo_profesor();
+                conexion.CerrarConexion();
+            }
+            string gmail = "";
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                gmail = profesor.Email_alumno(dgvTutoria.Rows[fila].Cells[1].Value.ToString());
+                conexion.CerrarConexion();
+            }
+            string error = "";
+            StringBuilder sb = new StringBuilder();
+            sb.Append(string.Format("El profesor {0} del {1} ha anulado tu tutoria.", nombre, modulo));
+            EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY",error);
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                DialogResult resultado = MessageBox.Show("¿Deseas anular la tutoria?",
+               "ANULAR!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.Yes)
+                {
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            exito = profesor.anular_tutoria(dgvTutoria.Rows[fila].Cells[1].Value.ToString(), DateTime.Parse(dgvTutoria.Rows[fila].Cells[4].Value.ToString()), DateTime.Parse(dgvTutoria.Rows[fila].Cells[3].Value.ToString()));
+                            if (exito != 0)
+                            {
+                                MessageBox.Show("Anulado con exito.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Fallo");
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                        conexion.CerrarConexion();
+                    }
+                }
+
+            }
+            refresh();
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

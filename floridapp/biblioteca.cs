@@ -17,6 +17,8 @@ namespace floridapp
         private int id_pecera;
         private string id_user;
         private DateTime dia_hora_devolucion;
+        private TimeSpan hora;
+        private bool reservado;
 
         public int Id { get => id; set => id = value; }
         public DateTime Dia_hora_reserva { get => dia_hora_reserva; set => dia_hora_reserva = value; }
@@ -24,7 +26,8 @@ namespace floridapp
         public int Id_pecera { get => id_pecera; set => id_pecera = value; }
         public string Id_user { get => id_user; set => id_user = value; }
         public DateTime Dia_hora_devolucion { get => dia_hora_devolucion; set => dia_hora_devolucion = value; }
-
+        public TimeSpan Hora { get => hora; set => hora = value; }
+        public bool Reservado { get => reservado; set => reservado = value; }
         /// <summary>
         /// Constructor sobrecargado
         /// </summary>
@@ -43,7 +46,22 @@ namespace floridapp
             this.id_user = id_user;
             this.dia_hora_devolucion = dhd;
         }
+        public biblioteca(int id,TimeSpan hora,int id_por, string nif,DateTime dia_re)
+        {
 
+            this.id = id;
+            this.hora = hora;
+            this.Id_portatil = id_por;
+            id_user = nif;
+            dia_hora_reserva = dia_re;
+
+        }
+
+        public biblioteca(int id, bool reservado)
+        {
+            id_portatil = id;
+            this.reservado = reservado;
+        }
         /// <summary>
         /// Constructor vacio
         /// </summary>
@@ -134,6 +152,69 @@ namespace floridapp
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
+        }
+
+        public static void InsertarPedidoBiblioteca(TimeSpan reserva, int portatil, string nif)
+        {
+            string consulta = "";
+
+            consulta = String.Format("INSERT INTO reserva_portatil (hora_reserva, id_portatil, id_user, dia_reserva) VALUES " +
+                        "('{0}','{1}','{2}','{3}')", reserva, portatil, nif, DateTime.Now.ToString("yyyy-MM-dd"));
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteReader();
+        }
+
+        public static int BuscarPortatilDisponible()
+        {
+            int id = 0;
+            string consulta = "";
+            consulta = String.Format("SELECT id from portatil where reservado=0 and devuelto=0");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id = reader.GetInt16(0);
+                }
+            }
+            reader.Close();
+            return id;
+        }
+
+        public static void ActualizarPortatilReserva(int id)
+        {
+            string consulta1 = "";
+            consulta1 = String.Format("UPDATE portatil set reservado=1 and devuelto=0 where id='{0}';", id);
+            MySqlCommand comando2 = new MySqlCommand(consulta1, conexion.Conexion);
+            comando2.ExecuteReader();
+        }
+
+        public static void ActualizarPortatilDevuelto(int id)
+        {
+            string consulta1 = "";
+            consulta1 = String.Format("UPDATE portatil set devuelto=1 devuelto=0 where num='{0}' ;", id);
+            MySqlCommand comando2 = new MySqlCommand(consulta1, conexion.Conexion);
+            comando2.ExecuteReader();
+        }
+        public static List<biblioteca> ListaBiblioteca()
+        {
+            List<biblioteca> lista = new List<biblioteca>();
+            string consulta = "";
+            consulta = String.Format("SELECT p.id, p.hora_reserva, p.id_portatil, p.id_user, p.dia_reserva FROM reserva_portatil p INNER JOIN portatil j on p.id_portatil=j.id WHERE reservado=1;");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    biblioteca biblio = new biblioteca(reader.GetInt16(0), reader.GetTimeSpan(1),reader.GetInt16(2),reader.GetString(3),reader.GetDateTime(4));
+                    lista.Add(biblio);
+                }
+            }
+            reader.Close();
+            return lista;
         }
     }
 }

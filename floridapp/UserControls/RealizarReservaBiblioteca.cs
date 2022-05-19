@@ -24,7 +24,39 @@ namespace floridapp.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool portatil = cbPortatil.Checked;
+            TimeSpan hora= TimeSpan.Parse(dtpHora.Value.ToString("T"));
+            if (portatil == cbPortatil.Checked)
+            {
+                int id = 0;
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    id = biblioteca.BuscarPortatilDisponible();
+                    conexion.CerrarConexion();
+                }
+                
+                string nif = "";
 
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    nif = usuario.BuscarNIF(usuario.Email);
+                    conexion.CerrarConexion();
+                }
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    biblioteca.InsertarPedidoBiblioteca(hora,id,nif);
+                    conexion.CerrarConexion();
+                }
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    biblioteca.ActualizarPortatilReserva(id);
+                    conexion.CerrarConexion();
+                }
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -37,6 +69,11 @@ namespace floridapp.UserControls
             {
                 cbSalas.Enabled = true;
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
