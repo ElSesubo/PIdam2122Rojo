@@ -93,5 +93,10 @@ namespace floridapp.UserControls
             }
             return nombres;
         }
+
+        private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
