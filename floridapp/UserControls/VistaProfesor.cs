@@ -32,7 +32,14 @@ namespace floridapp.UserControls
             {
                 dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia, p[i].Hora, "Anular");
             }
-            gbCalendario.Visible = false;
+            for(int j=0; j < list_ciclos.Count; j++)
+            {
+                if (dgvTutoria.Rows[j].Cells[4].Value.ToString() == "04:00:00")
+                {
+                    dgvTutoria.Rows[j].Visible = false;
+                    
+                }
+            }
         }
         private List<profesor> profesores()
         {
@@ -90,10 +97,7 @@ namespace floridapp.UserControls
 
         private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-<<<<<<< HEAD
 
-=======
-            
             var senderGrid = (DataGridView)sender;
             int fila=e.RowIndex;
             int exito = 0;
@@ -156,7 +160,7 @@ namespace floridapp.UserControls
 
             }
             refresh();
->>>>>>> 9a0ae76523b3a0712d38bf88277cda2359c77682
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -164,36 +168,6 @@ namespace floridapp.UserControls
 
         }
 
-        private void btnDiaOcupado_Click(object sender, EventArgs e)
-        {
-            gbCalendario.Visible = true;
-        }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            string nif = "";
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                nif = usuario.BuscarNIF(usuario.Email);
-                conexion.CerrarConexion();
-            }
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                try
-                {
-                    profesor.dia_ocupado(profesor.lista_ciclos(nif), dtpFecha.Value);
-                    MessageBox.Show("Dia libre.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al reservar.");
-                }
-
-                conexion.CerrarConexion();
-            }
-            refresh();
-        }
     }
 }

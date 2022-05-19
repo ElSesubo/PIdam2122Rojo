@@ -358,28 +358,28 @@ namespace floridapp
 
         }
 
-        public bool comprobar_dia(DateTime dia_re)
-        {
-            string consulta = "SELECT id_user,nif_profesor FROM reservar_profesor where dia_reserva=@dia_re and nif_profesor=@nif_pro;";
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            comando.Parameters.AddWithValue("dia_re", dia_re.ToString("yyyy-MM-dd"));
-            comando.Parameters.AddWithValue("nif_pro", Nif);
-            comando.ExecuteNonQuery();
-            MySqlDataReader reader = comando.ExecuteReader();
-            while (reader.Read())
-            {
-                if (reader.GetString(1) == reader.GetString(0))
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
-            reader.Close();
-            return  true;
-        }
+        //public bool comprobar_dia(DateTime dia_re)
+        //{
+        //    string consulta = "SELECT id_user,nif_profesor FROM reservar_profesor where dia_reserva=@dia_re and nif_profesor=@nif_pro;";
+        //    MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+        //    comando.Parameters.AddWithValue("dia_re", dia_re.ToString("yyyy-MM-dd"));
+        //    comando.Parameters.AddWithValue("nif_pro", Nif);
+        //    comando.ExecuteNonQuery();
+        //    MySqlDataReader reader = comando.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        if (reader.GetString(1) == reader.GetString(0))
+        //        {
+        //            return false;
+        //        }
+        //        else
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    reader.Close();
+        //    return  true;
+        //}
     }
 
 

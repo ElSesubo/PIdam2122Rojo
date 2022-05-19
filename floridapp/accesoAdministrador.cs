@@ -205,11 +205,14 @@ namespace floridapp
 
         }
 
-<<<<<<< HEAD
+
         private void dtgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-=======
+        {
+
+        }
+
         private void rbnProfesor_CheckedChanged(object sender, EventArgs e)
->>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
+
         {
 
         }

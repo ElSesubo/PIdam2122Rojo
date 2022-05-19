@@ -39,24 +39,15 @@ namespace floridapp.UserControls
         private void refresh()
         {
             
-            bool disponible=false;
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                disponible = profesor.comprobar_dia(dtpDia.Value);
-                conexion.CerrarConexion();
-            }
-            if (disponible==true)
-            {
+
+
                 if (conexion.Conexion != null)
                 {
                     conexion.AbrirConexion();
                     cmbHoras.DataSource = profesor.filtrar_horas_por_dias(dtpDia.Value);
                     conexion.CerrarConexion();
                 }
-            }
-            else
-            {
+
                 if (cmbHoras.Items.Count == 0)
                 {
                     cmbHoras.Items.Add("No queda horas disponibles.");
@@ -64,7 +55,6 @@ namespace floridapp.UserControls
                 }
             }
 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
