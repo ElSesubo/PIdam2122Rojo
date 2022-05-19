@@ -49,11 +49,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.cbAlumno = new System.Windows.Forms.CheckBox();
             this.cbBiblioteca = new System.Windows.Forms.CheckBox();
             this.cbCocina = new System.Windows.Forms.CheckBox();
             this.cbAdministrador = new System.Windows.Forms.CheckBox();
             this.cbProfesor = new System.Windows.Forms.CheckBox();
+=======
+            this.rbnProfesor = new System.Windows.Forms.RadioButton();
+            this.rbnAdmin = new System.Windows.Forms.RadioButton();
+            this.rbnCocina = new System.Windows.Forms.RadioButton();
+            this.rbnBiblioteca = new System.Windows.Forms.RadioButton();
+            this.rbnAlumno = new System.Windows.Forms.RadioButton();
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -61,11 +69,19 @@
             // dtgvUsuarios
             // 
             this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dtgvUsuarios.Location = new System.Drawing.Point(112, 76);
             this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvUsuarios.Name = "dtgvUsuarios";
             this.dtgvUsuarios.RowHeadersWidth = 51;
             this.dtgvUsuarios.Size = new System.Drawing.Size(904, 446);
+=======
+            this.dtgvUsuarios.Location = new System.Drawing.Point(63, 85);
+            this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvUsuarios.Name = "dtgvUsuarios";
+            this.dtgvUsuarios.RowHeadersWidth = 51;
+            this.dtgvUsuarios.Size = new System.Drawing.Size(802, 446);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.dtgvUsuarios.TabIndex = 0;
             this.dtgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellContentClick);
             // 
@@ -91,7 +107,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(107, 47);
+=======
+            this.label2.Location = new System.Drawing.Point(59, 49);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 23);
@@ -101,7 +121,11 @@
             // btnMostrar
             // 
             this.btnMostrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnMostrar.Location = new System.Drawing.Point(1600, 565);
+=======
+            this.btnMostrar.Location = new System.Drawing.Point(1361, 574);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(116, 44);
@@ -113,7 +137,11 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnEliminar.Location = new System.Drawing.Point(1472, 565);
+=======
+            this.btnEliminar.Location = new System.Drawing.Point(1233, 574);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 44);
@@ -125,7 +153,11 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnEditar.Location = new System.Drawing.Point(1364, 565);
+=======
+            this.btnEditar.Location = new System.Drawing.Point(1125, 574);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 44);
@@ -137,7 +169,11 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnBuscar.Location = new System.Drawing.Point(1255, 565);
+=======
+            this.btnBuscar.Location = new System.Drawing.Point(1017, 574);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 44);
@@ -149,7 +185,11 @@
             // btnInsertar
             // 
             this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnInsertar.Location = new System.Drawing.Point(1139, 565);
+=======
+            this.btnInsertar.Location = new System.Drawing.Point(900, 574);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(108, 44);
@@ -162,7 +202,11 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.lblNombre.Location = new System.Drawing.Point(116, 27);
+=======
+            this.lblNombre.Location = new System.Drawing.Point(113, 33);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(45, 23);
@@ -205,7 +249,11 @@
             // txtNif
             // 
             this.txtNif.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.txtNif.Location = new System.Drawing.Point(177, 25);
+=======
+            this.txtNif.Location = new System.Drawing.Point(166, 30);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.txtNif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNif.Name = "txtNif";
             this.txtNif.Size = new System.Drawing.Size(239, 32);
@@ -214,7 +262,11 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.txtCorreo.Location = new System.Drawing.Point(177, 68);
+=======
+            this.txtCorreo.Location = new System.Drawing.Point(166, 70);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(437, 32);
@@ -223,7 +275,11 @@
             // txtContra
             // 
             this.txtContra.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.txtContra.Location = new System.Drawing.Point(177, 111);
+=======
+            this.txtContra.Location = new System.Drawing.Point(166, 111);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(437, 32);
@@ -243,7 +299,11 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.txtNombre.Location = new System.Drawing.Point(177, 156);
+=======
+            this.txtNombre.Location = new System.Drawing.Point(166, 151);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(437, 32);
@@ -252,7 +312,11 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.txtApellido.Location = new System.Drawing.Point(177, 197);
+=======
+            this.txtApellido.Location = new System.Drawing.Point(166, 194);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(437, 32);
@@ -272,7 +336,11 @@
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.txtTel.Location = new System.Drawing.Point(177, 238);
+=======
+            this.txtTel.Location = new System.Drawing.Point(166, 238);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.txtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(437, 32);
@@ -280,11 +348,11 @@
             // 
             // pnlUsuario
             // 
-            this.pnlUsuario.Controls.Add(this.cbAlumno);
-            this.pnlUsuario.Controls.Add(this.cbBiblioteca);
-            this.pnlUsuario.Controls.Add(this.cbCocina);
-            this.pnlUsuario.Controls.Add(this.cbAdministrador);
-            this.pnlUsuario.Controls.Add(this.cbProfesor);
+            this.pnlUsuario.Controls.Add(this.rbnAlumno);
+            this.pnlUsuario.Controls.Add(this.rbnBiblioteca);
+            this.pnlUsuario.Controls.Add(this.rbnCocina);
+            this.pnlUsuario.Controls.Add(this.rbnAdmin);
+            this.pnlUsuario.Controls.Add(this.rbnProfesor);
             this.pnlUsuario.Controls.Add(this.txtTel);
             this.pnlUsuario.Controls.Add(this.label1);
             this.pnlUsuario.Controls.Add(this.txtApellido);
@@ -297,6 +365,7 @@
             this.pnlUsuario.Controls.Add(this.lblEmail);
             this.pnlUsuario.Controls.Add(this.lblApellidos);
             this.pnlUsuario.Controls.Add(this.lblNombre);
+<<<<<<< HEAD
             this.pnlUsuario.Location = new System.Drawing.Point(1059, 76);
             this.pnlUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlUsuario.Name = "pnlUsuario";
@@ -314,6 +383,74 @@
             this.cbAlumno.TabIndex = 19;
             this.cbAlumno.Text = "Alumno";
             this.cbAlumno.UseVisualStyleBackColor = true;
+=======
+            this.pnlUsuario.Location = new System.Drawing.Point(900, 85);
+            this.pnlUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUsuario.Name = "pnlUsuario";
+            this.pnlUsuario.Size = new System.Drawing.Size(634, 481);
+            this.pnlUsuario.TabIndex = 8;
+            // 
+            // rbnProfesor
+            // 
+            this.rbnProfesor.AutoSize = true;
+            this.rbnProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnProfesor.Location = new System.Drawing.Point(177, 335);
+            this.rbnProfesor.Name = "rbnProfesor";
+            this.rbnProfesor.Size = new System.Drawing.Size(108, 27);
+            this.rbnProfesor.TabIndex = 20;
+            this.rbnProfesor.TabStop = true;
+            this.rbnProfesor.Text = "Profesor";
+            this.rbnProfesor.UseVisualStyleBackColor = true;
+            this.rbnProfesor.CheckedChanged += new System.EventHandler(this.rbnProfesor_CheckedChanged);
+            // 
+            // rbnAdmin
+            // 
+            this.rbnAdmin.AutoSize = true;
+            this.rbnAdmin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnAdmin.Location = new System.Drawing.Point(177, 434);
+            this.rbnAdmin.Name = "rbnAdmin";
+            this.rbnAdmin.Size = new System.Drawing.Size(165, 27);
+            this.rbnAdmin.TabIndex = 21;
+            this.rbnAdmin.TabStop = true;
+            this.rbnAdmin.Text = "Administrador";
+            this.rbnAdmin.UseVisualStyleBackColor = true;
+            // 
+            // rbnCocina
+            // 
+            this.rbnCocina.AutoSize = true;
+            this.rbnCocina.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnCocina.Location = new System.Drawing.Point(177, 368);
+            this.rbnCocina.Name = "rbnCocina";
+            this.rbnCocina.Size = new System.Drawing.Size(102, 27);
+            this.rbnCocina.TabIndex = 22;
+            this.rbnCocina.TabStop = true;
+            this.rbnCocina.Text = "Cocina";
+            this.rbnCocina.UseVisualStyleBackColor = true;
+            // 
+            // rbnBiblioteca
+            // 
+            this.rbnBiblioteca.AutoSize = true;
+            this.rbnBiblioteca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnBiblioteca.Location = new System.Drawing.Point(177, 401);
+            this.rbnBiblioteca.Name = "rbnBiblioteca";
+            this.rbnBiblioteca.Size = new System.Drawing.Size(127, 27);
+            this.rbnBiblioteca.TabIndex = 23;
+            this.rbnBiblioteca.TabStop = true;
+            this.rbnBiblioteca.Text = "Biblioteca";
+            this.rbnBiblioteca.UseVisualStyleBackColor = true;
+            // 
+            // rbnAlumno
+            // 
+            this.rbnAlumno.AutoSize = true;
+            this.rbnAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbnAlumno.Location = new System.Drawing.Point(177, 302);
+            this.rbnAlumno.Name = "rbnAlumno";
+            this.rbnAlumno.Size = new System.Drawing.Size(107, 27);
+            this.rbnAlumno.TabIndex = 24;
+            this.rbnAlumno.TabStop = true;
+            this.rbnAlumno.Text = "Alumno";
+            this.rbnAlumno.UseVisualStyleBackColor = true;
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             // 
             // cbBiblioteca
             // 
@@ -369,7 +506,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1827, 650);
+=======
+            this.ClientSize = new System.Drawing.Size(1608, 650);
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -416,10 +557,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Panel pnlUsuario;
-        private System.Windows.Forms.CheckBox cbAlumno;
-        private System.Windows.Forms.CheckBox cbBiblioteca;
-        private System.Windows.Forms.CheckBox cbCocina;
-        private System.Windows.Forms.CheckBox cbAdministrador;
-        private System.Windows.Forms.CheckBox cbProfesor;
+        private System.Windows.Forms.RadioButton rbnProfesor;
+        private System.Windows.Forms.RadioButton rbnAlumno;
+        private System.Windows.Forms.RadioButton rbnBiblioteca;
+        private System.Windows.Forms.RadioButton rbnCocina;
+        private System.Windows.Forms.RadioButton rbnAdmin;
     }
 }

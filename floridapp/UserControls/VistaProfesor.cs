@@ -90,6 +90,9 @@ namespace floridapp.UserControls
 
         private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+<<<<<<< HEAD
+
+=======
             
             var senderGrid = (DataGridView)sender;
             int fila=e.RowIndex;
@@ -153,6 +156,7 @@ namespace floridapp.UserControls
 
             }
             refresh();
+>>>>>>> 9a0ae76523b3a0712d38bf88277cda2359c77682
         }
 
         private void label3_Click(object sender, EventArgs e)

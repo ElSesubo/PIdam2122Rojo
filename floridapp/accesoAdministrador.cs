@@ -59,11 +59,11 @@ namespace floridapp
                     usu.Nombre = txtNombre.Text;
                     usu.Apellido = txtApellido.Text;
                     usu.Tel = Convert.ToInt32(txtTel.Text);
-                    usu.Alumno = cbAlumno.Checked;
-                    usu.Admi = cbAdministrador.Checked;
-                    usu.Profesor = cbProfesor.Checked;
-                    usu.Cocina = cbCocina.Checked;
-                    usu.Biblioteca = cbBiblioteca.Checked;
+                    usu.Alumno = rbnAlumno.Checked;
+                    usu.Admi = rbnAdmin.Checked;
+                    usu.Profesor = rbnProfesor.Checked;
+                    usu.Cocina = rbnCocina.Checked;
+                    usu.Biblioteca = rbnBiblioteca.Checked; 
 
                     if (!usuario.MailExiste(txtCorreo.Text)) 
                     {
@@ -83,11 +83,11 @@ namespace floridapp
                         txtNombre.Clear();
                         txtApellido.Clear();
                         txtTel.Clear();
-                        cbAdministrador.Checked = false;
-                        cbAlumno.Checked = false;
-                        cbProfesor.Checked = false;
-                        cbCocina.Checked = false;
-                        cbBiblioteca.Checked = false;
+                        rbnAdmin.Checked = false;
+                        rbnAlumno.Checked = false;
+                        rbnProfesor.Checked = false;
+                        rbnCocina.Checked = false;
+                        rbnBiblioteca.Checked = false; 
                         txtNif.Focus();
                     }
 
@@ -141,11 +141,11 @@ namespace floridapp
                         txtNombre.Text = usu.Nombre;
                         txtApellido.Text = usu.Apellido;
                         txtTel.Text = usu.Tel.ToString();
-                        cbProfesor.Checked = usu.Profesor;
-                        cbAdministrador.Checked = usu.Admi;
-                        cbCocina.Checked = usu.Cocina;
-                        cbBiblioteca.Checked = usu.Biblioteca;
-                        cbAlumno.Checked = usu.Alumno;
+                        rbnProfesor.Checked = usu.Profesor;
+                        rbnAdmin.Checked = usu.Admi;
+                        rbnCocina.Checked = usu.Cocina;
+                        rbnBiblioteca.Checked = usu.Biblioteca;
+                        rbnAlumno.Checked = usu.Alumno; 
                     }
                     else
                     {
@@ -205,7 +205,11 @@ namespace floridapp
 
         }
 
+<<<<<<< HEAD
         private void dtgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+=======
+        private void rbnProfesor_CheckedChanged(object sender, EventArgs e)
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
         {
 
         }
