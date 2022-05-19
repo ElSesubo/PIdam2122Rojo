@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
 
 namespace floridapp
 {
@@ -151,6 +153,26 @@ namespace floridapp
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cbxIdiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cbLenguas.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "Inglés":
+                    {
+                        cultura = "EN-GB";  
+                        break;
+                    }
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
         }
     }
 }
