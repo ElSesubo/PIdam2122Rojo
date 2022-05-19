@@ -30,25 +30,26 @@ namespace floridapp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelVista = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pbAlumno = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.btnListaMod = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnBiblioteca = new System.Windows.Forms.Button();
             this.btnCafeteria = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReunion = new System.Windows.Forms.Button();
-            this.pbAlumno = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelVista = new System.Windows.Forms.Panel();
+            this.cbLenguas = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,60 +74,15 @@ namespace floridapp
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lblTitulo
+            // pbAlumno
             // 
-            this.lblTitulo.AutoEllipsis = true;
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(71, 263);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(0, 23);
-            this.lblTitulo.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(278, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1108, 123);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(469, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "INICIO";
-            // 
-            // panelVista
-            // 
-            this.panelVista.BackColor = System.Drawing.SystemColors.Control;
-            this.panelVista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelVista.ForeColor = System.Drawing.Color.Black;
-            this.panelVista.Location = new System.Drawing.Point(278, 0);
-            this.panelVista.Name = "panelVista";
-            this.panelVista.Size = new System.Drawing.Size(1108, 804);
-            this.panelVista.TabIndex = 5;
-            this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoEllipsis = true;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 262);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 23);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "FLORIDAPP";
+            this.pbAlumno.Image = global::floridapp.Properties.Resources.AlumnoUser;
+            this.pbAlumno.Location = new System.Drawing.Point(31, 27);
+            this.pbAlumno.Name = "pbAlumno";
+            this.pbAlumno.Size = new System.Drawing.Size(28, 28);
+            this.pbAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAlumno.TabIndex = 11;
+            this.pbAlumno.TabStop = false;
             // 
             // lblNombre
             // 
@@ -135,9 +91,20 @@ namespace floridapp
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(71, 33);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 22);
+            this.lblNombre.Size = new System.Drawing.Size(86, 30);
             this.lblNombre.TabIndex = 10;
             this.lblNombre.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoEllipsis = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(84, 262);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 28);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "FLORIDAPP";
             // 
             // pbUsuario
             // 
@@ -184,6 +151,16 @@ namespace floridapp
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoEllipsis = true;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(71, 263);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(0, 28);
+            this.lblTitulo.TabIndex = 1;
             // 
             // btnBiblioteca
             // 
@@ -251,19 +228,55 @@ namespace floridapp
             this.btnReunion.UseVisualStyleBackColor = true;
             this.btnReunion.Click += new System.EventHandler(this.btnReunion_Click);
             // 
-            // pbAlumno
+            // panel2
             // 
-            this.pbAlumno.Image = global::floridapp.Properties.Resources.AlumnoUser;
-            this.pbAlumno.Location = new System.Drawing.Point(31, 27);
-            this.pbAlumno.Name = "pbAlumno";
-            this.pbAlumno.Size = new System.Drawing.Size(28, 28);
-            this.pbAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAlumno.TabIndex = 11;
-            this.pbAlumno.TabStop = false;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.cbLenguas);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(278, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1108, 123);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(469, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 70);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "INICIO";
+            // 
+            // panelVista
+            // 
+            this.panelVista.BackColor = System.Drawing.SystemColors.Control;
+            this.panelVista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVista.ForeColor = System.Drawing.Color.Black;
+            this.panelVista.Location = new System.Drawing.Point(278, 0);
+            this.panelVista.Name = "panelVista";
+            this.panelVista.Size = new System.Drawing.Size(1108, 804);
+            this.panelVista.TabIndex = 5;
+            this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
+            // 
+            // cbLenguas
+            // 
+            this.cbLenguas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLenguas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLenguas.FormattingEnabled = true;
+            this.cbLenguas.Location = new System.Drawing.Point(898, 40);
+            this.cbLenguas.Name = "cbLenguas";
+            this.cbLenguas.Size = new System.Drawing.Size(155, 29);
+            this.cbLenguas.TabIndex = 1;
+            this.cbLenguas.SelectedIndexChanged += new System.EventHandler(this.cbxIdiomas_SelectedIndexChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 804);
             this.ControlBox = false;
@@ -280,11 +293,11 @@ namespace floridapp
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +319,7 @@ namespace floridapp
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbUsuario;
         private System.Windows.Forms.PictureBox pbAlumno;
+        private System.Windows.Forms.ComboBox cbLenguas;
     }
 }
 

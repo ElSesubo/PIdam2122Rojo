@@ -32,17 +32,13 @@ namespace floridapp.UserControls
             {
                 dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia, p[i].Hora, "Anular");
             }
-            for (int i = 0; i < list_alumnos.Count; i++)
+            for(int j=0; j < list_ciclos.Count; j++)
             {
-                comboBox1.Items.Add(list_alumnos[i]);
-            }
-            for (int i = 0; i < list_ciclos.Count; i++)
-            {
-                comboBox2.Items.Add(list_ciclos[i]);
-            }
-            for (int i = 0; i < p.Count; i++)
-            {
-                comboBox3.Items.Add(p[i].Nif_alumno);
+                if (dgvTutoria.Rows[j].Cells[4].Value.ToString() == "04:00:00")
+                {
+                    dgvTutoria.Rows[j].Visible = false;
+                    
+                }
             }
         }
         private List<profesor> profesores()
@@ -101,10 +97,7 @@ namespace floridapp.UserControls
 
         private void dgvTutoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-<<<<<<< HEAD
 
-=======
-            
             var senderGrid = (DataGridView)sender;
             int fila=e.RowIndex;
             int exito = 0;
@@ -167,7 +160,14 @@ namespace floridapp.UserControls
 
             }
             refresh();
->>>>>>> 9a0ae76523b3a0712d38bf88277cda2359c77682
+
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

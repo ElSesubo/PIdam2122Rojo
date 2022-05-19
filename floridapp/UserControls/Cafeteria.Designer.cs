@@ -39,6 +39,7 @@ namespace floridapp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelVista1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelVista1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -85,14 +86,15 @@ namespace floridapp
             this.label4.Size = new System.Drawing.Size(650, 165);
             this.label4.TabIndex = 3;
             this.label4.Text = resources.GetString("label4.Text");
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(168, 623);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(168, 640);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(507, 46);
             this.button1.TabIndex = 4;
@@ -116,7 +118,7 @@ namespace floridapp
             // 
             this.pictureBox1.Image = global::floridapp.Properties.Resources.Receta_paella_Valenciana;
             this.pictureBox1.Location = new System.Drawing.Point(716, 181);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(750, 750);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -126,6 +128,7 @@ namespace floridapp
             // panelVista1
             // 
             this.panelVista1.BackColor = System.Drawing.SystemColors.Control;
+            this.panelVista1.Controls.Add(this.button1);
             this.panelVista1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelVista1.Location = new System.Drawing.Point(0, 0);
             this.panelVista1.Name = "panelVista1";
@@ -139,17 +142,17 @@ namespace floridapp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelVista1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cafeteria";
             this.Size = new System.Drawing.Size(1477, 715);
             this.Load += new System.EventHandler(this.Cafeteria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelVista1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

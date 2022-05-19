@@ -49,11 +49,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+
             this.rbnProfesor = new System.Windows.Forms.RadioButton();
             this.rbnAdmin = new System.Windows.Forms.RadioButton();
             this.rbnCocina = new System.Windows.Forms.RadioButton();
             this.rbnBiblioteca = new System.Windows.Forms.RadioButton();
             this.rbnAlumno = new System.Windows.Forms.RadioButton();
+
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -61,12 +63,21 @@
             // dtgvUsuarios
             // 
             this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            this.dtgvUsuarios.Location = new System.Drawing.Point(112, 76);
+            this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgvUsuarios.Name = "dtgvUsuarios";
+            this.dtgvUsuarios.RowHeadersWidth = 51;
+            this.dtgvUsuarios.Size = new System.Drawing.Size(904, 446);
+
             this.dtgvUsuarios.Location = new System.Drawing.Point(63, 85);
             this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvUsuarios.Name = "dtgvUsuarios";
             this.dtgvUsuarios.RowHeadersWidth = 51;
             this.dtgvUsuarios.Size = new System.Drawing.Size(802, 446);
+
             this.dtgvUsuarios.TabIndex = 0;
+            this.dtgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellContentClick);
             // 
             // button5
             // 
@@ -90,7 +101,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.label2.Location = new System.Drawing.Point(107, 47);
+
             this.label2.Location = new System.Drawing.Point(59, 49);
+
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 23);
@@ -100,7 +115,11 @@
             // btnMostrar
             // 
             this.btnMostrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.btnMostrar.Location = new System.Drawing.Point(1600, 565);
+
             this.btnMostrar.Location = new System.Drawing.Point(1361, 574);
+
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(116, 44);
@@ -112,7 +131,11 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.btnEliminar.Location = new System.Drawing.Point(1472, 565);
+
             this.btnEliminar.Location = new System.Drawing.Point(1233, 574);
+
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 44);
@@ -124,7 +147,11 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.btnEditar.Location = new System.Drawing.Point(1364, 565);
+
             this.btnEditar.Location = new System.Drawing.Point(1125, 574);
+
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(100, 44);
@@ -136,7 +163,11 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.btnBuscar.Location = new System.Drawing.Point(1255, 565);
+
             this.btnBuscar.Location = new System.Drawing.Point(1017, 574);
+
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 44);
@@ -148,7 +179,11 @@
             // btnInsertar
             // 
             this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.btnInsertar.Location = new System.Drawing.Point(1139, 565);
+
             this.btnInsertar.Location = new System.Drawing.Point(900, 574);
+
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(108, 44);
@@ -161,7 +196,11 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.lblNombre.Location = new System.Drawing.Point(116, 27);
+
             this.lblNombre.Location = new System.Drawing.Point(113, 33);
+
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(45, 23);
@@ -204,7 +243,11 @@
             // txtNif
             // 
             this.txtNif.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.txtNif.Location = new System.Drawing.Point(177, 25);
+
             this.txtNif.Location = new System.Drawing.Point(166, 30);
+
             this.txtNif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNif.Name = "txtNif";
             this.txtNif.Size = new System.Drawing.Size(239, 32);
@@ -213,7 +256,11 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.txtCorreo.Location = new System.Drawing.Point(177, 68);
+
             this.txtCorreo.Location = new System.Drawing.Point(166, 70);
+
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(437, 32);
@@ -222,7 +269,11 @@
             // txtContra
             // 
             this.txtContra.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.txtContra.Location = new System.Drawing.Point(177, 111);
+
             this.txtContra.Location = new System.Drawing.Point(166, 111);
+
             this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(437, 32);
@@ -242,7 +293,11 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.txtNombre.Location = new System.Drawing.Point(177, 156);
+
             this.txtNombre.Location = new System.Drawing.Point(166, 151);
+
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(437, 32);
@@ -251,7 +306,11 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.txtApellido.Location = new System.Drawing.Point(177, 197);
+
             this.txtApellido.Location = new System.Drawing.Point(166, 194);
+
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(437, 32);
@@ -271,7 +330,11 @@
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            this.txtTel.Location = new System.Drawing.Point(177, 238);
+
             this.txtTel.Location = new System.Drawing.Point(166, 238);
+
             this.txtTel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(437, 32);
@@ -296,6 +359,16 @@
             this.pnlUsuario.Controls.Add(this.lblEmail);
             this.pnlUsuario.Controls.Add(this.lblApellidos);
             this.pnlUsuario.Controls.Add(this.lblNombre);
+
+            this.pnlUsuario.Location = new System.Drawing.Point(1059, 76);
+            this.pnlUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUsuario.Name = "pnlUsuario";
+            this.pnlUsuario.Size = new System.Drawing.Size(653, 481);
+            this.pnlUsuario.TabIndex = 8;
+            // 
+            // cbAlumno
+            // 
+
             this.pnlUsuario.Location = new System.Drawing.Point(900, 85);
             this.pnlUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlUsuario.Name = "pnlUsuario";
@@ -362,13 +435,22 @@
             this.rbnAlumno.TabStop = true;
             this.rbnAlumno.Text = "Alumno";
             this.rbnAlumno.UseVisualStyleBackColor = true;
+
+            // 
+            // cbBiblioteca
+            // 
+
             // 
             // accesoAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+
+            this.ClientSize = new System.Drawing.Size(1827, 650);
+
             this.ClientSize = new System.Drawing.Size(1608, 650);
+
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
