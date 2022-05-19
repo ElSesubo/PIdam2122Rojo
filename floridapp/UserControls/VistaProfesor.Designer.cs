@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.dgvTutoria = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.C_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_nif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C_anular = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.C_dia,
             this.C_hora,
             this.C_anular});
-            this.dgvTutoria.Location = new System.Drawing.Point(111, 154);
+            this.dgvTutoria.Location = new System.Drawing.Point(110, 147);
             this.dgvTutoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTutoria.Name = "dgvTutoria";
             this.dgvTutoria.RowHeadersWidth = 51;
@@ -61,43 +61,6 @@
             this.dgvTutoria.Size = new System.Drawing.Size(1062, 423);
             this.dgvTutoria.TabIndex = 0;
             this.dgvTutoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTutoria_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Listado de tutoria privadas";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1413, 288);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1413, 390);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 24);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1413, 506);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(160, 24);
-            this.comboBox3.TabIndex = 4;
             // 
             // C_nombre
             // 
@@ -144,6 +107,43 @@
             this.C_anular.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.C_anular.Text = "ANULAR";
             this.C_anular.Width = 125;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(105, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Listado de tutoria privadas";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1413, 288);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1413, 390);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(160, 24);
+            this.comboBox2.TabIndex = 3;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(1413, 506);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(160, 24);
+            this.comboBox3.TabIndex = 4;
             // 
             // VistaProfesor
             // 

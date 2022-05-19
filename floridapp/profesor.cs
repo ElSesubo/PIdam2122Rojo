@@ -80,8 +80,7 @@ namespace floridapp
             reader.Close();
             return id_ciclo;
         }
-
-
+        
         /// <summary>
         /// Metodo que seleciona el nombre y apellidos del profesor que pertenece al modulo selecionado y al ciclo del alumno.
         /// Y tambien asigna el nif al profesor.
@@ -207,7 +206,12 @@ namespace floridapp
         }
 
 
-
+        /// <summary>
+        /// Este metodo es creado porque en la datagridview de profesor necesita cargar el nombre del ciclo.
+        /// Le pasamos la lista de los id de los ciclos y nos devuelve una lista con los nombres de los ciclos.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static List<string> traducir_ciclos(List<int> c)
         {
             List<string> nombre_ciclo = new List<string>();
@@ -226,6 +230,13 @@ namespace floridapp
             return nombre_ciclo;
         }
 
+
+        /// <summary>
+        /// Este metodo es creado para poder cargar los nombres de los alumnos en el datagrid view de profesor.
+        /// Le pasas una lista de nifs y de devuelve una lista con los nombres y alumnos de esos nifs.
+        /// </summary>
+        /// <param name="us"></param>
+        /// <returns></returns>
         public static List<string> traducir_nombre(List<string> us)
         {
             List<string> nombre_alumno = new List<string>();
@@ -244,6 +255,14 @@ namespace floridapp
             return nombre_alumno;
         }
 
+
+        /// <summary>
+        /// Anula la tutoria previamente reservada.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="hora"></param>
+        /// <param name="dia"></param>
+        /// <returns>Devuelve un valor para saber si lo ha borrado o no.</returns>
         public static int anular_tutoria(string id,DateTime hora, DateTime dia)
         {
             int result = 0;
@@ -256,6 +275,54 @@ namespace floridapp
             return result;
         }
         
+
+        /// <summary>
+        /// Este metodo es creado para enviar al email del profesor.
+        /// </summary>
+        /// <returns></returns>
+        public string Email_profesor()
+        {
+            string email = "";
+            string consulta = "SELECT correo FROM usuario WHERE nif=@nif;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", this.Nif);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.Read())
+            {
+                email = reader.GetString(0);
+            }
+            reader.Close();
+            return email;
+        }
+        public static string Email_alumno(string nif_a)
+        {
+            string email = "";
+            string consulta = "SELECT correo FROM usuario WHERE nif=@nif;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", nif_a);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.Read())
+            {
+                email = reader.GetString(0);
+            }
+            reader.Close();
+            return email;
+        }
+
+        public static string Modulo_profesor()
+        {
+            string modulo = "";
+            string consulta = "SELECT modulo FROM modulo_profesor WHERE nif_user=@nif;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", usuario.BuscarNIF(usuario.Email));
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.Read())
+            {
+                modulo = reader.GetString(0);
+            }
+            reader.Close();
+            return modulo;
+        }
     }
 
 
