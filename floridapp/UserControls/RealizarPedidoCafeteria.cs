@@ -55,14 +55,14 @@ namespace floridapp.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-                DialogResult resultado = MessageBox.Show("¿Enviar pedido?", "informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            int id = 0;
+            DialogResult resultado = MessageBox.Show("¿Enviar pedido?", "informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
                 {
-                    int id = 0;
+                    
                     TimeSpan hora = TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
                     string nif = "";
-                    id = int.Parse(cbMesa.Text);
+                    
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
@@ -71,7 +71,8 @@ namespace floridapp.UserControls
                     }
                     if (cbMesa.SelectedItem != null)
                     {
-                        if (conexion.Conexion != null)
+                    id = int.Parse(cbMesa.Text);
+                    if (conexion.Conexion != null)
                         {
                             conexion.AbrirConexion();
                             cafeteria.InsertarReserva(hora, id, nif);
@@ -91,6 +92,7 @@ namespace floridapp.UserControls
 
                     bool llevar = cbLlevar.Checked;
                     int llevar2 = 0;
+                double precio = double.Parse(txtPrecio.Text);
                     if (llevar)
                     {
                         llevar2 = 1;
@@ -116,9 +118,26 @@ namespace floridapp.UserControls
                     }
 
 
-                    Cargar();
-                    MessageBox.Show("Pedido realizado");
+                    
+                    
+                
+
+                StringBuilder mensaje = new StringBuilder();
+                StringBuilder mensaje2 = new StringBuilder();
+
+                string user = usuario.Email;
+                string err = "No se que paso wey";
+                mensaje.Append(String.Format("EL menu selecionado es {0}, su precio es {1} y la mesa es {2} para la hora {3} ", cbMenu.Text,txtPrecio.Text,cbMesa.Text, hora));
+                mensaje2.Append(String.Format("La mesa {0} ha sido reservada por {1} para la hora {2}  ", cbMesa.Text, nif,hora));
+                EnviarGmail.EnviarMensaje(mensaje, user, "Floridapp, Cafeteria", err);
+                MessageBox.Show("Pedido realizado");
+                if (cbMesa.SelectedItem != null)
+                {
+                    EnviarGmail.EnviarMensaje(mensaje2, "aabb@floridauniversitaria.es", "Pedido Mesa", err);
                 }
+                Cargar();
+
+            }
 
         }
 

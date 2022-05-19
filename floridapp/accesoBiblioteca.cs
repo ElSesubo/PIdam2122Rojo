@@ -31,7 +31,7 @@ namespace floridapp
             }
         }
 
-        private void CargaListaReservas()
+        /*private void CargaListaReservas()
         {
             string seleccion = "Select * from reserva_biblioteca";
             if (conexion.Conexion != null)
@@ -44,11 +44,12 @@ namespace floridapp
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }
-        }
+        }*/
 
         private void accesoBiblioteca_Load(object sender, EventArgs e)
         {
-            CargaListaReservas();
+            //CargaListaReservas();
+            Cargar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -107,7 +108,7 @@ namespace floridapp
                             MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                         }
                         conexion.CerrarConexion();
-                        CargaListaReservas();
+                        //CargaListaReservas();
                     }
                 }
 
@@ -120,12 +121,34 @@ namespace floridapp
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            CargaListaReservas();
+            //CargaListaReservas();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void dtgvReservas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Cargar()
+        {
+            List<biblioteca> portatil = new List<biblioteca>();
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                portatil = biblioteca.ListaBiblioteca();
+                conexion.CerrarConexion();
+            }
+            dtgvReservas.Rows.Clear();
+            for (int i = 0; i < portatil.Count; i++)
+            {
+                dtgvReservas.Rows.Add(portatil[i].Id_portatil, portatil[i].Reservado);
+            }
         }
     }
 }
