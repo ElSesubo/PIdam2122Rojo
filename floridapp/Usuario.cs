@@ -25,7 +25,7 @@ namespace floridapp
         private static string email;
         private static int tipo;
 
-        public usuario(string nif, string correo, string contraseña, string nombre, string apellido, int tel, bool profesor, bool alumno, bool admi, bool cocina, bool biblioteca)
+        public usuario(string nif, string correo, string contraseña, string nombre, string apellido, int tel, bool profesor, bool admi, bool cocina, bool biblioteca, bool alumno)
         {
             this.nif = nif;
             this.correo = correo;
@@ -34,10 +34,10 @@ namespace floridapp
             this.apellido = apellido;
             this.tel = tel;
             this.profesor = profesor;
-            this.alumno = alumno;
             this.admi = admi;
             this.cocina = cocina;
             this.biblioteca = biblioteca;
+            this.alumno = alumno;
         }
 
         public usuario(bool profesor, bool alumno, bool admi, bool cocina, bool biblioteca)
@@ -68,6 +68,12 @@ namespace floridapp
         public static string Email { get => email; set => email = value; }
         public static int Tipo { get => tipo; set => tipo = value; }
 
+        /// <summary>
+        /// Este metodo nos devuelve el tipo de usuario.
+        /// Lo usaremos despues para verificar el usuario.
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns></returns>
         static private List<usuario> tipoUsuario(string mail)
         {
             List<usuario> us=new List<usuario>();
@@ -82,6 +88,13 @@ namespace floridapp
             return us;
         }
 
+        /// <summary>
+        /// Este metodo verifica primero el tipo de usuario, despues verifica si el usuario y la contraseña coincide.
+        /// Ya por ultimo dependiendo del tipo de usuario se retorna el numero del tipo de usuario.
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         static public int VerifyUser(string mail, string password)
         {
             List<usuario> user = tipoUsuario(mail);
@@ -190,6 +203,12 @@ namespace floridapp
             return 0;
         }
 
+
+        /// <summary>
+        /// Este metodo comprueba si el email existe o no
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns>Devuelve true o false dependiendo del email</returns>
         static public bool MailExiste(string mail)
         {
             string consulta = "";
@@ -208,6 +227,11 @@ namespace floridapp
             }
         }
 
+        /// <summary>
+        /// Este metodo te busca el nif apartir del email.
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns>Devuelve el nif</returns>
         public static string BuscarNIF(string mail)
         {
             string nif = "";
@@ -302,6 +326,11 @@ namespace floridapp
         }
 
 
+
+        /// <summary>
+        /// Este metodo carga los modulos del ciclo a la cual pertenece el usuario.
+        /// </summary>
+        /// <returns>Devuelve un lista con los modulos</returns>
         public static List<string> cargar_modulos()
         {
             string nif = usuario.BuscarNIF(usuario.Email);
@@ -315,6 +344,45 @@ namespace floridapp
             }
             reader.Close();
             return ciclos;
+        }
+
+
+        /// <summary>
+        /// Este metodo busca el nombre del usuario apartir del correo
+        /// </summary>
+        /// <returns></returns>
+        public static string obtener_nombre_usuario()
+        {
+            string nombre = "";
+            string consulta = "Select nombre,apellido from usuario where correo=@corr;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("corr", Email);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                nombre=(reader.GetString(0) + " " + reader.GetString(1));
+            }
+            reader.Close();
+            return nombre;
+        }
+
+        /// <summary>
+        /// Este metodo obtiene el nombre del ciclo a la cual pertenece el usuario.
+        /// </summary>
+        /// <returns></returns>
+        public static string obtener_nombre_ciclo()
+        {
+            string nombre = "";
+            string consulta = "Select nombre from ciclo c INNER JOIN ciclo_pertenece cp on c.id=cp.cicl WHERE cp.user_nif=@nif;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", usuario.BuscarNIF(usuario.Email));
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                nombre = (reader.GetString(0));
+            }
+            reader.Close();
+            return nombre;
         }
     }
 }

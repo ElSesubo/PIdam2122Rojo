@@ -45,74 +45,84 @@ namespace floridapp.UserControls
             {
                 cbMesa.Items.Add(cafe[i].Numero_mesa);
             }
-            
+            cbMenu.Items.Clear();
             for (int j = 0; j < pedi.Count; j++)
             {
                 cbMenu.Items.Add(pedi[j].Nombre_menu);
             }
+            cbMenu.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            TimeSpan hora = TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
-            string nif = "";
-            id = int.Parse(cbMesa.Text);
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                nif = usuario.BuscarNIF(usuario.Email);
-                conexion.CerrarConexion();
-            }
-            if (cbMesa.SelectedItem != null)
-            {
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    cafeteria.InsertarReserva(hora, id, nif);
-                    conexion.CerrarConexion();
-                }
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
-                    conexion.CerrarConexion();
-                }
-            }
 
-            
-            int id2 = 0;
-
-            
-            bool llevar = cbLlevar.Checked;
-            int llevar2= 0;
-            if (llevar)
-            {
-                llevar2 = 1;
-            }
-            else
-            {
-                llevar2 = 0;
-            }
-            if (cbMenu.SelectedItem!=null)
-            {
-                if (conexion.Conexion != null)
+                DialogResult resultado = MessageBox.Show("¿Enviar pedido?", "informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
                 {
-                    conexion.AbrirConexion();
-                    id2 = Pedido.ListarMenus(cbMenu.Text);
-                    conexion.CerrarConexion();
-                }
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    Pedido.InsertarReserva(hora, id2, nif, llevar2);
-                    conexion.CerrarConexion();
-                }
-            }
+                    int id = 0;
+                    TimeSpan hora = TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
+                    string nif = "";
+                    id = int.Parse(cbMesa.Text);
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        nif = usuario.BuscarNIF(usuario.Email);
+                        conexion.CerrarConexion();
+                    }
+                    if (cbMesa.SelectedItem != null)
+                    {
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            cafeteria.InsertarReserva(hora, id, nif);
+                            conexion.CerrarConexion();
+                        }
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
+                            conexion.CerrarConexion();
+                        }
+                    }
 
 
-            Cargar();
+                    int id2 = 0;
+
+
+                    bool llevar = cbLlevar.Checked;
+                    int llevar2 = 0;
+                    if (llevar)
+                    {
+                        llevar2 = 1;
+                    }
+                    else
+                    {
+                        llevar2 = 0;
+                    }
+                    if (cbMenu.SelectedItem != null)
+                    {
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            id2 = Pedido.ListarMenus(cbMenu.Text);
+                            conexion.CerrarConexion();
+                        }
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            Pedido.InsertarReserva(hora, id2, nif, llevar2);
+                            conexion.CerrarConexion();
+                        }
+                    }
+
+
+                    Cargar();
+                    MessageBox.Show("Pedido realizado");
+                }
+
         }
+
+            
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

@@ -34,22 +34,7 @@ namespace floridapp
             this.Numero_de_mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ocupado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.btnMostrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
-            this.pnlUsuario = new System.Windows.Forms.Panel();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.dgvPedidoMenu = new System.Windows.Forms.DataGridView();
             this.id_menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.llevar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,13 +52,13 @@ namespace floridapp
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
-            this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvPedidos
             // 
             resources.ApplyResources(this.dtgvPedidos, "dtgvPedidos");
+            this.dtgvPedidos.AllowUserToAddRows = false;
             this.dtgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero_de_mesa,
@@ -96,12 +81,6 @@ namespace floridapp
             resources.ApplyResources(this.lblEmail, "lblEmail");
             this.lblEmail.Name = "lblEmail";
             // 
-            // btnMostrar
-            // 
-            resources.ApplyResources(this.btnMostrar, "btnMostrar");
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            // 
             // btnEliminar
             // 
             resources.ApplyResources(this.btnEliminar, "btnEliminar");
@@ -109,97 +88,10 @@ namespace floridapp
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnEditar
-            // 
-            resources.ApplyResources(this.btnEditar, "btnEditar");
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            resources.ApplyResources(this.btnBuscar, "btnBuscar");
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnInsertar
-            // 
-            resources.ApplyResources(this.btnInsertar, "btnInsertar");
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            // 
-            // pnlUsuario
-            // 
-            resources.ApplyResources(this.pnlUsuario, "pnlUsuario");
-            this.pnlUsuario.Controls.Add(this.checkBox3);
-            this.pnlUsuario.Controls.Add(this.dateTimePicker1);
-            this.pnlUsuario.Controls.Add(this.label5);
-            this.pnlUsuario.Controls.Add(this.textBox2);
-            this.pnlUsuario.Controls.Add(this.label2);
-            this.pnlUsuario.Controls.Add(this.textBox1);
-            this.pnlUsuario.Controls.Add(this.label1);
-            this.pnlUsuario.Controls.Add(this.checkBox1);
-            this.pnlUsuario.Controls.Add(this.txtNombre);
-            this.pnlUsuario.Controls.Add(this.lblNombre);
-            this.pnlUsuario.Name = "pnlUsuario";
-            // 
-            // checkBox3
-            // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // txtNombre
-            // 
-            resources.ApplyResources(this.txtNombre, "txtNombre");
-            this.txtNombre.Name = "txtNombre";
-            // 
-            // lblNombre
-            // 
-            resources.ApplyResources(this.lblNombre, "lblNombre");
-            this.lblNombre.Name = "lblNombre";
-            // 
             // dgvPedidoMenu
             // 
             resources.ApplyResources(this.dgvPedidoMenu, "dgvPedidoMenu");
+            this.dgvPedidoMenu.AllowUserToAddRows = false;
             this.dgvPedidoMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedidoMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_menu,
@@ -314,12 +206,7 @@ namespace floridapp
             this.Controls.Add(this.btnPreparado);
             this.Controls.Add(this.lblPedidoMenu);
             this.Controls.Add(this.dgvPedidoMenu);
-            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnInsertar);
-            this.Controls.Add(this.pnlUsuario);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dtgvPedidos);
@@ -327,8 +214,6 @@ namespace floridapp
             this.Name = "accesoCocina";
             this.Load += new System.EventHandler(this.accesoCocina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).EndInit();
-            this.pnlUsuario.ResumeLayout(false);
-            this.pnlUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,22 +225,7 @@ namespace floridapp
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dtgvPedidos;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnInsertar;
-        private System.Windows.Forms.Panel pnlUsuario;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_de_mesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ocupado;
         private System.Windows.Forms.DataGridView dgvPedidoMenu;

@@ -246,6 +246,11 @@ C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 >>>>>>> c19299561cd49341193f5090bd39522440178c83
 >>>>>>> 9fb43a8f91770989f370329e310afbf57c43f78d
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+<<<<<<< HEAD
+=======
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+>>>>>>> fbed7b41071a533379f17c9057b745979cfef6f8
+>>>>>>> 9a0ae76523b3a0712d38bf88277cda2359c77682
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
 C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
@@ -271,7 +276,11 @@ C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.U
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 >>>>>>> 41c3d0ded0a5ef32d44735755bd33cf4752faa6f
+<<<<<<< HEAD
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\es\floridapp.resources.dll
+=======
+>>>>>>> 50b012cdecbef4142437a179b80d6fdaad5bdbcb
+>>>>>>> 9a0ae76523b3a0712d38bf88277cda2359c77682

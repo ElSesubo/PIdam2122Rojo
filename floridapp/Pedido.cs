@@ -60,8 +60,8 @@ namespace floridapp
         public static void InsertarReserva(TimeSpan reserva, int menu, string nif, int llevar)
         {
             string consulta = "";
-            consulta = String.Format("INSERT INTO pedido (hora_pedido, id_menu, nifusu, llevar, recogido, preparado) VALUES " +
-                    "('{0}','{1}','{2}','{3}',0,0)", reserva, menu, nif,llevar);
+            consulta = String.Format("INSERT INTO pedido (hora_pedido, id_menu, nifusu, llevar, recogido, preparado, dia) VALUES " +
+                    "('{0}','{1}','{2}','{3}',0,0,'{4}')", reserva, menu, nif,llevar, DateTime.Now.ToString("yyyy-MM-dd"));
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.ExecuteReader();
@@ -71,7 +71,7 @@ namespace floridapp
         {
             List<Pedido> lista = new List<Pedido>();
             string consulta = "";
-            consulta = String.Format("SELECT id, llevar, nifusu, hora_pedido, recogido, preparado, id_menu FROM pedido WHERE recogido=0;");
+            consulta = String.Format("SELECT id, llevar, nifusu, hora_pedido, recogido, preparado, id_menu FROM pedido WHERE recogido=0 and dia='{0}';", DateTime.Now.ToString("yyyy-MM-dd"));
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)

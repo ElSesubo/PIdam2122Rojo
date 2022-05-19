@@ -15,8 +15,7 @@ namespace ProyectoIntegrado
 {
     public partial class Form1 : Form
     {
-        const string mailAddress = "floridapprojo@gmail.com";
-        const string password = "ghidm6rojo";
+
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +41,8 @@ namespace ProyectoIntegrado
         {
 
         }
-
+        const string mailAddress = "floridapprojo@gmail.com";
+        const string password = "ghidm6rojo";
         public static void EnviarMensaje(StringBuilder Mensaje,DateTime fec, string para, string asunto, out string Error)
         {
             Error = "";

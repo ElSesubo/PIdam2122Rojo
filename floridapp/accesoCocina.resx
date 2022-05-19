@@ -310,7 +310,7 @@
     <value>7</value>
   </data>
   <data name="&gt;&gt;btnEliminar.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -637,7 +637,7 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;llevar.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -928,7 +928,7 @@
     <value>6</value>
   </data>
   <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>10</value>
   </data>
   <data name="lblNombre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -961,7 +961,7 @@
     <value>125</value>
   </data>
   <data name="&gt;&gt;dtgvPedidos.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>11</value>
   </data>
   <data name="btnPreparado.Location" type="System.Drawing.Point, System.Drawing">
     <value>1132, 425</value>
