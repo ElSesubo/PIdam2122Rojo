@@ -25,7 +25,7 @@ namespace floridapp.UserControls
         private void button1_Click(object sender, EventArgs e)
         {
             bool portatil = cbPortatil.Checked;
-            TimeSpan hora= TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
+            TimeSpan hora= TimeSpan.Parse(dtpHora.Value.ToString("T"));
             if (portatil == cbPortatil.Checked)
             {
                 int id = 0;
