@@ -46,12 +46,14 @@ namespace floridapp
             this.id_user = id_user;
             this.dia_hora_devolucion = dhd;
         }
-        public biblioteca(TimeSpan hora,int id, string nif)
+        public biblioteca(int id,TimeSpan hora,int id_por, string nif,DateTime dia_re)
         {
 
-            id_portatil = id;
+            this.id = id;
             this.hora = hora;
+            this.Id_portatil = id_por;
             id_user = nif;
+            dia_hora_reserva = dia_re;
 
         }
 
@@ -200,14 +202,14 @@ namespace floridapp
         {
             List<biblioteca> lista = new List<biblioteca>();
             string consulta = "";
-            consulta = String.Format("SELECT id, reservado FROM portatil where reservado=1;");
+            consulta = String.Format("SELECT p.id, p.hora_reserva, p.id_portatil, p.id_user, p.dia_reserva FROM reserva_portatil p INNER JOIN portatil j on p.id_portatil=j.id WHERE reservado=1;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    biblioteca biblio = new biblioteca(reader.GetInt16(0), reader.GetBoolean(1));
+                    biblioteca biblio = new biblioteca(reader.GetInt16(0), reader.GetTimeSpan(1),reader.GetInt16(2),reader.GetString(3),reader.GetDateTime(4));
                     lista.Add(biblio);
                 }
             }

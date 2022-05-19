@@ -172,6 +172,10 @@ namespace floridapp
                     }
             }
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+<<<<<<< HEAD
+            
+=======
+>>>>>>> aa52900ee8e9f237d409b891589ef3a21bab0c17
         }
     }
 }

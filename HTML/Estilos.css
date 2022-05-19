@@ -165,7 +165,19 @@ textarea{
   padding-top: 15px; 
 }
 
-
+.Abajo{
+	width: 100%;
+	height: 100px;
+	background-color: #252932;
+}
+.Abajo p{
+	color:white;
+	font-size:15px;
+	padding-left: 105px;
+	padding-top: 35px;
+	font-weight: bold;
+	font-family: CenturyGothic;
+}
 label{
   display: block; 
   float: center;  
@@ -275,9 +287,7 @@ p{
   font-family: CenturyGothicN;
   src: url(GOTHIC.TTF);
 }
-.Abajo{
-margin-bottom: 30px;
-}
+
 
 .banner{
 	width: 100%;
@@ -308,7 +318,7 @@ margin-bottom: 30px;
 	height: 500px;
 	width: 600px;
 	margin-right: 1px;
-	background-color: #0e0e0e;
+	background-color: #252932;
 	display:inline-block;
 	position: absolute;
 }
@@ -319,15 +329,22 @@ margin-bottom: 30px;
 	font-family:  CenturyGothicN;
 	letter-spacing: -2px;
 }
+.Explic h6{
+	font-size: 50px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-family:  CenturyGothicN;
+	letter-spacing: -2px;
+}
 .separacion {
 	margin-top: 1px;
 	float: left;
 	position: absolute;
-	margin-left: 750px;
+	margin-left: 775px;
 	margin-right: 1px;
 	height: 500px;
 	width: 5px;
-	background-color: #0e0e0e;
+	background-color: #252932;
 }
 .cuadradotexto{
 
@@ -337,9 +354,27 @@ margin-bottom: 30px;
 	background-color: transparent;
 	display:inline-block;
 	position: absolute;
-	margin-left: 760px;
+	margin-left: 800px;
 
 	position: absolute;
+}
+.cuadradotextoINT{
+
+	height: 500px;
+	width: 600px;
+	margin-right: 1px;
+	background-color: transparent;
+	display:inline-block;
+	position: absolute;
+	margin-left: 800px;
+
+	position: absolute;
+}.cuadradotextoINT h1 {
+	font-size: 33px;
+	text-align: left;
+	color: black;
+	font-family:  CenturyGothicN;
+	
 }
 .cuadradotexto h1 {
 	font-size: 33px;
@@ -347,4 +382,155 @@ margin-bottom: 30px;
 	color: black;
 	font-family:  CenturyGothicN;
 	
+}
+
+.separacionHor {
+	margin-top: 1px;
+	float: left;
+	position: absolute;
+	margin-left: 100px;
+	margin-right: 1px;
+	height: 5px;
+	width: 1350px;
+	background-color: #252932;
+	
+}
+.cajita1{
+	
+	height: 500px;
+	width: 300px;
+	margin-right: 1px;
+	background-color: transparent;
+	display:inline-block;
+	position: absolute;
+	margin-left: 100px;
+	background-color: #252932;
+}
+.cajita1 h1{
+	font-size: 33px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	padding-bottom: 1px;
+}
+.cajita1 h2{
+	font-size: 12px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	letter-spacing: 1px;
+}
+.cajita2{
+	
+	height: 500px;
+	width: 300px;
+	margin-right: 1px;
+	background-color: transparent;
+	display:inline-block;
+	position: absolute;
+	margin-left: 450px;
+	background-color: #252932;
+}
+.cajita2 h1{
+	font-size: 33px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	padding-bottom: 1px;
+}
+.cajita2 h2{
+	font-size: 12px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	letter-spacing: 1px;
+}
+.cajita3{
+	
+	height: 500px;
+	width: 300px;
+	margin-right: 1px;
+	background-color: transparent;
+	display:inline-block;
+	position: absolute;
+	margin-left: 800px;
+	background-color: #252932;
+}
+.cajita3 h1{
+	font-size: 33px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	padding-bottom: 1px;
+}
+.cajita3 h2{
+	font-size: 12px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	letter-spacing: 1px;
+}
+.cajita4{
+	
+	height: 500px;
+	width: 300px;
+	margin-right: 1px;
+	background-color: transparent;
+	display:inline-block;
+	position: absolute;
+	margin-left: 1150px;
+	background-color: #252932;
+}
+.cajita4 h1{
+	font-size: 33px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	padding-bottom: 1px;
+}
+.cajita4 h2{
+	font-size: 12px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	letter-spacing: 1px;
+}
+.TarjetaINT{
+	display:inline-block;
+	
+	height: 400px;
+	width: 600px;
+	margin-left: 100px;
+	margin-right: 1px;
+	
+	background-color: #252932;
+	display:inline-block;
+}
+.TarjetaINT h1{
+	font-size: 20px;
+	text-align: left;
+	color: white;
+	padding-bottom: 0%;
+	font-family:  CenturyGothicN;
+	letter-spacing: 1px;
+	display:inline-block;
+}
+.TarjetaINT h2{
+	padding-top: 0%;
+	font-size: 12px;
+	text-align: left;
+	color: white;
+	font-family:  CenturyGothicN;
+	letter-spacing: 1px;
+	display:inline-block;
+}
+.imgINT{
+	float: left;
+	margin-left:20px ;
+	margin-right:1px ;
+	margin-top:20px ;
+}
+.INTtext{
+
+
 }
