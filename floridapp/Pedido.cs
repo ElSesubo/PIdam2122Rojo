@@ -48,6 +48,16 @@ namespace floridapp
         {
 
         }
+
+        //Voy a aprovechar de pedido para crear un constructor para el menu
+        public Pedido(int menu,string nombre,double precio)
+        {
+            this.nombre_menu = nombre;
+            this.menu = menu;
+            this.precio = precio;
+        }
+
+
         public int Id { get => id; set => id = value; }
         public bool Llevar { get => llevar; set => llevar = value; }
         public TimeSpan Hora { get => hora; set => hora = value; }
@@ -219,6 +229,53 @@ namespace floridapp
             }
             reader.Close();
             return id;
+        }
+
+        public static List<Pedido> lista_menus()
+        {
+            List<Pedido> lista=new List<Pedido>();
+            string consulta = "Select * from menu;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                lista.Add(new Pedido(reader.GetInt32(0), reader.GetString(1), reader.GetDouble(2)));
+            }
+            reader.Close();
+            return lista;
+        }
+
+        public static int modificarmenu(int id,string nombre,double precio)
+        {
+            int result = 0;
+            string consulta = "Update menu set nombre_menu=@nombre,precio=@precio where id=@id;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("id", id);
+            comando.Parameters.AddWithValue("nombre", nombre);
+            comando.Parameters.AddWithValue("precio", precio);
+            result=comando.ExecuteNonQuery();
+            return result;
+        }
+
+        public static int insertarMenus(string nombre,double precio)
+        {
+            int result = 0;
+            string consulta = "INSERT INTO menu VALUES(null,@nombre,@precio);";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nombre", nombre);
+            comando.Parameters.AddWithValue("precio", precio);
+            result=comando.ExecuteNonQuery();
+            return result;
+        }
+
+        public static int eliminarMenu(int id)
+        {
+            int result = 0;
+            string consulta = "DELETE FROM menu WHERE id=@id;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("id" , id);
+            result = comando.ExecuteNonQuery();
+            return result;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace floridapp
 {
     public partial class accesoCocina : Form
     {
+        int idmenu=0;
         public accesoCocina()
         {
             InitializeComponent();
@@ -25,10 +26,7 @@ namespace floridapp
 
         private void accesoCocina_Load(object sender, EventArgs e)
         {
-
-            Cargar();
-            Cargar2();
-
+            refresh();
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -63,6 +61,12 @@ namespace floridapp
                     Cargar();
                 }
             }
+        }
+        private void refresh()
+        {
+            Cargar();
+            Cargar2();
+            groupBox1.Visible = false;
         }
         private void Cargar()
         {
@@ -191,6 +195,159 @@ namespace floridapp
         private void btnRestaurar_Click(object sender, EventArgs e)
         {
             Cargar2();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int fila = e.RowIndex;
+            idmenu = int.Parse(dgvMenu.Rows[fila].Cells[0].Value.ToString());
+            txtMenu.Text=dgvMenu.Rows[fila].Cells[1].Value.ToString();
+            nudPrecio.Value=decimal.Parse(dgvMenu.Rows[fila].Cells[2].Value.ToString());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            cargar_dgvmenu();
+        }
+
+        /// <summary>
+        /// Este metodo refresca la datagridview del menu.
+        /// </summary>
+        private void cargar_dgvmenu()
+        {
+            dgvMenu.Rows.Clear();
+            List<Pedido> menus=new List<Pedido>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                menus = Pedido.lista_menus();
+                conexion.CerrarConexion();
+            }
+            for(int i = 0; i < menus.Count; i++)
+            {
+                dgvMenu.Rows.Add(menus[i].Menu,menus[i].Nombre_menu,menus[i].Precio);
+            }
+
+        }
+ 
+        private void limpiar()
+        {
+            txtMenu.Text = "";
+            nudPrecio.Value = 0;
+        }
+
+        private void bntSalir_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+
+        /// <summary>
+        /// Este boton modifica los datos del menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int result = 0;
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                try
+                {
+                    result = Pedido.modificarmenu(idmenu, txtMenu.Text, double.Parse(nudPrecio.Value.ToString()));
+                    if(result != 0)
+                    {
+                        MessageBox.Show("Se ha modificado con exito");
+                    }
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                conexion.CerrarConexion();
+            }
+            cargar_dgvmenu();
+            limpiar();
+        }
+
+
+        private bool comprobarSIexiste()
+        {
+            bool existe = true;
+            for(int i = 0; i < dgvMenu.Rows.Count; i++)
+            {
+                if (txtMenu.Text != dgvMenu.Rows[i].Cells[1].Value.ToString())
+                {
+                    return true;
+                }
+            }
+            return existe;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int result = 0;
+            
+                if (txtMenu.Text != "")
+                {
+                if (!comprobarSIexiste())
+                {
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            result = Pedido.insertarMenus(txtMenu.Text, double.Parse(nudPrecio.Value.ToString()));
+                            if (result != 0)
+                            {
+                                MessageBox.Show("Se ha insertado con exito");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.ToString());
+                        }
+                        conexion.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ese menu ya existe.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("El campo de nombre del menu esta vacio.");
+            }
+            cargar_dgvmenu();
+            limpiar();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int result = 0;
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                try
+                {
+                    result = Pedido.eliminarMenu(idmenu);
+                    if (result != 0)
+                    {
+                        MessageBox.Show("Se ha eliminado con exito");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+                conexion.CerrarConexion();
+            }
+            cargar_dgvmenu();
+            limpiar();
         }
     }
 }
