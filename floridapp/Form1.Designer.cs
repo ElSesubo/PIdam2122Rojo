@@ -31,7 +31,6 @@ namespace floridapp
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbAlumno = new System.Windows.Forms.PictureBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.btnListaMod = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@ namespace floridapp
             this.cbLenguas = new System.Windows.Forms.ComboBox();
             this.lblinicio = new System.Windows.Forms.Label();
             this.panelVista = new System.Windows.Forms.Panel();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
@@ -84,17 +84,6 @@ namespace floridapp
             this.pbAlumno.TabIndex = 11;
             this.pbAlumno.TabStop = false;
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(71, 33);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(86, 30);
-            this.lblNombre.TabIndex = 10;
-            this.lblNombre.Text = "label2";
-            // 
             // label3
             // 
             this.label3.AutoEllipsis = true;
@@ -102,7 +91,7 @@ namespace floridapp
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(84, 262);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 28);
+            this.label3.Size = new System.Drawing.Size(108, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "FLORIDAPP";
             // 
@@ -159,7 +148,7 @@ namespace floridapp
             this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(71, 263);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(0, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(0, 23);
             this.lblTitulo.TabIndex = 1;
             // 
             // btnBiblioteca
@@ -252,7 +241,7 @@ namespace floridapp
             "English"});
             this.cbLenguas.Location = new System.Drawing.Point(898, 40);
             this.cbLenguas.Name = "cbLenguas";
-            this.cbLenguas.Size = new System.Drawing.Size(155, 29);
+            this.cbLenguas.Size = new System.Drawing.Size(155, 27);
             this.cbLenguas.TabIndex = 1;
             this.cbLenguas.SelectedIndexChanged += new System.EventHandler(this.cbxIdiomas_SelectedIndexChanged);
             // 
@@ -263,7 +252,7 @@ namespace floridapp
             this.lblinicio.ForeColor = System.Drawing.Color.Black;
             this.lblinicio.Location = new System.Drawing.Point(469, 32);
             this.lblinicio.Name = "lblinicio";
-            this.lblinicio.Size = new System.Drawing.Size(222, 70);
+            this.lblinicio.Size = new System.Drawing.Size(176, 56);
             this.lblinicio.TabIndex = 0;
             this.lblinicio.Text = "INICIO";
             // 
@@ -278,9 +267,20 @@ namespace floridapp
             this.panelVista.TabIndex = 5;
             this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(71, 33);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(65, 22);
+            this.lblNombre.TabIndex = 10;
+            this.lblNombre.Text = "label2";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 804);
             this.ControlBox = false;
@@ -320,10 +320,10 @@ namespace floridapp
         private System.Windows.Forms.Panel panelVista;
         private System.Windows.Forms.Button btnListaMod;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbUsuario;
         private System.Windows.Forms.PictureBox pbAlumno;
         private System.Windows.Forms.ComboBox cbLenguas;
+        private System.Windows.Forms.Label lblNombre;
     }
 }
 

@@ -17,20 +17,6 @@ namespace floridapp
             InitializeComponent();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                dtgvReservas.DataSource = biblioteca.BuscarRegistroId(Convert.ToInt32(txtId.Text));
-                conexion.CerrarConexion();
-            }
-            else
-            {
-                MessageBox.Show("No existe conexión a la Base de Datos");
-            }
-        }
-
         /*private void CargaListaReservas()
         {
             string seleccion = "Select * from reserva_biblioteca";
@@ -51,43 +37,12 @@ namespace floridapp
             Cargar();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dtgvReservas.SelectedRows.Count == 1) 
-                {
-                    int idUsuario = (int)dtgvReservas.CurrentRow.Cells[0].Value;  
-                    if (conexion.Conexion != null)
-                    {
-                        conexion.AbrirConexion();
-                        biblioteca reg =  biblioteca.ObtenerUsuario(idUsuario);
-                        txtId.Text = reg.Id.ToString();
-                        dtpReserva.Value = reg.Dia_hora_reserva;
-                        txtIdPortatil.Text = reg.Id_portatil.ToString();
-                        txtIdPecera.Text = reg.Id_pecera.ToString();
-                        txtNIF.Text = reg.Id_user;
-                        dtpDevolucion.Value = reg.Dia_hora_devolucion;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
-                    }
-                    conexion.CerrarConexion();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
             if (dtgvReservas.SelectedRows.Count == 1)
             {
-                int cafe = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[0].Value));
+                int id = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[0].Value));
 
 
 
@@ -99,7 +54,7 @@ namespace floridapp
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
-                        cafeteria.ActualizarMesaV(cafe);
+                        biblioteca.EliminaRegistro(id);
                         conexion.CerrarConexion();
                     }
                     Cargar();
@@ -173,7 +128,60 @@ namespace floridapp
 
         private void accesoBiblioteca_Load_1(object sender, EventArgs e)
         {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                List<string> ciclos = biblioteca.cargar_portatiles();
+                for (int i = 0; i < ciclos.Count; i++)
+                {
+                    comboBox1.Items.Add(ciclos[i]);
+                }
+                conexion.CerrarConexion();
+            }
+            comboBox1.SelectedIndex = 0;
             Cargar();
+        }
+
+        private void btnInserta_Click(object sender, EventArgs e)
+        {
+            TimeSpan hora = TimeSpan.Parse(dtpHoraReserva.Value.ToString("T"));
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                biblioteca.InsertarPedidoBiblioteca(hora, Convert.ToInt32(comboBox1.Text), txtNIF.Text);
+                conexion.CerrarConexion();
+                conexion.AbrirConexion();
+                biblioteca.ActualizarPortatilReserva(Convert.ToInt32(comboBox1.Text));
+                conexion.CerrarConexion();
+            }
+            Cargar();
+        }
+
+        private void btnDevuelto_Click(object sender, EventArgs e)
+        {
+            if (dtgvReservas.SelectedRows.Count == 1)
+            {
+                int id = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[2].Value));
+
+
+
+                DialogResult confirmacion = MessageBox.Show("Portatil sin devolver en el registro seleccionado. ¿Continuar?",
+                                                    "Eliminación", MessageBoxButtons.YesNo);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        biblioteca.EliminaRegistro(id);
+                        conexion.CerrarConexion();
+                        conexion.AbrirConexion();
+                        biblioteca.ActualizarPortatilDevuelto(id);
+                        conexion.CerrarConexion();
+                    }
+                    Cargar();
+                }
+            }
         }
     }
 }

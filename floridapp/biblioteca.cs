@@ -148,7 +148,7 @@ namespace floridapp
         public static int EliminaRegistro(int identidad)
         {
             int retorno;
-            string consulta = string.Format("DELETE FROM reserva_biblioteca WHERE id={0}", identidad);
+            string consulta = string.Format("DELETE FROM reserva_portatil WHERE id={0}", identidad);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
@@ -186,7 +186,7 @@ namespace floridapp
         public static void ActualizarPortatilReserva(int id)
         {
             string consulta1 = "";
-            consulta1 = String.Format("UPDATE portatil set reservado=1 and devuelto=0 where id='{0}';", id);
+            consulta1 = String.Format("UPDATE portatil set reservado=1, devuelto=0 where id='{0}';", id);
             MySqlCommand comando2 = new MySqlCommand(consulta1, conexion.Conexion);
             comando2.ExecuteReader();
         }
@@ -194,15 +194,16 @@ namespace floridapp
         public static void ActualizarPortatilDevuelto(int id)
         {
             string consulta1 = "";
-            consulta1 = String.Format("UPDATE portatil set devuelto=1 devuelto=0 where num='{0}' ;", id);
+            consulta1 = String.Format("UPDATE portatil set devuelto=1, reservado=0 where id='{0}' ;", id);
             MySqlCommand comando2 = new MySqlCommand(consulta1, conexion.Conexion);
             comando2.ExecuteReader();
         }
+
         public static List<biblioteca> ListaBiblioteca()
         {
             List<biblioteca> lista = new List<biblioteca>();
             string consulta = "";
-            consulta = String.Format("SELECT p.id, p.hora_reserva, p.id_portatil, p.id_user, p.dia_reserva FROM reserva_portatil p INNER JOIN portatil j on p.id_portatil=j.id WHERE reservado=1;");
+            consulta = String.Format("SELECT p.id, p.hora_reserva, p.id_portatil, p.id_user, p.dia_reserva, p.devuelto, p.dia_devolucion FROM reserva_portatil p INNER JOIN portatil j on p.id_portatil=j.id WHERE reservado=1;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
@@ -215,6 +216,37 @@ namespace floridapp
             }
             reader.Close();
             return lista;
+        }
+
+        public static List<string> cargar_portatiles()
+        {
+            List<string> portatiles = new List<string>();
+            string consulta = string.Format("SELECT id FROM portatil WHERE reservado=0;");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                portatiles.Add(reader.GetString(0));
+            }
+            reader.Close();
+            return portatiles;
+        }
+
+        public static int idPortatil()
+        {
+            int id = 0;
+            string consulta = "SELECT id FROM reserva_portatil ORDER DES LIMIT 1";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id = reader.GetInt16(0);
+                }
+            }
+            reader.Close();
+            return id;
         }
     }
 }
