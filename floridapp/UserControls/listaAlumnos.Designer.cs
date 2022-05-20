@@ -42,9 +42,10 @@ namespace floridapp.UserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(669, 274);
+            this.label3.Location = new System.Drawing.Point(892, 337);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 21);
+            this.label3.Size = new System.Drawing.Size(183, 23);
             this.label3.TabIndex = 54;
             this.label3.Text = "Seleccionar ciclo:";
             // 
@@ -52,9 +53,10 @@ namespace floridapp.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(365, 214);
+            this.label2.Location = new System.Drawing.Point(487, 263);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 19);
+            this.label2.Size = new System.Drawing.Size(394, 23);
             this.label2.TabIndex = 53;
             this.label2.Text = "Consulta la información de tus alumnos";
             // 
@@ -63,9 +65,10 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(310, 150);
+            this.label1.Location = new System.Drawing.Point(413, 185);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(455, 72);
+            this.label1.Size = new System.Drawing.Size(565, 91);
             this.label1.TabIndex = 52;
             this.label1.Text = "Buscar ciclo";
             // 
@@ -73,9 +76,10 @@ namespace floridapp.UserControls
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(630, 547);
+            this.btnBuscar.Location = new System.Drawing.Point(840, 673);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(229, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(305, 37);
             this.btnBuscar.TabIndex = 51;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -84,23 +88,26 @@ namespace floridapp.UserControls
             // 
             this.cbCiclo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCiclo.FormattingEnabled = true;
-            this.cbCiclo.Location = new System.Drawing.Point(630, 298);
+            this.cbCiclo.Location = new System.Drawing.Point(840, 367);
+            this.cbCiclo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCiclo.Name = "cbCiclo";
-            this.cbCiclo.Size = new System.Drawing.Size(229, 28);
+            this.cbCiclo.Size = new System.Drawing.Size(304, 30);
             this.cbCiclo.TabIndex = 50;
             // 
             // dtgvAlumnos
             // 
             this.dtgvAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvAlumnos.Location = new System.Drawing.Point(40, 253);
+            this.dtgvAlumnos.Location = new System.Drawing.Point(53, 311);
+            this.dtgvAlumnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvAlumnos.Name = "dtgvAlumnos";
-            this.dtgvAlumnos.Size = new System.Drawing.Size(531, 324);
+            this.dtgvAlumnos.RowHeadersWidth = 51;
+            this.dtgvAlumnos.Size = new System.Drawing.Size(708, 399);
             this.dtgvAlumnos.TabIndex = 49;
             // 
             // listaAlumnos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -108,8 +115,10 @@ namespace floridapp.UserControls
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbCiclo);
             this.Controls.Add(this.dtgvAlumnos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "listaAlumnos";
-            this.Size = new System.Drawing.Size(1108, 581);
+            this.Size = new System.Drawing.Size(1477, 715);
+            this.Load += new System.EventHandler(this.listaAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

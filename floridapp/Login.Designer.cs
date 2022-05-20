@@ -29,28 +29,29 @@ namespace floridapp
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnentrar = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblcorreo = new System.Windows.Forms.Label();
+            this.lblcontraseña = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cmbLengua = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnentrar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(189, 497);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 41);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnentrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnentrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnentrar.Location = new System.Drawing.Point(189, 497);
+            this.btnentrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnentrar.Name = "btnentrar";
+            this.btnentrar.Size = new System.Drawing.Size(276, 41);
+            this.btnentrar.TabIndex = 3;
+            this.btnentrar.Text = "Entrar";
+            this.btnentrar.UseVisualStyleBackColor = true;
+            this.btnentrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtContraseña
             // 
@@ -71,27 +72,27 @@ namespace floridapp
             this.txtCorreo.Size = new System.Drawing.Size(355, 32);
             this.txtCorreo.TabIndex = 1;
             // 
-            // label1
+            // lblcorreo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 363);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Correo:";
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.Location = new System.Drawing.Point(75, 363);
+            this.lblcorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(82, 23);
+            this.lblcorreo.TabIndex = 5;
+            this.lblcorreo.Text = "Correo:";
             // 
-            // label2
+            // lblcontraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 418);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Contraseña:";
+            this.lblcontraseña.AutoSize = true;
+            this.lblcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcontraseña.Location = new System.Drawing.Point(21, 418);
+            this.lblcontraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcontraseña.Name = "lblcontraseña";
+            this.lblcontraseña.Size = new System.Drawing.Size(130, 23);
+            this.lblcontraseña.TabIndex = 6;
+            this.lblcontraseña.Text = "Contraseña:";
             // 
             // pictureBox1
             // 
@@ -116,6 +117,18 @@ namespace floridapp
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cmbLengua
+            // 
+            this.cmbLengua.FormattingEnabled = true;
+            this.cmbLengua.Items.AddRange(new object[] {
+            "Castellano",
+            "Inglés"});
+            this.cmbLengua.Location = new System.Drawing.Point(521, 55);
+            this.cmbLengua.Name = "cmbLengua";
+            this.cmbLengua.Size = new System.Drawing.Size(82, 24);
+            this.cmbLengua.TabIndex = 7;
+            this.cmbLengua.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,13 +136,14 @@ namespace floridapp
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(636, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbLengua);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblcontraseña);
+            this.Controls.Add(this.lblcorreo);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnentrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
@@ -144,12 +158,13 @@ namespace floridapp
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnentrar;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblcorreo;
+        private System.Windows.Forms.Label lblcontraseña;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cmbLengua;
     }
 }

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using floridapp.UserControls;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
 
 namespace floridapp
 {
@@ -20,7 +23,7 @@ namespace floridapp
 
         private void Cafeteria_Load(object sender, EventArgs e)
         {
-            
+            cargar_idioma();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,6 +47,19 @@ namespace floridapp
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+        private void AplicarIdioma()
+        {
+            lbl1.Text = RecursoL.Resources.caf1;
+            lbl2.Text= RecursoL.Resources.caf2;
+            label3.Text= RecursoL.Resources.caf3;
+            label4.Text= RecursoL.Resources.caf4;
+            button1.Text= RecursoL.Resources.caf5;
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
         }
     }
 }

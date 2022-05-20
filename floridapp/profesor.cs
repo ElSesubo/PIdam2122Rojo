@@ -10,6 +10,7 @@ namespace floridapp
     internal class profesor
     {
 
+        //Esta clase es totalmente ajeno a las otras clases, porque la mayoria de los métodos del profesor son muy especificos por lo que no puedo hacer 2 consultas en un mismo metodo.
         public static string modulo;
         private string nif;
         private TimeSpan hora;

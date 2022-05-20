@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="bib1" xml:space="preserve">
+    <value>Buscas un portatil?</value>
+  </data>
+  <data name="bib2" xml:space="preserve">
+    <value>Servicio de reserva de salas y portatiles</value>
+  </data>
+  <data name="bib3" xml:space="preserve">
+    <value>Bienvenido al espacio de biblioteca,
+en este apartado tendrás la posibilidad
+de reservar los equipos informáticos que 
+provee el centro educativo, también tendrás
+que concretar las horas de uso de este mismo
+para que una vez finalizado el tiempo de uso
+esté pueda ser devuelto a la biblioteca del centro.</value>
+  </data>
+  <data name="bib4" xml:space="preserve">
+    <value>Realizar Reserva</value>
+  </data>
+  <data name="caf1" xml:space="preserve">
+    <value>Por solamente:</value>
+  </data>
+  <data name="caf2" xml:space="preserve">
+    <value>Menú Paella</value>
+  </data>
+  <data name="caf3" xml:space="preserve">
+    <value>Paella tradicionl valenciana</value>
+  </data>
+  <data name="caf4" xml:space="preserve">
+    <value>Bienvenido al espacio de cafetería, aquí 
+tendrás la oportunidad de tanto realizar 
+pedidos como reservar mesas en la cafetería de 
+nuestra institución, dispondrás de la opción de 
+poder llevarte tu pedido para llevar. En el momento 
+en el cual realices tu pedido se te enviara una 
+factura a tu correo la cual posteriormente tendrás 
+que mostrar en la cafetería para poder pagarlo.</value>
+  </data>
+  <data name="caf5" xml:space="preserve">
+    <value>Realizar Pedido</value>
+  </data>
+  <data name="f1bib" xml:space="preserve">
+    <value>Biblioteca</value>
+  </data>
+  <data name="f1caf" xml:space="preserve">
+    <value>Cafeteria</value>
+  </data>
+  <data name="f1ini" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="f1list" xml:space="preserve">
+    <value>Lista grados</value>
+  </data>
+  <data name="f1reu" xml:space="preserve">
+    <value>Reunion</value>
+  </data>
+  <data name="f1sal" xml:space="preserve">
+    <value>Salie</value>
+  </data>
+  <data name="la1" xml:space="preserve">
+    <value>Busca ciclos</value>
+  </data>
+  <data name="la2" xml:space="preserve">
+    <value>Consulta la información de tus alumnos</value>
+  </data>
+  <data name="la3" xml:space="preserve">
+    <value>Selecione un modulo</value>
+  </data>
+  <data name="la4" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="lm1" xml:space="preserve">
+    <value>Consulta ciclos</value>
+  </data>
+  <data name="lm2" xml:space="preserve">
+    <value>Consulta la información de tus profesores</value>
+  </data>
+  <data name="lm3" xml:space="preserve">
+    <value>Seleciona ciclo</value>
+  </data>
+  <data name="lm4" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="locon" xml:space="preserve">
+    <value>Contraseña:</value>
+  </data>
+  <data name="locor" xml:space="preserve">
+    <value>Correo:</value>
+  </data>
+  <data name="loent" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="losal" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="new1" xml:space="preserve">
+    <value>Tablón de noticias</value>
+  </data>
+  <data name="new2" xml:space="preserve">
+    <value>Nuestras noticias más recientes</value>
+  </data>
+  <data name="new3" xml:space="preserve">
+    <value>Máas noticias</value>
+  </data>
+  <data name="reu1" xml:space="preserve">
+    <value>Organizar una reunión</value>
+  </data>
+  <data name="reu2" xml:space="preserve">
+    <value>Con tus profesores de confianza</value>
+  </data>
+  <data name="reu3" xml:space="preserve">
+    <value>Bienvenido al espacio de reuniones,
+en este apartado tendrás la posibilidad
+de organizar reuniones con todos y cada
+uno de los docentes de tu ciclo, tendras
+la opción de concretar la hora del encuentro
+para resolver cada una de tus dudas, también 
+te será confirmada la reunión con un correo que 
+te llegara a tu bandeja de entrada.</value>
+  </data>
+  <data name="reu4" xml:space="preserve">
+    <value>Realiza la tuya propia</value>
+  </data>
+  <data name="rpc1" xml:space="preserve">
+    <value>Realiza tu pedido</value>
+  </data>
+  <data name="rpc2" xml:space="preserve">
+    <value>Nunca es mal momento para comer</value>
+  </data>
+  <data name="rpc3" xml:space="preserve">
+    <value>Para llevar?</value>
+  </data>
+  <data name="rpc4" xml:space="preserve">
+    <value>Menú:</value>
+  </data>
+  <data name="rpc5" xml:space="preserve">
+    <value>Mesa:</value>
+  </data>
+  <data name="rpc6" xml:space="preserve">
+    <value>Hora Reserva:</value>
+  </data>
+  <data name="rpc7" xml:space="preserve">
+    <value>Precio:</value>
+  </data>
+  <data name="rpc8" xml:space="preserve">
+    <value>Proceder al tramite e imprimir factura</value>
+  </data>
+  <data name="rpc9" xml:space="preserve">
+    <value>Limpiar Pedido</value>
+  </data>
+  <data name="rrb1" xml:space="preserve">
+    <value>Realizar Reserva</value>
+  </data>
+  <data name="rrb2" xml:space="preserve">
+    <value>Reserva tanto de portatil como de salas de estudio</value>
+  </data>
+  <data name="rrb3" xml:space="preserve">
+    <value>Portatil?</value>
+  </data>
+  <data name="rrb4" xml:space="preserve">
+    <value>Hora Reserva:</value>
+  </data>
+  <data name="rrb5" xml:space="preserve">
+    <value>Realizar Reserva</value>
+  </data>
+  <data name="rreu1" xml:space="preserve">
+    <value>Selecciona tu módulo</value>
+  </data>
+  <data name="rreu2" xml:space="preserve">
+    <value>Para acceder a la disponibilidad de los docentes</value>
+  </data>
+  <data name="rreu3" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="rreuf1" xml:space="preserve">
+    <value>Realizar el formulario</value>
+  </data>
+  <data name="rreuf2" xml:space="preserve">
+    <value>Para enviar una solicitud para una reunión</value>
+  </data>
+  <data name="rreuf3" xml:space="preserve">
+    <value>Profesor:</value>
+  </data>
+  <data name="rreuf4" xml:space="preserve">
+    <value>Dia Reserva:</value>
+  </data>
+  <data name="rreuf5" xml:space="preserve">
+    <value>Hora Reserva:</value>
+  </data>
+  <data name="rreuf6" xml:space="preserve">
+    <value>Enviar solicitud</value>
+  </data>
+  <data name="vpr1" xml:space="preserve">
+    <value>Listado de tutorias privadas</value>
+  </data>
+</root>

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
 
 namespace floridapp.UserControls
 {
@@ -19,7 +22,19 @@ namespace floridapp.UserControls
 
         private void Reunion_Load(object sender, EventArgs e)
         {
-
+            cargar_idioma();
+        }
+        private void AplicarIdioma()
+        {
+            label1.Text = RecursoL.Resources.reu1;
+            label2.Text=RecursoL.Resources.reu2;
+            label3.Text=RecursoL.Resources.reu3;
+            button1.Text=RecursoL.Resources.reu4;
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
         }
         private void button1_Click(object sender, EventArgs e)
         {

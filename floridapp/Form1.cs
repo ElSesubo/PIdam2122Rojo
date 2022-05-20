@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
+using floridapp.RecursoL;
 
 namespace floridapp
 {
@@ -155,27 +156,32 @@ namespace floridapp
 
         }
 
+        private void AplicarIdioma()
+        {
+            lblinicio.Text = RecursoL.Resources.f1ini;
+            btnBiblioteca.Text = RecursoL.Resources.f1bib;
+            btnCafeteria.Text = RecursoL.Resources.f1caf;
+            btnReunion.Text = RecursoL.Resources.f1reu;
+            btnListaMod.Text = RecursoL.Resources.f1list;
+            btnsalir.Text = RecursoL.Resources.f1sal;
+        }
         private void cbxIdiomas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string cultura = "";
             switch (cbLenguas.Text)
             {
                 case "Castellano":
                     {
-                        cultura = "ES-ES";
+                        cultura.Nombre = "ES-ES";
                         break;
                     }
-                case "Inglés":
+                case "English":
                     {
-                        cultura = "EN-GB";  
+                        cultura.Nombre = "EN-US";  
                         break;
                     }
             }
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
-<<<<<<< HEAD
-            
-=======
->>>>>>> aa52900ee8e9f237d409b891589ef3a21bab0c17
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
         }
     }
 }

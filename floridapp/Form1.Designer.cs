@@ -35,16 +35,16 @@ namespace floridapp
             this.label3 = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.btnListaMod = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnBiblioteca = new System.Windows.Forms.Button();
             this.btnCafeteria = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReunion = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelVista = new System.Windows.Forms.Panel();
             this.cbLenguas = new System.Windows.Forms.ComboBox();
+            this.lblinicio = new System.Windows.Forms.Label();
+            this.panelVista = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
@@ -60,7 +60,7 @@ namespace floridapp
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pbUsuario);
             this.panel1.Controls.Add(this.btnListaMod);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnsalir);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnBiblioteca);
             this.panel1.Controls.Add(this.btnCafeteria);
@@ -134,23 +134,23 @@ namespace floridapp
             this.btnListaMod.UseVisualStyleBackColor = true;
             this.btnListaMod.Click += new System.EventHandler(this.btnListaMod_Click);
             // 
-            // button5
+            // btnsalir
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::floridapp.Properties.Resources.SALIDA;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(31, 722);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(247, 79);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "   Salida";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnsalir.FlatAppearance.BorderSize = 0;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsalir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.ForeColor = System.Drawing.Color.White;
+            this.btnsalir.Image = global::floridapp.Properties.Resources.SALIDA;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsalir.Location = new System.Drawing.Point(31, 722);
+            this.btnsalir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(247, 79);
+            this.btnsalir.TabIndex = 5;
+            this.btnsalir.Text = "   Salida";
+            this.btnsalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.button5_Click);
             // 
             // lblTitulo
             // 
@@ -232,7 +232,7 @@ namespace floridapp
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel2.Controls.Add(this.cbLenguas);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblinicio);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(278, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -241,16 +241,31 @@ namespace floridapp
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // cbLenguas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(469, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 70);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "INICIO";
+            this.cbLenguas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLenguas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLenguas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLenguas.FormattingEnabled = true;
+            this.cbLenguas.Items.AddRange(new object[] {
+            "Castellano",
+            "English"});
+            this.cbLenguas.Location = new System.Drawing.Point(898, 40);
+            this.cbLenguas.Name = "cbLenguas";
+            this.cbLenguas.Size = new System.Drawing.Size(155, 29);
+            this.cbLenguas.TabIndex = 1;
+            this.cbLenguas.SelectedIndexChanged += new System.EventHandler(this.cbxIdiomas_SelectedIndexChanged);
+            // 
+            // lblinicio
+            // 
+            this.lblinicio.AutoSize = true;
+            this.lblinicio.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinicio.ForeColor = System.Drawing.Color.Black;
+            this.lblinicio.Location = new System.Drawing.Point(469, 32);
+            this.lblinicio.Name = "lblinicio";
+            this.lblinicio.Size = new System.Drawing.Size(222, 70);
+            this.lblinicio.TabIndex = 0;
+            this.lblinicio.Text = "INICIO";
             // 
             // panelVista
             // 
@@ -262,17 +277,6 @@ namespace floridapp
             this.panelVista.Size = new System.Drawing.Size(1108, 804);
             this.panelVista.TabIndex = 5;
             this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
-            // 
-            // cbLenguas
-            // 
-            this.cbLenguas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLenguas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLenguas.FormattingEnabled = true;
-            this.cbLenguas.Location = new System.Drawing.Point(898, 40);
-            this.cbLenguas.Name = "cbLenguas";
-            this.cbLenguas.Size = new System.Drawing.Size(155, 29);
-            this.cbLenguas.TabIndex = 1;
-            this.cbLenguas.SelectedIndexChanged += new System.EventHandler(this.cbxIdiomas_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -309,10 +313,10 @@ namespace floridapp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBiblioteca;
         private System.Windows.Forms.Button btnCafeteria;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblinicio;
         private System.Windows.Forms.Panel panelVista;
         private System.Windows.Forms.Button btnListaMod;
         private System.Windows.Forms.Label label3;

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
 
 namespace floridapp.UserControls
 {
@@ -19,7 +22,22 @@ namespace floridapp.UserControls
 
         private void RealizarReservaBiblioteca_Load(object sender, EventArgs e)
         {
+            cargar_idioma();
+        }
 
+        private void AplicarIdioma()
+        {
+            lbl1.Text = Resources.rrb1;
+            label2.Text= Resources.rrb2;
+            cbPortatil.Text= Resources.rrb3;
+            label4.Text= Resources.rrb4;
+            button1.Text= Resources.rrb5;
+
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
         }
 
         private void button1_Click(object sender, EventArgs e)

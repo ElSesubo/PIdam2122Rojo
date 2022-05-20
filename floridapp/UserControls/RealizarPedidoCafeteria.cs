@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
 
 namespace floridapp.UserControls
 {
@@ -20,9 +23,29 @@ namespace floridapp.UserControls
         private void RealizarPedidoCafeteria_Load(object sender, EventArgs e)
         {
             Cargar();
-            
+            cargar_idioma();
         }
 
+        /// <summary>
+        /// Carga idioma
+        /// </summary>
+        private void AplicarIdioma()
+        {
+            label1.Text = RecursoL.Resources.rpc1;
+            label2.Text= RecursoL.Resources.rpc2;
+            cbLlevar.Text= RecursoL.Resources.rpc3;
+            label3.Text= RecursoL.Resources.rpc4;
+            label4.Text= RecursoL.Resources.rpc5;
+            label5.Text= RecursoL.Resources.rpc6;
+            label6.Text= RecursoL.Resources.rpc7;
+            button1.Text= RecursoL.Resources.rpc8;
+            btnLimpiarPedido.Text= RecursoL.Resources.rpc9;
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
+        }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -36,7 +36,7 @@ namespace floridapp.UserControls
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbSalas = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +59,7 @@ namespace floridapp.UserControls
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(157, 579);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(492, 50);
             this.button1.TabIndex = 33;
@@ -72,7 +72,7 @@ namespace floridapp.UserControls
             this.cbSala.AutoSize = true;
             this.cbSala.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSala.Location = new System.Drawing.Point(159, 378);
-            this.cbSala.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSala.Margin = new System.Windows.Forms.Padding(4);
             this.cbSala.Name = "cbSala";
             this.cbSala.Size = new System.Drawing.Size(108, 37);
             this.cbSala.TabIndex = 32;
@@ -85,7 +85,7 @@ namespace floridapp.UserControls
             this.cbPortatil.AutoSize = true;
             this.cbPortatil.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPortatil.Location = new System.Drawing.Point(159, 414);
-            this.cbPortatil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPortatil.Margin = new System.Windows.Forms.Padding(4);
             this.cbPortatil.Name = "cbPortatil";
             this.cbPortatil.Size = new System.Drawing.Size(145, 37);
             this.cbPortatil.TabIndex = 40;
@@ -96,7 +96,7 @@ namespace floridapp.UserControls
             // 
             this.pictureBox1.Image = global::floridapp.Properties.Resources.estudiantes_214533102;
             this.pictureBox1.Location = new System.Drawing.Point(733, 308);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(708, 810);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +109,7 @@ namespace floridapp.UserControls
             this.cbSalas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSalas.FormattingEnabled = true;
             this.cbSalas.Location = new System.Drawing.Point(404, 452);
-            this.cbSalas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSalas.Margin = new System.Windows.Forms.Padding(4);
             this.cbSalas.Name = "cbSalas";
             this.cbSalas.Size = new System.Drawing.Size(321, 31);
             this.cbSalas.TabIndex = 45;
@@ -125,17 +125,17 @@ namespace floridapp.UserControls
             this.label2.TabIndex = 46;
             this.label2.Text = "Reserva tanto de portatiles como de salas de estudio";
             // 
-            // label6
+            // lbl1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label6.Location = new System.Drawing.Point(143, 225);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(791, 91);
-            this.label6.TabIndex = 47;
-            this.label6.Text = "Realizar Reserva";
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
+            this.lbl1.Location = new System.Drawing.Point(143, 225);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(791, 91);
+            this.lbl1.TabIndex = 47;
+            this.lbl1.Text = "Realizar Reserva";
             // 
             // dtpHora
             // 
@@ -164,7 +164,7 @@ namespace floridapp.UserControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbSalas);
             this.Controls.Add(this.pictureBox1);
@@ -173,7 +173,7 @@ namespace floridapp.UserControls
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbSala);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RealizarReservaBiblioteca";
             this.Size = new System.Drawing.Size(1477, 990);
             this.Load += new System.EventHandler(this.RealizarReservaBiblioteca_Load);
@@ -191,7 +191,7 @@ namespace floridapp.UserControls
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbSalas;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.DateTimePicker dtpHora;
         private System.Windows.Forms.Label label4;
     }

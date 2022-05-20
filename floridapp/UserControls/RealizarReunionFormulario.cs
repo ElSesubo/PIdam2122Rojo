@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
+
 
 namespace floridapp.UserControls
 {
@@ -33,9 +37,23 @@ namespace floridapp.UserControls
                 lblprofesor.Text = profesor.cargar_profesor_modulos();
                 conexion.CerrarConexion();
             }
+            cargar_idioma();
 
         }
-
+        private void AplicarIdioma()
+        {
+            label1.Text = RecursoL.Resources.rreuf1;
+            label2.Text=Resources.rreuf2;
+            label3.Text=Resources.rreuf3;
+            label4.Text=Resources.rreuf5;
+            label5.Text=Resources.rreuf4;
+            button1.Text=Resources.rreuf6;
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
+        }
         private void refresh()
         {
             

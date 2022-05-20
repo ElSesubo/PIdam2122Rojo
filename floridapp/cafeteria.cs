@@ -16,6 +16,8 @@ namespace floridapp
         private bool ocupado;
         private string nif;
 
+
+        //Constructores
         public cafeteria(int id ,int numero_mesa, TimeSpan hora)
         {
             this.id = id;
@@ -50,6 +52,13 @@ namespace floridapp
         public int Id { get => id; set=>id=value; }
         public bool Ocupado { get=> ocupado; set=>ocupado=value; }
 
+
+        /// <summary>
+        /// Método que inserta registro a tabla reserva_mesa_cafeteria.
+        /// </summary>
+        /// <param name="reserva"></param>
+        /// <param name="mesa"></param>
+        /// <param name="nif"></param>
         public static void InsertarReserva(TimeSpan reserva, int mesa, string nif)
         {
             string consulta = "";
@@ -62,6 +71,12 @@ namespace floridapp
 
         }
 
+
+        /// <summary>
+        /// Método que elimina registro de la tabla reserva_mesa_cafeteria.
+        /// </summary>
+        /// <param name="cafe"></param>
+        /// <param name="mesa"></param>
         public static void EliminarReserva(cafeteria cafe,int mesa)
         {
             string consulta = "";
@@ -71,6 +86,11 @@ namespace floridapp
             comando.ExecuteReader();
         }
 
+
+        /// <summary>
+        /// Método que devuelve una lista con las mesas ocupadas.
+        /// </summary>
+        /// <returns></returns>
         public static List<cafeteria> ListaMesaCocina()
         {
             List<cafeteria> lista = new List<cafeteria>();
@@ -106,6 +126,12 @@ namespace floridapp
             return false;
         }*/
 
+
+        /// <summary>
+        /// Método que filtra la lista de reserva por nif del usuario
+        /// </summary>
+        /// <param name="use"></param>
+        /// <returns>Lista de reserva</returns>
         public static List<cafeteria> ListaReserva(usuario use)
         {
             List<cafeteria> lista = new List<cafeteria>();
@@ -126,6 +152,11 @@ namespace floridapp
             return lista;
         }
 
+
+        /// <summary>
+        /// Método que devuelve la lista de mesas libres.
+        /// </summary>
+        /// <returns></returns>
         public static List<cafeteria> ListaMesasDisponibles()
         {
             List<cafeteria> lista = new List<cafeteria>();
@@ -146,6 +177,10 @@ namespace floridapp
         }
 
 
+        /// <summary>
+        /// Método que actualice para que la mesa este ocupado
+        /// </summary>
+        /// <param name="mesa"></param>
         public static void ActualizarMesaR(int mesa)
         {
             string consulta2 = "";
@@ -154,6 +189,10 @@ namespace floridapp
             comando2.ExecuteReader();
         }
 
+        /// <summary>
+        /// Método que actualice para que la mesa este libre
+        /// </summary>
+        /// <param name="mesa"></param>
         public static void ActualizarMesaV(int mesa)
         {
             string consulta2 = "";

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
 
 namespace floridapp.UserControls
 {
@@ -20,8 +23,18 @@ namespace floridapp.UserControls
         private void VistaProfesor_Load(object sender, EventArgs e)
         {
             refresh();
+            cargar_idioma();
         }
 
+        private void AplicarIdioma()
+        {
+            label1.Text = Resources.vpr1;
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
+        }
         private void refresh()
         {
             List<profesor> p = profesores();//Devuelve la lista de tutoria profesor.
