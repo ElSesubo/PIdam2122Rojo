@@ -186,7 +186,7 @@ namespace floridapp
         public static void ActualizarPortatilReserva(int id)
         {
             string consulta1 = "";
-            consulta1 = String.Format("UPDATE portatil set reservado=1, devuelto=0 where id='{0}';", id);
+            consulta1 = String.Format("UPDATE portatil set devuelto=0, reservado=1 where id='{0}';", id);
             MySqlCommand comando2 = new MySqlCommand(consulta1, conexion.Conexion);
             comando2.ExecuteReader();
         }

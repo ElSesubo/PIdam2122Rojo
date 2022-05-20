@@ -128,17 +128,7 @@ namespace floridapp
 
         private void accesoBiblioteca_Load_1(object sender, EventArgs e)
         {
-            if (conexion.Conexion != null)
-            {
-                conexion.AbrirConexion();
-                List<string> ciclos = biblioteca.cargar_portatiles();
-                for (int i = 0; i < ciclos.Count; i++)
-                {
-                    comboBox1.Items.Add(ciclos[i]);
-                }
-                conexion.CerrarConexion();
-            }
-            comboBox1.SelectedIndex = 0;
+            cargarPortatiles();
             Cargar();
         }
 
@@ -148,13 +138,14 @@ namespace floridapp
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                biblioteca.InsertarPedidoBiblioteca(hora, Convert.ToInt32(comboBox1.Text), txtNIF.Text);
+                biblioteca.ActualizarPortatilReserva(Convert.ToInt32(comboBox1.Text));
                 conexion.CerrarConexion();
                 conexion.AbrirConexion();
-                biblioteca.ActualizarPortatilReserva(Convert.ToInt32(comboBox1.Text));
+                biblioteca.InsertarPedidoBiblioteca(hora, Convert.ToInt32(comboBox1.Text), txtNIF.Text);
                 conexion.CerrarConexion();
             }
             Cargar();
+            cargarPortatiles();
         }
 
         private void btnDevuelto_Click(object sender, EventArgs e)
@@ -182,6 +173,21 @@ namespace floridapp
                     Cargar();
                 }
             }
+        }
+
+        private void cargarPortatiles()
+        {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                List<string> ciclos = biblioteca.cargar_portatiles();
+                for (int i = 0; i<ciclos.Count; i++)
+                {
+                    comboBox1.Items.Add(ciclos[i]);
+                }
+            conexion.CerrarConexion();
+                    }
+        comboBox1.SelectedIndex = 0;
         }
     }
 }

@@ -344,3 +344,15 @@ C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\EN-US\floridapp.resources.dll
 C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.csproj.CopyComplete
 C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.exe
 C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.pdb
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\EN-US\floridapp.resources.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.RecursoL.Resources.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.RecursoL.Resources.EN-US.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.RecursoL.StringResource.en-US.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\es\floridapp.resources.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\EN-US\floridapp.resources.dll
