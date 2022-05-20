@@ -70,6 +70,7 @@
     <Compile Include="biblioteca.cs" />
     <Compile Include="cafeteria.cs" />
     <Compile Include="conexion.cs" />
+    <Compile Include="cultura.cs" />
     <Compile Include="EnviarGmail.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -79,13 +80,16 @@
     </Compile>
     <Compile Include="Pedido.cs" />
     <Compile Include="profesor.cs" />
-    <Compile Include="RecursoL\Resource1.Designer.cs">
+    <Compile Include="RecursoL\Resources.EN-US1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource1.resx</DependentUpon>
+      <DependentUpon>Resources.EN-US.resx</DependentUpon>
     </Compile>
-    <Compile Include="RecursoL\StringRecursos.en-US.Designer.cs" />
-    <Compile Include="RecursoL\StringRecursos.ES-ES1.Designer.cs" />
+    <Compile Include="RecursoL\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Biblio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,12 +181,15 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecursoL\Resource1.resx">
+    <EmbeddedResource Include="RecursoL\Resources.EN-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.EN-US1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursoL\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursoL\StringResource.en-US.resx" />
-    <EmbeddedResource Include="RecursoL\StringRecursos.ES-ES.resx" />
     <EmbeddedResource Include="UserControls\Biblio.resx">
       <DependentUpon>Biblio.cs</DependentUpon>
     </EmbeddedResource>

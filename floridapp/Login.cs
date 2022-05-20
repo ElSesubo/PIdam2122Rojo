@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-using floridapp.Properties;
+using floridapp.RecursoL;
 
 namespace floridapp
 {
@@ -84,10 +84,10 @@ namespace floridapp
 
         private void AplicarIdioma()
         {
-            label1.Text = StringRes
-            label2.Text = 
-            btnSalir.Text = StringRecursos.textosalir;
-            this.Text = StringRecursos.tituloventana;
+            lblcorreo.Text = RecursoL.Resources.locor;
+            lblcontraseña.Text = RecursoL.Resources.locon;
+            btnSalir.Text = RecursoL.Resources.losal;
+            btnentrar.Text = RecursoL.Resources.loent;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -101,7 +101,7 @@ namespace floridapp
                     }
                 case "Inglés":
                     {
-                        cultura = "EN-GB";  // Inglés United Kingdom
+                        cultura = "EN-US";  // Inglés United Kingdom
                         break;
                     }
 

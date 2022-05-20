@@ -124,7 +124,13 @@
     <value>Service of laptops reservation </value>
   </data>
   <data name="bib_3" xml:space="preserve">
-    <value>Ofrecemos un</value>
+    <value>Welcome to the library area,
+in this section you will have the possibility
+to book the computer equipment provided by the 
+educational center, you will also have to
+specify the hours of use of the same
+so that once the time of use is over, 
+it can be returned to the center library.</value>
   </data>
   <data name="bib_4" xml:space="preserve">
     <value>Make Reservation</value>
@@ -139,11 +145,14 @@
     <value>Traditional Paella Valenciana</value>
   </data>
   <data name="caf_4" xml:space="preserve">
-    <value>Paella is probably the most acclaimed 
-most acclaimed, popular and well known of our gastronomy. 
-gastronomy. It is the flagship dish of an entire 
-region, which has allowed the Spanish culinary richness to 
-Spanish culinary richness to cross borders.</value>
+    <value>Welcome to the cafeteria space, here you 
+you will have the opportunity to place 
+orders as well as to reserve tables in the cafeteria of 
+our institution, you will have the option of taking your 
+order to take away. When you place your order you 
+will be confirmed with and invoice to your email which you 
+will have to show at the cafeteria 
+to pay for it.</value>
   </data>
   <data name="caf_5" xml:space="preserve">
     <value>Place Order</value>
@@ -194,7 +203,14 @@ Spanish culinary richness to cross borders.</value>
     <value>With your trusted teachers</value>
   </data>
   <data name="reu_3" xml:space="preserve">
-    <value />
+    <value>Welcome to the meeting space,
+in this section you will have the possibility
+to organize meeting with each and every one
+of the teachers of your course, you will have
+the option to specify the time of the meeting
+to solve each of your doubts, also the meeting
+will be confirmed with an email that will arrive 
+to your inbox.</value>
   </data>
   <data name="reu_4" xml:space="preserve">
     <value>Make your own</value>

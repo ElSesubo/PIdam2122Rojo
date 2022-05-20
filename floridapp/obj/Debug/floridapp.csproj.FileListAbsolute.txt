@@ -287,3 +287,9 @@ C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\florida
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.Ingles.resources
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.StringRecursos.ES-ES.resources
 C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.StringRecursos.en-US.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.Resources.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.StringResource.en-US.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.StringRecursos.ES-ES.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.Resources.en-US.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\EN-US\floridapp.resources.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\EN-US\floridapp.resources.dll

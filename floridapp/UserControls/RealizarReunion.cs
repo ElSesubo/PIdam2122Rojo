@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Threading;
+using System.Globalization;
+using floridapp.RecursoL;
 
 namespace floridapp.UserControls
 {
@@ -48,10 +51,21 @@ namespace floridapp.UserControls
                 conexion.CerrarConexion();
             }
             cmbCiclo.SelectedIndex = 0;
-
+            cargar_idioma();
             
         }
 
+        private void AplicarIdioma()
+        {
+            label1.Text = RecursoL.Resources.rreu1;
+            label2.Text = RecursoL.Resources.rreu2;
+            btnContinuar.Text = RecursoL.Resources.rreu3;
+        }
+        private void cargar_idioma()
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
+            AplicarIdioma();
+        }
         private void cmbCiclo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
