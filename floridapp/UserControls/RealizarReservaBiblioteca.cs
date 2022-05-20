@@ -29,7 +29,6 @@ namespace floridapp.UserControls
         {
             lbl1.Text = Resources.rrb1;
             label2.Text= Resources.rrb2;
-            cbPortatil.Text= Resources.rrb3;
             label4.Text= Resources.rrb4;
             button1.Text= Resources.rrb5;
 
@@ -42,10 +41,7 @@ namespace floridapp.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool portatil = cbPortatil.Checked;
             TimeSpan hora= TimeSpan.Parse(dtpHora.Value.ToString("T"));
-            if (portatil == cbPortatil.Checked)
-            {
                 int id = 0;
                 if (conexion.Conexion != null)
                 {
@@ -74,22 +70,24 @@ namespace floridapp.UserControls
                     biblioteca.ActualizarPortatilReserva(id);
                     conexion.CerrarConexion();
                 }
-            }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if(cbSala.Checked == false)
-            {
-                cbSalas.Enabled = false;
-            }
-            else
-            {
-                cbSalas.Enabled = true;
-            }
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpHora_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
