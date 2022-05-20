@@ -384,5 +384,91 @@ namespace floridapp
             reader.Close();
             return nombre;
         }
+
+        public static List<string> lista_ciclos()
+        {
+            string a = "";
+            List<string> lista=new List<string>();
+            string consulta = "SELECT DISTINCT(nombre) from ciclo;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a=reader.GetString(0);
+                lista.Add(a);
+            }
+            reader.Close();
+            return lista;
+        }
+        public static List<string> lista_clase()
+        {
+            string a = "";
+            List<string> lista = new List<string>();
+            string consulta = "SELECT DISTINCT(clase) from ciclo;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a = reader.GetString(0);
+                lista.Add(a);
+            }
+            reader.Close();
+            return lista;
+        }
+        public static List<string> lista_horario()
+        {
+            TimeSpan a=new TimeSpan();
+            List<string> lista = new List<string>();
+            string consulta = "SELECT DISTINCT(horario) from ciclo;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a = reader.GetTimeSpan(0);
+                lista.Add(a.ToString());
+            }
+            reader.Close();
+            return lista;
+        }
+        public static List<string> lista_presencialidad()
+        {
+            string a = "";
+            List<string> lista = new List<string>();
+            string consulta = "SELECT DISTINCT(presencialidad) from ciclo;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a = reader.GetString(0);
+                lista.Add(a.ToString());
+            }
+            reader.Close();
+            return lista;
+        }
+
+        public static int filtrarCiclos(string nombre,string clase,string horario,string presencia)
+        {
+            int id=0;
+            string consulta = "SELECT id FROM ciclo WHERE nombre=@nom and clase=@clas and hoarario=@hora and presencialidad=@pre;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nom", nombre);
+            comando.Parameters.AddWithValue("clas", clase);
+            comando.Parameters.AddWithValue("hora", horario);
+            comando.Parameters.AddWithValue("pre", presencia);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                 id=reader.GetInt32(0);
+            }
+            reader.Close();
+            return id;
+        }
+        public static void insertarUsuarioCiclo(string nif,int cicl)
+        {
+            string consulta = "INSERT INTO ciclo_pertenece VALUES(null,@nif,@ciclo);";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", nif);
+            comando.Parameters.AddWithValue("ciclo", cicl);
+        }
     }
 }

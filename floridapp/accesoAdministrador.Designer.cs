@@ -57,11 +57,17 @@
             this.gbCiclo = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblmodulo = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbciclo = new System.Windows.Forms.ComboBox();
+            this.cmbmodulo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbclase = new System.Windows.Forms.ComboBox();
+            this.cmbhorario = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbprensencia = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             this.gbCiclo.SuspendLayout();
@@ -323,6 +329,7 @@
             this.rbnAlumno.TabStop = true;
             this.rbnAlumno.Text = "Alumno";
             this.rbnAlumno.UseVisualStyleBackColor = true;
+            this.rbnAlumno.CheckedChanged += new System.EventHandler(this.rbnAlumno_CheckedChanged);
             // 
             // rbnBiblioteca
             // 
@@ -335,6 +342,7 @@
             this.rbnBiblioteca.TabStop = true;
             this.rbnBiblioteca.Text = "Biblioteca";
             this.rbnBiblioteca.UseVisualStyleBackColor = true;
+            this.rbnBiblioteca.CheckedChanged += new System.EventHandler(this.rbnBiblioteca_CheckedChanged);
             // 
             // rbnCocina
             // 
@@ -347,6 +355,7 @@
             this.rbnCocina.TabStop = true;
             this.rbnCocina.Text = "Cocina";
             this.rbnCocina.UseVisualStyleBackColor = true;
+            this.rbnCocina.CheckedChanged += new System.EventHandler(this.rbnCocina_CheckedChanged);
             // 
             // rbnAdmin
             // 
@@ -359,6 +368,7 @@
             this.rbnAdmin.TabStop = true;
             this.rbnAdmin.Text = "Administrador";
             this.rbnAdmin.UseVisualStyleBackColor = true;
+            this.rbnAdmin.CheckedChanged += new System.EventHandler(this.rbnAdmin_CheckedChanged);
             // 
             // rbnProfesor
             // 
@@ -376,16 +386,22 @@
             // gbCiclo
             // 
             this.gbCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.gbCiclo.Controls.Add(this.button1);
-            this.gbCiclo.Controls.Add(this.comboBox2);
-            this.gbCiclo.Controls.Add(this.comboBox1);
-            this.gbCiclo.Controls.Add(this.label5);
+            this.gbCiclo.Controls.Add(this.cmbprensencia);
+            this.gbCiclo.Controls.Add(this.label7);
+            this.gbCiclo.Controls.Add(this.cmbhorario);
+            this.gbCiclo.Controls.Add(this.cmbclase);
+            this.gbCiclo.Controls.Add(this.label6);
             this.gbCiclo.Controls.Add(this.label4);
+            this.gbCiclo.Controls.Add(this.button1);
+            this.gbCiclo.Controls.Add(this.cmbmodulo);
+            this.gbCiclo.Controls.Add(this.cmbciclo);
+            this.gbCiclo.Controls.Add(this.label5);
+            this.gbCiclo.Controls.Add(this.lblmodulo);
             this.gbCiclo.Controls.Add(this.label3);
             this.gbCiclo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCiclo.Location = new System.Drawing.Point(357, 85);
+            this.gbCiclo.Location = new System.Drawing.Point(319, 85);
             this.gbCiclo.Name = "gbCiclo";
-            this.gbCiclo.Size = new System.Drawing.Size(612, 446);
+            this.gbCiclo.Size = new System.Drawing.Size(650, 533);
             this.gbCiclo.TabIndex = 29;
             this.gbCiclo.TabStop = false;
             // 
@@ -399,15 +415,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Ciclo: ";
             // 
-            // label4
+            // lblmodulo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 214);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 27);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Módulo: ";
+            this.lblmodulo.AutoSize = true;
+            this.lblmodulo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmodulo.Location = new System.Drawing.Point(33, 368);
+            this.lblmodulo.Name = "lblmodulo";
+            this.lblmodulo.Size = new System.Drawing.Size(110, 27);
+            this.lblmodulo.TabIndex = 1;
+            this.lblmodulo.Text = "Módulo: ";
             // 
             // label5
             // 
@@ -419,30 +435,84 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Selecione el ciclo y modulo al que quieres\r\nque pertenezca";
             // 
-            // comboBox1
+            // cmbciclo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(190, 148);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 35);
-            this.comboBox1.TabIndex = 3;
+            this.cmbciclo.FormattingEnabled = true;
+            this.cmbciclo.Location = new System.Drawing.Point(215, 146);
+            this.cmbciclo.Name = "cmbciclo";
+            this.cmbciclo.Size = new System.Drawing.Size(230, 35);
+            this.cmbciclo.TabIndex = 3;
             // 
-            // comboBox2
+            // cmbmodulo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(190, 210);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 35);
-            this.comboBox2.TabIndex = 4;
+            this.cmbmodulo.FormattingEnabled = true;
+            this.cmbmodulo.Location = new System.Drawing.Point(215, 358);
+            this.cmbmodulo.Name = "cmbmodulo";
+            this.cmbmodulo.Size = new System.Drawing.Size(230, 35);
+            this.cmbmodulo.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(146, 301);
+            this.button1.Location = new System.Drawing.Point(171, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 61);
             this.button1.TabIndex = 5;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(59, 199);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 27);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Clase: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(38, 255);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 27);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Horario: ";
+            // 
+            // cmbclase
+            // 
+            this.cmbclase.FormattingEnabled = true;
+            this.cmbclase.Location = new System.Drawing.Point(215, 193);
+            this.cmbclase.Name = "cmbclase";
+            this.cmbclase.Size = new System.Drawing.Size(230, 35);
+            this.cmbclase.TabIndex = 8;
+            // 
+            // cmbhorario
+            // 
+            this.cmbhorario.FormattingEnabled = true;
+            this.cmbhorario.Location = new System.Drawing.Point(215, 245);
+            this.cmbhorario.Name = "cmbhorario";
+            this.cmbhorario.Size = new System.Drawing.Size(230, 35);
+            this.cmbhorario.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 306);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(191, 27);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Presencialidad: ";
+            // 
+            // cmbprensencia
+            // 
+            this.cmbprensencia.FormattingEnabled = true;
+            this.cmbprensencia.Location = new System.Drawing.Point(215, 300);
+            this.cmbprensencia.Name = "cmbprensencia";
+            this.cmbprensencia.Size = new System.Drawing.Size(230, 35);
+            this.cmbprensencia.TabIndex = 11;
             // 
             // accesoAdministrador
             // 
@@ -507,10 +577,16 @@
         private System.Windows.Forms.GroupBox gbCiclo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblmodulo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbmodulo;
+        private System.Windows.Forms.ComboBox cmbciclo;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbprensencia;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbhorario;
+        private System.Windows.Forms.ComboBox cmbclase;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
     }
 }

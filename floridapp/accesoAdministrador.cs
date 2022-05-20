@@ -217,6 +217,95 @@ namespace floridapp
 
         {
             gbCiclo.Visible=true;
+            lblmodulo.Visible=true;
+            cmbmodulo.Visible=true;
+            cargar_combobox();
+        }
+
+        private void cargar_ciclos()
+        {
+            List<string> ciclo=new List<string>();
+            if(conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                ciclo=usuario.lista_ciclos();
+                conexion.CerrarConexion();
+            }
+            for(int i = 0; i < ciclo.Count; i++)
+            {
+                cmbciclo.Items.Add(ciclo[i]);
+            }
+        }
+        private void cargar_clase()
+        {
+            List<string> ciclo = new List<string>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                ciclo = usuario.lista_clase();
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < ciclo.Count; i++)
+            {
+                cmbclase.Items.Add(ciclo[i]);
+            }
+        }
+        private void cargar_horario()
+        {
+            List<string> ciclo = new List<string>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                ciclo = usuario.lista_horario();
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < ciclo.Count; i++)
+            {
+                cmbhorario.Items.Add(ciclo[i]);
+            }
+        }
+        private void cargar_presencialidad()
+        {
+            List<string> ciclo = new List<string>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                ciclo = usuario.lista_presencialidad();
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < ciclo.Count; i++)
+            {
+                cmbprensencia.Items.Add(ciclo[i]);
+            }
+        }
+        private void cargar_combobox()
+        {
+            cargar_ciclos();
+            cargar_clase();
+            cargar_horario();
+            cargar_presencialidad();
+        }
+
+        private void rbnAlumno_CheckedChanged(object sender, EventArgs e)
+        {
+            gbCiclo.Visible = true;
+            lblmodulo.Visible = false;
+            cmbmodulo.Visible=false;
+        }
+
+        private void rbnCocina_CheckedChanged(object sender, EventArgs e)
+        {
+            gbCiclo.Visible=false;
+        }
+
+        private void rbnBiblioteca_CheckedChanged(object sender, EventArgs e)
+        {
+            gbCiclo.Visible = false;
+        }
+
+        private void rbnAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            gbCiclo.Visible = false;
         }
     }
 }
