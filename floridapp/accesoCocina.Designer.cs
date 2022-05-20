@@ -68,11 +68,18 @@ namespace floridapp
             this.bntEditarMenu = new System.Windows.Forms.Button();
             this.btnEditarMesas = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnagregarmesa = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblnum = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMenu)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgvPedidos
@@ -327,13 +334,59 @@ namespace floridapp
             resources.ApplyResources(this.btnEditarMesas, "btnEditarMesas");
             this.btnEditarMesas.Name = "btnEditarMesas";
             this.btnEditarMesas.UseVisualStyleBackColor = true;
+            this.btnEditarMesas.Click += new System.EventHandler(this.btnEditarMesas_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.lblnum);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.btnagregarmesa);
+            this.groupBox2.Controls.Add(this.label4);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // btnagregarmesa
+            // 
+            resources.ApplyResources(this.btnagregarmesa, "btnagregarmesa");
+            this.btnagregarmesa.Name = "btnagregarmesa";
+            this.btnagregarmesa.UseVisualStyleBackColor = true;
+            this.btnagregarmesa.Click += new System.EventHandler(this.btnagregarmesa_Click);
+            // 
+            // button6
+            // 
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lblnum
+            // 
+            resources.ApplyResources(this.lblnum, "lblnum");
+            this.lblnum.Name = "lblnum";
+            this.lblnum.Click += new System.EventHandler(this.lblnum_Click);
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // accesoCocina
             // 
@@ -366,6 +419,8 @@ namespace floridapp
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +466,11 @@ namespace floridapp
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnEditarMesas;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnagregarmesa;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblnum;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button4;
     }
 }

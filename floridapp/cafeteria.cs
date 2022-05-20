@@ -200,5 +200,47 @@ namespace floridapp
             MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
             comando2.ExecuteReader();
         }
+
+        /// <summary>
+        /// Método que inserta una mesa.
+        /// </summary>
+        public static void agregarmesas()
+        {
+            string consulta = "INSERT INTO mesa_cafeteria VALUES(NULL,false);";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteReader();
+        }
+
+
+        /// <summary>
+        /// Método que elimina una mesa
+        /// </summary>
+        public static void eliminarmesas()
+        {
+            string consulta = "DELETE FROM mesa_cafeteria WHERE reservado = false LIMIT 1;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteReader();
+        }
+
+        /// <summary>
+        /// Devuelve el numero total de mesas que hay para reservar.
+        /// </summary>
+        /// <returns></returns>
+        public static int num_totales_mesa()
+        {
+            int num = 0;
+            string consulta = "Select * from mesa_cafeteria;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    num++;
+                }
+            }
+            reader.Close();
+            return num;
+        }
     }
 }

@@ -41,6 +41,8 @@ namespace floridapp
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }
+            dtgvUsuarios.ReadOnly = true;
+            gbCiclo.Visible = false;
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -214,7 +216,7 @@ namespace floridapp
         private void rbnProfesor_CheckedChanged(object sender, EventArgs e)
 
         {
-
+            gbCiclo.Visible=true;
         }
     }
 }

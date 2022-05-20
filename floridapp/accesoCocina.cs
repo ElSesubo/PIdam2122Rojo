@@ -67,6 +67,7 @@ namespace floridapp
             Cargar();
             Cargar2();
             groupBox1.Visible = false;
+            groupBox2.Visible = false;
         }
         private void Cargar()
         {
@@ -208,6 +209,7 @@ namespace floridapp
         private void button4_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
+            groupBox2.Visible = false;
             cargar_dgvmenu();
         }
 
@@ -348,6 +350,84 @@ namespace floridapp
             }
             cargar_dgvmenu();
             limpiar();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Muestra editar mesas y oculta editar menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnEditarMesas_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+            groupBox2.Visible = true;
+            nummesas();
+        }
+
+        /// <summary>
+        /// Muestra el numero de mesas totales
+        /// </summary>
+        private void nummesas()
+        {
+            int total = 0;
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                total = cafeteria.num_totales_mesa();
+                conexion.CerrarConexion();
+            }
+            lblnum.Text = total.ToString();
+        }
+
+        private void lblnum_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            refresh();
+        }
+        /// <summary>
+        /// Elimina una mesa que no esta reservado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                cafeteria.eliminarmesas();
+                conexion.CerrarConexion();
+            }
+            nummesas();
+        }
+
+        /// <summary>
+        /// Agrega una mesa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnagregarmesa_Click(object sender, EventArgs e)
+        {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                cafeteria.agregarmesas();
+                conexion.CerrarConexion();
+            }
+            nummesas();
         }
     }
 }
