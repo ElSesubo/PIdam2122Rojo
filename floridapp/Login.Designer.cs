@@ -36,6 +36,7 @@ namespace floridapp
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cmbLengua = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +117,18 @@ namespace floridapp
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cmbLengua
+            // 
+            this.cmbLengua.FormattingEnabled = true;
+            this.cmbLengua.Items.AddRange(new object[] {
+            "Castellano",
+            "Inglés"});
+            this.cmbLengua.Location = new System.Drawing.Point(521, 55);
+            this.cmbLengua.Name = "cmbLengua";
+            this.cmbLengua.Size = new System.Drawing.Size(82, 24);
+            this.cmbLengua.TabIndex = 7;
+            this.cmbLengua.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,6 +136,7 @@ namespace floridapp
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(636, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbLengua);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -151,5 +165,6 @@ namespace floridapp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cmbLengua;
     }
 }

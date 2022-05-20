@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
+using floridapp.RecursoL;
 
 namespace floridapp
 {
@@ -172,10 +173,7 @@ namespace floridapp
                     }
             }
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
-<<<<<<< HEAD
-            
-=======
->>>>>>> aa52900ee8e9f237d409b891589ef3a21bab0c17
+
         }
     }
 }

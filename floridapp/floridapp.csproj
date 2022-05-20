@@ -79,16 +79,13 @@
     </Compile>
     <Compile Include="Pedido.cs" />
     <Compile Include="profesor.cs" />
-    <Compile Include="Recurso_lenguaje\Castellano.Designer.cs">
+    <Compile Include="RecursoL\Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Castellano.resx</DependentUpon>
+      <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <Compile Include="Recurso_lenguaje\Ingles.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ingles.resx</DependentUpon>
-    </Compile>
+    <Compile Include="RecursoL\StringRecursos.en-US.Designer.cs" />
+    <Compile Include="RecursoL\StringRecursos.ES-ES1.Designer.cs" />
     <Compile Include="UserControls\Biblio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,14 +177,12 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recurso_lenguaje\Castellano.resx">
+    <EmbeddedResource Include="RecursoL\Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Castellano.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recurso_lenguaje\Ingles.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Ingles.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="RecursoL\StringResource.en-US.resx" />
+    <EmbeddedResource Include="RecursoL\StringRecursos.ES-ES.resx" />
     <EmbeddedResource Include="UserControls\Biblio.resx">
       <DependentUpon>Biblio.cs</DependentUpon>
     </EmbeddedResource>

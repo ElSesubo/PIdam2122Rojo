@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
+using floridapp.Properties;
 
 namespace floridapp
 {
@@ -77,6 +80,35 @@ namespace floridapp
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void AplicarIdioma()
+        {
+            label1.Text = StringRes
+            label2.Text = 
+            btnSalir.Text = StringRecursos.textosalir;
+            this.Text = StringRecursos.tituloventana;
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (cmbLengua.Text)
+            {
+                case "Castellano":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "Inglés":
+                    {
+                        cultura = "EN-GB";  // Inglés United Kingdom
+                        break;
+                    }
+
+            }
+            MessageBox.Show("Nombre de la referencia cultural en .NET: " + cultura);  // mensaje informativo
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
         }
     }
 }
