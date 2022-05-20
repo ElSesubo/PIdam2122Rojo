@@ -498,7 +498,7 @@ p{
 .TarjetaINT{
 	display:inline-block;
 	
-	height: 400px;
+	height: 250px;
 	width: 600px;
 	margin-left: 100px;
 	margin-right: 1px;
@@ -506,23 +506,29 @@ p{
 	background-color: #252932;
 	display:inline-block;
 }
+
+
 .TarjetaINT h1{
 	font-size: 20px;
 	text-align: left;
 	color: white;
-	padding-bottom: 0%;
+	padding-bottom: 1px;
 	font-family:  CenturyGothicN;
 	letter-spacing: 1px;
 	display:inline-block;
+	margin-top: 1px;
+	padding-top: 10px;
 }
 .TarjetaINT h2{
 	padding-top: 0%;
-	font-size: 12px;
+	font-size: 16px;
 	text-align: left;
 	color: white;
 	font-family:  CenturyGothicN;
 	letter-spacing: 1px;
 	display:inline-block;
+	max-width: 45%;
+	
 }
 .imgINT{
 	float: left;
@@ -530,7 +536,9 @@ p{
 	margin-right:1px ;
 	margin-top:20px ;
 }
-.INTtext{
-
-
+.imgINTgrupal{
+	margin-left: 18%;
+	
+	margin-right:1px ;
+	margin-top:100px ;
 }
