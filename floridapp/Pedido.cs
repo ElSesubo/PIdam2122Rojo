@@ -20,6 +20,8 @@ namespace floridapp
         private string nombre_menu;
         private double precio;
 
+
+        //Constructores
         public Pedido(int id, bool llevar, string nif, TimeSpan hora, bool recogido, bool preparado, int menu )
         {
             this.id = id;
@@ -56,7 +58,13 @@ namespace floridapp
         public string Nombre_menu { get => nombre_menu; set => nombre_menu = value; }
         public double Precio { get => precio; set => precio = value; }
 
-
+        /// <summary>
+        /// MÉtodo que inserta registro en la tabla pedidos
+        /// </summary>
+        /// <param name="reserva"></param>
+        /// <param name="menu"></param>
+        /// <param name="nif"></param>
+        /// <param name="llevar"></param>
         public static void InsertarReserva(TimeSpan reserva, int menu, string nif, int llevar)
         {
             string consulta = "";
@@ -67,6 +75,11 @@ namespace floridapp
             comando.ExecuteReader();
 
         }
+
+        /// <summary>
+        /// Método que devuelve la lista de pedidos pendientes y no recogidos de hoy
+        /// </summary>
+        /// <returns></returns>
         public static List<Pedido> ListaMenu()
         {
             List<Pedido> lista = new List<Pedido>();
@@ -86,6 +99,11 @@ namespace floridapp
             return lista;
         }
 
+
+        /// <summary>
+        /// Método que actualiza la tabla de pedidos, haciendo que pedido este preparado.
+        /// </summary>
+        /// <param name="id"></param>
         public static void ActualizarPreparado(int id)
         {
             string consulta2 = "";
@@ -94,6 +112,10 @@ namespace floridapp
             comando2.ExecuteReader();
         }
 
+        /// <summary>
+        /// Método que actualiza la tabla de pedidos, haciendo que el pedido este recogido.
+        /// </summary>
+        /// <param name="id"></param>
         public static void ActualizarRecogido(int id)
         {
 
@@ -101,9 +123,13 @@ namespace floridapp
                 consulta2 = String.Format("UPDATE pedido set recogido=1 where id='{0}';", id);
                 MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
                 comando2.ExecuteReader();
-
- 
         }
+
+        /// <summary>
+        /// Método que devuelve la lista de pedidos filtado por nif
+        /// </summary>
+        /// <param name="nif"></param>
+        /// <returns></returns>
         public static List<Pedido> BuscarMenu(string nif)
         {
             List<Pedido> lista = new List<Pedido>();
@@ -122,6 +148,11 @@ namespace floridapp
             reader.Close();
             return lista;
         }
+
+        /// <summary>
+        /// Método devuelve una lista con los nombres de los menus.Lo usaremos para cargar posteriolmente el combobox.
+        /// </summary>
+        /// <returns></returns>
         public static List<Pedido> ListaMenus()
         {
             List<Pedido> lista = new List<Pedido>();
@@ -141,6 +172,12 @@ namespace floridapp
             return lista;
         }
 
+
+        /// <summary>
+        /// Método que busca y devulve el precio del menu asignado
+        /// </summary>
+        /// <param name="menu"></param>
+        /// <returns></returns>
         public static double BuscarPrecio(string menu)
         {
             double precio = 0;
@@ -153,7 +190,6 @@ namespace floridapp
                 while (reader.Read())
                 {
                     precio = reader.GetDouble(0);
-
                 }
             }
             reader.Close();
@@ -161,6 +197,12 @@ namespace floridapp
 
         }
 
+
+        /// <summary>
+        /// Método que devuelve el id del menu asignado.
+        /// </summary>
+        /// <param name="menu"></param>
+        /// <returns></returns>
         public static int ListarMenus(string menu)
         {
             int id = 0;
@@ -172,8 +214,7 @@ namespace floridapp
             {
                 while (reader.Read())
                 {
-                     id=reader.GetInt16(0);
-                    
+                     id=reader.GetInt16(0);                   
                 }
             }
             reader.Close();

@@ -209,6 +209,78 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Busca ciclos.
+        /// </summary>
+        internal static string la1 {
+            get {
+                return ResourceManager.GetString("la1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Consulta la información de tus alumnos.
+        /// </summary>
+        internal static string la2 {
+            get {
+                return ResourceManager.GetString("la2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecione un modulo.
+        /// </summary>
+        internal static string la3 {
+            get {
+                return ResourceManager.GetString("la3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Buscar.
+        /// </summary>
+        internal static string la4 {
+            get {
+                return ResourceManager.GetString("la4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Consulta ciclos.
+        /// </summary>
+        internal static string lm1 {
+            get {
+                return ResourceManager.GetString("lm1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Consulta la información de tus profesores.
+        /// </summary>
+        internal static string lm2 {
+            get {
+                return ResourceManager.GetString("lm2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Seleciona ciclo.
+        /// </summary>
+        internal static string lm3 {
+            get {
+                return ResourceManager.GetString("lm3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Buscar.
+        /// </summary>
+        internal static string lm4 {
+            get {
+                return ResourceManager.GetString("lm4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Contraseña:.
         /// </summary>
         internal static string locon {

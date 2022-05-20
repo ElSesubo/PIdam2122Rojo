@@ -25,6 +25,10 @@ namespace floridapp.UserControls
             Cargar();
             cargar_idioma();
         }
+
+        /// <summary>
+        /// Carga idioma
+        /// </summary>
         private void AplicarIdioma()
         {
             label1.Text = RecursoL.Resources.rpc1;

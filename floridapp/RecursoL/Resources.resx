@@ -175,6 +175,30 @@ que mostrar en la cafetería para poder pagarlo.</value>
   <data name="f1sal" xml:space="preserve">
     <value>Salie</value>
   </data>
+  <data name="la1" xml:space="preserve">
+    <value>Busca ciclos</value>
+  </data>
+  <data name="la2" xml:space="preserve">
+    <value>Consulta la información de tus alumnos</value>
+  </data>
+  <data name="la3" xml:space="preserve">
+    <value>Selecione un modulo</value>
+  </data>
+  <data name="la4" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="lm1" xml:space="preserve">
+    <value>Consulta ciclos</value>
+  </data>
+  <data name="lm2" xml:space="preserve">
+    <value>Consulta la información de tus profesores</value>
+  </data>
+  <data name="lm3" xml:space="preserve">
+    <value>Seleciona ciclo</value>
+  </data>
+  <data name="lm4" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
   <data name="locon" xml:space="preserve">
     <value>Contraseña:</value>
   </data>

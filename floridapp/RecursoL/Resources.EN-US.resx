@@ -166,6 +166,30 @@ Spanish culinary richness to cross borders.</value>
   <data name="f1sal" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="la1" xml:space="preserve">
+    <value>Find course</value>
+  </data>
+  <data name="la2" xml:space="preserve">
+    <value>Consult yours students information</value>
+  </data>
+  <data name="la3" xml:space="preserve">
+    <value>Select course</value>
+  </data>
+  <data name="la4" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="lm1" xml:space="preserve">
+    <value>Course consultation</value>
+  </data>
+  <data name="lm2" xml:space="preserve">
+    <value>Consult your teachers' information</value>
+  </data>
+  <data name="lm3" xml:space="preserve">
+    <value>Select course</value>
+  </data>
+  <data name="lm4" xml:space="preserve">
+    <value>Find</value>
+  </data>
   <data name="locon" xml:space="preserve">
     <value>  Password:</value>
   </data>
