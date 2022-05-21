@@ -19,7 +19,7 @@ namespace floridapp.RecursoL {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -121,7 +121,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Paella tradicionl valenciana.
+        ///   Busca una cadena traducida similar a Paella tradicional valenciana.
         /// </summary>
         internal static string caf3 {
             get {
@@ -191,7 +191,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Reunion.
+        ///   Busca una cadena traducida similar a Reunión.
         /// </summary>
         internal static string f1reu {
             get {
@@ -200,7 +200,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Salie.
+        ///   Busca una cadena traducida similar a Salir.
         /// </summary>
         internal static string f1sal {
             get {
@@ -209,7 +209,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Busca ciclos.
+        ///   Busca una cadena traducida similar a Buscar ciclos.
         /// </summary>
         internal static string la1 {
             get {
@@ -227,7 +227,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Selecione un modulo.
+        ///   Busca una cadena traducida similar a Seleccione un modulo.
         /// </summary>
         internal static string la3 {
             get {
@@ -245,7 +245,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Consulta ciclos.
+        ///   Busca una cadena traducida similar a Consultar ciclos.
         /// </summary>
         internal static string lm1 {
             get {
@@ -263,7 +263,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Seleciona ciclo.
+        ///   Busca una cadena traducida similar a Selecciona ciclo.
         /// </summary>
         internal static string lm3 {
             get {
@@ -317,7 +317,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Tablón de noticias.
+        ///   Busca una cadena traducida similar a Florida News.
         /// </summary>
         internal static string new1 {
             get {
@@ -335,7 +335,7 @@ namespace floridapp.RecursoL {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Máas noticias.
+        ///   Busca una cadena traducida similar a More.
         /// </summary>
         internal static string new3 {
             get {

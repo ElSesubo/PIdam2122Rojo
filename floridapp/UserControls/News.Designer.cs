@@ -30,7 +30,6 @@ namespace floridapp.UserControls
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,29 +45,20 @@ namespace floridapp.UserControls
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(369, 41);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Más noticias";
+            this.button1.Text = "More";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(351, 207);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(257, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Nuestras noticias más recientes";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(160, 145);
+            this.label1.Location = new System.Drawing.Point(238, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(668, 72);
+            this.label1.Size = new System.Drawing.Size(471, 72);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Tablón de notícias";
+            this.label1.Text = "Florida News";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -102,7 +92,6 @@ namespace floridapp.UserControls
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "News";
             this.Size = new System.Drawing.Size(1108, 804);
@@ -115,7 +104,6 @@ namespace floridapp.UserControls
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

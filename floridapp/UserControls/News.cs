@@ -29,13 +29,17 @@ namespace floridapp.UserControls
         private void AplicarIdioma()
         {
             label1.Text = RecursoL.Resources.new1;
-            label2.Text = RecursoL.Resources.new2;
             button1.Text = RecursoL.Resources.new3;
         }
         private void cargar_idioma()
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
             AplicarIdioma();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

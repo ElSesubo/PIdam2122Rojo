@@ -142,7 +142,7 @@ esté pueda ser devuelto a la biblioteca del centro.</value>
     <value>Menú Paella</value>
   </data>
   <data name="caf3" xml:space="preserve">
-    <value>Paella tradicionl valenciana</value>
+    <value>Paella tradicional valenciana</value>
   </data>
   <data name="caf4" xml:space="preserve">
     <value>Bienvenido al espacio de cafetería, aquí 
@@ -170,31 +170,31 @@ que mostrar en la cafetería para poder pagarlo.</value>
     <value>Lista grados</value>
   </data>
   <data name="f1reu" xml:space="preserve">
-    <value>Reunion</value>
+    <value>Reunión</value>
   </data>
   <data name="f1sal" xml:space="preserve">
-    <value>Salie</value>
+    <value>Salir</value>
   </data>
   <data name="la1" xml:space="preserve">
-    <value>Busca ciclos</value>
+    <value>Buscar ciclos</value>
   </data>
   <data name="la2" xml:space="preserve">
     <value>Consulta la información de tus alumnos</value>
   </data>
   <data name="la3" xml:space="preserve">
-    <value>Selecione un modulo</value>
+    <value>Seleccione un modulo</value>
   </data>
   <data name="la4" xml:space="preserve">
     <value>Buscar</value>
   </data>
   <data name="lm1" xml:space="preserve">
-    <value>Consulta ciclos</value>
+    <value>Consultar ciclos</value>
   </data>
   <data name="lm2" xml:space="preserve">
     <value>Consulta la información de tus profesores</value>
   </data>
   <data name="lm3" xml:space="preserve">
-    <value>Seleciona ciclo</value>
+    <value>Selecciona ciclo</value>
   </data>
   <data name="lm4" xml:space="preserve">
     <value>Buscar</value>
@@ -212,13 +212,13 @@ que mostrar en la cafetería para poder pagarlo.</value>
     <value>Salir</value>
   </data>
   <data name="new1" xml:space="preserve">
-    <value>Tablón de noticias</value>
+    <value>Florida News</value>
   </data>
   <data name="new2" xml:space="preserve">
     <value>Nuestras noticias más recientes</value>
   </data>
   <data name="new3" xml:space="preserve">
-    <value>Máas noticias</value>
+    <value>More</value>
   </data>
   <data name="reu1" xml:space="preserve">
     <value>Organizar una reunión</value>

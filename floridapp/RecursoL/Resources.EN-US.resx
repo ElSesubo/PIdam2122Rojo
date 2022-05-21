@@ -145,11 +145,14 @@ it can be returned to the center library.</value>
     <value>Traditional Paella Valenciana</value>
   </data>
   <data name="caf4" xml:space="preserve">
-    <value>Paella is probably the most acclaimed 
-most acclaimed, popular and well known of our gastronomy. 
-gastronomy. It is the flagship dish of an entire 
-region, which has allowed the Spanish culinary richness to 
-Spanish culinary richness to cross borders.</value>
+    <value>Welcome to the cafeteria space, here you 
+you will have the opportunity to place 
+orders as well as to reserve tables in the cafeteria of 
+our institution, you will have the option of taking your 
+order to take away. When you place your order you 
+will be confirmed with and invoice to your email which you 
+will have to show at the cafeteria 
+to pay for it.</value>
   </data>
   <data name="caf5" xml:space="preserve">
     <value>Place Order</value>
@@ -197,7 +200,7 @@ Spanish culinary richness to cross borders.</value>
     <value>Find</value>
   </data>
   <data name="locon" xml:space="preserve">
-    <value>  Password:</value>
+    <value>Password:</value>
   </data>
   <data name="locor" xml:space="preserve">
     <value>Gmail: </value>
@@ -209,13 +212,13 @@ Spanish culinary richness to cross borders.</value>
     <value>Exit</value>
   </data>
   <data name="new1" xml:space="preserve">
-    <value>News board</value>
+    <value>Florida News</value>
   </data>
   <data name="new2" xml:space="preserve">
     <value>Our latest news</value>
   </data>
   <data name="new3" xml:space="preserve">
-    <value>More news</value>
+    <value>More</value>
   </data>
   <data name="reu1" xml:space="preserve">
     <value>Organize a meeting</value>

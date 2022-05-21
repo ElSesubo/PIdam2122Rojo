@@ -72,7 +72,7 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(287, 143);
+            this.label1.Location = new System.Drawing.Point(188, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(455, 72);
             this.label1.TabIndex = 30;
@@ -82,7 +82,7 @@ namespace floridapp.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(342, 203);
+            this.label2.Location = new System.Drawing.Point(309, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(334, 19);
             this.label2.TabIndex = 47;
