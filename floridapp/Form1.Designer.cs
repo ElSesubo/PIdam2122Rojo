@@ -31,6 +31,7 @@ namespace floridapp
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbAlumno = new System.Windows.Forms.PictureBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.btnListaMod = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@ namespace floridapp
             this.cbLenguas = new System.Windows.Forms.ComboBox();
             this.lblinicio = new System.Windows.Forms.Label();
             this.panelVista = new System.Windows.Forms.Panel();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.btnListaModAlu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
@@ -55,6 +56,7 @@ namespace floridapp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.panel1.Controls.Add(this.btnListaModAlu);
             this.panel1.Controls.Add(this.pbAlumno);
             this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.label3);
@@ -83,6 +85,17 @@ namespace floridapp
             this.pbAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAlumno.TabIndex = 11;
             this.pbAlumno.TabStop = false;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(71, 33);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(65, 22);
+            this.lblNombre.TabIndex = 10;
+            this.lblNombre.Text = "label2";
             // 
             // label3
             // 
@@ -267,16 +280,23 @@ namespace floridapp
             this.panelVista.TabIndex = 5;
             this.panelVista.Paint += new System.Windows.Forms.PaintEventHandler(this.panelVista_Paint);
             // 
-            // lblNombre
+            // btnListaModAlu
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(71, 33);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 22);
-            this.lblNombre.TabIndex = 10;
-            this.lblNombre.Text = "label2";
+            this.btnListaModAlu.FlatAppearance.BorderSize = 0;
+            this.btnListaModAlu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaModAlu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaModAlu.ForeColor = System.Drawing.Color.White;
+            this.btnListaModAlu.Image = global::floridapp.Properties.Resources.News__1___1_;
+            this.btnListaModAlu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaModAlu.Location = new System.Drawing.Point(34, 561);
+            this.btnListaModAlu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnListaModAlu.Name = "btnListaModAlu";
+            this.btnListaModAlu.Size = new System.Drawing.Size(247, 79);
+            this.btnListaModAlu.TabIndex = 12;
+            this.btnListaModAlu.Text = "   Lista grados";
+            this.btnListaModAlu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListaModAlu.UseVisualStyleBackColor = true;
+            this.btnListaModAlu.Click += new System.EventHandler(this.btnListaModAlu_Click);
             // 
             // Form1
             // 
@@ -324,6 +344,7 @@ namespace floridapp
         private System.Windows.Forms.PictureBox pbAlumno;
         private System.Windows.Forms.ComboBox cbLenguas;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnListaModAlu;
     }
 }
 
