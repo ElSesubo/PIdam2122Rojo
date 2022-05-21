@@ -43,16 +43,16 @@ namespace floridapp.UserControls
             dgvTutoria.Rows.Clear();
             for (int i = 0; i < list_alumnos.Count; i++)
             {
-                dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia, p[i].Hora, "Anular");
+                dgvTutoria.Rows.Add(list_alumnos[i], p[i].Nif_alumno, list_ciclos[i], p[i].Dia.ToString("yyyy-MM-dd"), p[i].Hora, "Anular");
             }
-            for(int j=0; j < list_ciclos.Count; j++)
-            {
-                if (dgvTutoria.Rows[j].Cells[4].Value.ToString() == "04:00:00")
-                {
-                    dgvTutoria.Rows[j].Visible = false;
+            //for(int j=0; j < list_ciclos.Count; j++)
+            //{
+            //    if (dgvTutoria.Rows[j].Cells[4].Value.ToString() == "04:00:00")
+            //    {
+            //        dgvTutoria.Rows[j].Visible = false;
                     
-                }
-            }
+            //    }
+            //}
         }
         private List<profesor> profesores()
         {
@@ -135,10 +135,6 @@ namespace floridapp.UserControls
                 gmail = profesor.Email_alumno(dgvTutoria.Rows[fila].Cells[1].Value.ToString());
                 conexion.CerrarConexion();
             }
-            string error = "";
-            StringBuilder sb = new StringBuilder();
-            sb.Append(string.Format("El profesor {0} del {1} ha anulado tu tutoria.", nombre, modulo));
-            EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY",error);
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
@@ -155,10 +151,15 @@ namespace floridapp.UserControls
                             if (exito != 0)
                             {
                                 MessageBox.Show("Anulado con exito.");
+                                string error = "";
+                                StringBuilder sb = new StringBuilder();
+                                sb.Append(string.Format("El profesor {0} del {1} ha anulado tu tutoria.", nombre, modulo));
+                                EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY", error);
                             }
                             else
                             {
                                 MessageBox.Show("Fallo");
+                                MessageBox.Show(dgvTutoria.Rows[fila].Cells[1].Value.ToString() + dgvTutoria.Rows[fila].Cells[4].Value.ToString() + dgvTutoria.Rows[fila].Cells[3].Value.ToString());
                             }
 
                         }

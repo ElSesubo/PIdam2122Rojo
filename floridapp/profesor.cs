@@ -272,8 +272,8 @@ namespace floridapp
             string consulta = "DELETE FROM reservar_profesor WHERE id_user=@id_us and hora_reserva=@hora and dia_reserva=@dia;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("id_us", id);
-            comando.Parameters.AddWithValue("hora", hora.ToString("hh:mm:ss"));
-            comando.Parameters.AddWithValue("dia", dia.ToString("yyyy-MM-dd"));
+            comando.Parameters.AddWithValue("hora", hora);
+            comando.Parameters.AddWithValue("dia", dia);
             result= comando.ExecuteNonQuery();
             return result;
         }
