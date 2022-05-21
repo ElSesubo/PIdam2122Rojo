@@ -79,6 +79,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Pedido.cs" />
+    <Compile Include="portatil.cs" />
     <Compile Include="profesor.cs" />
     <Compile Include="RecursoL\Resources.EN-US1.Designer.cs">
       <AutoGen>True</AutoGen>

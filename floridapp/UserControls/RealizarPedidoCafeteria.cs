@@ -80,88 +80,88 @@ namespace floridapp.UserControls
         {
             int id = 0;
             DialogResult resultado = MessageBox.Show("¿Enviar pedido?", "informacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (resultado == DialogResult.Yes)
+                if(dateTimePicker1.Value < DateTime.Now)
                 {
-                    
-                    TimeSpan hora = TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
-                    string nif = "";
-                    
-                    if (conexion.Conexion != null)
-                    {
-                        conexion.AbrirConexion();
-                        nif = usuario.BuscarNIF(usuario.Email);
-                        conexion.CerrarConexion();
-                    }
-                    if (cbMesa.SelectedItem != null)
-                    {
-                    id = int.Parse(cbMesa.Text);
-                    if (conexion.Conexion != null)
-                        {
-                            conexion.AbrirConexion();
-                            cafeteria.InsertarReserva(hora, id, nif);
-                            conexion.CerrarConexion();
-                        }
-                        if (conexion.Conexion != null)
-                        {
-                            conexion.AbrirConexion();
-                            cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
-                            conexion.CerrarConexion();
-                        }
-                    }
-
-
-                    int id2 = 0;
-
-
-                    bool llevar = cbLlevar.Checked;
-                    int llevar2 = 0;
-                double precio = double.Parse(txtPrecio.Text);
-                    if (llevar)
-                    {
-                        llevar2 = 1;
-                    }
-                    else
-                    {
-                        llevar2 = 0;
-                    }
-                    if (cbMenu.SelectedItem != null)
-                    {
-                        if (conexion.Conexion != null)
-                        {
-                            conexion.AbrirConexion();
-                            id2 = Pedido.ListarMenus(cbMenu.Text);
-                            conexion.CerrarConexion();
-                        }
-                        if (conexion.Conexion != null)
-                        {
-                            conexion.AbrirConexion();
-                            Pedido.InsertarReserva(hora, id2, nif, llevar2);
-                            conexion.CerrarConexion();
-                        }
-                    }
-
-
-                    
-                    
-                
-
-                StringBuilder mensaje = new StringBuilder();
-                StringBuilder mensaje2 = new StringBuilder();
-
-                string user = usuario.Email;
-                string err = "No se que paso wey";
-                mensaje.Append(String.Format("EL menu selecionado es {0}, su precio es {1} y la mesa es {2} para la hora {3} ", cbMenu.Text,txtPrecio.Text,cbMesa.Text, hora));
-                mensaje2.Append(String.Format("La mesa {0} ha sido reservada por {1} para la hora {2}  ", cbMesa.Text, nif,hora));
-                EnviarGmail.EnviarMensaje(mensaje, user, "Floridapp, Cafeteria", err);
-                MessageBox.Show("Pedido realizado");
-                if (cbMesa.SelectedItem != null)
-                {
-                    EnviarGmail.EnviarMensaje(mensaje2, "aabb@floridauniversitaria.es", "Pedido Mesa", err);
+                MessageBox.Show("La hora no puede ser menor que la actual");
                 }
-                Cargar();
+                else
+                {
+                    if (resultado == DialogResult.Yes)
+                    {
+                        TimeSpan hora = TimeSpan.Parse(dateTimePicker1.Value.ToString("T"));
+                        string nif = "";
 
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            nif = usuario.BuscarNIF(usuario.Email);
+                            conexion.CerrarConexion();
+                        }
+                        if (cbMesa.SelectedItem != null)
+                        {
+                            id = int.Parse(cbMesa.Text);
+                            if (conexion.Conexion != null)
+                            {
+                                conexion.AbrirConexion();
+                                cafeteria.InsertarReserva(hora, id, nif);
+                                conexion.CerrarConexion();
+                            }
+                            if (conexion.Conexion != null)
+                            {
+                                conexion.AbrirConexion();
+                                cafeteria.ActualizarMesaR(int.Parse(cbMesa.SelectedItem.ToString()));
+                                conexion.CerrarConexion();
+                            }
+                        }
+
+
+                        int id2 = 0;
+
+
+                        bool llevar = cbLlevar.Checked;
+                        int llevar2 = 0;
+                        double precio = double.Parse(txtPrecio.Text);
+                        if (llevar)
+                        {
+                            llevar2 = 1;
+                        }
+                        else
+                        {
+                            llevar2 = 0;
+                        }
+                        if (cbMenu.SelectedItem != null)
+                        {
+                            if (conexion.Conexion != null)
+                            {
+                                conexion.AbrirConexion();
+                                id2 = Pedido.ListarMenus(cbMenu.Text);
+                                conexion.CerrarConexion();
+                            }
+                            if (conexion.Conexion != null)
+                            {
+                                conexion.AbrirConexion();
+                                Pedido.InsertarReserva(hora, id2, nif, llevar2);
+                                conexion.CerrarConexion();
+                            }
+                        }
+
+                        StringBuilder mensaje = new StringBuilder();
+                        StringBuilder mensaje2 = new StringBuilder();
+
+                        string user = usuario.Email;
+                        string err = "No se que paso wey";
+                        mensaje.Append(String.Format("EL menu selecionado es {0}, su precio es {1} y la mesa es {2} para la hora {3} ", cbMenu.Text, txtPrecio.Text, cbMesa.Text, hora));
+                        mensaje2.Append(String.Format("La mesa {0} ha sido reservada por {1} para la hora {2}  ", cbMesa.Text, nif, hora));
+                        EnviarGmail.EnviarMensaje(mensaje, user, "Floridapp, Cafeteria", err);
+                        MessageBox.Show("Pedido realizado");
+                        if (cbMesa.SelectedItem != null)
+                        {
+                            EnviarGmail.EnviarMensaje(mensaje2, "aabb@floridauniversitaria.es", "Pedido Mesa", err);
+                        }
+                        Cargar();
+
+                }
             }
-
         }
 
             

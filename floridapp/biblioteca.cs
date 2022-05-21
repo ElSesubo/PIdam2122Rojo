@@ -203,7 +203,7 @@ namespace floridapp
         {
             List<biblioteca> lista = new List<biblioteca>();
             string consulta = "";
-            consulta = String.Format("SELECT p.id, p.hora_reserva, p.id_portatil, p.id_user, p.dia_reserva, p.devuelto, p.dia_devolucion FROM reserva_portatil p INNER JOIN portatil j on p.id_portatil=j.id WHERE reservado=1;");
+            consulta = String.Format("SELECT p.id, p.hora_reserva, p.id_portatil, p.id_user, p.dia_reserva FROM reserva_portatil p INNER JOIN portatil j on p.id_portatil=j.id WHERE reservado=1;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)

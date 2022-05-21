@@ -76,56 +76,63 @@ namespace floridapp.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id_ci = 0;
-            DialogResult resultado = MessageBox.Show("Confirma para realizar la reserva.",
-            "RESERVA TUTORIA", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (resultado == DialogResult.Yes)
+            if (dtpDia.Value < DateTime.Now)
             {
-                if (conexion.Conexion != null)
+                MessageBox.Show("El día no puede ser menor al actual");
+            }
+            else
+            {
+                int id_ci = 0;
+                DialogResult resultado = MessageBox.Show("Confirma para realizar la reserva.",
+                "RESERVA TUTORIA", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resultado == DialogResult.Yes)
                 {
-                    conexion.AbrirConexion();
-                    id_ci = profesor.buscar_ciclo();
-                    conexion.CerrarConexion();
-                }
-                string nombre = "";
-                string ciclo = "";
-                string gmail = "";
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    nombre = usuario.obtener_nombre_usuario();
-                    conexion.CerrarConexion();
-                }
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    ciclo = usuario.obtener_nombre_ciclo();
-                    conexion.CerrarConexion();
-                }
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    gmail = profesor.Email_profesor();
-                    conexion.CerrarConexion();
-                }
-                if (conexion.Conexion != null)
-                {
-                    conexion.AbrirConexion();
-                    try
+                    if (conexion.Conexion != null)
                     {
-                        profesor.realizar_reserva_profesor(dtpDia.Value, cmbHoras.SelectedItem.ToString(), id_ci);
-                        MessageBox.Show("Reserva realizado con exito.");
-                        string error = "";
-                        StringBuilder sb = new StringBuilder();
-                        sb.Append(string.Format("{0} del ciclo {1} ha realizado una reserva para una tutoria para la fecha {2} a las {3}",nombre,ciclo,dtpDia.Value.ToString("MM-dd"),cmbHoras.SelectedItem.ToString()));
-                        EnviarGmail.EnviarMensaje(sb,gmail,"NOT-REPLY",error);
+                        conexion.AbrirConexion();
+                        id_ci = profesor.buscar_ciclo();
+                        conexion.CerrarConexion();
                     }
-                    catch (Exception ex)
+                    string nombre = "";
+                    string ciclo = "";
+                    string gmail = "";
+                    if (conexion.Conexion != null)
                     {
-                        MessageBox.Show("Error al reservar.");
+                        conexion.AbrirConexion();
+                        nombre = usuario.obtener_nombre_usuario();
+                        conexion.CerrarConexion();
                     }
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        ciclo = usuario.obtener_nombre_ciclo();
+                        conexion.CerrarConexion();
+                    }
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        gmail = profesor.Email_profesor();
+                        conexion.CerrarConexion();
+                    }
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            profesor.realizar_reserva_profesor(dtpDia.Value, cmbHoras.SelectedItem.ToString(), id_ci);
+                            MessageBox.Show("Reserva realizado con exito.");
+                            string error = "";
+                            StringBuilder sb = new StringBuilder();
+                            sb.Append(string.Format("{0} del ciclo {1} ha realizado una reserva para una tutoria para la fecha {2} a las {3}", nombre, ciclo, dtpDia.Value.ToString("MM-dd"), cmbHoras.SelectedItem.ToString()));
+                            EnviarGmail.EnviarMensaje(sb, gmail, "NOT-REPLY", error);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al reservar.");
+                        }
 
-                    conexion.CerrarConexion();
+                        conexion.CerrarConexion();
+                    }
                 }
             }
             refresh();

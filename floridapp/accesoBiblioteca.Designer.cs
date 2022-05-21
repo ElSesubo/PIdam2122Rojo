@@ -29,17 +29,18 @@ namespace floridapp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(accesoBiblioteca));
             this.lblEmail = new System.Windows.Forms.Label();
             this.dtgvReservas = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnDevuelto = new System.Windows.Forms.Button();
-            this.btnInserta = new System.Windows.Forms.Button();
             this.id_pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hora_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_portatil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_user = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dia_reserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnDevuelto = new System.Windows.Forms.Button();
+            this.btnInserta = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNIF = new System.Windows.Forms.TextBox();
@@ -47,19 +48,29 @@ namespace floridapp
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnlUsuario = new System.Windows.Forms.Panel();
+            this.dtgvPortatiles = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.devuelto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvReservas)).BeginInit();
             this.pnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPortatiles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(73, 39);
+            this.lblEmail.Location = new System.Drawing.Point(61, 18);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(75, 19);
             this.lblEmail.TabIndex = 26;
             this.lblEmail.Text = "Reservas";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // dtgvReservas
             // 
@@ -71,52 +82,13 @@ namespace floridapp
             this.id_portatil,
             this.id_user,
             this.dia_reserva});
-            this.dtgvReservas.Location = new System.Drawing.Point(77, 63);
+            this.dtgvReservas.Location = new System.Drawing.Point(65, 40);
             this.dtgvReservas.Name = "dtgvReservas";
+            this.dtgvReservas.ReadOnly = true;
             this.dtgvReservas.RowHeadersWidth = 51;
-            this.dtgvReservas.Size = new System.Drawing.Size(674, 361);
+            this.dtgvReservas.Size = new System.Drawing.Size(673, 197);
             this.dtgvReservas.TabIndex = 24;
             this.dtgvReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvReservas_CellContentClick);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 446);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(247, 79);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "   Salida";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnDevuelto
-            // 
-            this.btnDevuelto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevuelto.Location = new System.Drawing.Point(1194, 288);
-            this.btnDevuelto.Name = "btnDevuelto";
-            this.btnDevuelto.Size = new System.Drawing.Size(90, 36);
-            this.btnDevuelto.TabIndex = 33;
-            this.btnDevuelto.Text = "Devuelto";
-            this.btnDevuelto.UseVisualStyleBackColor = true;
-            this.btnDevuelto.Click += new System.EventHandler(this.btnDevuelto_Click);
-            // 
-            // btnInserta
-            // 
-            this.btnInserta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserta.Location = new System.Drawing.Point(1098, 288);
-            this.btnInserta.Name = "btnInserta";
-            this.btnInserta.Size = new System.Drawing.Size(90, 36);
-            this.btnInserta.TabIndex = 34;
-            this.btnInserta.Text = "Insertar";
-            this.btnInserta.UseVisualStyleBackColor = true;
-            this.btnInserta.Click += new System.EventHandler(this.btnInserta_Click);
             // 
             // id_pedido
             // 
@@ -152,6 +124,46 @@ namespace floridapp
             this.dia_reserva.MinimumWidth = 6;
             this.dia_reserva.Name = "dia_reserva";
             this.dia_reserva.Width = 125;
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(12, 446);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(247, 79);
+            this.button5.TabIndex = 25;
+            this.button5.Text = "   Salida";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btnDevuelto
+            // 
+            this.btnDevuelto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevuelto.Location = new System.Drawing.Point(1182, 243);
+            this.btnDevuelto.Name = "btnDevuelto";
+            this.btnDevuelto.Size = new System.Drawing.Size(90, 36);
+            this.btnDevuelto.TabIndex = 33;
+            this.btnDevuelto.Text = "Devuelto";
+            this.btnDevuelto.UseVisualStyleBackColor = true;
+            this.btnDevuelto.Click += new System.EventHandler(this.btnDevuelto_Click);
+            // 
+            // btnInserta
+            // 
+            this.btnInserta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserta.Location = new System.Drawing.Point(1086, 243);
+            this.btnInserta.Name = "btnInserta";
+            this.btnInserta.Size = new System.Drawing.Size(90, 36);
+            this.btnInserta.TabIndex = 34;
+            this.btnInserta.Text = "Insertar";
+            this.btnInserta.UseVisualStyleBackColor = true;
+            this.btnInserta.Click += new System.EventHandler(this.btnInserta_Click);
             // 
             // label3
             // 
@@ -217,10 +229,63 @@ namespace floridapp
             this.pnlUsuario.Controls.Add(this.txtNIF);
             this.pnlUsuario.Controls.Add(this.label5);
             this.pnlUsuario.Controls.Add(this.label3);
-            this.pnlUsuario.Location = new System.Drawing.Point(794, 85);
+            this.pnlUsuario.Location = new System.Drawing.Point(782, 40);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(490, 197);
             this.pnlUsuario.TabIndex = 27;
+            // 
+            // dtgvPortatiles
+            // 
+            this.dtgvPortatiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPortatiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.reservado,
+            this.devuelto});
+            this.dtgvPortatiles.Location = new System.Drawing.Point(65, 267);
+            this.dtgvPortatiles.Name = "dtgvPortatiles";
+            this.dtgvPortatiles.ReadOnly = true;
+            this.dtgvPortatiles.Size = new System.Drawing.Size(673, 172);
+            this.dtgvPortatiles.TabIndex = 35;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // reservado
+            // 
+            this.reservado.HeaderText = "Reservado";
+            this.reservado.Name = "reservado";
+            // 
+            // devuelto
+            // 
+            this.devuelto.HeaderText = "Devuelto";
+            this.devuelto.Name = "devuelto";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 243);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 19);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Portatiles";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(873, 243);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(207, 36);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Añadir portatil";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // accesoBiblioteca
             // 
@@ -228,6 +293,9 @@ namespace floridapp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1370, 528);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtgvPortatiles);
             this.Controls.Add(this.btnInserta);
             this.Controls.Add(this.btnDevuelto);
             this.Controls.Add(this.pnlUsuario);
@@ -243,6 +311,8 @@ namespace floridapp
             ((System.ComponentModel.ISupportInitialize)(this.dtgvReservas)).EndInit();
             this.pnlUsuario.ResumeLayout(false);
             this.pnlUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPortatiles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +336,12 @@ namespace floridapp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel pnlUsuario;
+        private System.Windows.Forms.DataGridView dtgvPortatiles;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn reservado;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn devuelto;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -111,18 +111,32 @@ namespace floridapp
 
         private void Cargar()
         {
-            List<biblioteca> portatil = new List<biblioteca>();
+            List<biblioteca> porta = new List<biblioteca>();
 
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                portatil = biblioteca.ListaBiblioteca();
+                porta = biblioteca.ListaBiblioteca();
                 conexion.CerrarConexion();
             }
             dtgvReservas.Rows.Clear();
-            for (int i = 0; i < portatil.Count; i++)
+            for (int i = 0; i < porta.Count; i++)
             {
-                dtgvReservas.Rows.Add(portatil[i].Id, portatil[i].Hora, portatil[i].Id_portatil, portatil[i].Id_user, portatil[i].Dia_hora_reserva);
+                dtgvReservas.Rows.Add(porta[i].Id, porta[i].Hora, porta[i].Id_portatil, porta[i].Id_user, porta[i].Dia_hora_reserva);
+            }
+
+            List<portatil> port = new List<portatil>();
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                port = portatil.ListaPortatiles();
+                conexion.CerrarConexion();
+            }
+            dtgvPortatiles.Rows.Clear();
+            for (int i = 0; i < port.Count; i++)
+            {
+                dtgvPortatiles.Rows.Add(port[i].Id, port[i].Reservado, port[i].Devuelto);
             }
         }
 
@@ -132,20 +146,53 @@ namespace floridapp
             Cargar();
         }
 
+        private bool ValidarDatos()
+        {
+            bool ok = true;
+            if (comboBox1.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(comboBox1, "SELECIONE EL PORTATIL");
+            }
+            else if (usuario.CheckNIF(txtNIF.Text.ToUpper()) == false)
+            {
+                ok = false;
+                errorProvider1.SetError(txtNIF, "LETRA DEL NIF INCORRECTA");
+            }
+            else if (usuario.ComprobarNIF(txtNIF.Text.ToUpper()) == false)
+            {
+                ok = false;
+                errorProvider1.SetError(dtpHoraReserva, "EL USUARIO YA EXISTE");
+            }
+            else if (dtpHoraReserva.Value < DateTime.Now)
+            {
+                ok = false;
+                errorProvider1.SetError(dtpHoraReserva, "HORA INCORRECTA");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return ok;
+        }
+
         private void btnInserta_Click(object sender, EventArgs e)
         {
-            TimeSpan hora = TimeSpan.Parse(dtpHoraReserva.Value.ToString("T"));
-            if (conexion.Conexion != null)
+            if (ValidarDatos())
             {
-                conexion.AbrirConexion();
-                biblioteca.ActualizarPortatilReserva(Convert.ToInt32(comboBox1.Text));
-                conexion.CerrarConexion();
-                conexion.AbrirConexion();
-                biblioteca.InsertarPedidoBiblioteca(hora, Convert.ToInt32(comboBox1.Text), txtNIF.Text);
-                conexion.CerrarConexion();
+                TimeSpan hora = TimeSpan.Parse(dtpHoraReserva.Value.ToString("T"));
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    biblioteca.ActualizarPortatilReserva(Convert.ToInt32(comboBox1.Text));
+                    conexion.CerrarConexion();
+                    conexion.AbrirConexion();
+                    biblioteca.InsertarPedidoBiblioteca(hora, Convert.ToInt32(comboBox1.Text), txtNIF.Text);
+                    conexion.CerrarConexion();
+                }
+                Cargar();
+                cargarPortatiles();
             }
-            Cargar();
-            cargarPortatiles();
         }
 
         private void btnDevuelto_Click(object sender, EventArgs e)
@@ -164,19 +211,21 @@ namespace floridapp
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
-                        biblioteca.EliminaRegistro(id);
-                        conexion.CerrarConexion();
-                        conexion.AbrirConexion();
                         biblioteca.ActualizarPortatilDevuelto(id);
                         conexion.CerrarConexion();
+                        conexion.AbrirConexion();
+                        biblioteca.EliminaRegistro(id);
+                        conexion.CerrarConexion();
                     }
-                    Cargar();
                 }
             }
+            Cargar();
+            cargarPortatiles();
         }
 
         private void cargarPortatiles()
         {
+            comboBox1.Items.Clear();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
@@ -185,9 +234,26 @@ namespace floridapp
                 {
                     comboBox1.Items.Add(ciclos[i]);
                 }
-            conexion.CerrarConexion();
-                    }
-        comboBox1.SelectedIndex = 0;
+                conexion.CerrarConexion();
+            }
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                portatil.AgregarPortatil();
+                conexion.CerrarConexion();
+            }
+            Cargar();
+            cargarPortatiles();
         }
     }
 }

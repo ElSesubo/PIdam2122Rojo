@@ -41,7 +41,13 @@ namespace floridapp.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TimeSpan hora= TimeSpan.Parse(dtpHora.Value.ToString("T"));
+            if (dtpHora.Value < DateTime.Now)
+            {
+                MessageBox.Show("La hora no puede ser menor que la actual");
+            }
+            else
+            {
+                TimeSpan hora = TimeSpan.Parse(dtpHora.Value.ToString("T"));
                 int id = 0;
                 if (conexion.Conexion != null)
                 {
@@ -49,7 +55,7 @@ namespace floridapp.UserControls
                     id = biblioteca.BuscarPortatilDisponible();
                     conexion.CerrarConexion();
                 }
-                
+
                 string nif = "";
 
                 if (conexion.Conexion != null)
@@ -61,7 +67,7 @@ namespace floridapp.UserControls
                 if (conexion.Conexion != null)
                 {
                     conexion.AbrirConexion();
-                    biblioteca.InsertarPedidoBiblioteca(hora,id,nif);
+                    biblioteca.InsertarPedidoBiblioteca(hora, id, nif);
                     conexion.CerrarConexion();
                 }
                 if (conexion.Conexion != null)
@@ -70,6 +76,7 @@ namespace floridapp.UserControls
                     biblioteca.ActualizarPortatilReserva(id);
                     conexion.CerrarConexion();
                 }
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)

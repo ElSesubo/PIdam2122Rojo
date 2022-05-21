@@ -494,6 +494,57 @@ namespace floridapp
             comando.ExecuteNonQuery();
         }
 
+        public static bool ComprobarNIF(string nif)
+        {
+            string consulta = string.Format("SELECT * FROM usuario" +
+            " WHERE nif='{0}'", nif);
 
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
+        }
+
+        public static bool CheckNIF(string dni)
+        {
+            if (dni.Length != 9)
+            {
+                return false;
+            }
+
+            string dniNumbers = dni.Substring(0, dni.Length - 1);
+            string dniLeter = dni.Substring(dni.Length - 1, 1);
+
+            var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
+            if (!numbersValid)
+            {
+                return false;
+            }
+            if (CalculateNIF(dniInteger) != dniLeter)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Calcula la letra del nif basandose en los números del nif
+        /// </summary>
+        /// <param name="dniNumbers">numeros del nif</param>
+        /// <returns>string con la letra correspondiente</returns>
+        public static string CalculateNIF(int dniNumbers)
+        {
+            string[] control = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
+            var mod = dniNumbers % 23;
+            return control[mod];
+        }
     }
 }
