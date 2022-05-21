@@ -400,12 +400,13 @@ namespace floridapp
             reader.Close();
             return lista;
         }
-        public static List<string> lista_clase()
+        public static List<string> lista_clase(string ciclos)
         {
             string a = "";
             List<string> lista = new List<string>();
-            string consulta = "SELECT DISTINCT(clase) from ciclo;";
+            string consulta = "SELECT DISTINCT(clase) from ciclo where nombre=@nombre;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nombre", ciclos);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
@@ -415,12 +416,15 @@ namespace floridapp
             reader.Close();
             return lista;
         }
-        public static List<string> lista_horario()
+        public static List<string> lista_horario(string ciclos, string clase,string pre)
         {
             TimeSpan a=new TimeSpan();
             List<string> lista = new List<string>();
-            string consulta = "SELECT DISTINCT(horario) from ciclo;";
+            string consulta = "SELECT DISTINCT(horario) from ciclo where nombre=@nombre and clase=@clase and presencialidad=@pre;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nombre", ciclos);
+            comando.Parameters.AddWithValue("clase", clase);
+            comando.Parameters.AddWithValue("pre", pre);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
@@ -430,12 +434,14 @@ namespace floridapp
             reader.Close();
             return lista;
         }
-        public static List<string> lista_presencialidad()
+        public static List<string> lista_presencialidad(string ciclos,string clase)
         {
             string a = "";
             List<string> lista = new List<string>();
-            string consulta = "SELECT DISTINCT(presencialidad) from ciclo;";
+            string consulta = "SELECT DISTINCT(presencialidad) from ciclo where nombre=@nombre and clase=@clase;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nombre", ciclos);
+            comando.Parameters.AddWithValue("clase", clase);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
@@ -449,7 +455,7 @@ namespace floridapp
         public static int filtrarCiclos(string nombre,string clase,string horario,string presencia)
         {
             int id=0;
-            string consulta = "SELECT id FROM ciclo WHERE nombre=@nom and clase=@clas and hoarario=@hora and presencialidad=@pre;";
+            string consulta = "SELECT id FROM ciclo WHERE nombre=@nom and clase=@clas and horario=@hora and presencialidad=@pre;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("nom", nombre);
             comando.Parameters.AddWithValue("clas", clase);
@@ -463,12 +469,31 @@ namespace floridapp
             reader.Close();
             return id;
         }
+        public static List<string> lista_modulos(int id_ciclo)
+        {
+            string a = "";
+            List<string> lista = new List<string>();
+            string consulta = "SELECT modulo from pertenencia_modulos where cicl=@ciclo;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("ciclo", id_ciclo);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a = reader.GetString(0);
+                lista.Add(a.ToString());
+            }
+            reader.Close();
+            return lista;
+        }
         public static void insertarUsuarioCiclo(string nif,int cicl)
         {
             string consulta = "INSERT INTO ciclo_pertenece VALUES(null,@nif,@ciclo);";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("nif", nif);
             comando.Parameters.AddWithValue("ciclo", cicl);
+            comando.ExecuteNonQuery();
         }
+
+
     }
 }

@@ -48,7 +48,7 @@ namespace floridapp
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             int resultado;
-
+            int id = buscar_id_ciclo();
             try
             {
                 if (conexion.Conexion != null)
@@ -108,6 +108,13 @@ namespace floridapp
             }
             finally  
             {
+                conexion.CerrarConexion();
+            }
+            
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                usuario.insertarUsuarioCiclo(txtNif.Text,id);
                 conexion.CerrarConexion();
             }
         }
@@ -214,16 +221,19 @@ namespace floridapp
         }
 
         private void rbnProfesor_CheckedChanged(object sender, EventArgs e)
-
         {
-            gbCiclo.Visible=true;
-            lblmodulo.Visible=true;
-            cmbmodulo.Visible=true;
-            cargar_combobox();
+            if (ValidarDatos2())
+            {
+                gbCiclo.Visible = true;
+                lblmodulo.Visible = true;
+                cmbmodulo.Visible = true;
+                cargar_combobox();
+            }
         }
 
         private void cargar_ciclos()
         {
+            cmbciclo.Items.Clear();
             List<string> ciclo=new List<string>();
             if(conexion.Conexion != null)
             {
@@ -242,7 +252,7 @@ namespace floridapp
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                ciclo = usuario.lista_clase();
+                ciclo = usuario.lista_clase(cmbciclo.SelectedItem.ToString());
                 conexion.CerrarConexion();
             }
             for (int i = 0; i < ciclo.Count; i++)
@@ -256,7 +266,7 @@ namespace floridapp
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                ciclo = usuario.lista_horario();
+                ciclo = usuario.lista_horario(cmbciclo.SelectedItem.ToString(),cmbclase.SelectedItem.ToString(),cmbprensencia.SelectedItem.ToString());
                 conexion.CerrarConexion();
             }
             for (int i = 0; i < ciclo.Count; i++)
@@ -270,7 +280,7 @@ namespace floridapp
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                ciclo = usuario.lista_presencialidad();
+                ciclo = usuario.lista_presencialidad(cmbciclo.SelectedItem.ToString(),cmbclase.SelectedItem.ToString());
                 conexion.CerrarConexion();
             }
             for (int i = 0; i < ciclo.Count; i++)
@@ -278,19 +288,48 @@ namespace floridapp
                 cmbprensencia.Items.Add(ciclo[i]);
             }
         }
+        private int buscar_id_ciclo()
+        {
+            int id = 0;
+            if(conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                id = usuario.filtrarCiclos(cmbciclo.SelectedItem.ToString(), cmbclase.SelectedItem.ToString(),cmbhorario.SelectedItem.ToString(),cmbprensencia.SelectedItem.ToString());
+                conexion.CerrarConexion();
+            }
+            return id;
+        }
+        private void cargar_modulos()
+        {
+            List<string> modulo = new List<string>();
+            int id = buscar_id_ciclo();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                modulo = usuario.lista_modulos(id);
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < modulo.Count; i++)
+            {
+                cmbmodulo.Items.Add(modulo[i]);
+            }
+        }
         private void cargar_combobox()
         {
             cargar_ciclos();
-            cargar_clase();
-            cargar_horario();
-            cargar_presencialidad();
+            cmbciclo.SelectedIndex = 0;
+
         }
 
         private void rbnAlumno_CheckedChanged(object sender, EventArgs e)
         {
-            gbCiclo.Visible = true;
-            lblmodulo.Visible = false;
-            cmbmodulo.Visible=false;
+            if (ValidarDatos2())
+            {
+                gbCiclo.Visible = true;
+                lblmodulo.Visible = false;
+                cmbmodulo.Visible = false;
+                cargar_combobox();
+            }
         }
 
         private void rbnCocina_CheckedChanged(object sender, EventArgs e)
@@ -306,6 +345,155 @@ namespace floridapp
         private void rbnAdmin_CheckedChanged(object sender, EventArgs e)
         {
             gbCiclo.Visible = false;
+        }
+
+        private void cmbciclo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbclase.Items.Clear();
+            cargar_clase();
+        }
+
+        private void cmbprensencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbhorario.Items.Clear();
+            cargar_horario();
+        }
+
+        private void cmbclase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbprensencia.Items.Clear();
+            cargar_presencialidad();
+        }
+
+        private void cmbhorario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbmodulo.Items.Clear();
+            cargar_modulos();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos()&&rbnProfesor.Checked)
+            {
+                gbCiclo.Visible = false;
+            }
+            else if (ValidarDatos3() && rbnAlumno.Checked)
+            {
+                gbCiclo.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+        }
+        private bool ValidarDatos()
+        {
+            bool ok = true;
+            if (cmbclase.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbclase, "SELECIONE LA CLASE");
+            }
+            else if (cmbprensencia.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbprensencia, "SELECIONE UN TIPO");
+            }
+            else if (cmbhorario.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbhorario, "SELECIONE EL HORARIO");
+            }
+            else if (cmbmodulo.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbmodulo, "SELECIONE UN MODULO");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return ok;
+        }
+        private bool ValidarDatos2()
+        {
+            bool ok = true;
+            if (txtNif.Text=="")
+            {
+                ok = false;
+                errorProvider2.SetError(txtNif, "INTRODUCE NIF");
+            }
+            else if (txtCorreo.Text == "")
+            {
+                ok = false;
+                errorProvider2.SetError(txtCorreo, "INTRODUCE CORREO");
+            }
+            else if (txtContra.Text == "")
+            {
+                ok = false;
+                errorProvider2.SetError(txtContra, "INTRODUCE CONTRASEÑA");
+            }
+            else if (txtNombre.Text == "")
+            {
+                ok = false;
+                errorProvider2.SetError(txtNombre, "INTRODUCE NOMBRE");
+            }
+            else if (txtApellido.Text == "")
+            {
+                ok = false;
+                errorProvider2.SetError(txtApellido, "INTRODUCE APELLIDO");
+            }
+            else if (txtTel.Text == "")
+            {
+                ok = false;
+                errorProvider2.SetError(txtTel, "INTRODUCE TELEFONO");
+            }
+            else
+            {
+                errorProvider2.Clear();
+            }
+            return ok;
+        }
+        private bool ValidarDatos3()
+        {
+            bool ok = true;
+            if (cmbclase.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbclase, "SELECIONE LA CLASE");
+            }
+            else if (cmbprensencia.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbprensencia, "SELECIONE UN TIPO");
+            }
+            else if (cmbhorario.SelectedIndex == -1)
+            {
+                ok = false;
+                errorProvider1.SetError(cmbhorario, "SELECIONE EL HORARIO");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+            return ok;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            gbCiclo.Visible = false;
+        }
+
+        private void rbnProfesor_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (ValidarDatos2())
+            {
+                gbCiclo.Visible = true;
+                lblmodulo.Visible = true;
+                cmbmodulo.Visible = true;
+                cargar_combobox();
+            }
         }
     }
 }

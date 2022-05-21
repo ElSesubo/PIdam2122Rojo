@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtgvUsuarios = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,22 +56,27 @@
             this.rbnAdmin = new System.Windows.Forms.RadioButton();
             this.rbnProfesor = new System.Windows.Forms.RadioButton();
             this.gbCiclo = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblmodulo = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbciclo = new System.Windows.Forms.ComboBox();
-            this.cmbmodulo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbclase = new System.Windows.Forms.ComboBox();
-            this.cmbhorario = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.cmbprensencia = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbhorario = new System.Windows.Forms.ComboBox();
+            this.cmbclase = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cmbmodulo = new System.Windows.Forms.ComboBox();
+            this.cmbciclo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblmodulo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.pnlUsuario.SuspendLayout();
             this.gbCiclo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvUsuarios
@@ -382,10 +388,12 @@
             this.rbnProfesor.Text = "Profesor";
             this.rbnProfesor.UseVisualStyleBackColor = true;
             this.rbnProfesor.CheckedChanged += new System.EventHandler(this.rbnProfesor_CheckedChanged);
+            this.rbnProfesor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbnProfesor_MouseClick);
             // 
             // gbCiclo
             // 
             this.gbCiclo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbCiclo.Controls.Add(this.button2);
             this.gbCiclo.Controls.Add(this.cmbprensencia);
             this.gbCiclo.Controls.Add(this.label7);
             this.gbCiclo.Controls.Add(this.cmbhorario);
@@ -399,66 +407,61 @@
             this.gbCiclo.Controls.Add(this.lblmodulo);
             this.gbCiclo.Controls.Add(this.label3);
             this.gbCiclo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCiclo.Location = new System.Drawing.Point(319, 85);
+            this.gbCiclo.Location = new System.Drawing.Point(206, 85);
             this.gbCiclo.Name = "gbCiclo";
             this.gbCiclo.Size = new System.Drawing.Size(650, 533);
             this.gbCiclo.TabIndex = 29;
             this.gbCiclo.TabStop = false;
             // 
-            // label3
+            // cmbprensencia
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 27);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Ciclo: ";
+            this.cmbprensencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbprensencia.FormattingEnabled = true;
+            this.cmbprensencia.Location = new System.Drawing.Point(215, 247);
+            this.cmbprensencia.Name = "cmbprensencia";
+            this.cmbprensencia.Size = new System.Drawing.Size(230, 35);
+            this.cmbprensencia.TabIndex = 11;
+            this.cmbprensencia.SelectedIndexChanged += new System.EventHandler(this.cmbprensencia_SelectedIndexChanged);
             // 
-            // lblmodulo
+            // label7
             // 
-            this.lblmodulo.AutoSize = true;
-            this.lblmodulo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmodulo.Location = new System.Drawing.Point(33, 368);
-            this.lblmodulo.Name = "lblmodulo";
-            this.lblmodulo.Size = new System.Drawing.Size(110, 27);
-            this.lblmodulo.TabIndex = 1;
-            this.lblmodulo.Text = "Módulo: ";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 253);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(191, 27);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Presencialidad: ";
             // 
-            // label5
+            // cmbhorario
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(597, 68);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Selecione el ciclo y modulo al que quieres\r\nque pertenezca";
+            this.cmbhorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbhorario.FormattingEnabled = true;
+            this.cmbhorario.Location = new System.Drawing.Point(215, 302);
+            this.cmbhorario.Name = "cmbhorario";
+            this.cmbhorario.Size = new System.Drawing.Size(230, 35);
+            this.cmbhorario.TabIndex = 9;
+            this.cmbhorario.SelectedIndexChanged += new System.EventHandler(this.cmbhorario_SelectedIndexChanged);
             // 
-            // cmbciclo
+            // cmbclase
             // 
-            this.cmbciclo.FormattingEnabled = true;
-            this.cmbciclo.Location = new System.Drawing.Point(215, 146);
-            this.cmbciclo.Name = "cmbciclo";
-            this.cmbciclo.Size = new System.Drawing.Size(230, 35);
-            this.cmbciclo.TabIndex = 3;
+            this.cmbclase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbclase.FormattingEnabled = true;
+            this.cmbclase.Location = new System.Drawing.Point(215, 193);
+            this.cmbclase.Name = "cmbclase";
+            this.cmbclase.Size = new System.Drawing.Size(230, 35);
+            this.cmbclase.TabIndex = 8;
+            this.cmbclase.SelectedIndexChanged += new System.EventHandler(this.cmbclase_SelectedIndexChanged);
             // 
-            // cmbmodulo
+            // label6
             // 
-            this.cmbmodulo.FormattingEnabled = true;
-            this.cmbmodulo.Location = new System.Drawing.Point(215, 358);
-            this.cmbmodulo.Name = "cmbmodulo";
-            this.cmbmodulo.Size = new System.Drawing.Size(230, 35);
-            this.cmbmodulo.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(171, 434);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 61);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(38, 312);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 27);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Horario: ";
             // 
             // label4
             // 
@@ -470,49 +473,82 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Clase: ";
             // 
-            // label6
+            // button1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 255);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 27);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Horario: ";
+            this.button1.Location = new System.Drawing.Point(43, 434);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(274, 61);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Aceptar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cmbclase
+            // cmbmodulo
             // 
-            this.cmbclase.FormattingEnabled = true;
-            this.cmbclase.Location = new System.Drawing.Point(215, 193);
-            this.cmbclase.Name = "cmbclase";
-            this.cmbclase.Size = new System.Drawing.Size(230, 35);
-            this.cmbclase.TabIndex = 8;
+            this.cmbmodulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbmodulo.FormattingEnabled = true;
+            this.cmbmodulo.Location = new System.Drawing.Point(215, 358);
+            this.cmbmodulo.Name = "cmbmodulo";
+            this.cmbmodulo.Size = new System.Drawing.Size(230, 35);
+            this.cmbmodulo.TabIndex = 4;
             // 
-            // cmbhorario
+            // cmbciclo
             // 
-            this.cmbhorario.FormattingEnabled = true;
-            this.cmbhorario.Location = new System.Drawing.Point(215, 245);
-            this.cmbhorario.Name = "cmbhorario";
-            this.cmbhorario.Size = new System.Drawing.Size(230, 35);
-            this.cmbhorario.TabIndex = 9;
+            this.cmbciclo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbciclo.FormattingEnabled = true;
+            this.cmbciclo.Location = new System.Drawing.Point(215, 146);
+            this.cmbciclo.Name = "cmbciclo";
+            this.cmbciclo.Size = new System.Drawing.Size(230, 35);
+            this.cmbciclo.TabIndex = 3;
+            this.cmbciclo.SelectedIndexChanged += new System.EventHandler(this.cmbciclo_SelectedIndexChanged);
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 306);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(191, 27);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Presencialidad: ";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(2, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(597, 68);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Selecione el ciclo y modulo al que quieres\r\nque pertenezca";
             // 
-            // cmbprensencia
+            // lblmodulo
             // 
-            this.cmbprensencia.FormattingEnabled = true;
-            this.cmbprensencia.Location = new System.Drawing.Point(215, 300);
-            this.cmbprensencia.Name = "cmbprensencia";
-            this.cmbprensencia.Size = new System.Drawing.Size(230, 35);
-            this.cmbprensencia.TabIndex = 11;
+            this.lblmodulo.AutoSize = true;
+            this.lblmodulo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmodulo.Location = new System.Drawing.Point(33, 368);
+            this.lblmodulo.Name = "lblmodulo";
+            this.lblmodulo.Size = new System.Drawing.Size(110, 27);
+            this.lblmodulo.TabIndex = 1;
+            this.lblmodulo.Text = "Módulo: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(59, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 27);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Ciclo: ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(348, 434);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(274, 61);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // accesoAdministrador
             // 
@@ -541,6 +577,8 @@
             this.pnlUsuario.PerformLayout();
             this.gbCiclo.ResumeLayout(false);
             this.gbCiclo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,5 +626,8 @@
         private System.Windows.Forms.ComboBox cmbclase;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
