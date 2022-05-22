@@ -78,7 +78,7 @@ namespace floridapp.UserControls
         {
             if (dtpDia.Value < DateTime.Now)
             {
-                MessageBox.Show("El día no puede ser menor al actual");
+                MessageBox.Show("La reserva tiene que tener un día de aticipación");
             }
             else
             {
