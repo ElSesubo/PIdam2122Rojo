@@ -133,6 +133,23 @@ namespace floridapp.UserControls
 
                         conexion.CerrarConexion();
                     }
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            string error = "";
+                            StringBuilder sb = new StringBuilder();
+                            sb.Append(string.Format("Has realizado una reserva para una tutoria privada para el dia {0} a las {1} al profesor {2}.", dtpDia.Value.ToString(),cmbHoras.SelectedItem.ToString(),lblprofesor.Text));
+                            EnviarGmail.EnviarMensaje(sb, usuario.Email, "NOT-REPLY", error);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al reservar.");
+                        }
+
+                        conexion.CerrarConexion();
+                    }
                 }
             }
             refresh();
