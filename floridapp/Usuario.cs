@@ -526,20 +526,40 @@ namespace floridapp
             reader.Close();
             return user;
         }
-        public static List<usuario> contacto_del_profesor(string modulo)
+
+        public static List<string> lista_nif_profesor_modulo(string modulo)
         {
-            string a = "";
-            List<usuario> user = new List<usuario>();
-            string consulta = "SELECT u.correo,u.nombre,u.apellido,u.tel from usuario as u INNER JOIN ciclo_pertenece as cp on u.nif=cp.user_nif INNER JOIN ciclo as c on cp.cicl=c.id INNER JOIN pertenencia_modulos as pm on c.id=pm.cicl where u.profesor=true and pm.modulo=@modulo;";
+            List<string> nif = new List<string>();
+            string consulta = "SELECT nif_prof FROM pertenencia_modulos WHERE modulo=@modulo;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("modulo", modulo);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                a = reader.GetString(1) + " " + reader.GetString(2);
-                user.Add(new usuario(a, reader.GetString(0), reader.GetInt32(3)));
+                nif.Add(reader.GetString(0));
             }
             reader.Close();
+            return nif;
+        }
+        public static List<usuario> contacto_del_profesor(List<string> nif)
+        {
+            string a = "";
+            List<usuario> user = new List<usuario>();
+            List<string> nif1 = nif;
+            for(int i = 0; i < nif1.Count; i++)
+            {
+                string consulta = "SELECT correo,nombre,apellido,tel from usuario where profesor=true and nif=@nif";
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                comando.Parameters.AddWithValue("nif", nif1[i]);
+                MySqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    a = reader.GetString(1) + " " + reader.GetString(2);
+                    user.Add(new usuario(a, reader.GetString(0), reader.GetInt32(3)));
+                }
+                reader.Close();
+            }
+
             return user;
         }
 
