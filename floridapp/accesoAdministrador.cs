@@ -15,7 +15,7 @@ namespace floridapp
         public accesoAdministrador()
         {
             InitializeComponent();
-            dtgvUsuarios.ReadOnly = true;
+            dtgvUsuarios1.ReadOnly = true;
         }
 
         private void accesoAdministrador_Load(object sender, EventArgs e)
@@ -32,17 +32,22 @@ namespace floridapp
         private void CargaListaUsuarios()
         {
             string seleccion = "Select * from usuario";
+            List<usuario>user=new List<usuario>();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                dtgvUsuarios.DataSource = usuario.BuscarUsuario(seleccion);
+                user = usuario.BuscarUsuario(seleccion);
                 conexion.CerrarConexion();
             }
             else
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }
-            dtgvUsuarios.ReadOnly = true;
+            for (int i = 0; i < user.Count; i++)
+            {
+                dtgvUsuarios1.Rows.Add(user[i].Nif, user[i].Correo, user[i].Contraseña, user[i].Nombre, user[i].Apellido, user[i].Tel, user[i].Alumno, user[i].Profesor, user[i].Cocina, user[i].Biblioteca, user[i].Admi);
+            }
+            dtgvUsuarios1.ReadOnly = true;
             gbCiclo.Visible = false;
         }
 
@@ -87,17 +92,15 @@ namespace floridapp
                     if (!usuario.MailExiste(txtCorreo.Text))
                     {
                         resultado = usu.AgregarUsuario(usu);
+                        MessageBox.Show("Usuario insertado con exito.");
                     }
                     else
                     {
                         usu.Nif = txtNif.Text;
                         resultado = usu.ActualizaUsuario(usu);
                     }
-
-
                     conexion.CerrarConexion();
                     CargaListaUsuarios();
-
                 }
                 else
                 {
@@ -127,12 +130,57 @@ namespace floridapp
                         try
                         {
                             usuario.insertarUsuarioCiclo(txtNif.Text, id);
-                            MessageBox.Show("Usuario insertado al ciclo coin exito");
                             limpiar();
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("Error al insertar usuario al ciclo.");
+                        }
+
+                        conexion.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    cargar_ciclos();
+                    gbCiclo.Visible = true;
+                    gbCiclo.Focus();
+                    cmbmodulo.Visible = false;
+                    ValidarDatos3();
+                }
+            }
+            else if (rbnProfesor.Checked == true)
+            {
+                if (ValidarDatos())
+                {
+                    insertar_usuario();
+                    int id = buscar_id_ciclo();
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            usuario.insertarUsuarioCiclo(txtNif.Text, id);
+                            MessageBox.Show("Usuario insertado al ciclo coin exito");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al insertar usuario al ciclo.");
+                        }
+
+                        conexion.CerrarConexion();
+                    }
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            usuario.insertar_modulo_profesor(cmbmodulo.SelectedItem.ToString().ToUpper(),txtNif.Text.ToUpper());
+                            limpiar();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al insertar profesor al ciclo.");
                         }
 
                         conexion.CerrarConexion();
@@ -153,7 +201,7 @@ namespace floridapp
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                dtgvUsuarios.DataSource = usuario.BuscarUsuario(txtNif.Text);
+                dtgvUsuarios1.DataSource = usuario.BuscarUsuario(txtNif.Text);
                 conexion.CerrarConexion();
             }
             else
@@ -166,9 +214,9 @@ namespace floridapp
         {
             try
             {
-                if (dtgvUsuarios.SelectedRows.Count == 1) 
+                if (dtgvUsuarios1.SelectedRows.Count == 1) 
                 {
-                    string nif = (string)dtgvUsuarios.CurrentRow.Cells[0].Value;  
+                    string nif = (string)dtgvUsuarios1.CurrentRow.Cells[0].Value;  
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
@@ -204,9 +252,9 @@ namespace floridapp
             {
                 int resultado;
 
-                if (dtgvUsuarios.SelectedRows.Count == 1) 
+                if (dtgvUsuarios1.SelectedRows.Count == 1) 
                 {
-                    string nif = (string)dtgvUsuarios.CurrentRow.Cells[0].Value;
+                    string nif = (string)dtgvUsuarios1.CurrentRow.Cells[0].Value;
                     DialogResult confirmacion = MessageBox.Show("Borrado de registro seleccionado. ¿Continuar?",
                                                 "Eliminación", MessageBoxButtons.YesNo);
 
@@ -246,7 +294,13 @@ namespace floridapp
 
         private void dtgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int fila=e.RowIndex;
+            txtNif.Text =dtgvUsuarios1.Rows[fila].Cells[0].Value.ToString();
+            txtCorreo.Text = dtgvUsuarios1.Rows[fila].Cells[1].Value.ToString();
+            txtContra.Text=dtgvUsuarios1.Rows[fila].Cells[2].Value.ToString();
+            txtNombre.Text=dtgvUsuarios1.Rows[fila].Cells[3].Value.ToString();
+            txtApellido.Text=dtgvUsuarios1.Rows[fila].Cells[4].Value.ToString();
+            txtTel.Text=dtgvUsuarios1.Rows[fila].Cells[5].Value.ToString();
         }
 
         private void rbnProfesor_CheckedChanged(object sender, EventArgs e)
@@ -528,5 +582,7 @@ namespace floridapp
                 cargar_combobox();
             }
         }
+
+
     }
 }
