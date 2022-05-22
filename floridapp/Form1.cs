@@ -112,6 +112,12 @@ namespace floridapp
                 pbAlumno.Hide();
                 btnListaMod.Hide();
             }
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                lblNombre.Text = usuario.nombreUsuario();
+                conexion.CerrarConexion();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

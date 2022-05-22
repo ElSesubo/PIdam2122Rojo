@@ -234,6 +234,29 @@ namespace floridapp
         }
 
         /// <summary>
+        /// Este método devuelve el nombre del usuario actual
+        /// </summary>
+        /// <returns></returns>
+        static public string nombreUsuario()
+        {
+            string nif=BuscarNIF(usuario.Email);
+            string nombre = "";
+            string consulta = "SELECT nombre,apellido from usuario where nif=@nif;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", nif);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    nombre=reader.GetString(0)+" "+reader.GetString(1);
+                }
+            }
+            reader.Close();
+            return nombre;
+        }
+
+        /// <summary>
         /// Este metodo te busca el nif apartir del email.
         /// </summary>
         /// <param name="mail"></param>
