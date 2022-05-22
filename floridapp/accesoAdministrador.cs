@@ -218,10 +218,18 @@ namespace floridapp
             {
                     if (conexion.Conexion != null)
                     {
+                    try
+                    {
                         conexion.AbrirConexion();
-                        usuario usu = new usuario(txtNif.Text, txtCorreo.Text, txtContra.Text, txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtTel.Text), rbnProfesor.Checked, 
+                        usuario usu = new usuario(txtNif.Text, txtCorreo.Text, txtContra.Text, txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtTel.Text), rbnProfesor.Checked,
                             rbnAlumno.Checked, rbnAdmin.Checked, rbnCocina.Checked, rbnBiblioteca.Checked);
                         usu.ActualizaUsuario(usu);
+                        MessageBox.Show("Se ha actualizado con exito");
+                    }catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                     }
                     else
                     {
