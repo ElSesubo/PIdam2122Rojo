@@ -348,8 +348,9 @@ namespace floridapp
         public static int EliminaUsuario(string nif)
         {
             int retorno;
-            string consulta = string.Format("DELETE FROM usuario WHERE nif={0}", nif);
+            string consulta = "DELETE FROM usuario WHERE nif=@nif;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", nif);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }

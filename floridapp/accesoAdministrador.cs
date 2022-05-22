@@ -31,6 +31,7 @@ namespace floridapp
 
         private void CargaListaUsuarios()
         {
+            dtgvUsuarios1.Rows.Clear();
             string seleccion = "Select * from usuario";
             List<usuario>user=new List<usuario>();
             if (conexion.Conexion != null)
@@ -249,37 +250,42 @@ namespace floridapp
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            int eliminado=0;
+            DialogResult resultado = MessageBox.Show("Desea eliminar usuario?", "ELIMINAR!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (txtNif.Text == "")
             {
-                int resultado;
-
-                if (dtgvUsuarios1.SelectedRows.Count == 1) 
+                MessageBox.Show("Debes hacer click sobre el usuario que quieres eliminar en la tabla.");
+            }
+            else
+            {
+                if (resultado == DialogResult.Yes)
                 {
-                    string nif = (string)dtgvUsuarios1.CurrentRow.Cells[0].Value;
-                    DialogResult confirmacion = MessageBox.Show("Borrado de registro seleccionado. ¿Continuar?",
-                                                "Eliminación", MessageBoxButtons.YesNo);
-
-                    if (confirmacion == DialogResult.Yes)
+                    if (conexion.Conexion != null)
                     {
-                        if (conexion.Conexion != null)
+                        conexion.AbrirConexion();
+                        try
                         {
-                            conexion.AbrirConexion();
-                            resultado = usuario.EliminaUsuario(nif);
+                            eliminado=usuario.EliminaUsuario(txtNif.Text);
+                            if (eliminado == 0)
+                            {
+                                MessageBox.Show("El nif introducido no existe.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Eliminado con exito.");
+                            }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                            MessageBox.Show("Error al eliminar.");
                         }
+
                         conexion.CerrarConexion();
-                        CargaListaUsuarios();
                     }
                 }
-
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            CargaListaUsuarios();
+            
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
