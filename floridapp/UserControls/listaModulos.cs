@@ -28,6 +28,7 @@ namespace floridapp.UserControls
         private void refresh()
         {
             dtgvProfesores.Rows.Clear();
+            cbCiclos.Items.Clear();
             List<usuario> user = new List<usuario>();
             if (conexion.Conexion != null)
             {
@@ -74,17 +75,29 @@ namespace floridapp.UserControls
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dtgvProfesores.Rows.Clear();
+            List<string> nif = new List<string>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                nif = usuario.lista_nif_profesor_modulo(cbCiclos.SelectedItem.ToString());
+                conexion.CerrarConexion();
+            }
             List<usuario> user = new List<usuario>();
             if (conexion.Conexion != null)
             {
                 conexion.AbrirConexion();
-                user = usuario.contacto_del_profesor(cbCiclos.SelectedItem.ToString());
+                user = usuario.contacto_del_profesor(nif);
                 conexion.CerrarConexion();
             }
             for (int i = 0; i < user.Count; i++)
             {
                 dtgvProfesores.Rows.Add(user[i].Nombre, user[i].Tel, user[i].Correo);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refresh();
         }
     }
 }
