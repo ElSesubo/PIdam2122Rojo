@@ -40,7 +40,7 @@ namespace floridapp.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(33)))), ((int)(((byte)(47)))));
-            this.label1.Location = new System.Drawing.Point(238, 150);
+            this.label1.Location = new System.Drawing.Point(271, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(471, 72);
             this.label1.TabIndex = 6;
@@ -50,7 +50,7 @@ namespace floridapp.UserControls
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(93, 244);
+            this.panel1.Location = new System.Drawing.Point(126, 247);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 287);
             this.panel1.TabIndex = 10;
@@ -58,7 +58,7 @@ namespace floridapp.UserControls
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Location = new System.Drawing.Point(352, 244);
+            this.panel2.Location = new System.Drawing.Point(385, 247);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 287);
             this.panel2.TabIndex = 11;
@@ -66,7 +66,7 @@ namespace floridapp.UserControls
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel3.Location = new System.Drawing.Point(611, 244);
+            this.panel3.Location = new System.Drawing.Point(644, 247);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(253, 287);
             this.panel3.TabIndex = 11;

@@ -104,15 +104,13 @@ namespace floridapp
             if (usuario.Tipo == 2)
             {
                 pbUsuario.Hide();
-                btnListaMod.Hide();
-                btnListaModAlu.Show();
+                btnListaMod.Show();
             }
             else
             {
                 pbUsuario.Show();
                 pbAlumno.Hide();
-                btnListaMod.Show();
-                btnListaModAlu.Hide();
+                btnListaMod.Hide();
             }
         }
 
@@ -135,7 +133,7 @@ namespace floridapp
         {
             panelVista.Controls.Clear();
             _instance = this;
-            listaAlumnos lmod = new listaAlumnos();
+            listaModulos lmod = new listaModulos();
             //addUserControl(bib);
             lmod.Dock = DockStyle.Fill;
             panelVista.Controls.Add(lmod);
@@ -184,17 +182,6 @@ namespace floridapp
             }
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
             AplicarIdioma();
-        }
-
-        private void btnListaModAlu_Click(object sender, EventArgs e)
-        {
-            panelVista.Controls.Clear();
-            _instance = this;
-            listaModulos lmod = new listaModulos();
-            //addUserControl(bib);
-            lmod.Dock = DockStyle.Fill;
-            panelVista.Controls.Add(lmod);
-            lmod.BringToFront();
         }
     }
 }

@@ -87,7 +87,7 @@ namespace floridapp.UserControls
             // 
             this.dtpHora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(277, 378);
+            this.dtpHora.Location = new System.Drawing.Point(301, 378);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpHora.Size = new System.Drawing.Size(200, 27);
