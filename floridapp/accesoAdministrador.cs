@@ -269,6 +269,7 @@ namespace floridapp
                             else
                             {
                                 MessageBox.Show("Eliminado con exito.");
+                                limpiar();
                             }
                         }
                         catch (Exception ex)
