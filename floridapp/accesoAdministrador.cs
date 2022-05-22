@@ -21,6 +21,7 @@ namespace floridapp
         private void accesoAdministrador_Load(object sender, EventArgs e)
         {
             CargaListaUsuarios();
+            rbnAdmin.Checked = true;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace floridapp
                 rbnCocina.Checked = false;
                 rbnBiblioteca.Checked = false;
                 txtNif.Focus();
-            
+                rbnAdmin.Checked=true;
         }
         private void insertar_usuario()
         {
@@ -114,10 +115,9 @@ namespace floridapp
         }
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-
-            if (ValidarDatos3())
+            if (rbnAlumno.Checked == true)
             {
-                if(rbnAlumno.Checked == true)
+                if (ValidarDatos3())
                 {
                     insertar_usuario();
                     int id = buscar_id_ciclo();
@@ -138,12 +138,12 @@ namespace floridapp
                         conexion.CerrarConexion();
                     }
                 }
-            }
-            else
-            {
-                gbCiclo.Visible = true;
-                gbCiclo.Focus();
-                ValidarDatos3();
+                else
+                {
+                    gbCiclo.Visible = true;
+                    gbCiclo.Focus();
+                    ValidarDatos3();
+                }
             }
 
         }
