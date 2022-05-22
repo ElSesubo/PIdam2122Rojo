@@ -473,7 +473,7 @@ namespace floridapp
         {
             string a = "";
             List<string> lista = new List<string>();
-            string consulta = "SELECT modulo from pertenencia_modulos where cicl=@ciclo;";
+            string consulta = "SELECT modulo from pertenencia_modulos where cicl=@ciclo AND nif_prof='l';";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("ciclo", id_ciclo);
             MySqlDataReader reader = comando.ExecuteReader();

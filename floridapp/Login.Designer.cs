@@ -36,7 +36,6 @@ namespace floridapp
             this.lblcontraseña = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cmbLengua = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +67,7 @@ namespace floridapp
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(172, 363);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 36660;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(355, 32);
             this.txtCorreo.TabIndex = 1;
@@ -117,18 +117,6 @@ namespace floridapp
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cmbLengua
-            // 
-            this.cmbLengua.FormattingEnabled = true;
-            this.cmbLengua.Items.AddRange(new object[] {
-            "Castellano",
-            "Inglés"});
-            this.cmbLengua.Location = new System.Drawing.Point(521, 55);
-            this.cmbLengua.Name = "cmbLengua";
-            this.cmbLengua.Size = new System.Drawing.Size(82, 24);
-            this.cmbLengua.TabIndex = 7;
-            this.cmbLengua.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,7 +124,6 @@ namespace floridapp
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(636, 604);
             this.ControlBox = false;
-            this.Controls.Add(this.cmbLengua);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblcorreo);
@@ -165,6 +152,5 @@ namespace floridapp
         private System.Windows.Forms.Label lblcorreo;
         private System.Windows.Forms.Label lblcontraseña;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox cmbLengua;
     }
 }

@@ -433,11 +433,11 @@ namespace floridapp
         private void cmbciclo_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbclase.Items.Clear();
-            cargar_clase();
             cmbclase.Items.Clear();
             cmbprensencia.Items.Clear();
             cmbhorario.Items.Clear();
             cmbmodulo.Items.Clear();
+            cargar_clase();
         }
 
         private void cmbprensencia_SelectedIndexChanged(object sender, EventArgs e)
