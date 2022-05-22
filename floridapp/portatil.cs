@@ -26,6 +26,10 @@ namespace floridapp
             this.Devuelto = devuelto;
         }
 
+        /// <summary>
+        /// Crea una lista de portatiles
+        /// </summary>
+        /// <returns>retorna una lista de menus</returns>
         public static List<portatil> ListaPortatiles()
         {
             List<portatil> lista = new List<portatil>();
@@ -45,6 +49,9 @@ namespace floridapp
             return lista;
         }
 
+        /// <summary>
+        /// Agrega un portatil
+        /// </summary>
         public static void AgregarPortatil()
         {
             string consulta = "";

@@ -142,6 +142,7 @@ namespace floridapp
                 }
                 else
                 {
+                    dtgvUsuarios1.Rows.Clear();
                     cargar_ciclos();
                     gbCiclo.Visible = true;
                     gbCiclo.Focus();
@@ -196,7 +197,7 @@ namespace floridapp
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        /*private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (conexion.Conexion != null)
             {
@@ -208,7 +209,7 @@ namespace floridapp
             {
                 MessageBox.Show("No existe conexión a la Base de Datos");
             }
-        }
+        }*/
 
         private void btnEditar_Click(object sender, EventArgs e)
         {

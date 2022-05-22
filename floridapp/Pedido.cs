@@ -231,6 +231,10 @@ namespace floridapp
             return id;
         }
 
+        /// <summary>
+        /// Crear una lista con todos los menus
+        /// </summary>
+        /// <returns>Una lista con todos los menus</returns>
         public static List<Pedido> lista_menus()
         {
             List<Pedido> lista=new List<Pedido>();
@@ -245,6 +249,13 @@ namespace floridapp
             return lista;
         }
 
+        /// <summary>
+        /// Modifica los datos del menú
+        /// </summary>
+        /// <param name="id">id del menú</param>
+        /// <param name="nombre">nombre del menú</param>
+        /// <param name="precio">precio del menú</param>
+        /// <returns>1 o 0 para comprobar que se ha realizado la consulta</returns>
         public static int modificarmenu(int id,string nombre,double precio)
         {
             int result = 0;
@@ -257,6 +268,12 @@ namespace floridapp
             return result;
         }
 
+        /// <summary>
+        /// Inserta un menú
+        /// </summary>
+        /// <param name="nombre">nombre del menú</param>
+        /// <param name="precio">precio del menú</param>
+        /// <returns>1 o 0 para comprobar que se ha realizado la consulta</returns>
         public static int insertarMenus(string nombre,double precio)
         {
             int result = 0;
@@ -268,6 +285,11 @@ namespace floridapp
             return result;
         }
 
+        /// <summary>
+        /// Eliminar un menú
+        /// </summary>
+        /// <param name="id">id del menú</param>
+        /// <returns>1 o 0 para comprobar que se ha realizado la consulta</returns>
         public static int eliminarMenu(int id)
         {
             int result = 0;

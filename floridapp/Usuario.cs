@@ -391,6 +391,10 @@ namespace floridapp
             return nombre;
         }
 
+        /// <summary>
+        /// Lista con los nombres de los ciclos solo una vez
+        /// </summary>
+        /// <returns>Retorna una lista con los nombres de los ciclos solo una vez</returns>
         public static List<string> lista_ciclos()
         {
             string a = "";
@@ -406,6 +410,12 @@ namespace floridapp
             reader.Close();
             return lista;
         }
+
+        /// <summary>
+        /// Lista de clases de los ciclos dependiendo del ciclo
+        /// </summary>
+        /// <param name="ciclos">nombre del ciclo</param>
+        /// <returns>Lista de clases de los ciclos</returns>
         public static List<string> lista_clase(string ciclos)
         {
             string a = "";
@@ -422,6 +432,14 @@ namespace floridapp
             reader.Close();
             return lista;
         }
+
+        /// <summary>
+        /// Lista de horarios de los ciclos dependiendo del nombre, la clase y la presencialidad
+        /// </summary>
+        /// <param name="ciclos">nombre del ciclo</param>
+        /// <param name="clase">nombre de la clase</param>
+        /// <param name="pre">tipo de presencialidad</param>
+        /// <returns>Lista de horarios</returns>
         public static List<string> lista_horario(string ciclos, string clase,string pre)
         {
             TimeSpan a=new TimeSpan();
@@ -440,6 +458,13 @@ namespace floridapp
             reader.Close();
             return lista;
         }
+
+        /// <summary>
+        /// Lista de presencialidades de los ciclos dependiendo del nombre y la clase
+        /// </summary>
+        /// <param name="ciclos">nombre ciclos</param>
+        /// <param name="clase">nombre de la clase</param>
+        /// <returns>Lista de presencialidades de los ciclos</returns>
         public static List<string> lista_presencialidad(string ciclos,string clase)
         {
             string a = "";
@@ -458,6 +483,14 @@ namespace floridapp
             return lista;
         }
 
+        /// <summary>
+        /// Filtra los ciclos dependiendo del nombre, la clase, el horario y la presencialidad
+        /// </summary>
+        /// <param name="nombre">nombre del usuario</param>
+        /// <param name="clase">clase del usuario</param>
+        /// <param name="horario">horario del usuario</param>
+        /// <param name="presencia">presencialidad del usuario</param>
+        /// <returns>La id del usuario</returns>
         public static int filtrarCiclos(string nombre,string clase,string horario,string presencia)
         {
             int id=0;
@@ -475,6 +508,12 @@ namespace floridapp
             reader.Close();
             return id;
         }
+
+        /// <summary>
+        /// Lista de modulos dependiendo del ciclo
+        /// </summary>
+        /// <param name="id_ciclo">id del ciclo</param>
+        /// <returns>una lista de modulos</returns>
         public static List<string> lista_modulos(int id_ciclo)
         {
             string a = "";
@@ -492,6 +531,11 @@ namespace floridapp
             return lista;
         }
 
+        /// <summary>
+        /// Inserta usuarios en la tabla de ciclo_pertenece
+        /// </summary>
+        /// <param name="nif">nif del usuario</param>
+        /// <param name="id_cicl">id del ciclo</param>
         public static void insertarUsuarioCiclo(string nif,int id_cicl)
         {
             string consulta = "INSERT INTO ciclo_pertenece VALUES(null,@nif,@ciclo);";
@@ -501,6 +545,12 @@ namespace floridapp
             comando.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Inserta el nif del profesor en la tabla pertenecia_modulos dependiendo del ciclo y modulo
+        /// </summary>
+        /// <param name="modulo">nombre del modulo</param>
+        /// <param name="nif">nif del usuario</param>
+        /// <param name="ciclo">numero del ciclo</param>
         public static void insertar_modulo_profesor(string modulo,string nif,int ciclo)
         {
             string consulta = "UPDATE pertenencia_modulos SET nif_prof=@nif WHERE modulo=@modulo and cicl=@ciclo";
@@ -511,6 +561,10 @@ namespace floridapp
             comando.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Selecciona la información de contacto del profesor si es profesor
+        /// </summary>
+        /// <returns>Una lista de contactos</returns>
         public static List<usuario> contacto_del_profesor()
         {
             string a = "";
@@ -527,6 +581,11 @@ namespace floridapp
             return user;
         }
 
+        /// <summary>
+        /// Lista de nifs de profesores dependiendo del modulo
+        /// </summary>
+        /// <param name="modulo">nombre del modulo</param>
+        /// <returns>Lista cargada con nifs</returns>
         public static List<string> lista_nif_profesor_modulo(string modulo)
         {
             List<string> nif = new List<string>();
@@ -541,6 +600,12 @@ namespace floridapp
             reader.Close();
             return nif;
         }
+
+        /// <summary>
+        /// Selecciona la información de contacto del profesor si es profesor
+        /// </summary>
+        /// <param name="nif">lista de nifs</param>
+        /// <returns>Una lista de contactos</returns>
         public static List<usuario> contacto_del_profesor(List<string> nif)
         {
             string a = "";
@@ -563,6 +628,10 @@ namespace floridapp
             return user;
         }
 
+        /// <summary>
+        /// Lista de modulos
+        /// </summary>
+        /// <returns>Lista de modulos</returns>
         public static List<string> lista_modulos()
         {
             List<string> list=new List<string>();
@@ -577,6 +646,11 @@ namespace floridapp
             return list;
         }
 
+        /// <summary>
+        /// Comprueba la existencia de nif
+        /// </summary>
+        /// <param name="nif">nif del usuario</param>
+        /// <returns>True en caso de que ya exista false en caso contrario</returns>
         public static bool ComprobarNIF(string nif)
         {
             string consulta = string.Format("SELECT * FROM usuario" +
@@ -596,6 +670,11 @@ namespace floridapp
             }
         }
 
+        /// <summary>
+        /// Comprueba la letra del dni
+        /// </summary>
+        /// <param name="dni">nif del usuario</param>
+        /// <returns>true en caso de que la letra esté correcta, false en caso contrario</returns>
         public static bool CheckNIF(string dni)
         {
             if (dni.Length != 9)

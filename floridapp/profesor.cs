@@ -298,6 +298,12 @@ namespace floridapp
             reader.Close();
             return email;
         }
+
+        /// <summary>
+        /// Selecciona el email de un alumno dependiendo del nif
+        /// </summary>
+        /// <param name="nif_a">nif alumno</param>
+        /// <returns>email del usuario</returns>
         public static string Email_alumno(string nif_a)
         {
             string email = "";
@@ -313,6 +319,10 @@ namespace floridapp
             return email;
         }
 
+        /// <summary>
+        /// Selecciona el módulo dependiendo del nif
+        /// </summary>
+        /// <returns>un string con el módulo</returns>
         public static string Modulo_profesor()
         {
             string modulo = "";
@@ -328,6 +338,11 @@ namespace floridapp
             return modulo;
         }
 
+        /// <summary>
+        /// Crea una lista de ciclos
+        /// </summary>
+        /// <param name="nif_a">nif del usuario</param>
+        /// <returns>una lista con los ciclos</returns>
         public static List<int> lista_ciclos(string nif_a)
         {
             List<int> list_ciclo = new List<int>();
@@ -342,7 +357,12 @@ namespace floridapp
             return list_ciclo;
         }
 
-        public static void dia_ocupado(List<int> li,DateTime dia)
+        /// <summary>
+        /// Metodo futura ampliación
+        /// </summary>
+        /// <param name="li">lista </param>
+        /// <param name="dia"></param>
+        /*public static void dia_ocupado(List<int> li,DateTime dia)
         {
             string nif = usuario.BuscarNIF(usuario.Email);
             for(int i = 0; i < li.Count; i++)
@@ -358,7 +378,7 @@ namespace floridapp
                 comando.ExecuteNonQuery();
             }
 
-        }
+        }*/
 
         //public bool comprobar_dia(DateTime dia_re)
         //{

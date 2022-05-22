@@ -16,6 +16,14 @@ namespace floridapp
     {
         const string mailAddress = "floridapprojo@gmail.com";
         const string password = "ghidm6rojo";
+
+        /// <summary>
+        /// Método para enviar correos
+        /// </summary>
+        /// <param name="Mensaje">Mensaje del correo</param>
+        /// <param name="para">Destinatario del correo</param>
+        /// <param name="asunto">Cuerpo del correo</param>
+        /// <param name="Error">Mensaje de error si se produce un error</param>
         public static void EnviarMensaje(StringBuilder Mensaje, string para, string asunto, string Error)
         {
             try

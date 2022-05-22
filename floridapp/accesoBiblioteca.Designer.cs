@@ -95,6 +95,7 @@ namespace floridapp
             this.id_pedido.HeaderText = "id pedido";
             this.id_pedido.MinimumWidth = 6;
             this.id_pedido.Name = "id_pedido";
+            this.id_pedido.ReadOnly = true;
             this.id_pedido.Width = 125;
             // 
             // hora_reserva
@@ -102,6 +103,7 @@ namespace floridapp
             this.hora_reserva.HeaderText = "hora reserva";
             this.hora_reserva.MinimumWidth = 6;
             this.hora_reserva.Name = "hora_reserva";
+            this.hora_reserva.ReadOnly = true;
             this.hora_reserva.Width = 125;
             // 
             // id_portatil
@@ -109,6 +111,7 @@ namespace floridapp
             this.id_portatil.HeaderText = "id portatil";
             this.id_portatil.MinimumWidth = 6;
             this.id_portatil.Name = "id_portatil";
+            this.id_portatil.ReadOnly = true;
             this.id_portatil.Width = 125;
             // 
             // id_user
@@ -116,6 +119,7 @@ namespace floridapp
             this.id_user.HeaderText = "Id user";
             this.id_user.MinimumWidth = 6;
             this.id_user.Name = "id_user";
+            this.id_user.ReadOnly = true;
             this.id_user.Width = 125;
             // 
             // dia_reserva
@@ -123,6 +127,7 @@ namespace floridapp
             this.dia_reserva.HeaderText = "Dia reserva";
             this.dia_reserva.MinimumWidth = 6;
             this.dia_reserva.Name = "dia_reserva";
+            this.dia_reserva.ReadOnly = true;
             this.dia_reserva.Width = 125;
             // 
             // button5
@@ -189,6 +194,7 @@ namespace floridapp
             // 
             this.txtNIF.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNIF.Location = new System.Drawing.Point(232, 83);
+            this.txtNIF.MaxLength = 9;
             this.txtNIF.Name = "txtNIF";
             this.txtNIF.Size = new System.Drawing.Size(190, 27);
             this.txtNIF.TabIndex = 24;
@@ -251,16 +257,19 @@ namespace floridapp
             // 
             this.id.HeaderText = "Id";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // reservado
             // 
             this.reservado.HeaderText = "Reservado";
             this.reservado.Name = "reservado";
+            this.reservado.ReadOnly = true;
             // 
             // devuelto
             // 
             this.devuelto.HeaderText = "Devuelto";
             this.devuelto.Name = "devuelto";
+            this.devuelto.ReadOnly = true;
             // 
             // label1
             // 
