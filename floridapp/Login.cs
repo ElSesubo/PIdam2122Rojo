@@ -89,26 +89,6 @@ namespace floridapp
             btnSalir.Text = RecursoL.Resources.losal;
             btnentrar.Text = RecursoL.Resources.loent;
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string cultura = "";
-            switch (cmbLengua.Text)
-            {
-                case "Castellano":
-                    {
-                        cultura = "ES-ES";
-                        break;
-                    }
-                case "Inglés":
-                    {
-                        cultura = "EN-US";  // Inglés United Kingdom
-                        break;
-                    }
-
-            }
-            MessageBox.Show("Nombre de la referencia cultural en .NET: " + cultura);  // mensaje informativo
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
-            AplicarIdioma();
-        }
+       
     }
 }

@@ -175,7 +175,7 @@ namespace floridapp
                         conexion.AbrirConexion();
                         try
                         {
-                            usuario.insertar_modulo_profesor(cmbmodulo.SelectedItem.ToString().ToUpper(),txtNif.Text.ToUpper());
+                            usuario.insertar_modulo_profesor(cmbmodulo.SelectedItem.ToString().ToUpper(),txtNif.Text.ToUpper(),id);
                             limpiar();
                         }
                         catch (Exception ex)
@@ -433,6 +433,10 @@ namespace floridapp
         private void cmbciclo_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbclase.Items.Clear();
+            cmbclase.Items.Clear();
+            cmbprensencia.Items.Clear();
+            cmbhorario.Items.Clear();
+            cmbmodulo.Items.Clear();
             cargar_clase();
         }
 
