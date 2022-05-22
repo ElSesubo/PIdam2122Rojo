@@ -24,6 +24,7 @@ namespace floridapp.UserControls
         private void listaAlumnos_Load(object sender, EventArgs e)
         {
             cargar_idioma();
+
         }
         private void AplicarIdioma()
         {

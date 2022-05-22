@@ -49,6 +49,12 @@ namespace floridapp
             this.biblioteca=biblioteca;
         }
 
+        public usuario(string nombre,string correo,int tel)
+        {
+            this.nombre=nombre;
+            this.correo=correo;
+            this.tel=tel;
+        }
         public usuario()
         {
 
@@ -503,6 +509,52 @@ namespace floridapp
             comando.Parameters.AddWithValue("modulo", modulo);
             comando.Parameters.AddWithValue("ciclo", ciclo);
             comando.ExecuteNonQuery();
+        }
+
+        public static List<usuario> contacto_del_profesor()
+        {
+            string a = "";
+            List<usuario> user = new List<usuario>();
+            string consulta = "SELECT correo,nombre,apellido,tel from usuario where profesor=true;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a = reader.GetString(1)+" "+reader.GetString(2);
+                user.Add(new usuario(a,reader.GetString(0),reader.GetInt32(3)));
+            }
+            reader.Close();
+            return user;
+        }
+        public static List<usuario> contacto_del_profesor(string modulo)
+        {
+            string a = "";
+            List<usuario> user = new List<usuario>();
+            string consulta = "SELECT u.correo,u.nombre,u.apellido,u.tel from usuario as u INNER JOIN ciclo_pertenece as cp on u.nif=cp.user_nif INNER JOIN ciclo as c on cp.cicl=c.id INNER JOIN pertenencia_modulos as pm on c.id=pm.cicl where u.profesor=true and pm.modulo=@modulo;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("modulo", modulo);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                a = reader.GetString(1) + " " + reader.GetString(2);
+                user.Add(new usuario(a, reader.GetString(0), reader.GetInt32(3)));
+            }
+            reader.Close();
+            return user;
+        }
+
+        public static List<string> lista_modulos()
+        {
+            List<string> list=new List<string>();
+            string consulta = "SELECT DISTINCT(modulo) FROM pertenencia_modulos;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                list.Add(reader.GetString(0));
+            }
+            reader.Close();
+            return list;
         }
 
         public static bool ComprobarNIF(string nif)

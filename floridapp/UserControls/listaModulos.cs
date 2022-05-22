@@ -23,6 +23,34 @@ namespace floridapp.UserControls
         private void listaModulos_Load(object sender, EventArgs e)
         {
             cargar_idioma();
+            refresh();
+        }
+        private void refresh()
+        {
+            dtgvProfesores.Rows.Clear();
+            List<usuario> user = new List<usuario>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                user = usuario.contacto_del_profesor();
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < user.Count; i++)
+            {
+                dtgvProfesores.Rows.Add(user[i].Nombre, user[i].Tel, user[i].Correo);
+            }
+            List<string> lista = new List<string>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                lista = usuario.lista_modulos();
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                cbCiclos.Items.Add(lista[i]);
+            }
+            cbCiclos.SelectedIndex = 0;
         }
         private void AplicarIdioma()
         {
@@ -36,6 +64,27 @@ namespace floridapp.UserControls
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura.Nombre);
             AplicarIdioma();
+        }
+
+        private void dtgvProfesores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dtgvProfesores.Rows.Clear();
+            List<usuario> user = new List<usuario>();
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                user = usuario.contacto_del_profesor(cbCiclos.SelectedItem.ToString());
+                conexion.CerrarConexion();
+            }
+            for (int i = 0; i < user.Count; i++)
+            {
+                dtgvProfesores.Rows.Add(user[i].Nombre, user[i].Tel, user[i].Correo);
+            }
         }
     }
 }

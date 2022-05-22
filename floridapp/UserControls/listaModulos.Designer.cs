@@ -35,15 +35,16 @@ namespace floridapp.UserControls
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProfesores)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvProfesores
             // 
+            this.dtgvProfesores.AllowUserToAddRows = false;
             this.dtgvProfesores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProfesores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -53,15 +54,18 @@ namespace floridapp.UserControls
             this.dtgvProfesores.Location = new System.Drawing.Point(61, 308);
             this.dtgvProfesores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvProfesores.Name = "dtgvProfesores";
+            this.dtgvProfesores.ReadOnly = true;
             this.dtgvProfesores.RowHeadersWidth = 51;
             this.dtgvProfesores.Size = new System.Drawing.Size(708, 399);
             this.dtgvProfesores.TabIndex = 0;
+            this.dtgvProfesores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProfesores_CellContentClick);
             // 
             // cbCiclos
             // 
+            this.cbCiclos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCiclos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCiclos.FormattingEnabled = true;
-            this.cbCiclos.Location = new System.Drawing.Point(848, 442);
+            this.cbCiclos.Location = new System.Drawing.Point(846, 365);
             this.cbCiclos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbCiclos.Name = "cbCiclos";
             this.cbCiclos.Size = new System.Drawing.Size(304, 30);
@@ -71,13 +75,14 @@ namespace floridapp.UserControls
             // 
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(848, 670);
+            this.btnBuscar.Location = new System.Drawing.Point(846, 614);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(305, 37);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
@@ -106,43 +111,48 @@ namespace floridapp.UserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(845, 403);
+            this.label3.Location = new System.Drawing.Point(843, 326);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 23);
+            this.label3.Size = new System.Drawing.Size(187, 23);
             this.label3.TabIndex = 48;
-            this.label3.Text = "Seleccionar módulo:";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(849, 541);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 72);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Mostrar todo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.Text = "Filtrar por módulo:";
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Nombre";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 180;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Tel";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Correo";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(846, 670);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(305, 37);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Mostrar todo";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // listaModulos
             // 
@@ -173,9 +183,9 @@ namespace floridapp.UserControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button button1;
     }
 }
