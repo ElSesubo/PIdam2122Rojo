@@ -45,10 +45,26 @@ namespace floridapp
             gbCiclo.Visible = false;
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void limpiar()
+        {
+
+                txtNif.Clear();
+                txtCorreo.Clear();
+                txtContra.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtTel.Clear();
+                rbnAdmin.Checked = false;
+                rbnAlumno.Checked = false;
+                rbnProfesor.Checked = false;
+                rbnCocina.Checked = false;
+                rbnBiblioteca.Checked = false;
+                txtNif.Focus();
+            
+        }
+        private void insertar_usuario()
         {
             int resultado;
-            int id = buscar_id_ciclo();
             try
             {
                 if (conexion.Conexion != null)
@@ -65,33 +81,18 @@ namespace floridapp
                     usu.Admi = rbnAdmin.Checked;
                     usu.Profesor = rbnProfesor.Checked;
                     usu.Cocina = rbnCocina.Checked;
-                    usu.Biblioteca = rbnBiblioteca.Checked; 
+                    usu.Biblioteca = rbnBiblioteca.Checked;
 
-                    if (!usuario.MailExiste(txtCorreo.Text)) 
+                    if (!usuario.MailExiste(txtCorreo.Text))
                     {
                         resultado = usu.AgregarUsuario(usu);
                     }
-                    else 
+                    else
                     {
                         usu.Nif = txtNif.Text;
                         resultado = usu.ActualizaUsuario(usu);
                     }
 
-                    if (resultado > 0) 
-                    {
-                        txtNif.Clear();
-                        txtCorreo.Clear();
-                        txtContra.Clear();
-                        txtNombre.Clear();
-                        txtApellido.Clear();
-                        txtTel.Clear();
-                        rbnAdmin.Checked = false;
-                        rbnAlumno.Checked = false;
-                        rbnProfesor.Checked = false;
-                        rbnCocina.Checked = false;
-                        rbnBiblioteca.Checked = false; 
-                        txtNif.Focus();
-                    }
 
                     conexion.CerrarConexion();
                     CargaListaUsuarios();
@@ -106,17 +107,45 @@ namespace floridapp
             {
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
             }
-            finally  
+            finally
             {
                 conexion.CerrarConexion();
             }
-            
-            if (conexion.Conexion != null)
+        }
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+            if (ValidarDatos3())
             {
-                conexion.AbrirConexion();
-                usuario.insertarUsuarioCiclo(txtNif.Text,id);
-                conexion.CerrarConexion();
+                if(rbnAlumno.Checked == true)
+                {
+                    insertar_usuario();
+                    int id = buscar_id_ciclo();
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        try
+                        {
+                            usuario.insertarUsuarioCiclo(txtNif.Text, id);
+                            MessageBox.Show("Usuario insertado al ciclo coin exito");
+                            limpiar();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al insertar usuario al ciclo.");
+                        }
+
+                        conexion.CerrarConexion();
+                    }
+                }
             }
+            else
+            {
+                gbCiclo.Visible = true;
+                gbCiclo.Focus();
+                ValidarDatos3();
+            }
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -455,6 +484,10 @@ namespace floridapp
             }
             return ok;
         }
+        /// <summary>
+        /// Valida datos de alumno
+        /// </summary>
+        /// <returns></returns>
         private bool ValidarDatos3()
         {
             bool ok = true;

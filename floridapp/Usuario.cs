@@ -250,7 +250,7 @@ namespace floridapp
         {
             int retorno;
             string consulta = String.Format("INSERT INTO usuario (nif,correo,contraseña,nombre,apellido,tel,profesor,administrador,cocina,biblioteca,alumno) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')", usu.nif, usu.correo, usu.contraseña, usu.nombre, 
+                "('{0}','{1}','{2}','{3}','{4}','{5}',{6},{7},{8},{9},{10});", usu.nif, usu.correo, usu.contraseña, usu.nombre, 
                 usu.apellido, usu.tel, usu.profesor, usu.admi, usu.cocina, usu.biblioteca, usu.alumno);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
@@ -491,6 +491,15 @@ namespace floridapp
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("nif", nif);
             comando.Parameters.AddWithValue("ciclo", cicl);
+            comando.ExecuteNonQuery();
+        }
+
+        public static void insertar_modulo_profesor(string modulo,string nif)
+        {
+            string consulta = "INSERT INTO modulo_profesor VALUES(null,@modulo,@nif);";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.AddWithValue("nif", nif);
+            comando.Parameters.AddWithValue("modulo", modulo);
             comando.ExecuteNonQuery();
         }
 
