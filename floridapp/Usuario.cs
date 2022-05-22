@@ -292,11 +292,9 @@ namespace floridapp
         public int ActualizaUsuario(usuario usu)
         {
             int retorno;
-            string consulta = string.Format("UPDATE usuarios SET correo='{0}',contraseña='{1}',nombre='{2}',apellido='{3}',tel='{4}',profesor={5}," +
-                "administrador='{6}',cocina='{7}',biblioteca='{8}',alumno='{9}'  WHERE nif={10}", usu.correo, usu.contraseña, usu.nombre, usu.apellido, usu.tel,
+            string consulta = string.Format("UPDATE usuario SET correo='{0}',contraseña='{1}',nombre='{2}',apellido='{3}',tel='{4}',profesor={5}," +
+                "administrador='{6}',cocina='{7}',biblioteca='{8}',alumno='{9}' WHERE nif={10}", usu.correo, usu.contraseña, usu.nombre, usu.apellido, usu.tel,
                 usu.profesor, usu.admi, usu.cocina, usu.biblioteca, usu.alumno, usu.nif);
-
-            MessageBox.Show(consulta);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();

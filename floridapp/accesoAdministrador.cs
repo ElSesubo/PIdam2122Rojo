@@ -216,31 +216,19 @@ namespace floridapp
         {
             try
             {
-                if (dtgvUsuarios1.SelectedRows.Count == 1) 
-                {
-                    string nif = (string)dtgvUsuarios1.CurrentRow.Cells[0].Value;  
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
-                        usuario usu = usuario.ObtenerUsuario(nif);
-                        txtNif.Text = usu.Nif;
-                        txtCorreo.Text = usu.Correo;
-                        txtContra.Text = usu.Contraseña;
-                        txtNombre.Text = usu.Nombre;
-                        txtApellido.Text = usu.Apellido;
-                        txtTel.Text = usu.Tel.ToString();
-                        rbnProfesor.Checked = usu.Profesor;
-                        rbnAdmin.Checked = usu.Admi;
-                        rbnCocina.Checked = usu.Cocina;
-                        rbnBiblioteca.Checked = usu.Biblioteca;
-                        rbnAlumno.Checked = usu.Alumno; 
+                        usuario usu = new usuario(txtNif.Text, txtCorreo.Text, txtContra.Text, txtNombre.Text, txtApellido.Text, Convert.ToInt32(txtTel.Text), rbnProfesor.Checked, 
+                            rbnAlumno.Checked, rbnAdmin.Checked, rbnCocina.Checked, rbnBiblioteca.Checked);
+                        usu.ActualizaUsuario(usu);
                     }
                     else
                     {
                         MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                     }
                     conexion.CerrarConexion();
-                }
+                    CargaListaUsuarios();
             }
             catch (Exception ex)
             {
