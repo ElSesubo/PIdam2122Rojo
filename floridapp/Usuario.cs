@@ -485,21 +485,23 @@ namespace floridapp
             reader.Close();
             return lista;
         }
-        public static void insertarUsuarioCiclo(string nif,int cicl)
+
+        public static void insertarUsuarioCiclo(string nif,int id_cicl)
         {
             string consulta = "INSERT INTO ciclo_pertenece VALUES(null,@nif,@ciclo);";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("nif", nif);
-            comando.Parameters.AddWithValue("ciclo", cicl);
+            comando.Parameters.AddWithValue("ciclo", id_cicl);
             comando.ExecuteNonQuery();
         }
 
-        public static void insertar_modulo_profesor(string modulo,string nif)
+        public static void insertar_modulo_profesor(string modulo,string nif,int ciclo)
         {
-            string consulta = "INSERT INTO modulo_profesor VALUES(null,@modulo,@nif);";
+            string consulta = "UPDATE pertenencia_modulos SET nif_prof=@nif WHERE modulo=@modulo and cicl=@ciclo";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("nif", nif);
             comando.Parameters.AddWithValue("modulo", modulo);
+            comando.Parameters.AddWithValue("ciclo", ciclo);
             comando.ExecuteNonQuery();
         }
 

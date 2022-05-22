@@ -93,7 +93,7 @@ namespace floridapp
             
             int ciclo=buscar_ciclo();
             string ciclos ="";
-            string consulta = string.Format("SELECT u.nombre,u.apellido,u.nif FROM usuario u INNER JOIN ciclo_pertenece c INNER JOIN modulo_profesor m ON m.nif_user=c.user_nif AND c.user_nif=u.nif WHERE m.modulo = '{0}' AND c.cicl = '{1}'; ", profesor.modulo,ciclo);
+            string consulta = string.Format("SELECT u.nombre,u.apellido,u.nif FROM usuario u INNER JOIN ciclo_pertenece c INNER JOIN pertenencia_modulos p ON p.nif_prof=c.user_nif AND c.user_nif=u.nif WHERE p.modulo = '{0}' AND c.cicl = '{1}'; ", profesor.modulo,ciclo);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())//Esto deberia ser un if pero no me iba. Opte por el while auque no es lo mas optimo.
@@ -316,7 +316,7 @@ namespace floridapp
         public static string Modulo_profesor()
         {
             string modulo = "";
-            string consulta = "SELECT modulo FROM modulo_profesor WHERE nif_user=@nif;";
+            string consulta = "SELECT modulo FROM pertenencia_modulos WHERE nif_prof=@nif;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("nif", usuario.BuscarNIF(usuario.Email));
             MySqlDataReader reader = comando.ExecuteReader();
