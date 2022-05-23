@@ -1,0 +1,358 @@
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\gaarag\Desktop\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\gaarag\Desktop\floridapp\bin\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\floridapp\bin\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\floridapp\obj\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+<<<<<<< HEAD
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\floridapp.exe
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\floridapp.pdb
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.exe
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.pdb
+=======
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+>>>>>>> a774bfd66bfaf43dfe4aa643f59ef315d137759f
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\MySql.Data.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\MySql.Web.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\System.Memory.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\System.Memory.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedido.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Memory.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+>>>>>>> fdb72d1cddf0ca5599742bedb0680d2041abedac
+>>>>>>> d8a82ef2114545a185b248037aa8f1e8c77d8550
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Reunion.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\System.Memory.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.exe
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+>>>>>>> 075ffaa25fde2204823b2d84e69eca2b52e9e3cf
+>>>>>>> d3515cd7bcab80d2b039d23ecca03e0e111a6ee6
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+>>>>>>> 79b30e124e3be9aeb6b0bfe165c872221efbc923
+>>>>>>> a6cce9f77a87e9ebe6d0de69dd4d361199c7abc3
+>>>>>>> 8c34a77afcc7330d70a3ed783fa4afcce60802aa
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.exe
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.pdb
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+>>>>>>> 217387429c9fe8b0460051d523c71e84bde1e5c8
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\floridapp.exe
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\floridapp.pdb
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\System.Memory.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\masica\Desktop\JIJIJU\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\masica\Desktop\JIJIJU\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+>>>>>>> c19299561cd49341193f5090bd39522440178c83
+>>>>>>> 9fb43a8f91770989f370329e310afbf57c43f78d
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+C:\Users\gaarag\Desktop\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+>>>>>>> fbed7b41071a533379f17c9057b745979cfef6f8
+>>>>>>> 9a0ae76523b3a0712d38bf88277cda2359c77682
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
+C:\Users\dacoma\OneDrive - Florida Centre de Formació Coop.V\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\es\floridapp.resources.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.exe
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\floridapp.pdb
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Memory.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+>>>>>>> 41c3d0ded0a5ef32d44735755bd33cf4752faa6f
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ivanl\OneDrive\Escritorio\PIdam2122Rojo\floridapp\obj\Debug\es\floridapp.resources.dll
+>>>>>>> 50b012cdecbef4142437a179b80d6fdaad5bdbcb
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\es\floridapp.resources.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\es\floridapp.resources.dll
+>>>>>>> 9233e1f7bf5539a13378398fef1ec9e805b12992
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.Castellano.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.Ingles.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.StringRecursos.ES-ES.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.Recurso_lenguaje.StringRecursos.en-US.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.Resources.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.StringResource.en-US.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.StringRecursos.ES-ES.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\floridapp.RecursoL.Resources.en-US.resources
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\bin\Debug\EN-US\floridapp.resources.dll
+C:\Users\Haitian Ji\Documents\Proyecto_Integrado\git\floridapp\obj\Debug\EN-US\floridapp.resources.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\floridapp.exe.config
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\floridapp.pdb
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\es\floridapp.resources.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\EN-US\floridapp.resources.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\MySql.Data.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\MySql.Web.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\Google.Protobuf.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\ZstdNet.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\System.Memory.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\System.Buffers.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\MySql.Data.xml
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\bin\Debug\MySql.Web.xml
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.csproj.AssemblyReference.cache
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.exe.config
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.accesoAdministrador.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.accesoBiblioteca.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.accesoCocina.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.Login.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.RecursoL.Resources.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.Biblio.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.News.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.RealizarPedidoCafeteria.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.RealizarReservaBiblioteca.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.RealizarReunion.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.RealizarReunionFormulario.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.Reunion.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.Cafeteria.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.Form1.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.Properties.Resources.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.RecursoL.Resources.EN-US.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.RecursoL.StringResource.en-US.resources
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.csproj.GenerateResource.cache
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.csproj.CoreCompileInputs.cache
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\es\floridapp.resources.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\EN-US\floridapp.resources.dll
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.csproj.CopyComplete
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.exe
+C:\Users\gaarag\Desktop\DAM\PI\floridapp\obj\Debug\floridapp.pdb
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\es\floridapp.resources.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\EN-US\floridapp.resources.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.RecursoL.Resources.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaAlumnos.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.listaModulos.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.UserControls.VistaProfesor.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.accesoCocina.es.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.RecursoL.Resources.EN-US.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\floridapp.RecursoL.StringResource.en-US.resources
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\es\floridapp.resources.dll
+C:\Users\gabri\Documents\PIdam2122Rojo\floridapp\obj\Debug\EN-US\floridapp.resources.dll

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="floridapp.biblioteca">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gBACAAAQAKAACBCAiEAACIAAA0AAAAFAOAAAADACAgA=</HashCode>
+      <FileName>biblioteca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.cafeteria">
+    <Position X="2.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAECACAABICAAAQAAAAAAQAACEAAAQBAAEAAAQABAgA=</HashCode>
+      <FileName>cafeteria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.Ciclo">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAGAAAAAgAAEAAAgBAAAoIAAAICAAgA=</HashCode>
+      <FileName>Ciclo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.conexion">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAQAAAAAAAgAAAAAAAAAAAAAACAAAAAAAAAAEAAA=</HashCode>
+      <FileName>conexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.cultura">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>cultura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.EnviarGmail">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>EnviarGmail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.Pedido">
+    <Position X="11.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAiAKAAEECQAABBkAIAQQgQgEBMEABAgAAAAAAAAgA=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.portatil">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAIAAAACAAAAACAgAAAAAAAAAAAAAAABAAgA=</HashCode>
+      <FileName>portatil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.profesor">
+    <Position X="15" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAACCAAAAggAgEAAAIBECIAgBMAJKQAAAAgAg=</HashCode>
+      <FileName>profesor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="floridapp.usuario">
+    <Position X="17.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>8AAABAAABCSYihbkrIRCyAAAMIQgABCABAAAgBAAwAQ=</HashCode>
+      <FileName>usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
