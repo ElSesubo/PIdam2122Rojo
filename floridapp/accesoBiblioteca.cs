@@ -159,11 +159,6 @@ namespace floridapp
                 ok = false;
                 errorProvider1.SetError(txtNIF, "LETRA DEL NIF INCORRECTA");
             }
-            else if (usuario.ComprobarNIF(txtNIF.Text.ToUpper()) == false)
-            {
-                ok = false;
-                errorProvider1.SetError(dtpHoraReserva, "EL USUARIO YA EXISTE");
-            }
             else if (dtpHoraReserva.Value < DateTime.Now)
             {
                 ok = false;
@@ -199,9 +194,8 @@ namespace floridapp
         {
             if (dtgvReservas.SelectedRows.Count == 1)
             {
-                int id = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[2].Value));
-
-
+                int id = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[0].Value));
+                int idP = (Convert.ToInt32(dtgvReservas.CurrentRow.Cells[2].Value));
 
                 DialogResult confirmacion = MessageBox.Show("Portatil sin devolver en el registro seleccionado. ¿Continuar?",
                                                     "Eliminación", MessageBoxButtons.YesNo);
@@ -211,10 +205,10 @@ namespace floridapp
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
-                        biblioteca.ActualizarPortatilDevuelto(id);
+                        biblioteca.EliminaRegistro(id);
                         conexion.CerrarConexion();
                         conexion.AbrirConexion();
-                        biblioteca.EliminaRegistro(id);
+                        biblioteca.ActualizarPortatilDevuelto(id);
                         conexion.CerrarConexion();
                     }
                 }

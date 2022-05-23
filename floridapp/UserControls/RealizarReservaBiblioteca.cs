@@ -69,6 +69,7 @@ namespace floridapp.UserControls
                     conexion.AbrirConexion();
                     biblioteca.InsertarPedidoBiblioteca(hora, id, nif);
                     conexion.CerrarConexion();
+                    MessageBox.Show("Reserva realizada exitosamente");
                 }
                 if (conexion.Conexion != null)
                 {

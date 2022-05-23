@@ -282,7 +282,7 @@ namespace floridapp
             {
                 if (txtMenu.Text != dgvMenu.Rows[i].Cells[1].Value.ToString())
                 {
-                    return true;
+                    return false;
                 }
             }
             return existe;
@@ -329,24 +329,29 @@ namespace floridapp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int result = 0;
-            if (conexion.Conexion != null)
+            try
             {
-                conexion.AbrirConexion();
-                try
+                if (dgvMenu.SelectedRows.Count == 1)
                 {
-                    result = Pedido.eliminarMenu(idmenu);
-                    if (result != 0)
+                    int id = (Convert.ToInt32(dgvMenu.CurrentRow.Cells[0].Value));
+
+                    DialogResult confirmacion = MessageBox.Show("Menú ha eliminar seleccionado. ¿Continuar?",
+                                                        "Eliminación", MessageBoxButtons.YesNo);
+
+                    if (confirmacion == DialogResult.Yes)
                     {
-                        MessageBox.Show("Se ha eliminado con exito");
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            Pedido.eliminarMenu(id);
+                            conexion.CerrarConexion();
+                        }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-
-                conexion.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             cargar_dgvmenu();
             limpiar();

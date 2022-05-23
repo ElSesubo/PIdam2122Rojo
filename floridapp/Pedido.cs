@@ -292,7 +292,7 @@ namespace floridapp
         /// <returns>1 o 0 para comprobar que se ha realizado la consulta</returns>
         public static int eliminarMenu(int id)
         {
-            int result = 0;
+            int result;
             string consulta = "DELETE FROM menu WHERE id=@id;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("id" , id);
