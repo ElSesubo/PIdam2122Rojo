@@ -44,20 +44,20 @@ namespace floridapp
                     {
                         case 1:
                             usuario.Tipo = 1;
-                            inicio.Show();
+                            inicio.ShowDialog();
                             break;
                         case 2:
                             usuario.Tipo = 2;
-                            inicio.Show();
+                            inicio.ShowDialog();
                             break;
                         case 3:
-                            admi.Show();
+                            admi.ShowDialog();
                             break;
                         case 4:
-                            cocina.Show();
+                            cocina.ShowDialog();
                             break;
                         case 5:
-                            biblio.Show();
+                            biblio.ShowDialog();
                             break;
                         default:
                             MessageBox.Show("Error al iniciar sesion");
