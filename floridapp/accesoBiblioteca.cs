@@ -205,10 +205,10 @@ namespace floridapp
                     if (conexion.Conexion != null)
                     {
                         conexion.AbrirConexion();
-                        biblioteca.EliminaRegistro(id);
+                        biblioteca.ActualizarPortatilDevuelto(idP);
                         conexion.CerrarConexion();
                         conexion.AbrirConexion();
-                        biblioteca.ActualizarPortatilDevuelto(id);
+                        biblioteca.EliminaRegistro(id);
                         conexion.CerrarConexion();
                     }
                 }
