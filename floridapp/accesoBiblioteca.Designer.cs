@@ -65,9 +65,10 @@ namespace floridapp
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(61, 18);
+            this.lblEmail.Location = new System.Drawing.Point(81, 22);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(75, 19);
+            this.lblEmail.Size = new System.Drawing.Size(96, 23);
             this.lblEmail.TabIndex = 26;
             this.lblEmail.Text = "Reservas";
             this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
@@ -82,11 +83,12 @@ namespace floridapp
             this.id_portatil,
             this.id_user,
             this.dia_reserva});
-            this.dtgvReservas.Location = new System.Drawing.Point(65, 40);
+            this.dtgvReservas.Location = new System.Drawing.Point(87, 49);
+            this.dtgvReservas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvReservas.Name = "dtgvReservas";
             this.dtgvReservas.ReadOnly = true;
             this.dtgvReservas.RowHeadersWidth = 51;
-            this.dtgvReservas.Size = new System.Drawing.Size(673, 197);
+            this.dtgvReservas.Size = new System.Drawing.Size(897, 242);
             this.dtgvReservas.TabIndex = 24;
             this.dtgvReservas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvReservas_CellContentClick);
             // 
@@ -138,10 +140,10 @@ namespace floridapp
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 446);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Location = new System.Drawing.Point(16, 549);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(247, 79);
+            this.button5.Size = new System.Drawing.Size(329, 97);
             this.button5.TabIndex = 25;
             this.button5.Text = "   Salida";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -151,9 +153,10 @@ namespace floridapp
             // btnDevuelto
             // 
             this.btnDevuelto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevuelto.Location = new System.Drawing.Point(1182, 243);
+            this.btnDevuelto.Location = new System.Drawing.Point(1576, 299);
+            this.btnDevuelto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDevuelto.Name = "btnDevuelto";
-            this.btnDevuelto.Size = new System.Drawing.Size(90, 36);
+            this.btnDevuelto.Size = new System.Drawing.Size(120, 44);
             this.btnDevuelto.TabIndex = 33;
             this.btnDevuelto.Text = "Devuelto";
             this.btnDevuelto.UseVisualStyleBackColor = true;
@@ -162,9 +165,10 @@ namespace floridapp
             // btnInserta
             // 
             this.btnInserta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserta.Location = new System.Drawing.Point(1086, 243);
+            this.btnInserta.Location = new System.Drawing.Point(1448, 299);
+            this.btnInserta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInserta.Name = "btnInserta";
-            this.btnInserta.Size = new System.Drawing.Size(90, 36);
+            this.btnInserta.Size = new System.Drawing.Size(120, 44);
             this.btnInserta.TabIndex = 34;
             this.btnInserta.Text = "Insertar";
             this.btnInserta.UseVisualStyleBackColor = true;
@@ -174,9 +178,10 @@ namespace floridapp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(127, 52);
+            this.label3.Location = new System.Drawing.Point(169, 64);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 21);
+            this.label3.Size = new System.Drawing.Size(107, 23);
             this.label3.TabIndex = 19;
             this.label3.Text = "Id Portatil:";
             // 
@@ -184,19 +189,21 @@ namespace floridapp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(117, 88);
+            this.label5.Location = new System.Drawing.Point(156, 108);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 21);
+            this.label5.Size = new System.Drawing.Size(120, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "NIF Usuario:";
             // 
             // txtNIF
             // 
             this.txtNIF.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNIF.Location = new System.Drawing.Point(232, 83);
+            this.txtNIF.Location = new System.Drawing.Point(309, 102);
+            this.txtNIF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNIF.MaxLength = 9;
             this.txtNIF.Name = "txtNIF";
-            this.txtNIF.Size = new System.Drawing.Size(190, 27);
+            this.txtNIF.Size = new System.Drawing.Size(252, 32);
             this.txtNIF.TabIndex = 24;
             // 
             // dtpHoraReserva
@@ -204,27 +211,32 @@ namespace floridapp
             this.dtpHoraReserva.CalendarFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHoraReserva.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHoraReserva.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraReserva.Location = new System.Drawing.Point(232, 116);
+            this.dtpHoraReserva.Location = new System.Drawing.Point(309, 143);
+            this.dtpHoraReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpHoraReserva.Name = "dtpHoraReserva";
-            this.dtpHoraReserva.Size = new System.Drawing.Size(200, 26);
+            this.dtpHoraReserva.Size = new System.Drawing.Size(265, 30);
             this.dtpHoraReserva.TabIndex = 28;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(79, 116);
+            this.label4.Location = new System.Drawing.Point(105, 143);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 21);
+            this.label4.Size = new System.Drawing.Size(174, 23);
             this.label4.TabIndex = 29;
             this.label4.Text = "Hora de reserva:";
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(232, 52);
+            this.comboBox1.Location = new System.Drawing.Point(309, 64);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(160, 31);
             this.comboBox1.TabIndex = 30;
             // 
             // pnlUsuario
@@ -235,9 +247,10 @@ namespace floridapp
             this.pnlUsuario.Controls.Add(this.txtNIF);
             this.pnlUsuario.Controls.Add(this.label5);
             this.pnlUsuario.Controls.Add(this.label3);
-            this.pnlUsuario.Location = new System.Drawing.Point(782, 40);
+            this.pnlUsuario.Location = new System.Drawing.Point(1043, 49);
+            this.pnlUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlUsuario.Name = "pnlUsuario";
-            this.pnlUsuario.Size = new System.Drawing.Size(490, 197);
+            this.pnlUsuario.Size = new System.Drawing.Size(653, 242);
             this.pnlUsuario.TabIndex = 27;
             // 
             // dtgvPortatiles
@@ -247,46 +260,56 @@ namespace floridapp
             this.id,
             this.reservado,
             this.devuelto});
-            this.dtgvPortatiles.Location = new System.Drawing.Point(65, 267);
+            this.dtgvPortatiles.Location = new System.Drawing.Point(87, 329);
+            this.dtgvPortatiles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgvPortatiles.Name = "dtgvPortatiles";
             this.dtgvPortatiles.ReadOnly = true;
-            this.dtgvPortatiles.Size = new System.Drawing.Size(673, 172);
+            this.dtgvPortatiles.RowHeadersWidth = 51;
+            this.dtgvPortatiles.Size = new System.Drawing.Size(897, 212);
             this.dtgvPortatiles.TabIndex = 35;
             // 
             // id
             // 
             this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.ReadOnly = true;
+            this.id.Width = 125;
             // 
             // reservado
             // 
             this.reservado.HeaderText = "Reservado";
+            this.reservado.MinimumWidth = 6;
             this.reservado.Name = "reservado";
             this.reservado.ReadOnly = true;
+            this.reservado.Width = 125;
             // 
             // devuelto
             // 
             this.devuelto.HeaderText = "Devuelto";
+            this.devuelto.MinimumWidth = 6;
             this.devuelto.Name = "devuelto";
             this.devuelto.ReadOnly = true;
+            this.devuelto.Width = 125;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 243);
+            this.label1.Location = new System.Drawing.Point(81, 299);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 19);
+            this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 36;
             this.label1.Text = "Portatiles";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(873, 243);
+            this.button1.Location = new System.Drawing.Point(1164, 299);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 36);
+            this.button1.Size = new System.Drawing.Size(276, 44);
             this.button1.TabIndex = 37;
             this.button1.Text = "Añadir portatil";
             this.button1.UseVisualStyleBackColor = true;
@@ -298,10 +321,10 @@ namespace floridapp
             // 
             // accesoBiblioteca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1370, 528);
+            this.ClientSize = new System.Drawing.Size(1827, 650);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgvPortatiles);
@@ -313,6 +336,7 @@ namespace floridapp
             this.Controls.Add(this.dtgvReservas);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "accesoBiblioteca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "accesoBiblioteca";
