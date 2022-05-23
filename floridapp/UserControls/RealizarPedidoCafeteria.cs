@@ -207,6 +207,20 @@ namespace floridapp.UserControls
             cbMesa.SelectedItem = null;
             
         }
+
+        private void cbLlevar_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if(cbLlevar.Checked == true)
+            {
+                dateTimePicker1.Enabled = false;
+                cbMesa.Enabled=false;
+            }
+            else
+            {
+                dateTimePicker1.Enabled = true;
+                cbMesa.Enabled = true;
+            }
+        }
     }
 
 
