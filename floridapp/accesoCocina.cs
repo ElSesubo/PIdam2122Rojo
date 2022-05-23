@@ -253,36 +253,49 @@ namespace floridapp
         private void button2_Click(object sender, EventArgs e)
         {
             int result = 0;
-            if (conexion.Conexion != null)
+            if (comprobarSIexiste())
             {
-                conexion.AbrirConexion();
-                try
+                if (conexion.Conexion != null)
                 {
-                    result = Pedido.modificarmenu(idmenu, txtMenu.Text, double.Parse(nudPrecio.Value.ToString()));
-                    if(result != 0)
+                    conexion.AbrirConexion();
+                    try
                     {
-                        MessageBox.Show("Se ha modificado con exito");
+                        result = Pedido.modificarmenu(idmenu, txtMenu.Text, double.Parse(nudPrecio.Value.ToString()));
+                        if (result != 0)
+                        {
+                            MessageBox.Show("Se ha modificado con exito");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debes hacer doble click sobre el menu que quieres modificar.");
+                        }
                     }
-                }catch(Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
 
-                conexion.CerrarConexion();
+                    conexion.CerrarConexion();
+                }
+                cargar_dgvmenu();
+                limpiar();
             }
-            cargar_dgvmenu();
-            limpiar();
+            else
+            {
+                MessageBox.Show("El menu introducido no existe.");
+            }
+
         }
 
 
         private bool comprobarSIexiste()
         {
-            bool existe = true;
+            bool existe = false;
             for(int i = 0; i < dgvMenu.Rows.Count; i++)
             {
-                if (txtMenu.Text != dgvMenu.Rows[i].Cells[1].Value.ToString())
+                if (txtMenu.Text == dgvMenu.Rows[i].Cells[1].Value.ToString())
                 {
-                    return false;
+                    return true;
                 }
             }
             return existe;
@@ -347,6 +360,10 @@ namespace floridapp
                             conexion.CerrarConexion();
                         }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione la fila del menu que quieres eliminar.");
                 }
             }
             catch (Exception ex)

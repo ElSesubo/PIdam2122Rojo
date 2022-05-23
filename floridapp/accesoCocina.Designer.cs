@@ -68,12 +68,12 @@ namespace floridapp
             this.bntEditarMenu = new System.Windows.Forms.Button();
             this.btnEditarMesas = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnagregarmesa = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblnum = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.lblnum = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnagregarmesa = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidoMenu)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -350,17 +350,24 @@ namespace floridapp
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // label4
+            // button4
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // btnagregarmesa
+            // lblnum
             // 
-            resources.ApplyResources(this.btnagregarmesa, "btnagregarmesa");
-            this.btnagregarmesa.Name = "btnagregarmesa";
-            this.btnagregarmesa.UseVisualStyleBackColor = true;
-            this.btnagregarmesa.Click += new System.EventHandler(this.btnagregarmesa_Click);
+            resources.ApplyResources(this.lblnum, "lblnum");
+            this.lblnum.Name = "lblnum";
+            this.lblnum.Click += new System.EventHandler(this.lblnum_Click);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button6
             // 
@@ -369,24 +376,17 @@ namespace floridapp
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label5
+            // btnagregarmesa
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            resources.ApplyResources(this.btnagregarmesa, "btnagregarmesa");
+            this.btnagregarmesa.Name = "btnagregarmesa";
+            this.btnagregarmesa.UseVisualStyleBackColor = true;
+            this.btnagregarmesa.Click += new System.EventHandler(this.btnagregarmesa_Click);
             // 
-            // lblnum
+            // label4
             // 
-            resources.ApplyResources(this.lblnum, "lblnum");
-            this.lblnum.Name = "lblnum";
-            this.lblnum.Click += new System.EventHandler(this.lblnum_Click);
-            // 
-            // button4
-            // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // accesoCocina
             // 
